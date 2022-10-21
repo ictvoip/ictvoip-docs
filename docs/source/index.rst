@@ -1,7 +1,7 @@
 .. image:: _static/images/vertical_tagline_on_white_300x300px.png
-        :width: 300pt
+        :width: 140pt
         :align: center
-        :height: 300pt
+        :height: 140pt
 
 |
 
