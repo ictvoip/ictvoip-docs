@@ -2,15 +2,15 @@
         :width: 170pt
         :align: center
         :height: 170pt
-
+        :alt: ictVoIP Canada
 |
 Welcome to ictVoIP Billing Docs
 =================================================
 
-ictVoIP Billing Management System is a WHMCS addon application that supports multi providers and various PBXs which calculates call times and allows for Tariff or custom rate. Client area addons for client area use for customers. Automation of billing of overage minutes based on metered plans and CDR views for customer reports based on billing cycles.
+ictVoIP Billing Management System is a WHMCS addon application that supports multi providers and various PBXs which calculates call times and allows for Tariff or custom rate. Automation of billing of overage minutes based on metered plans and CDR views for customer reports based on billing cycles. Client area addons for client area use for customers are currently expanding within our development.
 
-Some of the Key Features.
-=========================
+Some of the Key Features
+************************
 
 International FusionPBX Billing
 Supports single or multi PBX
@@ -56,46 +56,46 @@ Home
    
    home.rst
 
-Accounts
-==========
+Providers
+===========
 
 .. toctree::
    :maxdepth: 4
 
-   accounts.rst
+   providers.rst
 
-Dialplans
-==========
+Tariffs
+=========
 
 .. toctree::
    :maxdepth: 4
 
-   dialplans.rst
+   tariffs.rst
    
  
-Applications
+Servers
+=========
+
+.. toctree::
+   :maxdepth: 4
+
+   servers.rst
+   
+Packages
+==========
+
+.. toctree::
+   :maxdepth: 4
+
+   packages.rst
+
+Client Area
 =============
 
 .. toctree::
    :maxdepth: 4
 
-   applications.rst
-   
-Status
-========
-
-.. toctree::
-   :maxdepth: 4
-
-   status.rst
-
-Advanced
-==========
-
-.. toctree::
-   :maxdepth: 4
-
-   advanced.rst
+   clientarea.rst
 
 Hardware
 =============
