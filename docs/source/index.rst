@@ -1,5 +1,14 @@
-Welcome to Lumache's documentation!
-===================================
+.. image:: _static/images/logo.png
+        :width: 130pt
+        :align: center
+        :height: 76.5pt
+
+|
+
+
+Welcome to ictVoIP Billing Docs
+===============================
+
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
