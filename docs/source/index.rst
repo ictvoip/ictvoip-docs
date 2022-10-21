@@ -10,14 +10,20 @@ Welcome to ictVoIP Billing Docs
 ===============================
 
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-Lumache has its documentation hosted on Read the Docs.
+ictVoIP Billing is compatible with WHMCS v8+ and 
+PHP-7.4 and PHP-8.1, Apache and LiteSpeed. 
+
+You may select your server module required for your PBX or Provider API.
+Purchase your server module here: 
+https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software
+
+Download the ictVoIP Billing Addon along with your 
+Server module and extract to /home/$user/tmp.
+
+Archive: /home/$user/tmp/ictvoip_billing-release-x.x.x.zip
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+how to :ref:`installation` of ictVoIP Billing and modules.
 
 .. note::
 
