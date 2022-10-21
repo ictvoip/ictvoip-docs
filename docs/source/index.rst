@@ -1,7 +1,7 @@
-.. image:: _static/images/ictVoIP_Logo.png
-        :width: 180pt
+.. image:: _static/images/vertical_tagline_on_white_300x300px.png
+        :width: 300pt
         :align: center
-        :height: 
+        :height: 300pt
 
 |
 
