@@ -65,6 +65,7 @@ RewriteRule .* - [E=noabort:1]
 RewriteRule .* - [E=noconntimeout:1]
 
 Increase Session Timers [Apache & Litespeed]
+---------------------------------------------
 
 ie.
 
