@@ -10,83 +10,156 @@ Welcome to the ictVoIP Billing installation guide.
 
 |
 
-ictVoIP Billing can be installed on WHMCS 8+ running PHP7.x and soon PHP8.1. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA
+ictVoIP Billing can be installed on WHMCS 8+ running PHP7.x and soon PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA
 
 
 **1.** After downloading the ictVoIP Billing .zip
 
-Start with a **minimal** install of Debian 9 with SSH enabled.
-Paste the following commands in the console window **one line at a time**.
+You may select your server module required for your PBX or Provider API.
+Purchase your server module here: 
+https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software
 
-::
+Download the ictVoIP Billing Addon along with your 
+Server module and extract to /home/$user/tmp.
 
- wget -O - https://raw.githubusercontent.com/fusionpbx/fusionpbx-install.sh/master/debian/pre-install.sh | sh; 
+Archive: /home/$user/tmp/ictvoip_billing-release-x.x.x.zip
 
-|
+mySQL Table Import
+==================
 
-::
-
- cd /usr/src/fusionpbx-install.sh/debian && ./install.sh
-
-|
-
-If using **Debian on Proxmox LXC** containers please run the following **BEFORE** starting the FusionPBX install.
-
-::
-
- apt-get update && apt-get upgrade
- apt-get install systemd
- apt-get install systemd-sysv
- apt-get install ca-certificates
- reboot
-
-|
-
-**2.** At the end of the install, the script will instruct you to go to the ip address of the server (or domain name) in your web browser to login. The script will also provide a username and secure random password for you to use. This can be changed after you login. The install script builds the fusionpbx database. If you need the database password it is located in /etc/fusionpbx/config.php .
+Import the Country Codes table to your WHMCS DB 
+- mod_ictvoipbilling_country_codes.sql
 
 
-::
+Important - Licensing
+=====================
 
-   Installation has completed.
+Activating the ictVoIP Billing System enter your license keys 
+into the following locations within your modules. 
 
-   Use a web browser to login.
-      domain name: https://000.000.000.000
-      username: admin
-      password: zxP5yatwMxejKXd
-
-   The domain name in the browser is used by default as part of the authentication.
-   If you need to login to a different domain then use username@domain.
-      username: admin@x.x.x.x
-
-   Additional information.
-      https://fusionpbx.com/support.php
-      https://www.fusionpbx.com
-      http://docs.fusionpbx.com
-      https://www.fusionpbx.com/training.php
-
-|
-
-.. image:: ../_static/images/ilogin.jpg
-        :scale: 80%
-|
-
-After the install script has completed go to your web browser and login with the information provided by the install script.
+ictVoIP Billing Addon
+---------------------
+System Settings / Apps & Integrations / Addon Modules / 
+- Click Activate then configure and enter your license and the appropriate Access control groups and save.
+ie. LeasedictVoIP_a3174afbf93b3b8ba8f3
 
 
-After the installation script finishes, the option for anything to register to the ip address is **ENABLED**.
+Special Notes:
+==============
 
-* If you plan on registering devices to the FusionPBX ip address then no further action is required.
+1) .htaccess modification if Timeout Server error 500 
+   is found when running with LiteSpeed
 
-It is however recommended to register to a domain name (FQDN) since most scripted attacks happen to the public ip. Registering to the ip address will be blocked by the fail2ban rules freeswitch-ip and auth-challenge once these rules are set to true.
+a) Modify .htaccess [LiteSpeed]
 
-* To help secure your FusionPBX installation, enable the `fail2ban rules <http://docs.fusionpbx.com/en/latest/firewall/fail2ban.html>`_ [freeswitch-ip] and [auth-challenge-ip] in /etc/fail2ban/jail.local.
+# LiteSpeed
+RewriteRule .* - [E=noabort:1]
+RewriteRule .* - [E=noconntimeout:1]
 
-::
+Increase Session Timers
 
- [freeswitch-ip]
- enabled  = true
+ie.
 
-::
+IfModule php7_module
 
- [auth-challenge-ip]
- enabled  = true
+   -php_flag display_errors On
+   
+   -php_value max_execution_time 8600
+   
+   -php_value max_input_time 8600
+   
+   -php_value max_input_vars 1000
+   
+   -php_value memory_limit 8096M
+   
+   -php_value session.gc_maxlifetime 1440
+   
+   -php_value session.save_path "/tmp"
+   
+   -php_value upload_max_filesize 4000M
+   
+   -php_value date.timezone "America/Toronto"
+   
+   -php_value post_max_size 1000M
+   
+   -php_flag zlib.output_compression Off
+   
+
+IfModule
+
+IfModule lsapi_module
+
+   -php_flag display_errors On
+   
+   -php_value max_execution_time 8600
+   
+   -php_value max_input_time 8600
+   
+   -php_value max_input_vars 1000
+   
+   -php_value memory_limit 8096M
+   
+   -php_value session.gc_maxlifetime 1440
+   
+   -php_value session.save_path "/tmp"
+   
+   -php_value upload_max_filesize 4000M
+   
+   -php_value date.timezone "America/Toronto"
+   
+   -php_value post_max_size 1000M
+   
+   -php_flag zlib.output_compression Off
+
+IfModule
+
+
+
+Ubuntu CRON Setup
+=================
+
+CRON issues running cPanel on Ubuntu maybe found 
+where you should enable normal shell for the user 
+account in which the CRON is being run from.
+For Ubuntu CRON issues please contact cPanel if
+utilized.
+
+cPanel Support Advice:
+https://support.cpanel.net/hc/en-us/articles/6717639153943-Ubuntu-Jailed-Shell-users-unable-to-connect-to-mysqld-sock
+
+
+
+WHMCS System Settings / General
+===============================
+
+Change your WHMCS System URL to HTTPS 
+
+
+ictVoIP Billing Setup
+=====================
+
+1) Create new Provider/PBX (i.e Telnyx - FusionPBX)  (you would require a server module for your PBX or provider)
+2) Import and map your Tariff CSV from your provider 
+   (required mapped column fields - Description/Prefix/RateValue/Increment)
+3) Setup your Package Rates (you would require a server module for your PBX or provider)
+ a) Select the VoIP Product you created earlier
+
+ b) Select your Tariff that was just imported
+
+ c) Select the Country Code/Exit Code of your Billing Region. 
+    - if you wish to strip any leading digits of the CID and replace it 
+	  with the selected Country Code then select 
+ 	  "Check to enable: - Incorrect prefix removal / prepend Country Code"
+	  and enter the leading digit to be stripped.
+
+ d) Enter your Global Markup rate for this product.
+
+ e) Set Free minutes to 0 if none are allocatted for your product or 
+    free minutes allowed before billed.
+
+ f) Custom Package Rates [status=0] in Tariff Table
+    Set your incremental inbound/outbound costs to sell at. ie. 0.00967
+    Set your custom incremental billing value in sec. ie. 6/6 or 30/6 or 1/1
+	If you wish to use Custom rates for specific regions you must set 
+	[status] column to 0 in order for that Prefix(es) to use custom rates.
+ 
