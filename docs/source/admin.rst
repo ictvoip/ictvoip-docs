@@ -1,4 +1,4 @@
-Admin area for addon.
+ictVoIP Billing Admin area for addon configuration and setup.
 
 .. toctree::
   :maxdepth: 3
