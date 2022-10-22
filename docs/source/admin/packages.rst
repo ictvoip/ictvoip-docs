@@ -33,7 +33,7 @@ VoIP Package assignments and setup of server modules for extentions and API conn
 
 5) Set your Global Markup you wish to use against your Tariff costs.
 
-6) Assign number of free Minutes that your package has if metered. If not free minutes then assign 0 in the text box.
+6) Assign number of free Minutes that your package has if metered. If no free minutes then assign 0 in the text box.
 
 Custom Rates
 *************
