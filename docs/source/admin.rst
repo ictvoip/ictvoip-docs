@@ -2,10 +2,10 @@
 Admin Area
 ************
 
-ictVoIP Billing Admin area for addon configuration and setup.
+ictVoIP Billing Admin area for management of addon configuration and setup.
 
 .. image:: _static/images/admin/providers.png
-        :scale: 100%
+        :scale: 40%
         :align: center
         :alt: ictVoIP Canada
 |
