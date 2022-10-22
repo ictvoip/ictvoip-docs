@@ -35,6 +35,8 @@ VoIP Package assignments and setup of server modules for extentions and API conn
 
 6) Assign number of free Minutes that your package has if metered. If no free minutes then assign 0 in the text box.
 
+|
+
 Custom Rates
 *************
    
