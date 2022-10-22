@@ -3,7 +3,7 @@ Tariffs
 *********
 
 Once you have selected your Provider from the main dashboard you can now import your Provider Tariff. 
-To import your Tariff you must download your Rate Card or Tariff from your Provider in CSV format. Importing an updated Tariff can be done by selecting your new updated CSV from your provider and highlighting the existing Tariff Name and import. This will allow the consitant use of the Tariff assigned to your product(s)
+To import your Tariff, you must download your Rate Card or Tariff from your Provider in CSV format. Importing an updated Tariff can be done by selecting your new updated CSV from your provider and highlighting the existing Tariff Name and import. This will allow the consistent use of the Tariff assigned to your product(s)
 
   |
 
