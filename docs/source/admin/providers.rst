@@ -7,8 +7,8 @@ PBX Servers and Provider APIs Servers. Setting up new Provider or PBX provides m
 Add new Provider/PBX - This name will link your Tariff and Package rates. Some formatting would be as follows:
  - PBX Vendor - Provider Tariff
  
- .. image:: /_static/images/admin/new_provider.png
-        :scale: 40%
+ .. image:: _static/images/admin/new_provider.png
+        :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
 
