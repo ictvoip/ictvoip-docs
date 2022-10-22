@@ -1,7 +1,6 @@
-.. image:: _static/images/logo_1500x1500px.png
-        :width: 160pt
+.. image:: _static/images/ictVoIP_Logo.png
+        :scale: 10%
         :align: center
-        :height: 160pt
         :alt: ictVoIP Canada
 |
 Welcome to ictVoIP Billing Docs
