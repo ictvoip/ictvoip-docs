@@ -42,13 +42,13 @@ ictVoIP Billing Addon
 System Settings / Apps & Integrations / Addon Modules / 
 - Click Activate then configure and enter your license and the appropriate Access control groups and save.
 
-ie. LeasedictVoIP_a3174afbf93b3b8ba8f3
+i.e. LeasedictVoIP_a3174afbf93b3b8ba8f3
 
 FusionPBX Server Module
 -----------------------
 System Settings / Products & Services /
 - Create your new VoIP Product with description and with the Module Settings Tab, select Fusionpbx Module name and then place your License Key in the box, save. 
-ie. LeasedFusionPBX_f14fa0a312e4fac10107
+i.e. LeasedFusionPBX_f14fa0a312e4fac10107
 
 
 Special Notes:
@@ -67,7 +67,7 @@ RewriteRule .* - [E=noconntimeout:1]
 Increase Session Timers [Apache & Litespeed]
 ---------------------------------------------
 
-ie.
+i.e.
 
 IfModule php7_module
 
@@ -138,13 +138,13 @@ https://support.cpanel.net/hc/en-us/articles/6717639153943-Ubuntu-Jailed-Shell-u
 
 
 WHMCS System Settings / General
-===============================
+================================
 
 Change your WHMCS System URL to HTTPS 
 
 
-ictVoIP Billing Setup
-=====================
+ictVoIP Billing Module Setup
+=============================
 
 1) Create new Provider/PBX (i.e Telnyx - FusionPBX)  (you would require a server module for your PBX or provider)
 2) Import and map your Tariff CSV from your provider 
