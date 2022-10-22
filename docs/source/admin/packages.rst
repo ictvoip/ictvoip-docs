@@ -53,3 +53,8 @@ Here you can be creative as to how you would like to manage your custom rates.  
 
 i.e. VoIP Calls to Poland package 1000 minutes metered but then once over 1000 min you have a custom rate per min on the overages. Or you have a flat custom rate for all calls, zero free minutes, which would override your Provider Tariff rates and Global Markup.
 
+In order to use custom rates you must first change the column field of "status" to a zero. This can be found in your WHMCS DB Table of the Tariff you just imported. It should be located as such:
+
+Database: ictvoip_whmc308 »Table: mod_ictvoipbilling_tariff_telnyx_outbound_2022_10
+
+
