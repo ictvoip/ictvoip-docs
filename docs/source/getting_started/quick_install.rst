@@ -43,20 +43,27 @@ System Settings / Apps & Integrations / Addon Modules /
 - Click Activate then configure and enter your license and the appropriate Access control groups and save.
 ie. LeasedictVoIP_a3174afbf93b3b8ba8f3
 
+FusionPBX Server Module
+-----------------------
+System Settings / Products & Services /
+- Create your new VoIP Product with description and with the Module Settings Tab, select Fusionpbx Module 
+  name and then place your License Key in the box, save. 
+ie. LeasedFusionPBX_f14fa0a312e4fac10107
+
 
 Special Notes:
 ==============
 
-1) .htaccess modification if Timeout Server error 500 
-   is found when running with LiteSpeed
+1) .htaccess modification if Timeout Server error 500 is found when running with Apache or LiteSpeed. This can occur during large imports of Tariffs or CRON autobill execution on a large number of CDR records pulled from your PBX/Provider server module.
 
 a) Modify .htaccess [LiteSpeed]
 
-# LiteSpeed
+LiteSpeed
+----------
 RewriteRule .* - [E=noabort:1]
 RewriteRule .* - [E=noconntimeout:1]
 
-Increase Session Timers
+Increase Session Timers [Apache & Litespeed]
 
 ie.
 
@@ -112,7 +119,6 @@ IfModule lsapi_module
    -php_flag zlib.output_compression Off
 
 IfModule
-
 
 
 Ubuntu CRON Setup
