@@ -15,7 +15,7 @@ To import your Tariff you must download your Rate Card or Tariff from your Provi
 |
 
 
- 1) Create a name for the Tariff you are ready to import.
+ 1) Create a name for the Tariff you are ready to import. A good naming convention could be  - Providername_outbound_2022_10
 
  2) Highlight the Tariff name and click on Open
 
