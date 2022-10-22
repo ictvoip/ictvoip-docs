@@ -1,5 +1,5 @@
-.. image:: _static/images/ictVoIP_Logo.png
-        :scale: 10%
+.. image:: _static/images/document_logo.png
+        :scale: 100%
         :align: center
         :alt: ictVoIP Canada
 |
