@@ -6,11 +6,11 @@ Quick Install
 
 |
 
-Welcome to the ictVoIP Billing installation guide.
+Welcome to the ictVoIP Billing installation quick guide.
 
 |
 
-ictVoIP Billing can be installed on WHMCS 8+ running PHP7.x and soon PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA
+ictVoIP Billing can be installed on WHMCS v8.5.x and v8.6.x running PHP7.x and soon PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled and understand the administration of the WHMCS platform. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA
 
 
 **1.** After downloading the ictVoIP Billing .zip
@@ -22,7 +22,7 @@ https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software
 Download the ictVoIP Billing Addon along with your 
 Server module and extract to /home/$user/tmp.
 
-Archive: /home/$user/tmp/ictvoip_billing-release-x.x.x.zip
+i.e. Archive: /home/$user/tmp/ictvoip_billing-release-x.x.x.zip
 
 mySQL Table Import
 ==================
@@ -54,6 +54,9 @@ i.e. LeasedFusionPBX_f14fa0a312e4fac10107
 Special Notes:
 ==============
 
+.htaccess
+----------
+
 1) .htaccess modification if Timeout Server error 500 is found when running with Apache or LiteSpeed. This can occur during large imports of Tariffs or CRON autobill execution on a large number of CDR records pulled from your PBX/Provider server module.
 
 a) Modify .htaccess [LiteSpeed]
@@ -64,8 +67,8 @@ RewriteRule .* - [E=noabort:1]
 
 RewriteRule .* - [E=noconntimeout:1]
 
-Increase Session Timers [Apache & Litespeed]
----------------------------------------------
+PHP Requirements [Apache & Litespeed]
+-------------------------------------
 
 i.e.
 
@@ -126,30 +129,26 @@ IfModule
 Ubuntu CRON Setup
 =================
 
-CRON issues running cPanel on Ubuntu maybe found 
-where you should enable normal shell for the user 
-account in which the CRON is being run from.
-For Ubuntu CRON issues please contact cPanel if
-utilized.
+CRON issues running cPanel on Ubuntu maybe found where you should enable normal shell for the user account in which the CRON is being run from.
+For Ubuntu CRON issues please contact cPanel if utilized.
 
-cPanel Support Advice:
+WHM/cPanel Support Advice:
 https://support.cpanel.net/hc/en-us/articles/6717639153943-Ubuntu-Jailed-Shell-users-unable-to-connect-to-mysqld-sock
-
 
 
 WHMCS System Settings / General
 ================================
 
-Change your WHMCS System URL to HTTPS 
+Ensure your WHMCS System URL is set to HTTPS. 
 
 
 ictVoIP Billing Module Setup
 =============================
 
 1) Create new Provider/PBX (i.e Telnyx - FusionPBX)  (you would require a server module for your PBX or provider)
-2) Import and map your Tariff CSV from your provider 
+2) Import and map your Tariff or Rate Card CSV from your VoIP provider. 
    (required mapped column fields - Description/Prefix/RateValue/Increment)
-3) Setup your Package Rates (you would require a server module for your PBX or provider)
+3) Setting up your Package Rates (you would require a server module for your PBX or provider)
  a) Select the VoIP Product you created earlier
 
  b) Select your Tariff that was just imported
