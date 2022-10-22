@@ -16,7 +16,6 @@ ictVoIP Billing Admin area for management of addon configuration and setup.
   :maxdepth: 3
   :glob:
 
-  admin/admin.rst
   admin/packages.rst
   admin/providers.rst
   admin/servers.rst
