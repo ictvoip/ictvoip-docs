@@ -8,4 +8,4 @@ Servers installed can be provisioned from purchasing the module for your PBX or 
   :maxdepth: 3
   :glob:
 
-  servers/serverss.rst
+  servers/servers.rst
