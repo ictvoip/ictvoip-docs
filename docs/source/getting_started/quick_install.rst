@@ -48,6 +48,7 @@ FusionPBX Server Module
 -----------------------
 System Settings / Products & Services /
 - Create your new VoIP Product with description and with the Module Settings Tab, select Fusionpbx Module name and then place your License Key in the box, save. 
+
 i.e. LeasedFusionPBX_f14fa0a312e4fac10107
 
 
@@ -133,6 +134,7 @@ CRON issues running cPanel on Ubuntu maybe found where you should enable normal 
 For Ubuntu CRON issues please contact cPanel if utilized.
 
 WHM/cPanel Support Advice:
+
 https://support.cpanel.net/hc/en-us/articles/6717639153943-Ubuntu-Jailed-Shell-users-unable-to-connect-to-mysqld-sock
 
 
@@ -149,7 +151,7 @@ ictVoIP Billing Module Setup
 2) Import and map your Tariff or Rate Card CSV from your VoIP provider. 
    (required mapped column fields - Description/Prefix/RateValue/Increment)
 3) Setting up your Package Rates (you would require a server module for your PBX or provider)
- a) Select the VoIP Product you created earlier
+ a) Select the VoIP Product you created earlier her:  `Create VoIP Product <#fusionpbx-server-module>`_
 
  b) Select your Tariff that was just imported
 
