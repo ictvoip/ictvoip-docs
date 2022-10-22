@@ -11,7 +11,7 @@ Add new Provider/PBX - This name will link your Tariff and Package rates. Some f
  .. image:: _static/images/admin/new_provider.png
         :scale: 40%
         :align: center
-        :alt: ictVoIP Canada
+        :alt: Adding a new Provider or PBX
 
 i.e. [FusionPBX - Telnyx - Global] - no custom rates and all prefixes will billed with Global Markup.
  
