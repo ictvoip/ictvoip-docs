@@ -151,24 +151,21 @@ ictVoIP Billing Module Setup
 2) Import and map your Tariff or Rate Card CSV from your VoIP provider. 
    (required mapped column fields - Description/Prefix/RateValue/Increment)
 3) Setting up your Package Rates (you would require a server module for your PBX or provider)
- a) Select the VoIP Product you created earlier her:  `Create VoIP Product <#fusionpbx-server-module>`_
+ a) Select the VoIP Product you created earlier here:   `FusionPBX Server Module <#fusionpbx-server-module>`_
 
  b) Select your Tariff that was just imported
 
  c) Select the Country Code/Exit Code of your Billing Region. 
-    - if you wish to strip any leading digits of the CID and replace it 
-	  with the selected Country Code then select 
- 	  "Check to enable: - Incorrect prefix removal / prepend Country Code"
-	  and enter the leading digit to be stripped.
+    - if you wish to strip any leading digits of the CID and replace it with the selected Country Code then select "Check to enable: - Incorrect prefix removal / prepend Country Code" and enter the leading digit to be stripped.
 
  d) Enter your Global Markup rate for this product.
 
- e) Set Free minutes to 0 if none are allocatted for your product or 
-    free minutes allowed before billed.
+ e) Set Free minutes to 0 if none are allocatted for your product or free minutes allowed before billed if metered billing product.
 
  f) Custom Package Rates [status=0] in Tariff Table
     Set your incremental inbound/outbound costs to sell at. ie. 0.00967
     Set your custom incremental billing value in sec. ie. 6/6 or 30/6 or 1/1
-	If you wish to use Custom rates for specific regions you must set 
-	[status] column to 0 in order for that Prefix(es) to use custom rates.
+    If you wish to use Custom Rates for specific regions you must set [status] column to 0 in order for that Prefix(es) to use custom rates.
+    SQL query example to use selected regions in Canada:
+    
  
