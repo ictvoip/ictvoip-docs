@@ -1,13 +1,17 @@
 .. image:: _static/images/logo_1500x1500px.png
-        :width: 170pt
+        :width: 160pt
         :align: center
-        :height: 170pt
+        :height: 160pt
         :alt: ictVoIP Canada
 |
 Welcome to ictVoIP Billing Docs
 =================================================
 
-ictVoIP Billing Management System is a WHMCS addon application that supports multi providers and various PBXs which calculates call times and allows for Tariff or custom rate. Automation of billing of overage minutes based on metered plans and CDR views for customer reports based on billing cycles. Client area addons for client area use for customers are currently expanding within our development.
+.. note::
+
+   This project is under active development.
+
+ictVoIP Billing Management System is a WHMCS addon application that supports multi providers and various PBXs which calculates call times and allows for Tariff or custom rate for billing. Automation of billing for overage minutes used based on metered plans or base product plans. CDR views for customer reports based on billing cycles. Client area addons for client area use for customers are currently expanding within our development.
 
 Some of the Key Features
 ************************
@@ -36,9 +40,6 @@ https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` of ictVoIP Billing and modules.
 
-.. note::
-
-   This project is under active development.
 
 Getting Started
 =====================
