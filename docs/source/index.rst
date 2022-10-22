@@ -105,30 +105,6 @@ Packages
 
    packages.rst
 
-Client Area
-=============
-
-.. toctree::
-   :maxdepth: 4
-
-   clientarea.rst
-
-Hardware
-=============
-
-.. toctree::
-   :maxdepth: 4
-
-   hardware.rst
-
-Software
-===========
-
-.. toctree::
-   :maxdepth: 4
-   
-   software.rst
-
 Additional Information
 =======================
 
