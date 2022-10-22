@@ -8,4 +8,4 @@ Client area for view of CDRs of assigned VoIP products.
   :maxdepth: 3
   :glob:
 
-  clientadmin/clientarea.rst
+  clientarea/clientarea.rst
