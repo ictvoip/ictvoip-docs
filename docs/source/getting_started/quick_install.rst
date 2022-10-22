@@ -149,7 +149,8 @@ ictVoIP Billing Module Setup
 
 1) Create new Provider/PBX (i.e Telnyx - FusionPBX)  (you would require a server module for your PBX or provider)
 2) Import and map your Tariff or Rate Card CSV from your VoIP provider. 
-   (required mapped column fields - Description/Prefix/RateValue/Increment)
+   Attention to the required mapped column fields from your providers CSV:
+   /Description/Prefix/RateValue/Increment/
 3) Setting up your Package Rates (you would require a server module for your PBX or provider)
  a) Select the VoIP Product you created earlier here:   `FusionPBX Server Module <#fusionpbx-server-module>`_
 
@@ -165,7 +166,5 @@ ictVoIP Billing Module Setup
  f) Custom Package Rates [status=0] in Tariff Table
     Set your incremental inbound/outbound costs to sell at. ie. 0.00967
     Set your custom incremental billing value in sec. ie. 6/6 or 30/6 or 1/1
-    If you wish to use Custom Rates for specific regions you must set [status] column to 0 in order for that Prefix(es) to use custom rates.
-    SQL query example to use selected regions in Canada:
-    
- 
+    If you wish to use Custom Rates for specific prefixes or regions you must set [status] column to 0 in order for those Prefixes to bill using the set custom rates.
+  
