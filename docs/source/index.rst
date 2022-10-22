@@ -36,7 +36,7 @@ ictVoIP Billing is compatible with WHMCS v8+, PHP7.4, PHP8.1, Apache and LiteSpe
 You may select your server module required for your PBX or Provider API here:
 https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software
 
-Check out the :doc:`usage` section for further information, including
+Check out the :doc:`getting_started` section for quick setup, including
 how to :ref:`installation` of ictVoIP Billing and modules.
 
 
