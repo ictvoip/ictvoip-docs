@@ -41,13 +41,13 @@ ictVoIP Billing Addon
 ---------------------
 System Settings / Apps & Integrations / Addon Modules / 
 - Click Activate then configure and enter your license and the appropriate Access control groups and save.
+
 ie. LeasedictVoIP_a3174afbf93b3b8ba8f3
 
 FusionPBX Server Module
 -----------------------
 System Settings / Products & Services /
-- Create your new VoIP Product with description and with the Module Settings Tab, select Fusionpbx Module 
-  name and then place your License Key in the box, save. 
+- Create your new VoIP Product with description and with the Module Settings Tab, select Fusionpbx Module name and then place your License Key in the box, save. 
 ie. LeasedFusionPBX_f14fa0a312e4fac10107
 
 
