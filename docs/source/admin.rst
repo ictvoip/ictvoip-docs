@@ -15,3 +15,7 @@ ictVoIP Billing Admin area for addon configuration and setup.
   :glob:
 
   admin/admin.rst
+  admin/packages.rst
+  admin/providers.rst
+  admin/servers.rst
+  admin/tariffs.rst
