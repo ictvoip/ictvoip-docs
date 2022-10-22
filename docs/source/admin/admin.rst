@@ -14,7 +14,8 @@ Add new Provider/PBX - This name will link your Tariff and Package rates. Some f
   :maxdepth: 3
   :glob:
 
-  admin/packages.rst
   admin/providers.rst
-  admin/servers.rst
   admin/tariffs.rst
+  admin/packages.rst
+  admin/servers.rst
+  
