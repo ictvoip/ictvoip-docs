@@ -3,6 +3,7 @@ Admin Area
 ************
 
 ictVoIP Billing Admin area for management of addon configuration and setup.
+
 |
 
 .. image:: _static/images/admin/providers.png
