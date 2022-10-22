@@ -1,8 +1,8 @@
 *************
 Quick Install
 *************
-.. image:: ../_static/images/ictVoIP_Logo.png
-        :scale: 1%
+.. image:: ../_static/images/document_logo.png
+        :scale: 100%
 
 |
 
