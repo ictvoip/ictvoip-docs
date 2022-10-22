@@ -9,7 +9,7 @@ Add new Provider/PBX - This name will link your Tariff and Package rates. Some f
 
 |
 
- .. image:: _static/images/admin/new_provider.png
+ .. image:: ../_static/images/admin/new_provider.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
