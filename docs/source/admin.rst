@@ -7,7 +7,7 @@ ictVoIP Billing Admin area for management of addon configuration and setup.
 |
 
 .. image:: _static/images/admin/providers.png
-        :scale: 40%
+        :scale: 70%
         :align: center
         :alt: ictVoIP Canada
 |
