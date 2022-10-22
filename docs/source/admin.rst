@@ -2,7 +2,7 @@
 Admin Area
 ************
 
-ictVoIP Billing Admin area for management of addon configuration and setup.
+ictVoIP Billing Admin area for the management of addon configuration and setup of Provider, Tariffs and Package Rates.
 
 |
 
