@@ -48,13 +48,29 @@ Getting Started
    
    getting_started.rst
 
-Home
-=====
+Admin Area
+===========
 
 .. toctree::
    :maxdepth: 4
    
-   home.rst
+   admin.rst
+
+Client Admin
+=============
+
+.. toctree::
+   :maxdepth: 4
+   
+   clientadmin.rst
+
+Client Area
+=============
+
+.. toctree::
+   :maxdepth: 4
+   
+   clientarea.rst
 
 Providers
 ===========
