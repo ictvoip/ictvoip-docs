@@ -1,5 +1,5 @@
-******************
-Client Admin Area
-******************
+.. toctree::
+  :maxdepth: 3
+  :glob:
 
-Placeholder
+  clientadmin/clientadmin.rst
