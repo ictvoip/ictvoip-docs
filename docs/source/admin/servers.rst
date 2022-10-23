@@ -52,8 +52,8 @@ This example will provide the steps required to place the APIs onto your FusionP
 |
 
 
-Adding a Server
-****************
+Installing Server Module
+**************************
 |
 Adding your server module to WHMCS. We will provide an example of the FusionPBX server module install but the same steps can be used for other server modules. 
 
