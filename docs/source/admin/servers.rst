@@ -49,7 +49,11 @@ Adding a Server
 
 In this case we will provide an example of the FusionPBX server module. To do this create your Server(s) for FusionPBX within WHMCS
 
+::
+
 WHMCS/System Settings/Products & Services/Servers
+
+|
 
 Create your server with the following requirements:
 
