@@ -2,8 +2,18 @@
 Installing ictVoIP Billing
 ############################
 
-
+|
 ictVoIP Billing can be installed on WHMCS v8.5.x and v8.6.x running PHP7.x and soon PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a basic install of WHMCS with https enabled and understand the administration of the WHMCS platform. 
+
+|
+
+ .. image:: ../_static/images/admin/addon_lic.png
+        :scale: 60%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
 
 If you require the ictVoIP Billing addon module go here: `ictVoIP Billing Software <https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
 
