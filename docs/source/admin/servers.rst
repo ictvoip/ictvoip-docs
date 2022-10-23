@@ -13,8 +13,6 @@ Use of our Server modules with the ictVoIP Billing System allows you to provisio
         
 |
 
-
-
 Installing the API
 *******************
 
