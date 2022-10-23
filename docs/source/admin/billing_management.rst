@@ -62,8 +62,8 @@ Exclude and Suppress CDR output from columns Direction & Description.
 
 ::
 
-Exclude = exclude these filtered CDR records from billing
-Suppress = Suppress the CDR record from displaying in the CDR Client View
+ Exclude = exclude these filtered CDR records from billing
+ Suppress = Suppress the CDR record from displaying in the CDR Client View
 
 |
 Here we can elimante the CDR output of internal calls such as direct Extension or Voicemail calling by adding filter phares like this:
