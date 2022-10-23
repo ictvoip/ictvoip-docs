@@ -40,14 +40,12 @@ mySQL Table Import
 
 Import the Country Codes table to your WHMCS DB - mod_ictvoipbilling_country_codes.sql
 
-Important - Licensing
-########################
+License Activation
+#####################
 
 
-Activating the ictVoIP Billing System enter your license keys into the following locations within your modules.
+Activating the ictVoIP Billing System enter your license key into the following locations.
 
-ictVoIP Billing Addon
-***********************
 
 System Settings / Apps & Integrations / Addon Modules / - Click Activate then configure and enter your license and the appropriate Access control groups and save.
 
