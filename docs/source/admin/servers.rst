@@ -4,6 +4,16 @@ Servers
 
 Use of our Server modules with the ictVoIP Billing System allows you to provision to our custom API for your PBX or Provider. Once installed your PBX(s) you may have an almost unlimited amount of PBX servers to support your infrastructure for billing from these hosts.
 
+|
+
+ .. image:: ../_static/images/admin/servers.png
+        :scale: 70%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
 Install the API
 ****************
 
