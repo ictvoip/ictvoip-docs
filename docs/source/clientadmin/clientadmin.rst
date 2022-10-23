@@ -1,11 +1,12 @@
 ******************
 Client Admin Area
 ******************
+|
 
 Product Assignment
 ********************
 
-administration of server modules and billing would be setup with client products.  After you have your Addon and Server module installed and have created a VoIP product either metered or not you can add the product to the WHMCS client products. This example shows that you already have knowledge of adding products to your client accounts. Further information can be located with the WHMCS supported documentation here: WHMCS Docs
+Administration of server modules and billing would be setup with client products.  After you have your Addon and Server module installed and have created a VoIP product either metered or not you can add the product to the WHMCS client products. This example shows that you already have knowledge of adding products to your client accounts. Further information can be located with the WHMCS supported documentation here: WHMCS Docs
 
 |
 
@@ -16,3 +17,29 @@ administration of server modules and billing would be setup with client products
         
 |
 
+
+Formatting to API
+*******************
+
+Once your VoIP product has been assigned there are fields which must follow the following formats.
+
+ 1) Assign your FusionPBX server from the drop down. If only one server has been assigned it will appear and be selected.
+ 2) Assign the Domain/Tenant with Main DID attached to Domain
+ 
+::
+ 
+  mcon.wat5.ictvoip.ca | 5192229000
+  
+|
+ 
+ 3) Assign the extension you wish to have within the clients billing. Multi extension should use the | as the seperator.
+  
+::
+  
+   2112 | 2113 | 2114 | 2115 | 2216
+   
+|
+
+ 4) Save and then test your API connectivity to your FusionPBX account by then going to the Client's account view.
+ 
+ 
