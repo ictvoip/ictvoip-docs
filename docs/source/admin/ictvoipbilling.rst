@@ -55,3 +55,12 @@ i.e.
  LeasedictVoIP_a3174afbf93b3b8ba8f3
 
 |
+
+|
+
+ .. image:: ../_static/images/admin/addon_lic.png
+        :scale: 60%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
