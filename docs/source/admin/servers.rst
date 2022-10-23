@@ -52,7 +52,7 @@ In this case we will provide an example of the FusionPBX server module. To do th
 |
 
  .. image:: ../_static/images/admin/server_edit.png
-        :scale: 70%
+        :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
         
