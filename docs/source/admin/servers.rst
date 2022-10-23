@@ -76,42 +76,42 @@ Hostname needs to be the FQDN of your hosted FusionPBX
 IP Address can be the local IP or public
 ::
 
-IP Address: 102.100.100.20
+ IP Address: 102.100.100.20
 
 |
 
 Assigned IP can be the local IP or public
 ::
 
-Assigned IP addresses: 102.100.100.20
+ Assigned IP addresses: 102.100.100.20
 
 |
 
 Maximum Accounts would typically be the maximum allowed tenants or the maximum total extensions for that PBX
 ::
 
-Maximum No. of Accounts: 100
+ Maximum No. of Accounts: 100
 
 |
 
 Module in this case we select the Fusionpbx server module
 ::
 
-Module: Fusionpbx
+ Module: Fusionpbx
 
 |
 
 This user should be created on the Fusion PBX side with superadmin group rights.
 ::
 
-Username: ictapi
+ Username: ictapi
 
 |
 
 This would be the password assigned to the FusionPBX API user
 ::
 
-Password: [PASSWD] 
+ Password: [PASSWD] 
 
 |
 
