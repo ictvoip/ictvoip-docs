@@ -53,13 +53,21 @@ Adding your server module to WHMCS. We will provide an example of the FusionPBX 
 
  Download the ictVoIP Server module and extract to /home/$user/tmp.
 
- i.e. Archive: /home/$user/tmp/ictvoip_fusionpbx-release-x.x.x.zip
+ i.e. Archive: /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1.zip
 
- After downloading and uncompressing your server module, copy the files to 
-
+ After downloading and uncompressing your server module, copy the files from
+ 
 ::
 
- /home/$user/public_html/modules/servers/  
+ /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1/modules/servers/fusionpbx
+
+|
+
+ To
+ 
+::
+
+ /home/$user/public_html/modules/servers/fusionpbx
 
 |
 
