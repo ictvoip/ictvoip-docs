@@ -23,14 +23,14 @@ The uncompressed server module file will have a directory named [api]. This will
  /ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1/api/fusionpbx/var/www/fusionpbx/app/xml_cdr
 
 |
-Placing the script files onto your FusionPBX you may use WinSCP or FTP. The files do not need to be modified in any way and are not encoded. 
+Placing the script files onto your FusionPBX you may use WinSCP or FTP. The files do not need to be modified in any way. 
 
 This example will provide the steps required to place the APIs onto your FusionPBX host or many hosts for the addition into WHMCS and the server creation within WHMCS.
 
-  1) FusionPBX APIs should be uploaded to your host using an application like WinSCP or FTP. You would require root access to upload these files.  
+ 1) FusionPBX APIs should be uploaded to your host using an application like WinSCP or FTP. You would require root access to upload these files.  
   
-    FusionPBX File locations and a directory which will be created:
 
+ FusionPBX File locations and a directory which will be created:
 ::
 
     /var/www/fusionpbx/app/xml_cdr/export_cdr.php
