@@ -15,7 +15,7 @@ ictVoIP Billing Management System is a WHMCS addon application that supports mul
 |
 
  .. image:: _static/images/home/video_intro.png
-        :scale: 50%
+        :scale: 65%
         :align: center
         :alt: ictVoIP Intro
         
@@ -27,7 +27,7 @@ Some of the Key Features
 |
 
  .. image:: _static/images/home/key_features.png
-        :scale: 50%
+        :scale: 65%
         :align: center
         :alt: Key Features
         
@@ -52,7 +52,7 @@ These are just of few benefits of billing with our existing PBX and Provider API
 |
 
  .. image:: _static/images/home/lean_process.png
-        :scale: 50%
+        :scale: 65%
         :align: center
         :alt: Lean Process
         
