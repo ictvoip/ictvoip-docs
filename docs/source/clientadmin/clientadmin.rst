@@ -22,8 +22,19 @@ Formatting to API
 *******************
 
 Once your VoIP product has been assigned there are fields which must follow the following formats.
+
 |
- 1) Assign your FusionPBX server from the drop down. If only one server has been assigned it will appear and be selected.
+
+ 1) Assign your FusionPBX server from the drop down. If only one server has been assigned it will appear and be selected. 
+
+.. image:: ../_static/images/clientadmin/client_admin_server.png
+        :scale: 70%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
  
 |
  2) Assign the Domain/Tenant with Main DID attached to Domain
