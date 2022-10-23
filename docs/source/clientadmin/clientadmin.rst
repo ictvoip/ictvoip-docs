@@ -22,7 +22,7 @@ Formatting to API
 *******************
 
 Once your VoIP product has been assigned there are fields which must follow the following formats.
-
+|
  1) Assign your FusionPBX server from the drop down. If only one server has been assigned it will appear and be selected.
  
 |
