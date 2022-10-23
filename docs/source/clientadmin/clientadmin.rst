@@ -33,12 +33,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
         :alt: Adding a new Provider or PBX
         
 |
-
-
- 
-|
- 2) Assign the Domain/Tenant with Main DID attached to Domain
- 
+ 2) Assign the Domain/Tenant with Main DID attached to Domain 
 ::
  
   mcon.wat5.ictvoip.ca | 5192229000
@@ -51,7 +46,6 @@ Once your VoIP product has been assigned there are fields which must follow the 
    2112 | 2113 | 2114 | 2115 | 2216
    
 |
-
  4) Save and then test your API connectivity to your FusionPBX account by then going to the Client's account view.
  
  
