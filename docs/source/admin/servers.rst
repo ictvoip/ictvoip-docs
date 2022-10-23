@@ -28,6 +28,7 @@ This example will provide the steps required to place the APIs onto your FusionP
     FusionPBX File locations and a directory which will be created:
 
 ::
+
     /var/www/fusionpbx/app/xml_cdr/export_cdr.php
 
     /var/www/fusionpbx/app/xml_cdr/import_cdr.php  
@@ -39,9 +40,11 @@ This example will provide the steps required to place the APIs onto your FusionP
 |
 
 
-
   2) Please note that the import_cdr script can be used to import CDRs from other FusionPBX hosts to provide testing of correct CDR formatting of your FusionPBX setup. 
-::   ** Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant. **
+  
+::   
+
+** Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant. **
    
 |
 
