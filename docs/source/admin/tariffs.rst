@@ -15,6 +15,10 @@ To import your Tariff, you must download your Rate Card or Tariff from your Prov
 |
 
 
+Importing
+************
+
+
  1) Create a name for the Tariff you are ready to import. A good naming convention could be  - Providername_outbound_2022_10
 
  2) Highlight the Tariff name and click on Open
@@ -35,7 +39,7 @@ To import your Tariff, you must download your Rate Card or Tariff from your Prov
 |
 
 
-  5) Once import is complete you may now assign any Filtering you wish like Toll free numbers to be excluded from billing or Emergency Numbers. Further details will be provided within the Filtering section.
+  5) Once import is complete you may now assign any Filtering you wish like Toll free numbers to be excluded from billing or Emergency Numbers. Further details will be provided within the Filtering section here: `Billing Management <../admin/billing_management.html>`_
   
   |
 
