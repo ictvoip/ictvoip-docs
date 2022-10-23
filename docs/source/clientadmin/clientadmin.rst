@@ -25,7 +25,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
 
  1) Assign your FusionPBX server from the drop down. If only one server has been assigned it will appear and be selected.
  
- 
+|
  2) Assign the Domain/Tenant with Main DID attached to Domain
  
 ::
