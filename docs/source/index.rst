@@ -14,7 +14,7 @@ ictVoIP Billing Management System is a WHMCS addon application that supports mul
 
 |
 
- .. image:: ../_static/images/home/video_intro.png
+ .. image:: _static/images/home/video_intro.png
         :scale: 50%
         :align: center
         :alt: ictVoIP Intro
