@@ -51,7 +51,7 @@ In this case we will provide an example of the FusionPBX server module. To do th
 
 ::
 
-WHMCS/System Settings/Products & Services/Servers
+ WHMCS/System Settings/Products & Services/Servers
 
 |
 
