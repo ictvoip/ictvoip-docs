@@ -51,6 +51,34 @@ System Settings / Products & Services /
 
 i.e. LeasedFusionPBX_f14fa0a312e4fac10107
 
+Vodia Server Module
+---------------------
+System Settings / Products & Services /
+- Create your new VoIP Product with description and with the Module Settings Tab, select Vodia Module name and then place your License Key in the box, save. 
+
+i.e. LeasedVodia_f14fa0a312e4fac10107
+
+LesNet Server Module
+---------------------
+System Settings / Products & Services /
+- Create your new VoIP Product with description and with the Module Settings Tab, select LesNet Module name and then place your License Key in the box, save. 
+
+i.e. LeasedLesNet_f14fa0a312e4fac10107
+
+VoIPms Server Module
+---------------------
+System Settings / Products & Services /
+- Create your new VoIP Product with description and with the Module Settings Tab, select VoIPms Module name and then place your License Key in the box, save. 
+
+i.e. LeasedVoIPms_f14fa0a312e4fac10107
+
+
+VoIP Fax Server Module
+-----------------------
+System Settings / Products & Services /
+- Create your new VoIP Product with description and with the Module Settings Tab, select VoIPFax Module name and then place your License Key in the box, save. 
+
+i.e. LeasedVoIPFax_f14fa0a312e4fac10107
 
 Special Notes:
 ==============
