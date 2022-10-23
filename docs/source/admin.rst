@@ -21,4 +21,5 @@ ictVoIP Billing Admin area for the management of addon configuration and setup o
   admin/providers.rst
   admin/tariffs.rst
   admin/packages.rst
+  admin/autobill.rst
   
