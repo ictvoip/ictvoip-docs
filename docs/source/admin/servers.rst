@@ -58,7 +58,9 @@ Adding your server module to WHMCS. We will provide an example of the FusionPBX 
  After downloading and uncompressing your server module, copy the files to 
 
 ::
+
  /home/$user/public_html/modules/servers/  
+
 |
 
 Create your Server(s) for FusionPBX within WHMCS
