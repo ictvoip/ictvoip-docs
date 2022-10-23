@@ -57,11 +57,12 @@ In this case we will provide an example of the FusionPBX server module. To do th
 
 Create your server with the following requirements:
 
+
+Server Name could be the FQDN of your hosted FusionPBX
 ::
 
  Name: waterloo5.ictvoip.ca - FusionPBX
 |
-this could be the FQDN of your hosted FusionPBX
 
 ::
 
