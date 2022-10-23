@@ -47,7 +47,22 @@ This example will provide the steps required to place the APIs onto your FusionP
 Adding a Server
 ****************
 
-In this case we will provide an example of the FusionPBX server module. To do this create your Server(s) for FusionPBX within WHMCS
+Adding your server module to WHMCS. We will provide an example of the FusionPBX server module install but the same steps can be used for other server modules. 
+ 1. You may purchase your server module here: `ictVoIP Billing Software <https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
+
+
+ Download the ictVoIP Server module and extract to /home/$user/tmp.
+
+ i.e. Archive: /home/$user/tmp/ictvoip_fusionpbx-release-x.x.x.zip
+
+ After downloading and uncompressing your server module, copy the files to 
+
+::
+ /home/$user/public_html/modules/servers/  
+|
+
+Create your Server(s) for FusionPBX within WHMCS
+*************************************************
 
 |
 
