@@ -49,6 +49,15 @@ Adding a Server
 
 In this case we will provide an example of the FusionPBX server module. To do this create your Server(s) for FusionPBX within WHMCS
 
+|
+
+ .. image:: ../_static/images/admin/server_edit.png
+        :scale: 70%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
 ::
 
  WHMCS/System Settings/Products & Services/Servers
