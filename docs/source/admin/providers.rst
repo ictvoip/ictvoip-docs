@@ -1,8 +1,8 @@
 ***************
-PBX/Providers
+Provider/PBX 
 ***************
 
-PBX Servers and Provider APIs Servers. Setting up new Provider or PBX provides many custom senarios for your install and landscape.
+Provider APIs Servers and PBX Servers. Setting up new Provider or PBX provides many custom senarios for your install and landscape.
 
 Add new Provider/PBX - This name will link your Tariff and Package rates. Some formatting would be as follows:
  - PBX Vendor - Provider Tariff
