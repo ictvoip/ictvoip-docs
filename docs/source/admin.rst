@@ -13,7 +13,7 @@ ictVoIP Billing Admin area for the management of addon configuration and setup o
 |
 
 .. toctree::
-  :maxdepth: 3
+  :maxdepth: 9
   :glob:
 
   admin/ictvoipbilling.rst
