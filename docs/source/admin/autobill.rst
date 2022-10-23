@@ -15,7 +15,5 @@ Your CRON entry could be as follows:
 You may also test run your install by populating the script link into your browser. Be sure to set the next due date of the client's VoIP product to be the current date. 
 
 One method of displaying the calculations from the CDR billing from the autobill script is to enable the check box located within the Providers Mangement dashboard. 
-This can be found within the Tariff Management dashboard here:
-
-`Tariff Management <../admin/tariffs.html>`_
+This can be found within the Tariff Management dashboard here: `Tariff Management <../admin/tariffs.html>`_
 
