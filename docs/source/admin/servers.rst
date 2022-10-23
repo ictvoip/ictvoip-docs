@@ -57,12 +57,18 @@ In this case we will provide an example of the FusionPBX server module. To do th
 
 Create your server with the following requirements:
 
-Name: waterloo5.ictvoip.ca - FusionPBX
+::
 
+ Name: waterloo5.ictvoip.ca - FusionPBX
+
+|
 this could be the FQDN of your hosted FusionPBX
 
-Hostname: waterloo5.ictvoip.ca
+::
 
+ Hostname: waterloo5.ictvoip.ca
+
+|
 this needs to be the FQDN of your hosted FusionPBX **
 
 IP Address: 102.100.100.20
