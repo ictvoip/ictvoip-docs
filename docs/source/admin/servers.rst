@@ -17,9 +17,10 @@ Installing the API
 *******************
 
 The uncompressed server module file will have a directory named [api]. This will have the structure of where the files need to be uploaded to your FusionPBX host. 
+ i.e.
 ::
 
-i.e /ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1/api/fusionpbx/var/www/fusionpbx/app/xml_cdr
+ /ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1/api/fusionpbx/var/www/fusionpbx/app/xml_cdr
 
 |
 Placing the script files onto your FusionPBX you may use WinSCP or FTP. The files do not need to be modified in any way and are not encoded. 
