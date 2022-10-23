@@ -53,6 +53,8 @@ WHMCS/System Settings/Products & Services/Servers
 
 Create your server with the following requirements:
 
+|
+
 ::
 
 Name: waterloo5.ictvoip.ca - FusionPBX
