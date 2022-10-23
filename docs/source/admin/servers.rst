@@ -92,7 +92,8 @@ Once copied your directory server module files and directory structure should be
 Create your Server(s) for FusionPBX within WHMCS
 *************************************************
 
-Within WHMCS to add your servers go here:
+
+Within WHMCS to add and setup your servers go here:
 
 ::
 
