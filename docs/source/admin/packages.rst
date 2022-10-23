@@ -7,7 +7,7 @@ VoIP Package assignments and setup of server modules for extentions and API conn
 |
 
  .. image:: ../_static/images/admin/package_rates.png
-        :scale: 70%
+        :scale: 45%
         :align: center
         :alt: Package Rates
         
@@ -25,7 +25,7 @@ VoIP Package assignments and setup of server modules for extentions and API conn
 |
 
  .. image:: ../_static/images/admin/prepend_country_code.png
-        :scale: 70%
+        :scale: 50%
         :align: center
         :alt: Prepend Country Code
         
@@ -45,7 +45,7 @@ Here you can be creative as to how you would like to manage your custom rates.  
 |
 
  .. image:: ../_static/images/admin/custom_rates.png
-        :scale: 70%
+        :scale: 50%
         :align: center
         :alt: Custom Rates
         
