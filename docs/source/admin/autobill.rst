@@ -2,7 +2,7 @@
 Autobill CRON
 ***************
 
-To be able to bill VoIP CDRs from your server module we use a script called autobill. This script should be assigned to execute 30min before your WHMCS daily CRON job. For instance, if your WHMCS Daily CRON is set to run at 1AM the set the CRON for autobill to run at 12:30AM.
+To be able to bill VoIP CDRs from your server module we use a script called Autobill. This script should be assigned to execute 45min before your WHMCS daily CRON job. For instance, if your WHMCS Daily CRON is set to run at 1AM then set the CRON for Autobill to run at 12:15AM. This should allow enough time if you have many servers and domains/tenants for each server module. If you find this is not enough time then move your daily CRON in WHMCS to 2AM and start your Autobill CRON at 12:15AM
 
 Your CRON entry could be as follows:
 
@@ -14,6 +14,6 @@ Your CRON entry could be as follows:
 
 You may also test run your install by populating the script link into your browser. Be sure to set the next due date of the client's VoIP product to be the current date. 
 
-One method of displaying the calculations from the CDR billing from the autobill script is to enable the check box located within the Providers Mangement dashboard. 
+One method of displaying the calculations from the CDR billing from the Autobill script is to enable the check box located within the Providers Mangement dashboard. 
 This can be found within the Tariff Management dashboard here: `Tariff Management <../admin/tariffs.html>`_
 
