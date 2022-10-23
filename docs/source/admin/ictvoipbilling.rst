@@ -69,7 +69,7 @@ i.e.
 |
 
  .. image:: ../_static/images/admin/addon_lic.png
-        :scale: 60%
+        :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
         
