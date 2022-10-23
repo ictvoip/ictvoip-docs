@@ -7,7 +7,7 @@ ictVoIP Billing can be installed on WHMCS v8.5.x and v8.6.x running PHP7.x and s
 
 |
 
- .. image:: ../_static/images/admin/addon_lic.png
+ .. image:: ../_static/images/admin/ictvoip_billing_dashboard.png
         :scale: 60%
         :align: center
         :alt: Adding a new Provider or PBX
