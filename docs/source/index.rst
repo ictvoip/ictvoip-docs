@@ -26,7 +26,7 @@ Some of the Key Features
 
 |
 
- .. image:: ../_static/images/home/key_features.png
+ .. image:: _static/images/home/key_features.png
         :scale: 50%
         :align: center
         :alt: Key Features
@@ -51,7 +51,7 @@ These are just of few benefits of billing with our existing PBX and Provider API
 
 |
 
- .. image:: ../_static/images/home/lean_process.png
+ .. image:: _static/images/home/lean_process.png
         :scale: 50%
         :align: center
         :alt: Lean Process
