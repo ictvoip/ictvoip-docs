@@ -53,6 +53,8 @@ WHMCS/System Settings/Products & Services/Servers
 
 Create your server with the following requirements:
 
+::
+
 Name: waterloo5.ictvoip.ca - FusionPBX
 - this could be the FQDN of your hosted FusionPBX
 Hostname: waterloo5.ictvoip.ca
@@ -69,6 +71,8 @@ Username: ictapi
 - This user should be created on the Fusion PBX side with superadmin group rights.
 Password: [PASSWD] 
 - This would be the password assigned to the FusionPBX API user
+
+|
 
 Add more as required.
 
