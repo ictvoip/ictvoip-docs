@@ -167,7 +167,8 @@ For Ubuntu CRON issues please contact cPanel if utilized.
 WHM/cPanel Support Advice:
 ****************************
 
-https://support.cpanel.net/hc/en-us/articles/6717639153943-Ubuntu-Jailed-Shell-users-unable-to-connect-to-mysqld-sock
+`cPanel Article <https://support.cpanel.net/hc/en-us/articles/6717639153943-Ubuntu-Jailed-Shell-users-unable-to-connect-to-mysqld-sock>`_
+
 
 |
 
