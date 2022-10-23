@@ -10,7 +10,7 @@ Administration of server modules and billing would be setup with client products
 
 |
 
- .. image:: ../_static/images/clientadmin/client_product.png
+ .. image:: ../_static/images/clientadmin/client_product1.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
