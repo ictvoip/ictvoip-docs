@@ -16,8 +16,9 @@ ictVoIP Billing can be installed on WHMCS v8.5.x and v8.6.x running PHP7.x and s
 **1.** After downloading the ictVoIP Billing .zip
 
 You may select your server module required for your PBX or Provider API.
-Purchase your server module here: 
-https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software
+
+Purchase your server module here: `ictVoIP Billing Software https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
+
 
 Download the ictVoIP Billing Addon along with your 
 Server module and extract to /home/$user/tmp.
