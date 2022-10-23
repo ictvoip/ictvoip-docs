@@ -14,8 +14,9 @@ Use of our Server modules with the ictVoIP Billing System allows you to provisio
 |
 
 
-Install the API
-****************
+
+Installing the API
+*******************
 
 The uncompressed server module file will have a directory named API. This will have the structure of where the files need to be uploaded to your FusionPBX host. 
 To place the files onto your FusionPBXThe files do not need to be modified in any way and are not encoded. 
@@ -34,6 +35,8 @@ This example will provide the steps required to place the APIs onto your FusionP
   2) Please note that the import_cdr script can be used to import CDRs from other FusionPBX hosts to provide testing of correct CDR formatting of your FusionPBX setup. 
    *** Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant. ***
    
+|
+
 
 Adding a Server
 ****************
