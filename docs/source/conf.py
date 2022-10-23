@@ -2,12 +2,10 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = u'ictVoIP Billing'
+copyright = u'2022, ictVoIP Canada'
 
-release = '0.1'
-version = '0.1.0'
+version = '1.3'
 
 # -- General configuration
 
@@ -30,6 +28,7 @@ templates_path = ['_templates']
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
+html_favicon = "_static/images/favicon.ico"
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
