@@ -1,27 +1,59 @@
-###################################
-Installing ictVoIP Billing Module
-###################################
+############################
+Installing ictVoIP Billing
+############################
 
 
-ictVoIP Billing can be installed on WHMCS v8.5.x and v8.6.x running PHP7.x and soon PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a basic install of WHMCS with https enabled and understand the administration of the WHMCS platform. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA
+ictVoIP Billing can be installed on WHMCS v8.5.x and v8.6.x running PHP7.x and soon PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a basic install of WHMCS with https enabled and understand the administration of the WHMCS platform. 
 
-1. After downloading the ictVoIP Billing .zip
+If you require the ictVoIP Billing addon module go here: `ictVoIP Billing Software <https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
 
-You may select your server module required for your PBX or Provider API.
 
-Purchase your server module here: ictVoIP Billing Software
+ 1. Downloading the ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip
 
-Download the ictVoIP Billing Addon along with your Server module and extract to /home/$user/tmp.
+Download the ictVoIP Billing addon module to /home/$user/tmp.
 
-i.e. Archive: /home/$user/tmp/ictvoip_billing-release-x.x.x.zip
+i.e. Archive: 
+::
+
+/home/$user/tmp/ictvoip_billing-release-x.x.x.zip
+
+|
+ 2. Uncompress the module and copy the contents to your WHMCS root installation. Your directories which should be copied would be like this:
+ 
+ ::
+ 
+   /home/$user/public_html/admin/
+   /home/$user/public_html/admin/lang
+   /home/$user/public_html/admin/lang/overrides
+   /home/$user/public_html/images/
+   /home/$user/public_html/modules/addons/ictvoipbilling
+   /home/$user/public_html/modules/addons/ictvoipbilling/Actions
+   /home/$user/public_html/modules/addons/ictvoipbilling/Utility
+   /home/$user/public_html/modules/addons/ictvoipbilling/crons
+   /home/$user/public_html/modules/addons/ictvoipbilling/import
+   /home/$user/public_html/modules/addons/ictvoipbilling/tariff
+
+|
+
 mySQL Table Import
+####################
 
 Import the Country Codes table to your WHMCS DB - mod_ictvoipbilling_country_codes.sql
+
 Important - Licensing
+########################
+
 
 Activating the ictVoIP Billing System enter your license keys into the following locations within your modules.
+
 ictVoIP Billing Addon
+***********************
 
 System Settings / Apps & Integrations / Addon Modules / - Click Activate then configure and enter your license and the appropriate Access control groups and save.
 
-i.e. LeasedictVoIP_a3174afbf93b3b8ba8f3
+i.e. 
+::
+
+ LeasedictVoIP_a3174afbf93b3b8ba8f3
+
+|
