@@ -107,14 +107,6 @@ Contributing
 
    contributing.rst
 
-Documentation Guide
-====================
-
-.. toctree::
-   :maxdepth: 4
-
-   doc_guide.rst
-
 Other
 =======
 
