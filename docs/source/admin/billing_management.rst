@@ -82,4 +82,21 @@ Exclude from Billing
 #######################
 
 
+Exclude CDR output from columns Destination & Description. 
+
+::
+
+ Exclude = exclude these filtered CDR records from billing
+
+|
+Here we can display the output of the CDR filered records but Exclude from Billing the output.
+
+Let's Exclude from billing all Toll Free and Emergency numbers within North America.
+
+Exclude 18884163054, 911, etc.
+::
+
+ 844xxxxxxx,888xxxxxxx,877xxxxxxx,866xxxxxxx,800xxxxxxx,1800xxxxxxx,1844xxxxxxx,1866xxxxxxx,1877xxxxxxx,1888xxxxxxx,2264763054,8884163054,18884163054,911
+
+|
 
