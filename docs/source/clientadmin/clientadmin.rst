@@ -47,4 +47,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
 |
  4) Save and then test your API connectivity to your FusionPBX account by then going to the Client's account view.
  
+Special Considerations: 
+#########################
  
+Our API pulls the CDR outbound details from the Destination column within FusionPBX and the inbound from the Caller Destination column. It is best to try and match your formatting outbound to include your Country code as this will elliminate the requirement for the use of the filter used within setting your package rates "Check to Enable" if your PBX CDRs use a prefix for local/regional calls as where you do not use your country code. For further information about this setting please refer to the _`VoIP Package Rates /admin/packages.rst'_ section.
