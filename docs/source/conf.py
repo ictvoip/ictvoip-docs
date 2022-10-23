@@ -2,10 +2,10 @@
 
 # -- Project information
 
-project = ictVoIP Billing
-copyright = 2022, ictVoIP Canada
+project = 'ictVoIP Billing'
+copyright = '2022, ictVoIP Canada'
 
-version = 1.3.0
+version = '1.3.0'
 
 # -- General configuration
 
