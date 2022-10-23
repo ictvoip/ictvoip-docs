@@ -22,7 +22,7 @@ If you require the ictVoIP Billing addon module go here: `ictVoIP Billing Softwa
 Module Addon Install
 ######################
 
-
+|
  1. Downloading the ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip
 
 Download the ictVoIP Billing addon module to /home/$user/tmp.
