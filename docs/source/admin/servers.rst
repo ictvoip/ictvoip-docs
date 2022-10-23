@@ -69,7 +69,6 @@ Adding your server module to WHMCS. We will provide an example of the FusionPBX 
  /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1.zip
 
 |
-
  After downloading and uncompressing your server module, copy the files from
  
 ::
@@ -84,7 +83,6 @@ Adding your server module to WHMCS. We will provide an example of the FusionPBX 
  /home/$user/public_html/modules/servers/
 
 |
-
 Once copied your directory server module files and directory structure should be:
 
 ::
@@ -96,10 +94,10 @@ Once copied your directory server module files and directory structure should be
 
 |
 
-Create your Server(s) for FusionPBX within WHMCS
-*************************************************
+Create Server(s) within WHMCS
+********************************
 
-
+|
 Within WHMCS to add and setup your servers go here:
 
 ::
@@ -119,59 +117,51 @@ Within WHMCS to add and setup your servers go here:
 |
 
 
-Create your server with the following requirements:
-####################################################
+Create server with following requirements:
+############################################
 
 |
-
 Server Name could be the FQDN of your hosted FusionPBX
 ::
 
  Name: waterloo5.ictvoip.ca - FusionPBX
 |
-
 Hostname needs to be the FQDN of your hosted FusionPBX
 ::
 
  Hostname: waterloo5.ictvoip.ca
 
 |
-
 IP Address can be the local IP or public
 ::
 
  IP Address: 102.100.100.20
 
 |
-
 Assigned IP can be the local IP or public
 ::
 
  Assigned IP addresses: 102.100.100.20
 
 |
-
 Maximum Accounts would typically be the maximum allowed tenants or the maximum total extensions for that PBX
 ::
 
  Maximum No. of Accounts: 100
 
 |
-
 Module in this case we select the Fusionpbx server module
 ::
 
  Module: Fusionpbx
 
 |
-
 This user should be created on the Fusion PBX side with superadmin group rights.
 ::
 
  Username: ictapi
 
 |
-
 This would be the password assigned to the FusionPBX API user
 ::
 
