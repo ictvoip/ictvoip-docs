@@ -87,7 +87,6 @@ Exclude CDR output from columns Destination & Description.
 ::
 
  Exclude = exclude these filtered CDR records from billing
-
 |
 Here we can display the output of the CDR filered records but Exclude from Billing the output.
 
@@ -99,7 +98,6 @@ Exclude 18884163054, 911, etc.
  844xxxxxxx,888xxxxxxx,877xxxxxxx,866xxxxxxx,800xxxxxxx,1800xxxxxxx,1844xxxxxxx,1866xxxxxxx,1877xxxxxxx,1888xxxxxxx,2264763054,8884163054,18884163054,911
 
 |
-
 Here the CDR will display the called number but will not bill the minutes used. This can inversly be used to allow all inbound call free of charge and also allow to display local DIDs called but not bill such as voicemail local extensions, ring groups, etc..
 
 Exclude local DIDs or extensions and inbound calls etc.
