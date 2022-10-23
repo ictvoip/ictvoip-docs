@@ -156,6 +156,7 @@ IfModule lsapi_module
 
 IfModule
 
+|
 
 Ubuntu CRON Setup
 =================
@@ -164,9 +165,11 @@ CRON issues running cPanel on Ubuntu maybe found where you should enable normal 
 For Ubuntu CRON issues please contact cPanel if utilized.
 
 WHM/cPanel Support Advice:
+****************************
 
 https://support.cpanel.net/hc/en-us/articles/6717639153943-Ubuntu-Jailed-Shell-users-unable-to-connect-to-mysqld-sock
 
+|
 
 WHMCS System Settings / General
 ================================
