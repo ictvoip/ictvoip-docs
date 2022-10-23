@@ -25,6 +25,8 @@ By highlighting the imported Tariff name you may export the Tariff to CSV for up
 Package Rates
 ***************
 
+Relevant information can be found here on how to manage your VoIP packages:  `Package Rates <../admin/packages.html>`_
+
 
 Autobill Debug
 ****************
