@@ -70,12 +70,22 @@ Adding your server module to WHMCS. We will provide an example of the FusionPBX 
  /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1/modules/servers/
 
 |
-
  To
  
 ::
 
  /home/$user/public_html/modules/servers/
+
+|
+
+Once copied your directory server module files and directory structure should be:
+
+::
+
+ /home/$user/public_html/modules/servers/fusionpbx
+ /home/$user/public_html/modules/servers/fusionpbx/img
+ /home/$user/public_html/modules/servers/fusionpbx/lib
+ /home/$user/public_html/modules/servers/fusionpbx/templates
 
 |
 
