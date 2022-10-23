@@ -99,47 +99,6 @@ Client Area
    
    clientarea.rst
 
-Providers
-===========
-
-.. toctree::
-   :maxdepth: 4
-
-   providers.rst
-
-Tariffs
-=========
-
-.. toctree::
-   :maxdepth: 4
-
-   tariffs.rst
-   
- 
-Servers
-=========
-
-.. toctree::
-   :maxdepth: 4
-
-   servers.rst
-   
-Packages
-==========
-
-.. toctree::
-   :maxdepth: 4
-
-   packages.rst
-
-Additional Information
-=======================
-
-.. toctree::
-   :maxdepth: 4
-
-   additional_information.rst
-
 Contributing
 =============
 
