@@ -116,8 +116,6 @@ This would be the password assigned to the FusionPBX API user
 |
 
 
-|
-
 Add more as required.
 
 
