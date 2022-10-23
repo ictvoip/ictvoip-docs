@@ -30,11 +30,8 @@ This example will provide the steps required to place the APIs onto your FusionP
 ::
 
     /var/www/fusionpbx/app/xml_cdr/export_cdr.php
-
     /var/www/fusionpbx/app/xml_cdr/import_cdr.php  
-  
     /var/www/fusionpbx/app/xml_cdr/img/
-  
     /var/www/fusionpbx/app/xml_cdr/img/loading.gif
 
 |
