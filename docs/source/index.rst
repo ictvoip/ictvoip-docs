@@ -4,7 +4,10 @@
         :alt: ictVoIP Canada
 |
 Welcome to ictVoIP Billing Docs
-=================================================
+===================================
+
+**ictVoIP Billing**
+--------------------
 
 .. note::
 
