@@ -60,8 +60,8 @@ Create your server with the following requirements:
 ::
 
  Name: waterloo5.ictvoip.ca - FusionPBX
-
-|this could be the FQDN of your hosted FusionPBX
+|
+this could be the FQDN of your hosted FusionPBX
 
 ::
 
