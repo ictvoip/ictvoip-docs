@@ -33,20 +33,21 @@ Autobill Debug
 
 When you enable CDR Autobill Debug you will be presented with an output of the CDR billing collection from manually running the autobill.  You may test run your install by populating the script link into your browser. Be sure to set the next due date of the client’s VoIP product to be the current date.
 
+|
+
+ .. image:: ../_static/images/admin/enable_debug.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
 When executed debug will display the calculations from the CDR billing once it has complete. 
 
 .. Warning ::  Note that when running CRON via the browser it's processing can be very slow, be patient.
 
 Further information on Autobill CRON can be found here: `Autobill CRON <../admin/packages.html>`_
-
-|
-
- .. image:: ../_static/images/admin/enable_debug.png
-        :scale: 70%
-        :align: center
-        :alt: Adding a new Provider or PBX
-        
-|
 
 
 Filtering
