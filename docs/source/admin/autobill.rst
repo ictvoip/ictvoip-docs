@@ -12,7 +12,7 @@ Your CRON entry could be as follows:
  
 |
 
-You may also test run your install by populating the script link into your browser. Be sure to set the next due date of the client's VoIP product to be the current date. 
+You may also test run your install by populating the script link into your browser. Be sure to set the next due date of the client's VoIP product to be the current date. Running the Autobill script does not increment the products next billing date as this is done throught the WHMCS daily CRON at which time if your product is set to monthly with Generate the monthly invoice after the Autobill and change to the next due date.
 
 One method of displaying the calculations from the CDR billing from the Autobill script is to enable the check box located within the Providers Mangement dashboard. 
 This can be found within the Tariff Management dashboard here: `Tariff Management <../admin/tariffs.html>`_
