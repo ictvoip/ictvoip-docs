@@ -7,7 +7,7 @@ Use of the FusionPBX server module provides the client to view CDRs and also dow
 |
 
  .. image:: ../_static/images/clientarea/client_area.png
-        :scale: 60%
+        :scale: 70%
         :align: center
         :alt: Adding a new Provider or PBX
         
@@ -22,7 +22,7 @@ Within the client panel to view CDRs you would simply click on the client VoIP p
 |
 
  .. image:: ../_static/images/clientarea/client_area_cdr.png
-        :scale: 60%
+        :scale: 70%
         :align: center
         :alt: Adding a new Provider or PBX
         
