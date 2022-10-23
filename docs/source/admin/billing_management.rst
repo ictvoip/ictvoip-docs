@@ -100,3 +100,11 @@ Exclude 18884163054, 911, etc.
 
 |
 
+Here the CDR will display the called number but will not bill the minutes used. This can inversly be used to allow all inbound call free of charge and also allow to display local DIDs called but not bill such as voicemail local extensions, ring groups, etc..
+
+Exclude local DIDs or extensions and inbound calls etc.
+::
+
+ [local],[inbound]
+
+|
