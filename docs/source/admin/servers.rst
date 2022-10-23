@@ -39,7 +39,7 @@ This example will provide the steps required to place the APIs onto your FusionP
   
 ::   
 
-** Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant. **
+*Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.*
    
 |
 
