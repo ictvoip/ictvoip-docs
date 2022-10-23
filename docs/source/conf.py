@@ -2,10 +2,10 @@
 
 # -- Project information
 
-project = u'ictVoIP Billing'
-copyright = u'2022, ictVoIP Canada'
+project = ictVoIP Billing
+copyright = 2022, ictVoIP Canada
 
-version = '1.3'
+version = 1.3.0
 
 # -- General configuration
 
@@ -32,3 +32,8 @@ html_favicon = "_static/images/favicon.ico"
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+man_pages = [
+    ('index', 'ictvoipdocs', 'ictVoIP Billing Documentation',
+     ['ictVoIP Canada'], 1)
+]
