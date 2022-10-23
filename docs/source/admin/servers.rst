@@ -17,7 +17,7 @@ Installing the API
 *******************
 
 The uncompressed server module file will have a directory named API. This will have the structure of where the files need to be uploaded to your FusionPBX host. 
-To place the files onto your FusionPBXThe files do not need to be modified in any way and are not encoded. 
+Placing the script files onto your FusionPBX you may use WinSCP or FTP. The files do not need to be modified in any way and are not encoded. 
 
 This example will provide the steps required to place the APIs onto your FusionPBX host or many hosts for the addition into WHMCS and the server creation within WHMCS.
 
