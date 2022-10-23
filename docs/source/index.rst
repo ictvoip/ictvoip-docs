@@ -12,8 +12,26 @@ Welcome to ictVoIP Billing Docs
 
 ictVoIP Billing Management System is a WHMCS addon application that supports multi providers and various PBXs which calculates call times and allows for Tariff or custom rate for billing. Automation of billing for overage minutes used based on metered plans or base product plans. CDR views for customer reports based on billing cycles. Client area addons for client area use for customers are currently expanding within our development.
 
+|
+
+ .. image:: ../_static/images/home/video_intro.png
+        :scale: 50%
+        :align: center
+        :alt: ictVoIP Intro
+        
+|
+
 Some of the Key Features
 ************************
+
+|
+
+ .. image:: ../_static/images/home/key_features.png
+        :scale: 50%
+        :align: center
+        :alt: Key Features
+        
+|
 
 International FusionPBX Billing
 Supports single or multi PBX
@@ -30,6 +48,15 @@ Metered or Pay As You Go
 Payment Reminders
 
 These are just of few benefits of billing with our existing PBX and Provider API Modules with the ictVoIP Billing System. 
+
+|
+
+ .. image:: ../_static/images/home/lean_process.png
+        :scale: 50%
+        :align: center
+        :alt: Lean Process
+        
+|
 
 ictVoIP Billing is compatible with WHMCS v8+, PHP7.4, PHP8.1, Apache and LiteSpeed. 
 
