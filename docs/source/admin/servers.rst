@@ -61,15 +61,13 @@ Create your server with the following requirements:
 
  Name: waterloo5.ictvoip.ca - FusionPBX
 
-|
-this could be the FQDN of your hosted FusionPBX
+|this could be the FQDN of your hosted FusionPBX
 
 ::
 
  Hostname: waterloo5.ictvoip.ca
 
-|
-this needs to be the FQDN of your hosted FusionPBX **
+|this needs to be the FQDN of your hosted FusionPBX **
 
 IP Address: 102.100.100.20
 
