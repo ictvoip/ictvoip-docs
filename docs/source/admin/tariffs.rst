@@ -8,7 +8,7 @@ To import your Tariff, you must download your Rate Card or Tariff from your Prov
   |
 
  .. image:: ../_static/images/admin/billing_management.png
-        :scale: 50%
+        :scale: 40%
         :align: center
         :alt: ictVoIP Billing Management
         
@@ -28,7 +28,7 @@ To import your Tariff, you must download your Rate Card or Tariff from your Prov
   |
 
  .. image:: ../_static/images/admin/import_mapping.png
-        :scale: 70%
+        :scale: 50%
         :align: center
         :alt: Import Mapping of Tariff
         
@@ -40,7 +40,7 @@ To import your Tariff, you must download your Rate Card or Tariff from your Prov
   |
 
  .. image:: ../_static/images/admin/import_complete.png
-        :scale: 70%
+        :scale: 50%
         :align: center
         :alt: Import Complete
         
