@@ -45,7 +45,7 @@ This example will provide the steps required to place the APIs onto your FusionP
 
   2) Please note that the import_cdr script can be used to import CDRs from other FusionPBX hosts to provide testing of correct CDR formatting of your FusionPBX setup. 
      
-.. warning:: Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.
+.. warning::  Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.
    
 |
 
