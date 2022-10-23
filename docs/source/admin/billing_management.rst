@@ -106,3 +106,7 @@ Exclude local DIDs or extensions and inbound calls etc.
  [local],[inbound]
 
 |
+
+
+.. Note ::  These filters are dependant of each Vendors PBX's output of CDR columns. we try to keep it consistant accross platforms but test before applying into production.
+
