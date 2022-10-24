@@ -177,6 +177,14 @@ Adding a Server Widget
 |
 **This feature is optional**
 
+|
+
+ .. image:: ../_static/images/admin/server_widget.png
+        :scale: 70%
+        :align: center
+        :alt: FusionPBX Server Status
+        
+|
 Adding a FusionPBX Status Widget for your Servers can be accomplished by the following steps:
 
  1) Copy from your WHMCS host 
@@ -185,6 +193,7 @@ Adding a FusionPBX Status Widget for your Servers can be accomplished by the fol
  /home/$user/public_html/status/index.php 
 
 |
+
   to your FusionPBX host. Create the status directory if it does not exist.  
 ::
 
@@ -215,9 +224,27 @@ Adding a FusionPBX Status Widget for your Servers can be accomplished by the fol
 |
 
  Then save.
+ 
+|
+
+ .. image:: ../_static/images/admin/server_widget_link.png
+        :scale: 50%
+        :align: center
+        :alt: Server widget link
+        
+|
+
 |
 
  3) Add the Widget to your WHMCS Admin area by selecting the "Network Status" from the COG settings for Widgets at the top right of the Admin Dashboard.
   
+|
+
+ .. image:: ../_static/images/admin/server_widgets.png
+        :scale: 50%
+        :align: center
+        :alt: Server widget link
+        
+|
   
  
