@@ -25,7 +25,7 @@ Server module and extract to /home/$user/tmp.
 
 i.e. Archive: /home/$user/tmp/ictvoip_billing-release-x.x.x.zip
 
-mySQL Table Import
+MySQL Table Import
 ==================
 
 Import the Country Codes table to your WHMCS DB 
