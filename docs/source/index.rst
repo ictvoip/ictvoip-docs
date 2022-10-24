@@ -93,7 +93,7 @@ Client Admin
 .. toctree::
    :maxdepth: 4
    
-   clientadmin.rst
+   admin/clientadmin/clientadmin.rst
 
 Client Area
 =============
