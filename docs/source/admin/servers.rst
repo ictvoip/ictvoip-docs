@@ -170,10 +170,11 @@ This would be the password assigned to the FusionPBX API user
 
 Add more as required.
 
+|
 
 Adding a Server Widget
 ************************
-
+|
 Adding a FusionPBX Status Widget for your Servers can be accomplished by the following steps:
 
  1) Copy from your WHMCS host 
