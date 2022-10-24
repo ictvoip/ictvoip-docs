@@ -240,7 +240,7 @@ Adding a FusionPBX Status Widget for your Servers can be accomplished by the fol
   
 |
 
- .. image:: ../_static/images/admin/server_widgets.png
+ .. image:: ../_static/images/admin/show_widgets.png
         :scale: 50%
         :align: center
         :alt: Server widget link
