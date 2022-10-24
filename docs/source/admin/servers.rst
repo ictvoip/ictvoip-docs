@@ -213,8 +213,9 @@ Adding a FusionPBX Status Widget for your Servers can be accomplished by the fol
 |
 
  Then save.
- 
-  3) Add the Widget to your WHMCS Admin area by selecting the "Network Status" from the COG settings for Widgets at the top right of the Admin Dashboard.
+|
+
+ 3) Add the Widget to your WHMCS Admin area by selecting the "Network Status" from the COG settings for Widgets at the top right of the Admin Dashboard.
   
   
  
