@@ -175,6 +175,8 @@ Add more as required.
 Adding a Server Widget
 ************************
 |
+**This feature is optional**
+
 Adding a FusionPBX Status Widget for your Servers can be accomplished by the following steps:
 
  1) Copy from your WHMCS host 
