@@ -101,7 +101,7 @@ Client Area
 .. toctree::
    :maxdepth: 4
    
-   clientarea.rst
+   clientarea/clientarea.rst
 
 Contributing
 =============
