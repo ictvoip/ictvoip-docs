@@ -51,7 +51,7 @@ i.e. Archive:
 
 |
 
-mySQL Table Import
+MySQL Table Import
 ####################
 
 Import the Country Codes table to your WHMCS DB - mod_ictvoipbilling_country_codes.sql
