@@ -171,3 +171,49 @@ This would be the password assigned to the FusionPBX API user
 Add more as required.
 
 
+Adding a Server Widget
+************************
+
+Adding a FusionPBX Status Widget for your Servers can be accomplished by the following steps:
+
+ 1) Copy from your WHMCS host 
+::
+
+ /home/$user/public_html/status/index.php 
+
+|
+  to your FusionPBX host. Create the status directory if it does not exist.  
+::
+
+ /var/www/fusionpbx/app/status/index.php
+   
+|   
+   Once you have copied the index.php file you should run:
+   
+::
+
+ chown www-data:www-data /var/www/fusionpbx/app/status
+ 
+|
+
+ 2) Add the status script location to your WHMCS Fusion PBX Server.
+ 
+ ::
+ 
+  WHMCS / System Settings / Servers
+ 
+ |
+  select edit the server to monitor and enter the URL for "Server Status Address" 
+
+::
+
+   https://myfusionpbx.ca/app/status/
+
+|
+
+ Then save.
+ 
+  3) Add the Widget to your WHMCS Admin area by selecting the "Network Status" from the COG settings for Widgets at the top right of the Admin Dashboard.
+  
+  
+ 
