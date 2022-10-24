@@ -1,5 +1,5 @@
 ******************
-Client Setup
+Client Admin Area
 ******************
 |
 
