@@ -228,7 +228,7 @@ Adding a FusionPBX Status Widget for your Servers can be accomplished by the fol
 |
 
  .. image:: ../_static/images/admin/server_widget_link.png
-        :scale: 50%
+        :scale: 70%
         :align: center
         :alt: Server widget link
         
@@ -241,7 +241,7 @@ Adding a FusionPBX Status Widget for your Servers can be accomplished by the fol
 |
 
  .. image:: ../_static/images/admin/show_widgets.png
-        :scale: 50%
+        :scale: 70%
         :align: center
         :alt: Server widget link
         
