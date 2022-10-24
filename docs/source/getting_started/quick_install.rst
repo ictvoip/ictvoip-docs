@@ -178,6 +178,7 @@ WHMCS System Settings / General
 
 Ensure your WHMCS System URL is set to HTTPS. 
 
+|
 
 ictVoIP Billing Module Setup
 =============================
