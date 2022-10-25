@@ -31,7 +31,7 @@ Some of the Key Features
 |
 
  .. image:: _static/images/home/Key_Features1.png
-        :scale: 45%
+        :scale: 40%
         :align: center
         :alt: Key Features
         
