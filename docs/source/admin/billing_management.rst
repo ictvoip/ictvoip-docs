@@ -66,14 +66,14 @@ Exclude and Suppress CDR output from columns Direction & Description.
  Suppress = Suppress the CDR record from displaying in the CDR Client View
 
 |
-Here we can elimante the CDR output of internal calls such as direct Extension or Voicemail calling by adding filter phares like this:
+Here we can elimante the CDR output of internal calls such as direct Extension or Voicemail calling by adding filtering like this:
 
 Let's exclude all extension calls within a tenant or domain list.
 
 Exclude/Supress dialed codes starting with *xx and #xx, might be *97, *71, *72 etc.
 ::
 
- *xx, #xx, 4443, 4747
+ *xx,#xx,4443,4747,201,202,203,999,555
 
 |
 
@@ -82,7 +82,7 @@ Exclude from Billing
 #######################
 
 
-Exclude CDR output from columns Destination & Description. 
+Exclude CDR output for billing from columns Destination & Description. 
 
 ::
 
