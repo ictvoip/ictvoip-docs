@@ -68,7 +68,7 @@ You may select your server module required for your PBX or Provider API here:
 https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software
 
 Check out the :doc:`getting_started` section for quick setup, including
-how to :ref:`installation` of ictVoIP Billing and modules.
+how to install the ictVoIP Billing and modules.
 
 
 Getting Started
