@@ -45,6 +45,16 @@ System Settings / Apps & Integrations / Addon Modules /
 
 i.e. LeasedictVoIP_a3174afbf93b3b8ba8f3
 
+|
+
+ .. image:: ../_static/images/admin/addon_lic.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
 FusionPBX Server Module
 -----------------------
 System Settings / Products & Services /
