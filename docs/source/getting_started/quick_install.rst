@@ -62,6 +62,16 @@ System Settings / Products & Services /
 
 i.e. LeasedFusionPBX_f14fa0a312e4fac10107
 
+|
+
+ .. image:: ../_static/images/admin/product_module_fpbx.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
 Vodia Server Module
 ---------------------
 System Settings / Products & Services /
