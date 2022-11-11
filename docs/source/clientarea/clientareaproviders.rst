@@ -78,3 +78,49 @@ Send Fax using Attachments. Supported types: pdf, txt, jpg, gif, png, tif
         
 |
 
+
+Call Rates
+*********************
+
+Search and list call rates based on provider tariff with assigned markup.
+
+|
+
+ .. image:: ../_static/images/clientarea/callrates.png 
+        :scale: 40%
+        :align: center
+        :alt: Client CDRs
+        
+|
+
+
+VoiceMail Panel
+*****************
+
+Assign voicemail details for attachment type size and email.
+
+|
+
+ .. image:: ../_static/images/clientarea/voicemailpanel.png 
+        :scale: 40%
+        :align: center
+        :alt: Client CDRs
+        
+|
+
+
+CallerID Block
+******************
+
+Block telemarking numbers by adding to the list and manage block numbers.
+
+|
+
+ .. image:: ../_static/images/clientarea/callblock.png 
+        :scale: 40%
+        :align: center
+        :alt: Client CDRs
+        
+|
+
+
