@@ -67,3 +67,14 @@ Fax list with ability to email to users, download the PDF fax as an attachment a
         
 |
 
+Send Fax using Attachments. Supported types: pdf, txt, jpg, gif, png, tif
+
+|
+
+ .. image:: ../_static/images/clientarea/sendfax.png 
+        :scale: 40%
+        :align: center
+        :alt: Client CDRs
+        
+|
+
