@@ -8,8 +8,8 @@ Depending on your Server Module we have custom VoIP Panels associated for each. 
   :maxdepth: 3
   :glob:
 
-  clientarea/clientareafusionpbx.rst
-  clientarea/clientareaproviders.rst
-  clientarea/clientareavodia.rst
-  clientarea/clientarealesnet.rst
+  clientareafusionpbx.rst
+  clientareaproviders.rst
+  clientareavodia.rst
+  clientarealesnet.rst
   
