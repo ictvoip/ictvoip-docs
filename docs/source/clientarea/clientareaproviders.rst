@@ -42,3 +42,16 @@ CDRs can be viewed by billing period. A CSV export can be downloaded for the sel
         
 |
 
+Faxing Panel
+*********************
+
+ Fax Panel allows for listing of recieved faxes by billing period, download fax PDF attachment, email Fax to another user, assigning emails or groups to receive Faxes, and Send Faxes with attachments.
+|
+
+ .. image:: ../_static/images/clientarea/client_cdrs.png
+        :scale: 40%
+        :align: center
+        :alt: Client CDRs
+        
+|
+
