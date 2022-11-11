@@ -31,7 +31,7 @@ Within the VoIP panel to view CDRs you would simply click on Call Records. CDRs 
 Call Detail Records
 *********************
 
-CDRs can be viewed by billing period and can provide a CSV export for the selected billing period. 
+CDRs can be viewed by billing period. A CSV export can be downloaded for the selected billing period. If the client has multiple VoIP Product accounts then you may drop down the list of accounts to view those CDRs. 
 
 |
 
