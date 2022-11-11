@@ -24,7 +24,7 @@ Within the VoIP panel to view CDRs you would simply click on Call Records. CDRs 
  .. image:: ../_static/images/clientarea/panel2.png
         :scale: 40%
         :align: center
-        :alt: Adding a new Provider or PBX
+        :alt: VoIP Admin Panel
         
 |
 
@@ -35,10 +35,10 @@ CDRs can be viewed by billing period and can provide a CSV export for the select
 
 |
 
- .. image:: ../_static/images/clientarea/client_cdrs.png.png
+ .. image:: ../_static/images/clientarea/client_cdrs.png
         :scale: 40%
         :align: center
-        :alt: Adding a new Provider or PBX
+        :alt: Client CDRs
         
 |
 
