@@ -7,7 +7,7 @@ Use of the Providers Server module allows for VoIP Panel views for view CDRs and
 |
 
  .. image:: ../_static/images/clientarea/voip_panel.png
-        :scale: 70%
+        :scale: 40%
         :align: center
         :alt: VoIP Panel Main
         
@@ -22,7 +22,7 @@ Within the client panel to view CDRs you would simply click on the client VoIP p
 |
 
  .. image:: ../_static/images/clientarea/panel2.png
-        :scale: 70%
+        :scale: 40%
         :align: center
         :alt: Adding a new Provider or PBX
         
