@@ -4,9 +4,8 @@ Client Area Custom Views
   :maxdepth: 3
   :glob:
 
-  clientarea/clientarea.rst
-  clientarea/clientareaproviders.rst
   clientarea/clientareafusionpbx.rst
+  clientarea/clientareaproviders.rst
   clientarea/clientareavodia.rst
   clientarea/clientarealesnet.rst
   
