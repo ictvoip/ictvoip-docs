@@ -17,7 +17,7 @@ Use of the Providers Server module allows for VoIP Panel views for view CDRs and
 VoIP Admin
 *********************
 
-Within the client panel to view CDRs you would simply click on the client VoIP product either form the main client area or All Services then clicking within the product area. CDRs can be viewed by billing period and can provide a CSV export for the selected billing period.  Search and sorting is available.
+Within the VoIP panel to view CDRs you would simply click on Call Records. CDRs can be viewed by billing period and can provide a CSV export for the selected billing period. Faxing when clicked will provide the Fax Panel for retreiving received faxes, administrer email addresses for users to receive faxes notifications and an email attachment, download or email to a recipient, Send a Fax with an attachment.
 
 |
 
