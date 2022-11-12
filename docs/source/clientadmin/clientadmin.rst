@@ -47,7 +47,7 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 
 2) When the credit balance is zero and a possible balance owing then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function.
 
-
+|
 
 Formatting to FusionPBX API
 *****************************
@@ -80,7 +80,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
 |
  4) Save and then test your API connectivity to your FusionPBX account by then going to the Client's account CDR view in Client Area.
  
-
+|
 
 Formatting to Vodia API
 ***************************
@@ -118,7 +118,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
 |
  6) Save and then test your API connectivity to your Vodia account by then going to the Client's account view and list CDRs for that tenant.
  
-
+|
  
 Special Considerations: 
 **************************
