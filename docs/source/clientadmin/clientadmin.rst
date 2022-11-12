@@ -151,7 +151,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
 |
 
 Custom Product Fields
-***********************
+########################
 |
 
  4) Peer ID
