@@ -37,7 +37,7 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 
 |
 
- .. image:: ../_static/images/clientadmin/client_profile_lowbal.png
+ .. image:: ../_static/images/clientadmin/lowbal_email.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
@@ -47,14 +47,6 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 
 2) When the credit balance is zero and a possible balance owing then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function.
 
-|
-
- .. image:: ../_static/images/clientadmin/client_profile_lowbal.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
-        
-|
 
 
 Formatting to FusionPBX API
