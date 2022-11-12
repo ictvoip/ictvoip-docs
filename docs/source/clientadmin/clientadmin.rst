@@ -18,8 +18,47 @@ Administration of server modules and billing would be setup with client products
 |
 
 
-Formatting to API
-*******************
+Low Credit Balance Alerts/Suspend
+**********************************
+
+Low Credit Balance Thresholds are set within the Client Profile. When a low balance threshold has been set this will allow for a couple of automation events. 
+
+|
+
+ .. image:: ../_static/images/clientadmin/client_profile_lowbal.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
+1) When the credit balance falls below the set threshold an alert email is sent during the Daily Autobill CRON
+
+|
+
+ .. image:: ../_static/images/clientadmin/client_profile_lowbal.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
+2) When the credit balance is zero and a possible balance owing then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function.
+
+|
+
+ .. image:: ../_static/images/clientadmin/client_profile_lowbal.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
+Formatting to FusionPBX API
+*****************************
 
 Once your VoIP product has been assigned there are fields which must follow the following formats.
 
@@ -48,6 +87,13 @@ Once your VoIP product has been assigned there are fields which must follow the 
    
 |
  4) Save and then test your API connectivity to your FusionPBX account by then going to the Client's account view.
+ 
+ 
+Formatting to Vodia API
+***************************
+
+
+
  
 Special Considerations: 
 #########################
