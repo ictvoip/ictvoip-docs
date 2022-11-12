@@ -152,20 +152,17 @@ Once your VoIP product has been assigned there are fields formatting which must 
 
 Custom Product Fields
 ########################
-|
 
  4) Peer ID
 ::
   
   D4E3CD2BFC791
 |
- 
  5) DID(s) Attached to Peer
 ::
   
   12046664021
 |
-
  6) CDR Link
 
 ::
@@ -173,7 +170,6 @@ Custom Product Fields
   https://portal.les.net/cdr/11330_0000.txt
    
 |
-
 The external CDR text file from LesNet only update every 24hrs. Set your CRON for autobill accordingly.
 
 |
