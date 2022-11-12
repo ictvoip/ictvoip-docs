@@ -147,7 +147,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
   
 ::
   
-   12046664021
+  12046664021
 |
 
 Custom Product Fields
@@ -157,20 +157,20 @@ Custom Product Fields
  4) Peer ID
  ::
   
-   D4E3CD2BFC791
+  D4E3CD2BFC791
 |
  
  5) DID(s) Attached to Peer
 ::
   
-   12046664021
+  12046664021
 |
 
  6) CDR Link
 
 ::
   
-   https://portal.les.net/cdr/11330_0000.txt
+  https://portal.les.net/cdr/11330_0000.txt
    
 |
 
