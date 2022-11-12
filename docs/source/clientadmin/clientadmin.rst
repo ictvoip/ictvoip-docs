@@ -120,6 +120,63 @@ Once your VoIP product has been assigned there are fields formatting which must 
  
 |
  
+Formatting to LesNet API
+***************************** 
+
+Once your VoIP product has been assigned there are fields formatting which must be followed.
+
+ 1) Assign your LesNet API server from the drop down. If only one server has been assigned it will appear and be selected. 
+
+|
+
+ .. image:: ../_static/images/clientadmin/lesnet_format.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
+2) Domain is Peer | DID
+::
+ 
+  D4E3CD2BFC791 | 12046664021
+  
+|
+ 3) Assign the DID to username
+  
+::
+  
+   12046664021
+|
+
+Custom Product Fields
+***********************
+|
+
+ 4) Peer ID
+ ::
+  
+   D4E3CD2BFC791
+|
+ 
+ 5) DID(s) Attached to Peer
+::
+  
+   12046664021
+|
+
+ 6) CDR Link
+
+::
+  
+   https://portal.les.net/cdr/11330_0000.txt
+   
+|
+
+The external CDR text file from LesNet only update every 24hrs. Set your CRON for autobill accordingly.
+
+|
 Special Considerations: 
 **************************
  
