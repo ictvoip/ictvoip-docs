@@ -88,7 +88,7 @@ Formatting to Vodia API
 
  
 Special Considerations: 
-#########################
+**************************
  
 Our API pulls the CDR outbound details from the Destination column within FusionPBX and the inbound from the Caller Destination column. 
 
