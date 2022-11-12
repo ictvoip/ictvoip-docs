@@ -170,7 +170,7 @@ Custom Product Fields
   https://portal.les.net/cdr/11330_0000.txt
    
 |
-The external CDR text file from LesNet only update every 24hrs. Set your CRON for autobill accordingly.
+The external CDR text file from LesNet only updates every 24hrs. Set your CRON for autobill accordingly.
 
 |
 Special Considerations: 
