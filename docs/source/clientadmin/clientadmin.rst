@@ -59,7 +59,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
  1) Assign your FusionPBX server from the drop down. If only one server has been assigned it will appear and be selected. 
 
 .. image:: ../_static/images/clientadmin/client_admin_server.png
-        :scale: 70%
+        :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
         
@@ -78,13 +78,46 @@ Once your VoIP product has been assigned there are fields which must follow the 
    2112 | 2113 | 2114 | 2115 | 2216
    
 |
- 4) Save and then test your API connectivity to your FusionPBX account by then going to the Client's account view.
+ 4) Save and then test your API connectivity to your FusionPBX account by then going to the Client's account CDR view in Client Area.
  
- 
+
+
 Formatting to Vodia API
 ***************************
 
+Once your VoIP product has been assigned there are fields formatting which must be followed.
 
+ 1) Assign your Vodia PBX server from the drop down. If only one server has been assigned it will appear and be selected. 
+
+|
+
+ .. image:: ../_static/images/clientadmin/vodia_format.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+ 2) Assign the Tenant | Inbound DID(s) to Tenant 
+::
+ 
+  cffm.wat1.ictvoip.ca | 5484815577 | 5197830020 | 8300
+  
+|
+ 3) Assign the DID or extension you wish to have within the clients billing. 
+  
+::
+  
+   8300
+|
+ 4)  Ext Profile First Name	from your Extension Client Name
+
+|
+
+ 5) Inbound Search String (Ext/Firstname)
+|
+ 6) Save and then test your API connectivity to your Vodia account by then going to the Client's account view and list CDRs for that tenant.
+ 
 
  
 Special Considerations: 
