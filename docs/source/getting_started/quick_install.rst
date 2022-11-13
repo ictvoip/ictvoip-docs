@@ -189,8 +189,24 @@ IfModule
 
 |
 
-Ubuntu CRON Setup
+CRON Setup
 =================
+
+Time Zone
+###########
+
+If your hosting provider default PHP time.zone is using the incorrect timezone and also does not allow php.ini to override the time.zone you could use wHMCS configuration.php to set the CRON run default timezone:
+
+::
+ date_default_timezone_set('America/Toronto');
+
+|
+
+Edit the timezone to the appropriate timezone of your PBX server. Save the file. Timezones should be tz format.
+
+
+Ubuntu
+########
 
 CRON issues running cPanel on Ubuntu maybe found where you should enable normal shell for the user account in which the CRON is being run from.
 For Ubuntu CRON issues please contact cPanel if utilized.
