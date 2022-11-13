@@ -134,7 +134,9 @@ PHP Requirements [Apache & Litespeed]
 
 i.e.
 
-IfModule php7_module
+::
+
+  IfModule php7_module
 
    -php_flag display_errors On
    
@@ -159,9 +161,9 @@ IfModule php7_module
    -php_flag zlib.output_compression Off
    
 
-IfModule
+  IfModule
 
-IfModule lsapi_module
+  IfModule lsapi_module
 
    -php_flag display_errors On
    
@@ -185,9 +187,10 @@ IfModule lsapi_module
    
    -php_flag zlib.output_compression Off
 
-IfModule
+  IfModule
 
 |
+
 
 CRON Setup
 ============
