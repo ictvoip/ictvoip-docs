@@ -125,9 +125,12 @@ a) Modify .htaccess [LiteSpeed]
 
 LiteSpeed
 ----------
-RewriteRule .* - [E=noabort:1]
 
-RewriteRule .* - [E=noconntimeout:1]
+::
+  RewriteRule .* - [E=noabort:1]
+  RewriteRule .* - [E=noconntimeout:1]
+
+|
 
 PHP Requirements [Apache & Litespeed]
 -------------------------------------
