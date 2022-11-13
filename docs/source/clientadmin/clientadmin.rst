@@ -26,7 +26,7 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 |
 
  .. image:: ../_static/images/clientadmin/client_profile_lowbal.png
-        :scale: 50%
+        :scale: 40%
         :align: center
         :alt: Adding a new Provider or PBX
         
