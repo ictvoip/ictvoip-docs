@@ -121,10 +121,12 @@ Special Notes:
 
 1) .htaccess modification if Timeout Server error 500 is found when running with Apache or LiteSpeed. This can occur during large imports of Tariffs or CRON autobill execution on a large number of CDR records pulled from your PBX/Provider server module.
 
-a) Modify .htaccess [LiteSpeed]
 
 LiteSpeed
 ----------
+
+To allow timeout overrides in Litespeed.
+ a) Modify .htaccess [LiteSpeed]
 
 ::
 
