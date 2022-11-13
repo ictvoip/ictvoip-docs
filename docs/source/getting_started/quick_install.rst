@@ -198,7 +198,8 @@ Time Zone
 If your hosting provider default PHP time.zone is using the incorrect timezone and also does not allow php.ini to override the time.zone you could use wHMCS configuration.php to set the CRON run default timezone:
 
 ::
- date_default_timezone_set('America/Toronto');
+
+  date_default_timezone_set('America/Toronto');
 
 |
 
