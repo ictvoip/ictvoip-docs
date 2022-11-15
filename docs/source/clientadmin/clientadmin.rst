@@ -33,7 +33,25 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 |
 
 
-1) When the credit balance falls below the set threshold an alert email is sent during the Daily Autobill CRON
+1) When the credit balance falls below the set threshold an alert email is sent during the Daily Autobill CRON. An email Template must be setup with the name "Low Balance Alert" and can be comprised of the following:
+
+::
+
+  Dear {$client_first_name},
+
+  This is a friendly reminder that your account is low in funding. Please log into the ictVoIP Client Area and add funds to your account.
+
+  Login & top up here: https://www.ictvoip.ca/clientarea.php?action=addfunds
+  All ictVoIP Service accounts must carry a positive balance in order to maintain service.
+
+  Your current balance for your service(s)
+  Account# {$client_id} is: {$client_credit}
+
+  Your current low balance notification is set at ${$client_custom_field_lowbalancethreshold}.00
+  
+  If you do not wish to receive email notifications   from our system anymore, please contact us.
+
+|
 
 |
 
