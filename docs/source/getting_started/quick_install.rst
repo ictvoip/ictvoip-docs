@@ -10,7 +10,7 @@ Welcome to the ictVoIP Billing installation quick guide.
 
 |
 
-ictVoIP Billing can be installed on WHMCS v8.5.x and v8.6.x running PHP7.x and soon PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled and understand the administration of the WHMCS platform. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA
+ictVoIP Billing can be installed on WHMCS v8.5.x and v8.6.x running PHP7.x and PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled and understand the administration of the WHMCS platform. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA. For a more comprehensive install and setup please refer to the WHMCS sections as outlined in the rest of this document.
 
 
 **1.** After downloading the ictVoIP Billing .zip
