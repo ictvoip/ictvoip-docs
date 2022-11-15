@@ -172,6 +172,15 @@ Add more as required.
 
 |
 
+
+Server Connection Verification
+################################
+
+After your server details have been entered and saved you can now test your connection to your FusionPBX by clicking on the Test button next to the Server Module "FusionPBX". After clicking you should see "Attempting Connection" then if suscessful your should get "Connection successful." If there is a problem connecting with your FusionPBX server then you will have to further troubleshoot the issue before you continue your setup.
+
+
+
+
 Adding a Server Widget
 ************************
 |
