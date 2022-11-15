@@ -63,7 +63,31 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 |
 
 
-2) When the credit balance is zero and a possible balance owing then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function.
+2) When the credit balance is zero and a possible balance owing then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function. For certain account you have the option of manually overriding the auto suspend by setting the "VoIP Suspended" to no and the "Manual VoIP Suspend" to no.  An auto generated email can be sent to the client by creating an email template within General Messages and must have the name "VoIP Zero Balance" and can have the following as an example:
+
+::
+
+  Dear {$client_name},
+
+  This is a friendly reminder that your ictVoIP service must carry a positive balance.
+  The details of this are below:
+
+  ictVoIP not Active: No VoIP Credit Balance
+  Credit Balance: ${$client_credit}
+  Outstanding Balance: {$client_due_invoices_balance}
+  Low Balance Threshold: ${$client_custom_field_lowbalancethreshold}.00
+
+  All VoIP/SIP accounts must carry a positive balance in order for service connection.
+
+  To top up your account please go here to make your deposit and apply it to any outstanding amounts,
+  https://www.ictvoip.ca/clientarea.php?action=addfunds
+
+  Please allow up to 1min for your deposit to synchronize with the system before your account is able to place calls.
+
+  If you cannot make a deposit please contact us as soon as possible to get your service reactivated.
+
+
+|
 
 |
 
