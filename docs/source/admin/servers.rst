@@ -93,8 +93,8 @@ Once copied your directory server module files and directory structure should be
 
 |
 
-Create Server(s)
-******************
+Create the Server(s)
+*********************
 
 |
 Within WHMCS to add and setup your servers go here:
@@ -116,8 +116,8 @@ Within WHMCS to add and setup your servers go here:
 |
 
 
-Server Requirements:
-######################
+Server Module Requirements:
+############################
 
 |
 Server Name could be the FQDN of your hosted FusionPBX
@@ -189,8 +189,8 @@ After your server details have been entered and saved you can now test your conn
 |
 
 
-Adding a Server Widget
-************************
+Adding Server(s) Widget (optional)
+**********************************
 |
 **This feature is optional**
 
