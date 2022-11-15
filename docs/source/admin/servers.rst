@@ -35,6 +35,7 @@ This example will provide the steps required to place the APIs onto your FusionP
  FusionPBX File locations and a directory which will be created:
 ::
 
+    /var/www/fusionpbx/app/xml_cdr/chkcon.php  
     /var/www/fusionpbx/app/xml_cdr/export_cdr.php
     /var/www/fusionpbx/app/xml_cdr/import_cdr.php  
     /var/www/fusionpbx/app/xml_cdr/img/
