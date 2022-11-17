@@ -5,10 +5,10 @@ Autobill CRON
 To be able to bill VoIP CDRs from your server module we use a script called Autobill. This script should be assigned to execute 45min before your WHMCS daily CRON job. For instance, if your WHMCS Daily CRON is set to run at 1AM then set the CRON for Autobill to run at 12:15AM. This should allow enough time if you have many servers and domains/tenants for each server module. If you find this is not enough time then move your daily CRON in WHMCS to 2AM and start your Autobill CRON at 12:15AM
 
 Your CRON entry could be as follows:
-
+*(replace MYMODULE with the server module you have installed)*
 ::
 
- 30 	00 	* 	* 	*  https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill.php?runfrom=cron
+ 30 	00 	* 	* 	*  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
  
 |
 
