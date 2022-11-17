@@ -242,7 +242,7 @@ If you do not wish to use the Autosuspend feature you may manually trigger the S
 |
 
  .. image:: ../_static/images/clientadmin/manual_FS_commands.png
-        :scale: 40%
+        :scale: 60%
         :align: center
         :alt: Adding a new Provider or PBX
         
