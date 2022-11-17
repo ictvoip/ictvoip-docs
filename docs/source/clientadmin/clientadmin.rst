@@ -142,7 +142,7 @@ The external CDR text file from LesNet only updates every 24hrs. Set your CRON f
 
 |
 Special Considerations: 
-########################
+*************************
  
 Our API pulls the CDR outbound details from the Destination column within FusionPBX and the inbound from the Caller Destination column. 
 
@@ -232,7 +232,7 @@ Some settings for client VoIP services should be defined if you wish to use the 
 Autosuspend
 *************
 
-Required to enable "Has VoIP Service" to Yes. 
+Required to enable autosuspend "Has VoIP Service" to Yes. "Manual VoIP Suspend" can be used to suspend all VoIP service and "VoIP Suspended" will provide the state of suspension which can produce an override by selecting Yes or No. "None" is the default position for Autosuspend.
 
 Low Balance Threshold 
 ***********************
