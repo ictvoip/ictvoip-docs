@@ -242,7 +242,7 @@ This is a value that when the credit balance has been reached or fallin below th
 Auto VoIP Top-Up
 ******************
 
-##TBA
+**TBA**
 
 
 Fields used for this function are "CC Auth on File", "Date CC Auth Entered" and "Auto VoIP Top Amount". Currently they are not active. To have this feature available please contact Sales @ ictVoIP.ca
@@ -255,5 +255,4 @@ Fields used for this function are "CC Auth on File", "Date CC Auth Entered" and 
         :alt: Adding a new Provider or PBX
         
 |
-
 
