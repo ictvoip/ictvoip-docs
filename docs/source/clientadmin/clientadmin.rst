@@ -196,7 +196,7 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 |
 
 
-2) When the credit balance is zero and a possible balance owing then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function. For certain account you have the option of manually overriding the auto suspend by setting the "VoIP Suspended" to no and the "Manual VoIP Suspend" to no.  An auto generated email can be sent to the client by creating an email template within General Messages and must have the name "VoIP Zero Balance" and can have the following as an example:
+2) When the credit balance is zero and or a possible balance owing greater that the credit blance then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance with no outstanding balances then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function. For certain accounts you have the option of manually overriding the auto suspend by setting the "VoIP Suspended" to no and the "Manual VoIP Suspend" to no.  An auto generated email can be sent to the client by creating an email template within General Messages and must have the name "VoIP Zero Balance" and can have the following as an example:
 
 ::
 
@@ -222,7 +222,14 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 
 |
 
+The CRON for autosuspend example: 
+*(replace MYMODULE with the server module you have installed)*
+
+::
+  30     00      *       *       *  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autosuspend.php?runfrom=cron
+
 |
+
 
 Custom Client Profile Fields
 ################################
