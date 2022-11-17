@@ -122,7 +122,7 @@ Auto VoIP Top-Up
 
 
 Formatting to FusionPBX API
-*****************************
+#############################
 
 Once your VoIP product has been assigned there are fields which must follow the following formats.
 
@@ -155,7 +155,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
 |
 
 Formatting to Vodia API
-***************************
+#########################
 
 Once your VoIP product has been assigned there are fields formatting which must be followed.
 
@@ -193,7 +193,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
 |
  
 Formatting to LesNet API
-***************************** 
+############################
 
 Once your VoIP product has been assigned there are fields formatting which must be followed.
 
@@ -223,7 +223,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
 |
 
 Custom Product Fields
-########################
+***********************
 
  4) Peer ID
 ::
@@ -246,7 +246,7 @@ The external CDR text file from LesNet only updates every 24hrs. Set your CRON f
 
 |
 Special Considerations: 
-**************************
+########################
  
 Our API pulls the CDR outbound details from the Destination column within FusionPBX and the inbound from the Caller Destination column. 
 
