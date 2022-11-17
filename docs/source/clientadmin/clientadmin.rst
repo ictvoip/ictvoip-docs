@@ -226,9 +226,11 @@ The CRON for autosuspend example:
 *(replace MYMODULE with the server module you have installed)*
 
 ::
+
   30     00      *       *       *  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autosuspend.php?runfrom=cron
 
 |
+
 
 
 Custom Client Profile Fields
