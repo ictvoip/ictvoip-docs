@@ -17,110 +17,6 @@ Administration of server modules and billing would be setup with client products
         
 |
 
-
-Low Credit Balance Alerts/Suspend
-###################################
-
-Low Credit Balance Thresholds are set within the Client Profile. When a low balance threshold has been set this will allow for a couple of automation events. 
-
-|
-
- .. image:: ../_static/images/clientadmin/client_profile_lowbal.png
-        :scale: 40%
-        :align: center
-        :alt: Adding a new Provider or PBX
-        
-|
-
-
-1) When the credit balance falls below the set threshold an alert email is sent during the Daily Autobill CRON. A custom email Template located in General Messages must be created with the name "Low Balance Alert" and can include the following as an example:
-
-::
-
-  Dear {$client_first_name},
-
-  This is a friendly reminder that your account is low in funding. Please log into the ictVoIP Client Area and add funds to your account.
-
-  Login & top up here: https://www.ictvoip.ca/clientarea.php?action=addfunds
-  All ictVoIP Service accounts must carry a positive balance in order to maintain service.
-
-  Your current balance for your service(s)
-  Account# {$client_id} is: {$client_credit}
-
-  Your current low balance notification is set at ${$client_custom_field_lowbalancethreshold}.00
-  
-  If you do not wish to receive email notifications   from our system anymore, please contact us.
-
-|
-
-|
-
- .. image:: ../_static/images/clientadmin/lowbal_email.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
-        
-|
-
-
-2) When the credit balance is zero and a possible balance owing then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function. For certain account you have the option of manually overriding the auto suspend by setting the "VoIP Suspended" to no and the "Manual VoIP Suspend" to no.  An auto generated email can be sent to the client by creating an email template within General Messages and must have the name "VoIP Zero Balance" and can have the following as an example:
-
-::
-
-  Dear {$client_name},
-
-  This is a friendly reminder that your ictVoIP service must carry a positive balance.
-  The details of this are below:
-
-  ictVoIP not Active: No VoIP Credit Balance
-  Credit Balance: ${$client_credit}
-  Outstanding Balance: {$client_due_invoices_balance}
-  Low Balance Threshold: ${$client_custom_field_lowbalancethreshold}.00
-
-  All VoIP/SIP accounts must carry a positive balance in order for service connection.
-
-  To top up your account please go here to make your deposit and apply it to any outstanding amounts,
-  https://www.ictvoip.ca/clientarea.php?action=addfunds
-
-  Please allow up to 1min for your deposit to synchronize with the system before your account is able to place calls.
-
-  If you cannot make a deposit please contact us as soon as possible to get your service reactivated.
-
-
-|
-
-|
-
-Custom Client Profile Fields
-################################
-
-Some settings for client VoIP services should be defined if you wish to use the autosuspend, low balance alerts and auto top-ups. 
-
-Autosuspend
-*************
-
-Required to enable "Has VoIP Service" to Yes. 
-
-Low Balance Threshold 
-***********************
-
-This is a value that when the credit balance has been reached or fallin below this value it will send an email alert from a custom email template as noted above letting the client know that it is time to top-up.
-
-Auto VoIP Top-Up
-******************
-
-
-
-|
-
- .. image:: ../_static/images/clientadmin/custom_client_fields.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
-        
-|
-
-
 Formatting to FusionPBX API
 #############################
 
@@ -253,3 +149,109 @@ Our API pulls the CDR outbound details from the Destination column within Fusion
 It is best to try and match your formatting outbound to include your Country code. This will elliminate the requirement for the use of the filter used within setting your package rates.
 
 "Check to Enable" if your PBX CDRs use a prefix for local/regional calls as where you do not use your country code. For further information about this setting please refer to the `VoIP Package Rates <../admin/packages.html>`_ section.
+
+
+Low Credit Balance Alerts/Suspend
+###################################
+
+Low Credit Balance Thresholds are set within the Client Profile. When a low balance threshold has been set this will allow for a couple of automation events. 
+
+|
+
+ .. image:: ../_static/images/clientadmin/client_profile_lowbal.png
+        :scale: 40%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
+1) When the credit balance falls below the set threshold an alert email is sent during the Daily Autobill CRON. A custom email Template located in General Messages must be created with the name "Low Balance Alert" and can include the following as an example:
+
+::
+
+  Dear {$client_first_name},
+
+  This is a friendly reminder that your account is low in funding. Please log into the ictVoIP Client Area and add funds to your account.
+
+  Login & top up here: https://www.ictvoip.ca/clientarea.php?action=addfunds
+  All ictVoIP Service accounts must carry a positive balance in order to maintain service.
+
+  Your current balance for your service(s)
+  Account# {$client_id} is: {$client_credit}
+
+  Your current low balance notification is set at ${$client_custom_field_lowbalancethreshold}.00
+  
+  If you do not wish to receive email notifications   from our system anymore, please contact us.
+
+|
+
+|
+
+ .. image:: ../_static/images/clientadmin/lowbal_email.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
+2) When the credit balance is zero and a possible balance owing then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function. For certain account you have the option of manually overriding the auto suspend by setting the "VoIP Suspended" to no and the "Manual VoIP Suspend" to no.  An auto generated email can be sent to the client by creating an email template within General Messages and must have the name "VoIP Zero Balance" and can have the following as an example:
+
+::
+
+  Dear {$client_name},
+
+  This is a friendly reminder that your ictVoIP service must carry a positive balance.
+  The details of this are below:
+
+  ictVoIP not Active: No VoIP Credit Balance
+  Credit Balance: ${$client_credit}
+  Outstanding Balance: {$client_due_invoices_balance}
+  Low Balance Threshold: ${$client_custom_field_lowbalancethreshold}.00
+
+  All VoIP/SIP accounts must carry a positive balance in order for service connection.
+
+  To top up your account please go here to make your deposit and apply it to any outstanding amounts,
+  https://www.ictvoip.ca/clientarea.php?action=addfunds
+
+  Please allow up to 1min for your deposit to synchronize with the system before your account is able to place calls.
+
+  If you cannot make a deposit please contact us as soon as possible to get your service reactivated.
+
+
+|
+
+|
+
+Custom Client Profile Fields
+################################
+
+Some settings for client VoIP services should be defined if you wish to use the autosuspend, low balance alerts and auto top-ups. 
+
+Autosuspend
+*************
+
+Required to enable "Has VoIP Service" to Yes. 
+
+Low Balance Threshold 
+***********************
+
+This is a value that when the credit balance has been reached or fallin below this value it will send an email alert from a custom email template as noted above letting the client know that it is time to top-up.
+
+Auto VoIP Top-Up
+******************
+
+TBA
+
+
+|
+
+ .. image:: ../_static/images/clientadmin/custom_client_fields.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
