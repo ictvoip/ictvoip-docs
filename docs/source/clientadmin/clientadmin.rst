@@ -232,6 +232,24 @@ The CRON for autosuspend example:
 |
 
 
+Server Module Commands
+************************
+
+**TBA**
+
+If you do not wish to use the Autosuspend feature you may manually trigger the Suspend & Unsuspend commands within the Clients VoIP Product.
+
+|
+
+ .. image:: ../_static/images/clientadmin/manual_FS_commands.png
+        :scale: 40%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
+
 
 Custom Client Profile Fields
 ################################
