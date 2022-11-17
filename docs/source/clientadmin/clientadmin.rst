@@ -4,7 +4,7 @@ Client Admin Area
 |
 
 Product Assignment
-********************
+#####################
 
 Administration of server modules and billing would be setup with client products.  After you have your Addon and Server module installed and have created a VoIP product either metered or not you can add the product to the WHMCS client products. This example shows that you already have knowledge of adding products to your client accounts. Further information can be located with the WHMCS supported documentation here: `WHMCS Docs <https://docs.whmcs.com/Documentation_Home>`_
 
@@ -19,7 +19,7 @@ Administration of server modules and billing would be setup with client products
 
 
 Low Credit Balance Alerts/Suspend
-**********************************
+###################################
 
 Low Credit Balance Thresholds are set within the Client Profile. When a low balance threshold has been set this will allow for a couple of automation events. 
 
@@ -90,6 +90,36 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 |
 
 |
+
+Custom Client Profile Fields
+################################
+
+Some settings for client VoIP services should be defined if you wish to use the autosuspend, low balance alerts and auto top-ups. 
+
+Autosuspend
+*************
+
+Required to enable "Has VoIP Service" to Yes. 
+
+Low Balance Threshold 
+***********************
+
+This is a value that when the credit balance has been reached or fallin below this value it will send an email alert from a custom email template as noted above letting the client know that it is time to top-up.
+
+Auto VoIP Top-Up
+******************
+
+
+
+|
+
+ .. image:: ../_static/images/clientadmin/custom_client_fields.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
 
 Formatting to FusionPBX API
 *****************************
