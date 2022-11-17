@@ -243,12 +243,13 @@ Auto VoIP Top-Up
 ******************
 
 TBA
+|
 Fields used for this function are "CC Auth on File", "Date CC Auth Entered" and "Auto VoIP Top Amount". Currently they are not active. To have this feature available please contact Sales @ ictVoIP.ca
 
 |
 
  .. image:: ../_static/images/clientadmin/custom_client_fields.png
-        :scale: 50%
+        :scale: 40%
         :align: center
         :alt: Adding a new Provider or PBX
         
