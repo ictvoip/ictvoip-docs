@@ -259,7 +259,7 @@ Fields used for this function are "CC Auth on File", "Date CC Auth Entered" and 
 |
 
  .. image:: ../_static/images/clientadmin/custom_client_fields.png
-        :scale: 40%
+        :scale: 30%
         :align: center
         :alt: Adding a new Provider or PBX
         
