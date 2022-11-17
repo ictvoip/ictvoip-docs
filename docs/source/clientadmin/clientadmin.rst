@@ -227,7 +227,7 @@ The CRON for autosuspend example:
 
 ::
 
-  */5    *    *    *    *  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autosuspend.php?runfrom=cron
+  */5    *    *    *    *  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autosuspend.php?runfrom=cron >/dev/null 2>&1
 
 |
 
