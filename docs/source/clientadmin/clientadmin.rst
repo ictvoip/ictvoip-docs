@@ -18,7 +18,7 @@ Administration of server modules and billing would be setup with client products
 |
 
 Formatting to FusionPBX API
-#############################
+*****************************
 
 Once your VoIP product has been assigned there are fields which must follow the following formats.
 
@@ -51,7 +51,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
 |
 
 Formatting to Vodia API
-#########################
+************************
 
 Once your VoIP product has been assigned there are fields formatting which must be followed.
 
@@ -89,7 +89,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
 |
  
 Formatting to LesNet API
-############################
+**************************
 
 Once your VoIP product has been assigned there are fields formatting which must be followed.
 
@@ -119,7 +119,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
 |
 
 Custom Product Fields
-***********************
+
 
  4) Peer ID
 ::
