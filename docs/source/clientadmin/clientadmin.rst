@@ -222,6 +222,16 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 
 |
 
+|
+
+ .. image:: ../_static/images/clientadmin/zero_bal_alert.png
+        :scale: 60%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+
 The CRON for autosuspend example: 
 *(replace MYMODULE with the server module you have installed)*
 
