@@ -165,6 +165,8 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
         
 |
 
+Low Balance
+*************
 
 1) When the credit balance falls below the set threshold an alert email is sent during the Daily Autobill CRON. A custom email Template located in General Messages must be created with the name "Low Balance Alert" and can include the following as an example:
 
@@ -195,6 +197,8 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
         
 |
 
+Suspend
+**********
 
 2) When the credit balance is zero and or a possible balance owing greater that the credit blance then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance with no outstanding balances then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function. For certain accounts you have the option of manually overriding the auto suspend by setting the "VoIP Suspended" to no and the "Manual VoIP Suspend" to no.  An auto generated email can be sent to the client by creating an email template within General Messages and must have the name "VoIP Zero Balance" and can have the following as an example:
 
