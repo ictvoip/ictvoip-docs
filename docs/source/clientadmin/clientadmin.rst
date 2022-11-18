@@ -246,8 +246,8 @@ The CRON for autosuspend example:
 |
 
 
-Server Module Commands
-************************
+Module Commands
+*****************
 
 **TBA**
 
