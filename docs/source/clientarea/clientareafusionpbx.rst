@@ -21,7 +21,7 @@ Within the client panel to view CDRs you would simply click on the client VoIP p
 
 |
 
- .. image:: ../_static/images/clientarea/client_area_cdr.png
+ .. image:: ../_static/images/clientarea/CDRs_Client.png
         :scale: 70%
         :align: center
         :alt: Adding a new Provider or PBX
