@@ -6,7 +6,7 @@ Use of the FusionPBX server module provides the client to view CDRs and also dow
 
 |
 
- .. image:: ../_static/images/clientarea/fusion_CDRS.png
+ .. image:: ../_static/images/clientarea/Fusion_CDRS.png
         :scale: 70%
         :align: center
         :alt: Adding a new Provider or PBX
