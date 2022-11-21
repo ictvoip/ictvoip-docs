@@ -200,7 +200,7 @@ Low Balance
 Suspend
 **********
 
-2) When the credit balance is zero and or a possible balance owing greater that the credit blance then Autosuspend CRON will suspend all calls. Once a top up of the account has been provided and the account has a positive credit balance with no outstanding balances then the AutoSuspend CRON will un-suspend the account.  This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function. For certain accounts you have the option of manually overriding the auto suspend by setting the "VoIP Suspended" to no and the "Manual VoIP Suspend" to no.  An auto generated email can be sent to the client by creating an email template within General Messages and must have the name "VoIP Zero Balance" and can have the following as an example:
+2) When the credit balance is zero and or a possible balance owing greater than the credit blance then Autosuspend CRON will suspend all calls for that service depending on your Server Module. Once a top up of the account has been provided and the account has a positive credit balance with no outstanding balances then the AutoSuspend CRON will un-suspend the account. This process is done by triggering the PBX/Switch to either disable the Gateway/Trunk or API to Providers suspend function. For certain accounts you have the option of manually overriding the auto suspend by setting the "VoIP Suspended" to No and the "Manual VoIP Suspend" to No.  An auto generated email can be sent to the client by creating an email template within General Messages and must have the name "VoIP Zero Balance" and can have the following as an example:
 
 ::
 
