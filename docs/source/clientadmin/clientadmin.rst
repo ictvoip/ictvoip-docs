@@ -273,7 +273,7 @@ Some settings for client VoIP services should be defined if you wish to use the 
 Autosuspend
 *************
 
-Required to enable autosuspend "Has VoIP Service" to Yes. "Manual VoIP Suspend" can be used to suspend all VoIP service and "VoIP Suspended" will provide the state of suspension which can produce an override by selecting Yes or No. "None" is the default position for Autosuspend.
+Required to enable autosuspend "Has VoIP Service" to Yes. "Manual VoIP Suspend" can be used to suspend all VoIP services and "VoIP Suspended" will provide the state of suspension which can produce an override by selecting Yes or No. "None" is the default position for Autosuspend.
 
 Low Balance Threshold 
 ***********************
