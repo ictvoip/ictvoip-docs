@@ -278,7 +278,7 @@ Required to enable autosuspend "Has VoIP Service" to Yes. "Manual VoIP Suspend" 
 Low Balance Threshold 
 ***********************
 
-This is a value that when the credit balance has been reached or fallin below this value it will send an email alert from a custom email template as noted above letting the client know that it is time to top-up.
+This is a value that when the credit balance has been reached or falls below this value it will send an email alert from a custom email template as noted above letting the client know that it is time to top-up. A zero indicates that Low Balance threshold is not followed and disables this feature.
 
 Auto VoIP Top-Up
 ******************
