@@ -144,25 +144,25 @@ i.e.
 
   IfModule php7_module
 
-   -php_flag display_errors On
+   -php_flag display_errors On (for troubleshooting purposes)
    
-   -php_value max_execution_time 8600
+   -php_value max_execution_time 4300
    
-   -php_value max_input_time 8600
+   -php_value max_input_time 4300
    
-   -php_value max_input_vars 1000
+   -php_value max_input_vars 500
    
-   -php_value memory_limit 8096M
+   -php_value memory_limit 2048M (512M is minimum)
    
    -php_value session.gc_maxlifetime 1440
    
    -php_value session.save_path "/tmp"
    
-   -php_value upload_max_filesize 4000M
+   -php_value upload_max_filesize 100M (based on maximum tariff size)
    
-   -php_value date.timezone "America/Toronto"
+   -php_value date.timezone "America/Toronto" (adjust to your TZ)
    
-   -php_value post_max_size 1000M
+   -php_value post_max_size 100M (based on maximum tariff size)
    
    -php_flag zlib.output_compression Off
    
@@ -171,25 +171,25 @@ i.e.
 
   IfModule lsapi_module
 
-   -php_flag display_errors On
+   -php_flag display_errors On (for troubleshooting purposes)
    
-   -php_value max_execution_time 8600
+   -php_value max_execution_time 4300
    
-   -php_value max_input_time 8600
+   -php_value max_input_time 4300
    
-   -php_value max_input_vars 1000
+   -php_value max_input_vars 500
    
-   -php_value memory_limit 8096M
+   -php_value memory_limit 2048M (512M is minimum)
    
    -php_value session.gc_maxlifetime 1440
    
    -php_value session.save_path "/tmp"
    
-   -php_value upload_max_filesize 4000M
+   -php_value upload_max_filesize 100M (based on maximum tariff size)
    
-   -php_value date.timezone "America/Toronto"
+   -php_value date.timezone "America/Toronto" (adjust to your TZ)
    
-   -php_value post_max_size 1000M
+   -php_value post_max_size 100M (based on maximum tariff size)
    
    -php_flag zlib.output_compression Off
 
