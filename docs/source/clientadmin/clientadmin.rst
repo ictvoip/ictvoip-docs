@@ -235,6 +235,8 @@ Suspend
         
 |
 
+AutoSuspend
+*************
 
 The CRON for autosuspend example: 
 *(replace MYMODULE with the server module you have installed)*
@@ -246,7 +248,7 @@ The CRON for autosuspend example:
 |
 
 
-Module Commands
+Manual Suspend
 *****************
 
 
