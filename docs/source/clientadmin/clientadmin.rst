@@ -168,7 +168,7 @@ Low Credit Balance Thresholds are set within the Client Profile. When a low bala
 Low Balance
 *************
 
-1) When the credit balance falls below the set threshold an alert email is sent during the Daily Autobill CRON. A custom email Template located in General Messages must be created with the name "Low Balance Alert" and can include the following as an example:
+1) When the credit balance falls below the set threshold an alert email is sent during the Daily WHMCS CRON. A custom email Template located in General Messages must be created with the name "Low Balance Alert" and can include the following as an example:
 
 ::
 
