@@ -249,7 +249,6 @@ The CRON for autosuspend example:
 Module Commands
 *****************
 
-**TBA**
 
 If you do not wish to use the Autosuspend feature you may manually trigger the Suspend & Unsuspend commands within the Clients VoIP Product.
 
