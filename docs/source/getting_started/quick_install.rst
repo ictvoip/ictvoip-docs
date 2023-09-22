@@ -42,7 +42,7 @@ Make sure you have licensed you product by checking your client area.
 
 |
 
- .. image:: ../_static/images/admin/addon_lic.png
+ .. image:: ../_static/images/admin/issued_lic.png
         :scale: 40%
         :align: center
         :alt: Adding a new Provider or PBX
