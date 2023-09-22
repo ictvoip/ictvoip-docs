@@ -1,4 +1,4 @@
-*************
+king valid license*************
 Quick Install
 *************
 .. image:: ../_static/images/document_logo.png
@@ -42,10 +42,10 @@ Make sure you have licensed you product by checking your client area.
 
 |
 
- .. image:: ../_static/images/admin/issued_lic.png
+ .. image:: ../_static/images/clientarea/issued_lic.png
         :scale: 40%
         :align: center
-        :alt: Adding a new Provider or PBX
+        :alt: Checking valid license
         
 |
 
