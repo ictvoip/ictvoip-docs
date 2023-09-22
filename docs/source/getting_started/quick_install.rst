@@ -38,6 +38,10 @@ Important - Licensing
 Activating the ictVoIP Billing System enter your license keys 
 into the following locations within your modules. 
 
+Make sure you have licensed you product by checking your client area.
+
+
+
 ictVoIP Billing Addon
 ---------------------
 System Settings / Apps & Integrations / Addon Modules / 
