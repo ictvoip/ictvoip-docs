@@ -13,8 +13,8 @@ Use of our Server modules with the ictVoIP Billing System allows you to provisio
         
 |
 
-Installing the API
-*******************
+Installing the FusionPBX API
+****************************
 
 The uncompressed server module file will have a directory named [api]. This will have the structure of where the files need to be uploaded to your FusionPBX host. 
 
@@ -123,12 +123,12 @@ Server Module Requirements:
 Server Name could be the FQDN of your hosted FusionPBX
 ::
 
- Name: waterloo5.ictvoip.ca - FusionPBX
+ Name: waterloo12.ictvoip.ca - FusionPBX
 |
 Hostname needs to be the FQDN of your hosted FusionPBX
 ::
 
- Hostname: waterloo5.ictvoip.ca
+ Hostname: waterloo12.ictvoip.ca
 
 |
 IP Address can be the local IP or public
@@ -176,6 +176,9 @@ Add more as required.
 
 Server Connection Verification
 ################################
+**
+You must have SSL cert installed on your FusionPBX host
+**
 
 After your server details have been entered and saved you can now test your connection to your FusionPBX by clicking on the Test button next to the Server Module "FusionPBX". After clicking you should see "Attempting Connection" then if suscessful your should get "Connection successful." If there is a problem connecting with your FusionPBX server then you will have to further troubleshoot the issue before you continue your setup.
 
