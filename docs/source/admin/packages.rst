@@ -21,7 +21,12 @@ VoIP Package assignments and setup of server modules for extentions and API conn
 
 4) Only "Check to Enable" if your PBX CDRs use a prefix for local/regional calls as where you do not use your country code or E.164 for Calls. 
    Example, if your location is London England and you have setup your regional calls to use a 0 prefix without the use of the country code 44 then you would check to enable and place 44 into the text box.
-   
+
+
+ We firstly recommend that you adjust your Dial Plan in order to produce proper E.164 destination_number for CDR output formatting.
+
+
+
 |
 
  .. image:: ../_static/images/admin/prepend_country_code.png
