@@ -2,13 +2,13 @@
 Autobill CRON
 ***************
 
-To be able to bill VoIP CDRs from your server module we use a script called Autobill. This script should be assigned to execute before your WHMCS daily CRON job. For instance, if your WHMCS Daily CRON is set to run at 1AM then set the CRON for Autobill to run at 11:55PM. This should allow enough time if you have many servers and domains/tenants for each server module. If you find this is not enough time then move your daily CRON in WHMCS to 1AM and your Autobill CRON at 11:45PM
+To be able to bill VoIP CDRs from your server module we use a script called Autobill. This script should be assigned to execute before your WHMCS daily CRON job. For instance, if your WHMCS Daily CRON is set to run at 1AM then set the CRON for Autobill to run at 12:55AM. This should allow enough time if you have many servers and domains/tenants for each server module. If you find this is not enough time then move your daily CRON in WHMCS to 2AM and your Autobill CRON at 12:45AM
 
 Your CRON entry could be as follows:
 *(replace MYMODULE with the server module you have installed)*
 ::
 
- 55 	23 	* 	* 	*  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
+ 55 	00 	* 	* 	*  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
  
 |
 
