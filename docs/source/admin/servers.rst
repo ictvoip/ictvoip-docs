@@ -228,7 +228,7 @@ Adding a FusionPBX Status Widget for your Servers can be accomplished by the fol
    
 ::
 
- chown -R www-data:www-data /var/www/fusionpbx/status
+ chown -R www-data:www-data /var/www/fusionpbx/app/status
  
 |
 
