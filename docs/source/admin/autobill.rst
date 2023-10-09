@@ -8,7 +8,7 @@ Your CRON entry could be as follows:
 *(replace MYMODULE with the server module you have installed)*
 ::
 
- 55 	00 	* 	* 	*  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
+ 55 	00 	* 	* 	*  GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
  
 |
 
