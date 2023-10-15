@@ -1,4 +1,4 @@
-king valid license*************
+*************
 Quick Install
 *************
 .. image:: ../_static/images/document_logo.png
