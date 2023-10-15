@@ -3,7 +3,7 @@
 # -- Project information
 
 project = "ictVoIP Billing"
-copyright = "2022, ictVoIP Canada"
+copyright = "2023, ictVoIP Canada"
 author = "ictVoIP Canada"
 
 version = "1.3.0"
@@ -28,7 +28,6 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
 html_favicon = "_static/images/favicon.ico"
 
 # -- Options for EPUB output
