@@ -160,11 +160,11 @@ i.e.
    
    -php_value max_execution_time 4300
    
-   -php_value max_input_time 4300
+   -php_value max_input_time 8600
    
-   -php_value max_input_vars 500
+   -php_value max_input_vars 1000
    
-   -php_value memory_limit 2048M (512M is minimum)
+   -php_value memory_limit 8192M (2048M is minimum)
    
    -php_value session.gc_maxlifetime 1440
    
@@ -187,11 +187,11 @@ i.e.
    
    -php_value max_execution_time 4300
    
-   -php_value max_input_time 4300
+   -php_value max_input_time 8600
    
-   -php_value max_input_vars 500
+   -php_value max_input_vars 1000
    
-   -php_value memory_limit 2048M (512M is minimum)
+   -php_value memory_limit 8192M (2048M is minimum)
    
    -php_value session.gc_maxlifetime 1440
    
