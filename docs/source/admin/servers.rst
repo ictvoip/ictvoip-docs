@@ -16,13 +16,14 @@ Use of our Server modules with the ictVoIP Billing System allows you to provisio
 Installing the FusionPBX API
 ****************************
 
-The uncompressed server module file will have a directory named [api]. This will have the structure of where the files need to be uploaded to your FusionPBX host. 
+The compressed file will have the structure of where the files need to be uploaded to your FusionPBX host. Please note you would also require ionCube Loader enabled for PHP 7.4 and 8.1.
 
 i.e.
 
 ::
 
- /ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1/api/fusionpbx/var/www/fusionpbx/app/xml_cdr
+ Extract ictvoip_fusionpbx_5-1-x_extras.zip to
+ /var/www/fusionpbx/
 
 |
 Placing the script files onto your FusionPBX you may use WinSCP or FTP. The files do not need to be modified in any way. 
