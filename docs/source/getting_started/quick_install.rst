@@ -83,6 +83,7 @@ i.e. LeasedFusionPBX_f14fa0a312e4fac10107
         
 |
 
+Instructions for installing the required APIs onto your FusionPBX host can be found here  https://docs.ictvoip.ca/en/latest/admin/servers.html#installing-the-fusionpbx-api
 
 Vodia Server Module
 ---------------------
