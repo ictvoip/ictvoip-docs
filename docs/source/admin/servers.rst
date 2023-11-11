@@ -6,7 +6,7 @@ Use of our Server modules with the ictVoIP Billing System allows you to provisio
 
 |
 
- .. image:: ../_static/images/admin/servers1.png
+ .. image:: ../_static/images/admin/servers.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
