@@ -42,7 +42,7 @@ Make sure you have licensed you product by checking your client area.
 
 |
 
- .. image:: ../_static/images/clientarea/issued_lic.png
+ .. image:: ../_static/images/clientarea/issued_lic2.png
         :scale: 40%
         :align: center
         :alt: Checking valid license
