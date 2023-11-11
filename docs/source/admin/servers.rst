@@ -113,7 +113,7 @@ Within WHMCS to add and setup your servers go here:
 
 |
 
- .. image:: ../_static/images/admin/server_edit.png
+ .. image:: ../_static/images/admin/servers_edit.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
