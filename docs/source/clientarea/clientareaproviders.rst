@@ -6,7 +6,7 @@ Use of the Providers Server module allows for VoIP Panel views for view CDRs and
 
 |
 
- .. image:: ../_static/images/clientarea/voip_panel.png
+ .. image:: ../_static/images/clientarea/voip_panel2.png
         :scale: 40%
         :align: center
         :alt: VoIP Panel Main
