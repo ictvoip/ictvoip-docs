@@ -204,7 +204,7 @@ Adding Server(s) Widget (optional)
 
 |
 
- .. image:: ../_static/images/admin/server_widget.png
+ .. image:: ../_static/images/admin/server_widget2.png
         :scale: 70%
         :align: center
         :alt: FusionPBX Server Status
