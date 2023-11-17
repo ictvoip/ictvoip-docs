@@ -69,6 +69,7 @@ i.e. LeasedictVoIP_a3174afbf93b3b8ba8f3
 
 FusionPBX Server Module
 -----------------------
+Current Supported versions of FPBX v5.0.x & 5.1.x
 System Settings / Products & Services /
 - Create your new VoIP Product with description and with the Module Settings Tab, select Fusionpbx Module name and then place your License Key in the box, save. 
 
