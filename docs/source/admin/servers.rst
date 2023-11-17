@@ -16,6 +16,8 @@ Use of our Server modules with the ictVoIP Billing System allows you to provisio
 Installing the FusionPBX API
 ****************************
 
+Currently Supported Version of FPBX: 5.1.x - (for older version support please contact us)
+
 The compressed file will have the structure of where the files need to be uploaded to your FusionPBX host. Please note you would also require ionCube Loader enabled for PHP 7.4 and 8.1.
 
 i.e.
