@@ -7,7 +7,7 @@ Follow the menu to the left and you will have a working ictVoIP Billing applicat
 
 .. note::
 
-  Supported WHMCS versions currently include 8.5.x, 8.6.x, 8.7.x, 8.8.x and PHP7.4 and soon PHP8.1 which is still under development.
+  Supported WHMCS versions include 8.5.x, 8.6.x, 8.7.x, 8.8.x and PHP7.4, PHP8.1.
   What is presented here represents the quickest, easiest, best supported way to support PBX systems we have implimented.
 
 
