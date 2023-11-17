@@ -133,7 +133,7 @@ Server Name could be the FQDN of your hosted FusionPBX
 Hostname needs to be the FQDN of your hosted FusionPBX
 ::
 
- Hostname: waterloo12.ictvoip.ca
+ Hostname: waterloo7.ictvoip.ca
 
 |
 IP Address can be the local IP or public
@@ -163,7 +163,7 @@ Module in this case we select the Fusionpbx server module
 This user should be created on the Fusion PBX side with superadmin group rights.
 ::
 
- Username: ictapi
+ Username: ictapiwat5
 
 |
 This would be the password assigned to the FusionPBX API user
