@@ -3,8 +3,8 @@
         :align: center
         :alt: ictVoIP Canada
 |
-Welcome to ictVoIP Billing Administration Guide for WHMCS
-=========================================================
+ictVoIP Billing Administrators Guide for WHMCS
+==============================================
 
 **ictVoIP Billing**
 --------------------
@@ -37,21 +37,42 @@ Some of the Key Features
         
 |
 
-International FusionPBX Billing
-Supports single or multi PBX
-Multi-Tenant or Single-Tenant
-Multi-currency
-Post paid or Pre paid
-Invoicing of National Calls
-Invoicing of International Calls
-Tariff Billing Management
-Markup based on Tariffs and or Custom Rates
-Automatic CDR Collection
-Client Portal Access
-Metered or Pay As You Go
-Payment Reminders
+The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Billing System, offers a robust set of features for managing VoIP services. Here's a breakdown of the key benefits:
 
-These are just of few benefits of billing with our existing PBX and Provider API Modules with the ictVoIP Billing System. 
+1. **Single or Multi PBX Support:**
+   - The billing system supports both single and multi-PBX environments, providing flexibility for different infrastructure setups.
+
+2. **Multi-Tenant or Single-Tenant:**
+   - Accommodates both multi-tenant and single-tenant configurations, allowing for diverse use cases and customer structures.
+
+3. **Multi-Currency Support:**
+   - Supports multiple currencies, enabling businesses to operate and bill clients in different currencies.
+
+4. **Postpaid or Prepaid Invoicing:**
+   - Offers flexibility with both postpaid and prepaid invoicing models, allowing businesses to choose the billing approach that suits their needs.
+
+5. **Invoicing of National and International Calls:**
+   - Handles invoicing for both national and international calls, providing detailed billing information for various call types.
+
+6. **Tariff Billing Management:**
+   - Provides a comprehensive tariff billing management system, allowing administrators to set and manage tariffs from various providers and customizations.
+
+7. **Markup based on Tariffs and Custom Rates:**
+   - Supports the application of markups based on predefined tariffs or custom rates, giving businesses the flexibility to adjust pricing according to their strategies.
+
+8. **Automatic CDR Collection:**
+   - Offers automatic Call Detail Record (CDR) collection, streamlining the process of gathering call data for accurate billing.
+
+9. **Client Portal Access:**
+   - Provides a client portal, giving end-users access to their billing information, call details, and account management features.
+
+10. **Metered or Pay As You Go:**
+    - Supports metered billing or pay-as-you-go models, allowing for precise billing based on actual usage.
+
+11. **Payment Reminders:**
+    - Sends payment reminders to users, helping ensure timely payments and reducing the likelihood of overdue accounts.
+
+These features collectively contribute to a comprehensive VoIP billing solution that caters to the diverse needs of businesses and service providers. The integration with the ictVoIP Billing System provides a seamless management experience, making it easier for administrators to handle various aspects of billing and customer account management.
 
 |
 
