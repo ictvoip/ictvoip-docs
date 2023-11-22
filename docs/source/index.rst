@@ -124,6 +124,15 @@ Client Area
    
    clientarea.rst
 
+SIP Registration Addon
+======================
+
+.. toctree::
+   :maxdepth: 4
+
+   ictsipreg.rst
+
+
 Contributing
 =============
 
