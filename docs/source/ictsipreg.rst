@@ -1,11 +1,11 @@
-*******
-Other
-*******
+********************************
+ictSIP Registration Status Addon
+********************************
 
-Other relavent information to help provide a sucessful installation and setup of your billing modules.
+Supported PBX and Providers are VoIPms via API and FusionPBX via our custom API.
 
 .. toctree::
   :maxdepth: 3
   :glob:
 
-  other/other.rst
+  ictsipreg/ictsipreg.rst
