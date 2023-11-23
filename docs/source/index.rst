@@ -124,8 +124,8 @@ Client Area
    
    clientarea.rst
 
-SIP Registration Addon
-======================
+Extra Addons & Features
+=======================
 
 .. toctree::
    :maxdepth: 4
