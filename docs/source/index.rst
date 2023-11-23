@@ -130,7 +130,7 @@ Extra Addons & Features
 .. toctree::
    :maxdepth: 4
 
-   ictsipreg.rst
+   extra_addons.rst
 
 
 Contributing
