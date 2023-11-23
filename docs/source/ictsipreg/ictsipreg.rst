@@ -3,6 +3,7 @@ ictSIP Registration Status
 **************************
 
 Track and alert Admins on SIP registration drops and recieve email alerts on key registrations. Retain logs for any number of days. Assign one or multiple admins to a registration account. Emails for registration lost sent once with detailed information and then upon a restored registration.
+Currently supporting VoIPms and FusionPBX SIP registration collection. This addon is available for clients who already own the ictVoIP Billing app for WHMCS and a server module such as VoIPms API server module or FusionPBX server module or both at this time.
 
 |
 
