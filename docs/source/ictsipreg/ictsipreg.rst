@@ -53,7 +53,7 @@ Select accounts for collection and assign admin emails if required for alert not
 
 |
 
- .. image:: ../_static/images/ictsipreg/Log_Settings.png
+ .. image:: ../_static/images/ictsipreg/Log_Settings2.png
         :scale: 50%
         :align: center
         :alt: Custom Rates
