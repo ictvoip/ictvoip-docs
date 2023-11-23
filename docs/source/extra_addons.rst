@@ -9,4 +9,4 @@ Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services,
   :glob:
 
   ictsipreg/ictsipreg.rst
-  clientarea/clientareaproviders.html#faxing
+  clientarea/clientareaproviders.rst#faxing
