@@ -2,7 +2,7 @@
 ictSIP Registration Status
 **************************
 
-VoIP Package assignments and setup of server modules for extentions and API connection to your PBX or Provider API.
+Track and alert Admins on SIP registration drops and recieve email alerts on key registrations. Retain logs for any number of days. Assign one or multiple admins to a registration account. Emails for registration lost sent once with detailed information and then upon a restored registration.
 
 |
 
@@ -42,10 +42,10 @@ VoIP Package assignments and setup of server modules for extentions and API conn
 
 |
 
-Custom Rates
-*************
+VoIPms
+******
    
-Here you can be creative as to how you would like to manage your custom rates.  When examining how your specific custom packages may be designed you could create a package where only calls outbound for a particular Country could be metered at a special rate.
+Track and alert Admins on SIP registration drops and recieve email alerts on key registrations. Retain logs for any number of days. Assign one or multiple admins to a registration account. Emails for registration lost sent once with detailed information and then upon a restored registration.
 
 |
 
@@ -62,4 +62,7 @@ In order to use custom rates you must first change the column field of "status" 
 
 Database: ictvoip_whmc308 »Table: mod_ictvoipbilling_tariff_telnyx_outbound_2022_10
 
+FusionPBX 
+*********
 
+Track and alert Admins on SIP registration drops and recieve email alerts on key registrations. Retain logs for any number of days. Assign one or multiple admins to a registration account. Emails for registration lost sent once with detailed information and then upon a restored registration.
