@@ -1,8 +1,8 @@
-********************************
-ictSIP Registration Status Addon
-********************************
+**********************
+Optional Addons & Apps 
+**********************
 
-Supported PBX and Providers are VoIPms via API and FusionPBX via our custom API.
+Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services, Support and Billing.
 
 .. toctree::
   :maxdepth: 3
