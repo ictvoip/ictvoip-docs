@@ -10,7 +10,7 @@ Administration of server modules and billing would be setup with client products
 
 |
 
- .. image:: ../_static/images/clientadmin/client_product1.png
+ .. image:: ../_static/images/clientadmin/client_product2.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
@@ -26,7 +26,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
 
  1) Assign your FusionPBX server from the drop down. If only one server has been assigned it will appear and be selected. 
 
-.. image:: ../_static/images/clientadmin/client_admin_server.png
+.. image:: ../_static/images/clientadmin/client_admin_server2.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
