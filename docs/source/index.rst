@@ -22,7 +22,7 @@ CLICK to Watch the Video
         :scale: 65%
         :align: center
         :alt: Click to watch the ictVoIP Billing Intro
-        :target: https://cloud.icts.ca/index.php/s/c86SoQ6LQPWpZ7k
+        :target: ="_blank" https://cloud.icts.ca/index.php/s/c86SoQ6LQPWpZ7k
         
 |
 
