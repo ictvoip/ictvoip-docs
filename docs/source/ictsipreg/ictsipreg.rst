@@ -21,19 +21,6 @@ Activating your addon
 
 
 
-
-Log View and Export to CSV
-
-|
-
- .. image:: ../_static/images/ictsipreg/Log_View.png
-        :scale: 45%
-        :align: center
-        :alt: Package Rates
-        
-|
-
-
 VoIPms
 ******
 
@@ -47,6 +34,19 @@ Manage and select your VoIPms Provider table.
         :alt: Custom Rates
         
 |
+
+
+Log View and Export to CSV
+
+|
+
+ .. image:: ../_static/images/ictsipreg/Log_View.png
+        :scale: 45%
+        :align: center
+        :alt: Package Rates
+        
+|
+
 
 
 Select accounts for collection and assign admin emails if required for alert notification.
@@ -74,10 +74,62 @@ Adjust the default email template for your company needs
 
 
 
+
 FusionPBX 
 *********
 
 Track and alert Admins on SIP registration drops and recieve email alerts on key registrations. Retain logs for any number of days. Assign one or multiple admins to a registration account. Emails for registration lost sent once with detailed information and then upon a restored registration.
+
+
+Log View and Export to CSV
+
+|
+
+ .. image:: ../_static/images/ictsipreg/log_view_fpbx.png
+        :scale: 45%
+        :align: center
+        :alt: Package Rates
+        
+|
+
+
+
+Manage and select your FusionPBX Provider table.
+
+|
+
+ .. image:: ../_static/images/ictsipreg/provider_fpbx.png
+        :scale: 50%
+        :align: center
+        :alt: Custom Rates
+        
+|
+
+
+Select accounts for collection and assign admin emails if required for alert notification.
+
+|
+
+ .. image:: ../_static/images/ictsipreg/log_settings_fpbx.png
+        :scale: 50%
+        :align: center
+        :alt: Custom Rates
+        
+|
+
+Adjust the default email template for your company needs
+
+|
+
+ .. image:: ../_static/images/ictsipreg/email_templates_fpbx.png
+        :scale: 50%
+        :align: center
+        :alt: Custom Rates
+        
+|
+
+
+
 
 
 
