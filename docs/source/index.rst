@@ -71,14 +71,6 @@ The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Bill
 
 These features collectively contribute to a comprehensive VoIP billing solution that caters to the diverse needs of businesses and service providers. The integration with the ictVoIP Billing System provides a seamless management experience, making it easier for administrators to handle various aspects of billing and customer account management.
 
-|
-
- .. image:: _static/images/home/lean_process.png
-        :scale: 65%
-        :align: center
-        :alt: Lean Process
-        
-|
 
 ictVoIP Billing is compatible with WHMCS v8+, PHP7.4, PHP8.1, Apache and LiteSpeed. 
 
