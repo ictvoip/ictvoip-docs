@@ -36,7 +36,7 @@ Once your VoIP product has been assigned there are fields which must follow the 
  2) Assign the Domain/Tenant with Main DID attached to Domain 
 ::
  
-  mcon.wat5.ictvoip.ca | 5192229000
+  mcon.wat7.ictvoip.ca | 5192229000
   
 |
  3) Assign the extension you wish to have within the clients billing. Multi extension should use the | as the seperator.
@@ -69,7 +69,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
  2) Assign the Tenant | Inbound DID(s) to Tenant 
 ::
  
-  cffm.wat1.ictvoip.ca | 5484815577 | 5197830020 | 8300
+  cffm3.wat1.ictvoip.ca | 5484815577 | 5197830020 | 8300
   
 |
  3) Assign the DID or extension you wish to have within the clients billing. 
