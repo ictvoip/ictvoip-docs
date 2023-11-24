@@ -16,26 +16,23 @@ ictVoIP Billing Management System is a WHMCS addon application that supports mul
 
    This project is under active development.
 
+
+
+CLICK to Watch the Video
+************************
 |
 
- .. image:: _static/images/home/video_intro.png
+ .. image:: _static/images/home/video_intro2.png
         :scale: 65%
         :align: center
-        :alt: ictVoIP Intro
+        :alt: Click to watch the ictVoIP Billing Intro
+        :target: https://cloud.icts.ca/index.php/s/c86SoQ6LQPWpZ7k
         
 |
 
 Some of the Key Features
 ************************
 
-|
-
- .. image:: _static/images/home/Key_Features1.png
-        :scale: 40%
-        :align: center
-        :alt: Key Features
-        
-|
 
 The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Billing System, offers a robust set of features for managing VoIP services. Here's a breakdown of the key benefits:
 
