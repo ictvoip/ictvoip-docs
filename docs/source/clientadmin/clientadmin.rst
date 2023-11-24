@@ -59,7 +59,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
 
 |
 
- .. image:: ../_static/images/clientadmin/vodia_format.png
+ .. image:: ../_static/images/clientadmin/vodia_format2.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
@@ -69,7 +69,7 @@ Once your VoIP product has been assigned there are fields formatting which must 
  2) Assign the Tenant | Inbound DID(s) to Tenant 
 ::
  
-  cffm3.wat1.ictvoip.ca | 5484815577 | 5197830020 | 8300
+  rucken.wat1.ictvoip.ca | 5484815577 | 5197830020 | 8300
   
 |
  3) Assign the DID or extension you wish to have within the clients billing. 
