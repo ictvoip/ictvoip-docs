@@ -137,7 +137,11 @@ Adjust the default email template for your company needs
 SIP Faxing
 **********
 
+Fax Panel
+*********
+
 Fax Panel allows for listing of recieved faxes by billing period, download fax PDF attachment, email Fax to another user, assigning emails or groups to receive Faxes, and Send Faxes with attachments.
+
 
 |
 
@@ -148,7 +152,11 @@ Fax Panel allows for listing of recieved faxes by billing period, download fax P
         
 |
 
+Fax View/Email
+**************
+
 Fax list with ability to email to users, download the PDF fax as an attachment and assign users to receive Faxes via adding email address or groups. Fax Send.
+
 
 |
 
@@ -158,6 +166,9 @@ Fax list with ability to email to users, download the PDF fax as an attachment a
         :alt: Client CDRs
         
 |
+
+Sending Faxes
+*************
 
 Send Fax using Attachments. Supported types: pdf, txt, jpg, gif, png, tif
 
