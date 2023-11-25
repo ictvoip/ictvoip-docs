@@ -7,6 +7,8 @@ Getting Started
 
 .. warning::  Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.
 
+|
+
 Once you have installed the addon features for your FusionPBX ictVoIP Billing module you can then create a new menu item for your CDR maintenance when testing or migrating from other FusionPBX hosts.
 
 To begin create your menu item
@@ -82,6 +84,9 @@ Save your CSV Exported CDR for use to import onto your DEV or new production Fus
 Importing
 *********
 
+.. warning::  Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.
+
+|
 
 Currently supporting CDRs Exported from versions 5.0.x and 5.1.x and allows the importing of these CDRs based on Extension by Extension.
 If importing from tenant accounts extension then you must at minimum create the extensions which you require CDR details. The tenant (domain) should match from the exported FPBX host from where the CDRs have been exported.
