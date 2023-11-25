@@ -8,6 +8,6 @@ Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services,
   :maxdepth: 3
   :glob:
 
-  ictsipreg/ictsipreg.rst
   cdr_main/cdr_maint.rst
+  ictsipreg/ictsipreg.rst
   clientarea/clientareaproviders.rst#faxing
