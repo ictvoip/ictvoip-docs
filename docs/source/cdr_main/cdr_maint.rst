@@ -2,6 +2,9 @@
 FusionPBX CDR Maintenance
 **************************
 
+Getting Started
+***************
+
 
 Once you have installed the addon features for your FusionPBX ictVoIP Billing module you can then create a new menu item for your CDR maintenance when testing or migrating from other FusionPBX hosts.
 
@@ -29,6 +32,54 @@ Make the following entries
         :alt: Package Rates
         
 |
+
+Be sure to save and reload your new menu item.
+Once you have saved and reloaded you must logout and log back in to view your new menu item.
+
+
+|
+
+ .. image:: ../_static/images/fusionpbx/menu_item_save.png
+        :scale: 45%
+        :align: center
+        :alt: Package Rates
+        
+|
+
+
+Exporting
+*********
+
+Select the tenant of CDRs you wish to export and choose Apps / Call Detail records and click Export / CSV
+
+|
+
+ .. image:: ../_static/images/fusionpbx/export_cdr.png
+        :scale: 45%
+        :align: center
+        :alt: Package Rates
+        
+|
+
+
+Save your CSV Exported CDR for use to import onto your DEV or new production FusionPBX host
+
+
+|
+
+ .. image:: ../_static/images/fusionpbx/sace_CDR.png
+        :scale: 45%
+        :align: center
+        :alt: Package Rates
+        
+|
+
+
+
+
+
+Importing
+*********
 
 
 Currently supporting CDRs Exported from versions 5.0.x and 5.1.x and allows the importing of these CDRs based on Extension by Extension.
