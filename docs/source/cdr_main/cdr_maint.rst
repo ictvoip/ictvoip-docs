@@ -5,6 +5,7 @@ FusionPBX CDR Maintenance
 Getting Started
 ***************
 
+.. warning::  Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.
 
 Once you have installed the addon features for your FusionPBX ictVoIP Billing module you can then create a new menu item for your CDR maintenance when testing or migrating from other FusionPBX hosts.
 
