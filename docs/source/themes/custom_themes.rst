@@ -10,7 +10,7 @@ FusionPBX Landing Page
 |
 
  .. image:: ../_static/images/fusionpbx/landing_page.png
-        :scale: 45%
+        :scale: 50%
         :align: center
         :alt: Package Rates
         
