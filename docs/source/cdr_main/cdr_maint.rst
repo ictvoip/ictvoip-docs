@@ -50,7 +50,7 @@ Once you have saved and reloaded you must logout and log back in to view your ne
 Exporting
 *********
 
-Select the tenant of CDRs you wish to export and choose Apps / Call Detail records and click Export / CSV
+Select the tenant of CDRs you wish to export and choose Apps / Call Detail records and click Export / Format / CSV
 
 |
 
@@ -97,7 +97,8 @@ Once you have the tenant and extensions required to import then select the tenan
 |
 
 
-Select upload then select the CSV exported from your production host.
+Select browse to upload your CSV exported from your production host.
+
 
 |
 
@@ -108,4 +109,39 @@ Select upload then select the CSV exported from your production host.
         
 |
 
+Select your file and then open button
 
+|
+
+ .. image:: ../_static/images/fusionpbx/import_CDR_by_EXT.png
+        :scale: 45%
+        :align: center
+        :alt: Package Rates
+        
+|
+
+
+
+Once selected click submit to begin import
+
+|
+
+ .. image:: ../_static/images/fusionpbx/submit_import.png
+        :scale: 45%
+        :align: center
+        :alt: Package Rates
+        
+|
+
+Depending on the size of your exported CDR the process will complete as follows.
+
+
+
+|
+
+ .. image:: ../_static/images/fusionpbx/import_completed.png
+        :scale: 45%
+        :align: center
+        :alt: Package Rates
+        
+|
