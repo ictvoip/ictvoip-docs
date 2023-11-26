@@ -12,4 +12,4 @@ Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services,
   cdr_main/cdr_maint.rst
   ictsipreg/ictsipreg.rst
   clientarea/clientareaproviders.rst#faxing
-  admin/servers.rst#widget_section
+  admin/servers.rst#widget-section
