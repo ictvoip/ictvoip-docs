@@ -16,7 +16,9 @@ Use of our Server modules with the ictVoIP Billing System allows you to provisio
 Installing the FusionPBX API
 ****************************
 
-: Note :: You may recieve a bundled zip package ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip - this will have both the FusionPBX and WHMCS Server Module packages
+.. note:: 
+
+ You may recieve a bundled zip package ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip - this will have both the FusionPBX and WHMCS Server Module packages
 
 |
 
@@ -65,10 +67,11 @@ This example will provide the steps required to place the APIs onto your FusionP
 Installing Server Module
 **************************
 
-: Note :: You may recieve a bundled zip package ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip - this will have both the FusionPBX and WHMCS Server Module packages
+.. note:: 
+
+ You may recieve a bundled zip package ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip - this will have both the FusionPBX and WHMCS Server Module packages
 
 |
-
 
 |
 Adding your server module to WHMCS. We will provide an example of the FusionPBX server module install but the same steps can be used for other server modules. 
