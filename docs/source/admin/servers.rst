@@ -215,7 +215,6 @@ After your server details have been entered and saved you can now test your conn
 |
 
 .. _widget_section:
-
 Server Widget
 #############
 
