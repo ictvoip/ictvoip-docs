@@ -215,7 +215,8 @@ After your server details have been entered and saved you can now test your conn
 |
 
 
-:ref:`Link to Widget Section <admin/servers.rst#widget>`
+Server Widget
+#############
 
 |
 **This feature is optional**
