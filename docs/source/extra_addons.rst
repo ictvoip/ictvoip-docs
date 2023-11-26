@@ -5,7 +5,7 @@ Optional Addons & Apps
 Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services, Support and Billing.
 
 .. toctree::
-  :maxdepth: 5
+  :maxdepth: 3
   :glob:
 
   themes/custom_themes.rst
