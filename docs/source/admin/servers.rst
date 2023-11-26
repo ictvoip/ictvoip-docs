@@ -89,7 +89,7 @@ Adding your server module to WHMCS. We will provide an example of the FusionPBX 
  /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip
 
 |
- After uploading and uncompressing your the packe copy the files from
+ After uploading and uncompressing your package copy the files from
  
 ::
 
