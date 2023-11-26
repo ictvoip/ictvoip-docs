@@ -23,7 +23,7 @@ Purchase your server module here: `ictVoIP Billing Software <https://www.icttech
 Download the ictVoIP Billing Addon along with your 
 Server module and extract to /home/$user/tmp.
 
-i.e. Archive: /home/$user/tmp/ictvoip_billing-release-x.x.x.zip
+i.e. Archive: /home/$user/tmp/ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip
 
 MySQL Table Import
 ==================
