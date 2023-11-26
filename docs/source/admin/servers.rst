@@ -43,7 +43,7 @@ This example will provide the steps required to place the APIs onto your FusionP
 
  FusionPBX File locations and a directory which will be created: (please review README.md for full installation instructions)
 
-- example only.
+- example only, many more scripts would be required to be uploaded to your fusionpbx directory.
 
 
 ::
@@ -70,6 +70,7 @@ Installing Server Module
 .. note:: 
 
  You may recieve a bundled zip package ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip - this will have both the FusionPBX and WHMCS Server Module packages
+ The server module within this package will not be compressed. 
 
 |
 
@@ -85,27 +86,29 @@ Adding your server module to WHMCS. We will provide an example of the FusionPBX 
 
 ::
 
- /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1.zip
+ /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip
 
 |
- After downloading and uncompressing your server module, copy the files from
+ After uploading and uncompressing your the packe copy the files from
  
 ::
 
- /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.0_PHP7.4-8.1/modules/servers/
+ /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1/includes
+ /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1/modules
 
 |
  To
  
 ::
 
- /home/$user/public_html/modules/servers/
+ /home/$user/public_html/
 
 |
 Once copied your directory server module files and directory structure should be:
 
 ::
 
+ /home/$user/public_html/includes/hooks
  /home/$user/public_html/modules/servers/fusionpbx
  /home/$user/public_html/modules/servers/fusionpbx/img
  /home/$user/public_html/modules/servers/fusionpbx/lib
