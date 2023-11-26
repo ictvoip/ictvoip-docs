@@ -256,12 +256,13 @@ Adding a FusionPBX Status Widget for your Servers can be accomplished by the fol
  
 |
 
+WHMCS Setup
+###########
+
  2) Add the status script location to your WHMCS Fusion PBX Server.
  
  ::
 
-WHMCS Setup
-###########
 
   WHMCS / System Settings / Servers
  
