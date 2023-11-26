@@ -26,7 +26,7 @@ ictVoIP Billing Addon Install
 
  1. Downloading the ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip from your client area licenses.
 
-Download the ictVoIP Billing addon module zip file to /home/$user/tmp.
+Upload the ictVoIP Billing addon module zip file to /home/$user/tmp.
 
 i.e. Archive: 
 ::
