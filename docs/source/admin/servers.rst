@@ -279,7 +279,7 @@ WHMCS Setup
  
 |
 
- .. image:: ../_static/images/admin/server_widget_link.png
+ .. image:: ../_static/images/admin/server_widget_link2.png
         :scale: 70%
         :align: center
         :alt: Server widget link
