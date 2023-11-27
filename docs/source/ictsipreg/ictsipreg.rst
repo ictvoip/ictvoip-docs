@@ -22,7 +22,7 @@ i.e.
 
 Copy the addon directory tmp/ictvoip_sip_registration_status/modules/addons/ictsipreg to your WHMCS/modules/addons directory
 
-Activating your addon
+Activating your addon enter your addon license key. Note you have the option when deactivating your addon you will have the choice to drop all tables or keep by selecting "delete module data on deactivation "yes or "no" drop and save.
 
 |
 
