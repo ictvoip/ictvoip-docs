@@ -143,15 +143,15 @@ Server Module Requirements:
 ############################
 
 |
-Server Name could be the FQDN of your hosted FusionPBX
+Server Name [Just text] could be the FQDN of your hosted FusionPBX.
 ::
 
- Name: waterloo12.ictvoip.ca - FusionPBX
+ Name: waterloo3.ictvoip.ca - FusionPBX v5.1.1
 |
-Hostname needs to be the FQDN of your hosted FusionPBX
+Hostname must be the FQDN of your hosted FusionPBX with active SSL certificate.
 ::
 
- Hostname: waterloo7.ictvoip.ca
+ Hostname: waterloo3.ictvoip.ca
 
 |
 IP Address can be the local IP or public
@@ -181,7 +181,7 @@ Module in this case we select the Fusionpbx server module
 This user should be created on the Fusion PBX side with superadmin group rights.
 ::
 
- Username: ictapiwat5
+ Username: ictwat3api
 
 |
 This would be the password assigned to the FusionPBX API user
@@ -200,7 +200,7 @@ Add more as required.
 Server Connection Verification
 ################################
 **
-You must have SSL cert installed on your FusionPBX host
+You must have SSL certificate installed on your FusionPBX server host name.
 **
 
 After your server details have been entered and saved you can now test your connection to your FusionPBX by clicking on the Test button next to the Server Module "FusionPBX". After clicking you should see "Attempting Connection" then if suscessful your should get "Connection successful." If there is a problem connecting with your FusionPBX server then you will have to further troubleshoot the issue before you continue your setup.
