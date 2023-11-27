@@ -15,17 +15,36 @@ ictVoIP Billing can be installed on WHMCS v8.5.x, v8.6.x, v8.7.x and v8.8.x runn
 Install ictVoIP Billing Addon
 =============================
 
-**1.** After downloading the ictVoIP Billing .zip
+|
 
-You may select your server module required for your PBX or Provider API.
+ 1. Downloading the ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip from your client area licenses.
 
-Purchase your server module here: `ictVoIP Billing Software <https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
+Upload the ictVoIP Billing addon module zip file to /home/$user/tmp.
+
+i.e. Archive: 
+::
+
+/home/$user/tmp/ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip
+
+|
+ 2. Uncompress the module and copy the contents to your WHMCS root installation. Your directories which should be copied would be like this:
 
 
-Download the ictVoIP Billing Addon along with your 
-Server module and extract to /home/$user/tmp.
+ ::
+ 
+   /home/$user/public_html/admin/
+   /home/$user/public_html/admin/lang
+   /home/$user/public_html/admin/lang/overrides
+   /home/$user/public_html/images/
+   /home/$user/public_html/modules/addons/ictvoipbilling
+   /home/$user/public_html/modules/addons/ictvoipbilling/Actions
+   /home/$user/public_html/modules/addons/ictvoipbilling/Utility
+   /home/$user/public_html/modules/addons/ictvoipbilling/crons
+   /home/$user/public_html/modules/addons/ictvoipbilling/import
+   /home/$user/public_html/modules/addons/ictvoipbilling/tariff
 
-i.e. Archive: /home/$user/tmp/ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip
+|
+
 
 MySQL Table Import
 ==================
