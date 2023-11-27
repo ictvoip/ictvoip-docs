@@ -207,7 +207,7 @@ After your server details have been entered and saved you can now test your conn
 
 |
 
- .. image:: ../_static/images/admin/connection_test.png
+ .. image:: ../_static/images/admin/connection_test2.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
