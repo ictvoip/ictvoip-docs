@@ -6,7 +6,21 @@ Track and alert Admins on SIP registration drops and recieve email alerts on key
 
 Currently supporting VoIPms and FusionPBX SIP registration collection. This addon is available for clients who already own the ictVoIP Billing app for WHMCS and a server module such as VoIPms API server module or FusionPBX server module or both at this time.
 
+Installation
+**************
 
+Download your addon from your client area and upload the package to your WHMCS host.
+
+i.e.
+
+::
+
+ Extract ictsipreg-v1-0.zip to your tmp directory
+ /home/$user/tmp/
+
+|
+
+Copy the addon directory tmp/ictvoip_sip_registration_status/modules/addons/ictsipreg to your WHMCS/modules/addons directory
 
 Activating your addon
 
