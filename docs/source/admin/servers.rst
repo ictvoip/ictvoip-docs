@@ -223,7 +223,7 @@ Server Widget
 
 |
 
- .. image:: ../_static/images/admin/server_widget2.png
+ .. image:: ../_static/images/admin/server_widget3.png
         :scale: 70%
         :align: center
         :alt: FusionPBX Server Status
