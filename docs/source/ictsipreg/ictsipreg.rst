@@ -21,8 +21,8 @@ Activating your addon
 
 
 
-VoIPms
-******
+VoIPms Registrations Status
+***************************
 
 Manage and select your VoIPms Provider table.
 
@@ -37,6 +37,7 @@ Manage and select your VoIPms Provider table.
 
 
 Log View and Export to CSV
+###########################
 
 |
 
@@ -49,6 +50,9 @@ Log View and Export to CSV
 
 
 
+Log Settings
+############
+
 Select accounts for collection and assign admin emails if required for alert notification.
 
 |
@@ -59,6 +63,9 @@ Select accounts for collection and assign admin emails if required for alert not
         :alt: Custom Rates
         
 |
+
+Email Templates
+################
 
 Adjust the default email template for your company needs
 
@@ -75,11 +82,14 @@ Adjust the default email template for your company needs
 
 
 
-FusionPBX 
-*********
+FusionPBX Registrations Status
+******************************
 
 Track and alert Admins on SIP registration drops and recieve email alerts on key registrations. Retain logs for any number of days. Assign one or multiple admins to a registration account. Emails for registration lost sent once with detailed information and then upon a restored registration.
 
+
+Log View and Export to CSV
+###########################
 
 Log View and Export to CSV
 
@@ -93,6 +103,8 @@ Log View and Export to CSV
 |
 
 
+Log Settings
+############
 
 Manage and select your FusionPBX Provider table.
 
@@ -117,6 +129,9 @@ Select accounts for collection and assign admin emails if required for alert not
         
 |
 
+Email Templates
+###############
+
 Adjust the default email template for your company needs
 
 |
@@ -127,9 +142,6 @@ Adjust the default email template for your company needs
         :alt: Custom Rates
         
 |
-
-
-
 
 
 
@@ -153,7 +165,7 @@ Fax Panel allows for listing of recieved faxes by billing period, download fax P
 |
 
 Fax View/Email
-**************
+##############
 
 Fax list with ability to email to users, download the PDF fax as an attachment and assign users to receive Faxes via adding email address or groups. Fax Send.
 
@@ -168,7 +180,7 @@ Fax list with ability to email to users, download the PDF fax as an attachment a
 |
 
 Sending Faxes
-*************
+#############
 
 Send Fax using Attachments. Supported types: pdf, txt, jpg, gif, png, tif
 
