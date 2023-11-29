@@ -26,8 +26,8 @@ CLICK to Watch the Video
         
 |
 
-Some of the Key Features
-************************
+Some of the FusionPBX Billing Features
+***************************************
 
 
 The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Billing System, offers a robust set of features for managing VoIP services. Here's a breakdown of the key benefits:
