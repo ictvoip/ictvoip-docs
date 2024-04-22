@@ -50,12 +50,12 @@ Manage and select your VoIPms Provider table.
 |
 
 
-Log View and Export to CSV
-###########################
+Log View and Export to Excel
+############################
 
 |
 
- .. image:: ../_static/images/ictsipreg/Log_View.png
+ .. image:: ../_static/images/ictsipreg/Log_View2.png
         :scale: 45%
         :align: center
         :alt: Package Rates
