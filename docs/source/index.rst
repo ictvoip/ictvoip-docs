@@ -22,9 +22,8 @@ CLICK to Watch the Video
         :scale: 65%
         :align: center
         :alt: Click to watch the ictVoIP Billing Intro
-        :target: https://cloud.icts.ca/index.php/s/ADTMSaMwqXdj3Fk
+        :target: https://cloud.icts.ca/index.php/s/c86SoQ6LQPWpZ7k
         
-|
 
 Some of the FusionPBX Billing Features
 ***************************************
