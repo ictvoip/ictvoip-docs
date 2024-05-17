@@ -92,6 +92,10 @@ FusionPBX Server Module
 -----------------------
 Current Supported versions of FPBX: v5.0.x & 5.1.x
 
+.. note::
+
+  We can no longer provide support for this module as development has been paused at this time.
+
 System Settings / Products & Services /
 - Create your new VoIP Product with description and with the Module Settings Tab, select Fusionpbx Module name and then place your License Key in the box, save. 
 
