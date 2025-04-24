@@ -60,6 +60,6 @@ i.e. VoIP Calls to Poland package 1000 minutes metered but then once over 1000 m
 
 In order to use custom rates you must first change the column field of "status" to a zero. This can be found in your WHMCS DB Table of the Tariff you just imported. It should be located as such:
 
-Database: ictvoip_whmc308 »Table: mod_ictvoipbilling_tariff_telnyx_outbound_2022_10
+Database: ictvoip_dev6733 »Table: mod_ictvoipbilling_tariff_telnyx_outbound_2024_10
 
 
