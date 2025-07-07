@@ -1,112 +1,300 @@
-****************************
-Billing Management Details
-****************************
+Billing Management
+==================
 
-The main dashboard of the ictVoIP Billing Management Dashboard includes several areas which we will cover here. 
+**CDR Processing & Billing Configuration**
 
-Tariff/Rates
-***************
+The Billing Management dashboard provides comprehensive tools for managing CDR processing, rate configuration, filtering, and automated billing processes. This central hub controls all aspects of the billing system.
 
+|
 
-Tariff Importing
-##################
+.. image:: ../_static/images/admin/billing_management.png
+        :scale: 40%
+        :align: center
+        :alt: Billing Management Dashboard
+|
 
-Relevant information can be found here on how to and mapping:  `Tariffs <../admin/tariffs.html>`_
+Overview
+--------
 
+The Billing Management system handles call detail record (CDR) processing, rate application, filtering, and automated billing. It provides tools for configuring billing rules, managing exclusions, and monitoring billing processes.
 
-Tariff Exporting
-##################
+**Key Features:**
+* CDR processing and filtering
+* Rate management and export
+* Automated billing configuration
+* Debug and testing tools
+* Comprehensive filtering options
 
-By highlighting the imported Tariff name you may export the Tariff to CSV for updating or inspection.
+Tariff Management
+----------------
 
-.. warning:: If reimporting your exported Tariff do not include the "status" column
+**Tariff Importing**
 
+Import provider rate cards and configure pricing structures. For detailed information, see: `Tariffs <../admin/tariffs.html>`_
 
-Package Rates
-***************
+**Tariff Exporting**
 
-Relevant information can be found here on how to manage your VoIP packages:  `Package Rates <../admin/packages.html>`_
+Export existing tariffs to CSV format for review or modification:
 
+1. Select the tariff name from the dashboard
+2. Click **Export** to download the CSV file
+3. Review and modify rates as needed
+4. Re-import the updated tariff
+
+.. warning::
+   When re-importing exported tariffs, do not include the "status" column in your CSV file.
+
+Package Management
+-----------------
+
+**Package Configuration**
+
+Configure VoIP service packages with specific rates and features. For detailed information, see: `Package Rates <../admin/packages.html>`_
+
+**Package Features:**
+* Rate structure configuration
+* Free minute allocation
+* Custom rate application
+* Global markup management
 
 Autobill Debug
-****************
+-------------
 
-When you enable CDR Autobill Debug you will be presented with an output of the CDR billing collection from manually running the autobill.  You may test run your install by populating the script link into your browser. Be sure to set the next due date of the client’s VoIP product to be the current date.
+**Debug Configuration**
+
+Enable CDR Autobill Debug to test and monitor the billing process:
 
 |
 
- .. image:: ../_static/images/admin/enable_debug.png
+.. image:: ../_static/images/admin/enable_debug.png
         :scale: 50%
         :align: center
-        :alt: Adding a new Provider or PBX
-        
+        :alt: Autobill Debug Configuration
 |
 
+**Debug Process:**
 
-When executed debug will display the calculations from the CDR billing once it has complete. 
+1. **Enable Debug Mode** - Activate debug logging
+2. **Set Test Date** - Configure client's next due date to current date
+3. **Run Manual Test** - Execute autobill process manually
+4. **Review Output** - Analyze billing calculations and results
 
-.. Warning ::  Note that when running CRON via the browser it's processing can be very slow, be patient.
+**Debug Output:**
 
-Further information on Autobill CRON can be found here: `Autobill CRON <../admin/packages.html>`_
+The debug process displays detailed information including:
+* CDR processing results
+* Rate calculations
+* Billing summaries
+* Error messages and warnings
 
+.. warning::
+   When running CRON via browser, processing can be very slow. Please be patient during execution.
 
-Filtering
-***********
+**Manual Testing:**
 
-Here we can filter CDR information for a particular Provider. When selecting the provider from the ictVoIP Billing Dashboard you are presented with the Billing Management Dashboard. 
+Test your installation by accessing the autobill script directly in your browser:
 
-Exclude/Suppress
-##################
+.. code-block:: text
 
-Exclude and Suppress CDR output from columns Direction & Description. 
+   URL: https://your-domain.com/modules/addons/ictvoipbilling/crons/autobill.php
+   Method: GET or POST
+   Authentication: Required
 
-::
+For detailed CRON configuration, see: `Autobill CRON <../admin/autobill.html>`_
 
- Exclude = exclude these filtered CDR records from billing
- Suppress = Suppress the CDR record from displaying in the CDR Client View
+CDR Filtering
+-------------
 
-|
-Here we can elimante the CDR output of internal calls such as direct Extension or Voicemail calling by adding filtering like this:
+**Filter Configuration**
 
-Let's exclude all extension calls within a tenant or domain list.
+Configure CDR filtering to exclude or suppress specific call types and destinations. Filtering is applied per provider and affects both billing and display.
 
-Exclude/Supress dialed codes starting with *xx and #xx, might be *97, *71, *72 etc.
-::
+**Filter Types:**
 
- *xx,#xx,4443,4747,201,202,203,999,555
+1. **Exclude/Suppress** - Remove CDR records from billing and display
+2. **Exclude from Billing** - Remove from billing but keep in display
+3. **Custom Filters** - Specific filtering rules
 
-|
+Exclude/Suppress Filtering
+-------------------------
 
+**Purpose:**
+* **Exclude** - Remove filtered CDR records from billing
+* **Suppress** - Hide CDR records from client view
+
+**Common Exclusions:**
+
+**Internal System Calls:**
+Exclude internal PBX system calls and features:
+
+.. code-block:: text
+
+   Filter Pattern: *xx,#xx,4443,4747,201,202,203,999,555
+   
+   Examples:
+   *97 - Voicemail access
+   *71 - Call forwarding
+   *72 - Call forwarding activation
+   #72 - Call forwarding deactivation
+   4443 - System announcements
+   4747 - System features
+
+**Extension Calls:**
+Exclude direct extension-to-extension calls within the same tenant:
+
+.. code-block:: text
+
+   Filter Pattern: 201,202,203,204,205
+   
+   This excludes calls between extensions 201-205 from billing
+
+**System Features:**
+Exclude PBX system features and announcements:
+
+.. code-block:: text
+
+   Filter Pattern: 999,555,4443,4747
+   
+   Examples:
+   999 - Emergency system
+   555 - Test numbers
+   4443 - System announcements
+   4747 - Feature codes
 
 Exclude from Billing
-#######################
+-------------------
 
+**Purpose:**
+Remove specific calls from billing while keeping them visible in CDR reports.
 
-Exclude CDR output for billing from columns Destination & Description. 
+**Toll Free Numbers:**
 
-::
+Exclude North American toll-free numbers from billing:
 
- Exclude = exclude these filtered CDR records from billing
-|
-Here we can display the output of the CDR filered records but Exclude from Billing the output.
+.. code-block:: text
 
-Let's Exclude from billing all Toll Free and Emergency numbers within North America.
+   Filter Pattern: 844xxxxxxx,888xxxxxxx,877xxxxxxx,866xxxxxxx,800xxxxxxx,1800xxxxxxx,1844xxxxxxx,1866xxxxxxx,1877xxxxxxx,1888xxxxxxx
+   
+   Examples:
+   1-800-555-1234
+   1-888-555-5678
+   1-877-555-9012
 
-Exclude 18884163054, 911, etc.
-::
+**Emergency Numbers:**
 
- 844xxxxxxx,888xxxxxxx,877xxxxxxx,866xxxxxxx,800xxxxxxx,1800xxxxxxx,1844xxxxxxx,1866xxxxxxx,1877xxxxxxx,1888xxxxxxx,2264763054,8884163054,18884163054,911
+Exclude emergency service numbers:
 
-|
-Here the CDR will display the called number but will not bill the minutes used. This can inversly be used to allow all inbound call free of charge and also allow to display local DIDs called but not bill such as voicemail local extensions, ring groups, etc..
+.. code-block:: text
 
-Exclude local DIDs or extensions and inbound calls etc.
-::
+   Filter Pattern: 911,112,999,000
+   
+   Examples:
+   911 - North American emergency
+   112 - European emergency
+   999 - UK emergency
+   000 - Australian emergency
 
- [local],[inbound]
+**Local Services:**
 
-|
+Exclude local service numbers and features:
 
+.. code-block:: text
 
-.. Note ::  These filters are dependant of each Vendors PBX's output of CDR columns. we try to keep it consistant accross platforms but test before applying into production.
+   Filter Pattern: [local],[inbound]
+   
+   Examples:
+   Local DID numbers
+   Inbound call records
+   Voicemail access
+   Ring group calls
 
+**Custom Exclusions:**
+
+Create custom exclusion patterns for specific needs:
+
+.. code-block:: text
+
+   Filter Pattern: 2264763054,8884163054,18884163054
+   
+   This excludes specific numbers from billing
+
+Filter Configuration Best Practices
+---------------------------------
+
+**Pattern Design:**
+
+* **Use Wildcards** - `xxxxxxx` for variable digits
+* **Include Variations** - Account for different formats
+* **Test Patterns** - Verify filter accuracy
+* **Document Rules** - Maintain filter documentation
+
+**Common Patterns:**
+
+.. code-block:: text
+
+   # Toll Free Numbers
+   8xx,1-8xx,1-800,1-888,1-877,1-866
+   
+   # Emergency Numbers
+   911,112,999,000,119,110
+   
+   # System Features
+   *xx,#xx,4443,4747
+   
+   # Local Services
+   [local],[inbound],[voicemail]
+
+**Testing Filters:**
+
+1. **Enable Debug Mode** - Activate detailed logging
+2. **Run Test CDRs** - Process sample call records
+3. **Review Results** - Verify filter accuracy
+4. **Adjust Patterns** - Refine filter rules
+
+**Vendor Compatibility:**
+
+.. note::
+   Filter patterns depend on each vendor's PBX CDR output format. While we maintain consistency across platforms, test filters before applying to production.
+
+**CDR Column Dependencies:**
+
+Filters are applied to specific CDR columns:
+* **Direction** - Call direction (inbound/outbound)
+* **Description** - Call description or feature
+* **Destination** - Called number
+* **Source** - Calling number
+
+Troubleshooting
+--------------
+
+**Common Filter Issues:**
+
+* **Over-filtering** - Too many calls excluded
+* **Under-filtering** - Unwanted calls still billed
+* **Pattern Errors** - Incorrect filter syntax
+* **Vendor Differences** - PBX-specific formatting
+
+**Debug Steps:**
+
+1. **Review CDR Output** - Check raw CDR data
+2. **Test Filter Patterns** - Verify pattern matching
+3. **Check Column Values** - Confirm column content
+4. **Monitor Billing Results** - Review billing output
+
+**Support Information:**
+
+For filtering issues, provide:
+* CDR sample data
+* Filter patterns used
+* Expected vs actual results
+* PBX vendor and version
+
+Next Steps
+----------
+
+After configuring billing management:
+
+1. **Test Configuration** - Run debug tests
+2. **Monitor Results** - Review billing output
+3. **Adjust Filters** - Refine filtering rules
+4. **Production Deployment** - Enable automated billing

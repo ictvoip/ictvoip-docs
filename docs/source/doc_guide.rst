@@ -766,6 +766,8 @@ heading, like so::
 You can also explicitly number the footnotes (``[1]_``) or use auto-numbered 
 footnotes without names (``[#]_``). Here is an example [#footnote1]_.
 
+.. [#footnote1] this is a footnote aimed at illustrating the footnote capability.
+
 Citations
 =========
 
@@ -875,7 +877,6 @@ contents directives
 .. |logo| image:: _static/images/logo.png
     :width: 20pt
     :height: 20pt
-    :align: middle
 
 .. |longtext| replace:: this is a longish text to include within a table and which is longer than the width of the column.
 

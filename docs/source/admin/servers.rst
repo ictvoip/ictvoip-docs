@@ -1,134 +1,277 @@
-*********
-Servers
-*********
+Server Management
+=================
 
-Use of our Server modules with the ictVoIP Billing System allows you to provision to our custom API for your PBX or Provider. Once installed your PBX(s) you may have an almost unlimited amount of PBX servers to support your infrastructure for billing from these hosts.
+**PBX Server Integration & API Configuration**
+
+The Server Management section covers the installation and configuration of PBX server modules, enabling seamless integration between your WHMCS system and various PBX platforms.
 
 |
+
+.. image:: ../_static/images/admin/servers.png
+        :scale: 50%
+        :align: center
+        :alt: Server Management Dashboard
+|
+
+Overview
+--------
+
+Server modules allow you to provision and manage PBX servers directly from your WHMCS admin panel. This integration provides automated provisioning, billing, and management capabilities for your PBX infrastructure.
+
+**Supported PBX Platforms:**
+* FusionPBX 5.1.x and higher
+* Vodia PBX
+* Custom PBX integrations
+
+**Key Features:**
+* Automated server provisioning
+* Real-time server status monitoring
+* Integrated billing and management
+* API-based communication
+* Multi-server support
+
+FusionPBX Integration
+--------------------
+
+**Supported Versions:**
+* FusionPBX 5.1.x (current)
+* FusionPBX 5.2.x (current)
+* FusionPBX 5.3.x (current)
+
+.. note::
+   For older version support, please contact our support team.
+
+**Package Information:**
+
+You may receive a bundled package containing both FusionPBX and WHMCS modules:
+* **Package:** `ictvoip_fusionPBX_module-release-1.3.2_PHP8.1-8.3.zip`
+* **Contents:** FusionPBX API scripts + WHMCS Server Module
+
+FusionPBX API Installation
+--------------------------
+
+**Step 1: Download and Extract**
+
+Download the FusionPBX API package and extract it to your FusionPBX server:
+
+.. code-block:: bash
+
+   # Extract to FusionPBX root directory
+   unzip ictvoip_fusionpbx_5-1-x_extras.zip -d /var/www/fusionpbx/
+
+**Step 2: Upload Files**
+
+Upload the API scripts to your FusionPBX host using WinSCP, FTP, or SCP:
+
+.. code-block:: text
+
+   Required file locations:
+   /var/www/fusionpbx/app/xml_cdr/chkcon.php
+   /var/www/fusionpbx/app/xml_cdr/export_cdr.php
+   /var/www/fusionpbx/app/xml_cdr/import_cdr.php
+   /var/www/fusionpbx/app/xml_cdr/img/
+   /var/www/fusionpbx/app/xml_cdr/img/loading.gif
+
+.. warning::
+   The import_cdr script can overwrite existing CDRs. Use with caution and ensure proper backups.
+
+**Step 3: Verify Installation**
+
+Check that all files are properly uploaded and have correct permissions:
+
+.. code-block:: bash
+
+   # Check file permissions
+   ls -la /var/www/fusionpbx/app/xml_cdr/
+   
+   # Verify API accessibility
+   curl -I https://your-fusionpbx-domain.com/app/xml_cdr/chkcon.php
+
+WHMCS Server Module Installation
+-------------------------------
+
+**Step 1: Download Server Module**
+
+Download the WHMCS server module from your client area:
+
+.. code-block:: text
+
+   Package: ictvoip_fusionPBX_module-release-1.3.2_PHP8.1-8.3.zip
+   Location: /home/$user/tmp/
+
+**Step 2: Extract and Copy Files**
+
+Extract the package and copy the required files:
+
+.. code-block:: bash
+
+   # Extract the package
+   unzip ictvoip_fusionPBX_module-release-1.3.2_PHP8.1-8.3.zip
+   
+   # Copy WHMCS files
+   cp -r includes/hooks /home/$user/public_html/includes/
+   cp -r modules/servers/fusionpbx /home/$user/public_html/modules/servers/
+
+**Step 3: Verify Directory Structure**
+
+Ensure the following structure exists:
+
+.. code-block:: text
+
+   /home/$user/public_html/includes/hooks
+   /home/$user/public_html/modules/servers/fusionpbx
+   /home/$user/public_html/modules/servers/fusionpbx/img
+   /home/$user/public_html/modules/servers/fusionpbx/lib
+   /home/$user/public_html/modules/servers/fusionpbx/templates
+
+Server Configuration
+-------------------
+
+**Step 1: Access Server Management**
+
+Navigate to your WHMCS admin panel:
+* **System Settings** → **Products & Services** → **Servers**
+
+**Step 2: Add New Server**
+
+Click **Add New Server** and configure the following settings:
+
+|
+
+.. image:: ../_static/images/admin/servers_edit2.png
+        :scale: 50%
+        :align: center
+        :alt: Server Configuration
+|
+
+**Required Configuration:**
+
+.. code-block:: text
+
+   Server Name: waterloo3.ictvoip.ca - FusionPBX v5.1.1
+   Hostname: waterloo3.ictvoip.ca
+   IP Address: 102.100.100.20
+   Assigned IP addresses: 102.100.100.20
+   Maximum No. of Accounts: 100
+   Module: Fusionpbx
+   Username: ictwat3api
+   Password: [YOUR_SECURE_PASSWORD]
+
+**Configuration Details:**
+
+* **Server Name:** Descriptive name for your server
+* **Hostname:** FQDN with active SSL certificate
+* **IP Address:** Local or public IP address
+* **Assigned IP:** IP addresses available for this server
+* **Maximum Accounts:** Maximum tenants or extensions
+* **Module:** Select "Fusionpbx" from dropdown
+* **Username:** FusionPBX API user with superadmin rights
+* **Password:** Secure password for API user
+
+**Step 3: Create API User**
+
+On your FusionPBX server, create a new user with superadmin group rights:
+
+.. code-block:: sql
+
+   -- Create API user in FusionPBX database
+   INSERT INTO v_users (user_uuid, domain_uuid, username, password, salt, user_enabled)
+   VALUES (uuid_generate_v4(), 'your-domain-uuid', 'ictwat3api', 'hashed_password', 'salt', 'true');
+   
+   INSERT INTO v_group_users (group_user_uuid, domain_uuid, group_name, user_uuid, group_user_enabled)
+   VALUES (uuid_generate_v4(), 'your-domain-uuid', 'superadmin', 'user-uuid', 'true');
+
+Connection Verification
+----------------------
+
+**Test Server Connection:**
+
+1. In WHMCS, go to **Servers** → **Test Connection**
+2. Verify the connection is successful
+3. Check for any error messages
+
+**Common Connection Issues:**
+
+* **SSL Certificate:** Ensure valid SSL certificate on FusionPBX
+* **Firewall:** Check firewall rules allow API access
+* **API User:** Verify API user has correct permissions
+* **Network:** Ensure network connectivity between WHMCS and FusionPBX
+
+**API Endpoint Testing:**
+
+Test the API endpoints directly:
+
+.. code-block:: bash
+
+   # Test connection endpoint
+   curl -u username:password https://your-fusionpbx-domain.com/app/xml_cdr/chkcon.php
+   
+   # Test CDR export
+   curl -u username:password https://your-fusionpbx-domain.com/app/xml_cdr/export_cdr.php
+
+Security Considerations
+----------------------
+
+**Best Practices:**
+
+* Use strong, unique passwords for API users
+* Enable SSL/TLS encryption
+* Restrict API access to specific IP addresses
+* Regularly update API user credentials
+* Monitor API access logs
+
+**Firewall Configuration:**
+
+Ensure your firewall allows API communication:
+
+.. code-block:: bash
+
+   # Allow HTTPS traffic to FusionPBX
+   ufw allow 443/tcp
+   
+   # Allow specific IP ranges if needed
+   ufw allow from WHMCS_IP to any port 443
+
+Troubleshooting
+--------------
+
+**Common Issues:**
+
+* **Connection Failed:** Check hostname, credentials, and network connectivity
+* **Permission Denied:** Verify API user has superadmin rights
+* **SSL Errors:** Ensure valid SSL certificate is installed
+* **Module Not Found:** Verify server module files are properly installed
+
+**Debug Steps:**
+
+1. Check WHMCS error logs
+2. Verify FusionPBX API accessibility
+3. Test API credentials manually
+4. Review firewall and network configuration
+
+**Support:**
+
+For additional support, contact our team with:
+* WHMCS version and PHP version
+* FusionPBX version
+* Error messages and logs
+* Network configuration details
+
+Next Steps
+----------
+
+After successful server configuration:
+
+1. **Provider Setup** - Configure VoIP providers
+2. **Tariff Configuration** - Set up pricing structure
+3. **Package Creation** - Create service packages
+4. **Client Provisioning** - Set up client accounts
 
  .. image:: ../_static/images/admin/servers.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
         
-|
-
-Installing the FusionPBX API
-****************************
-
-.. note:: 
-
- You may recieve a bundled zip package ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip - this will have both the FusionPBX and WHMCS Server Module packages
-
-|
-
-Currently Supported Version of FPBX: 5.1.x - (for older version support please contact us)
-
-The compressed file will have the structure of where the files need to be uploaded to your FusionPBX host. Please note you would also require ionCube Loader enabled for PHP 7.4 and 8.1.
-
-i.e.
-
-::
-
- Extract ictvoip_fusionpbx_5-1-x_extras.zip to
- /var/www/fusionpbx/
-
-|
-Placing the script files onto your FusionPBX you may use WinSCP or FTP. The files do not need to be modified in any way. 
-
-This example will provide the steps required to place the APIs onto your FusionPBX host or many hosts for the addition into WHMCS and the server creation within WHMCS.
-
- 1) FusionPBX APIs should be uploaded to your host using an application like WinSCP or FTP. You would require root access to upload these files.  
-  
-
- FusionPBX File locations and a directory which will be created: (please review README.md for full installation instructions)
-
-- example only, many more scripts would be required to be uploaded to your fusionpbx directory.
-
-
-::
-
-    /var/www/fusionpbx/app/xml_cdr/chkcon.php  
-    /var/www/fusionpbx/app/xml_cdr/export_cdr.php
-    /var/www/fusionpbx/app/xml_cdr/import_cdr.php  
-    /var/www/fusionpbx/app/xml_cdr/img/
-    /var/www/fusionpbx/app/xml_cdr/img/loading.gif
-
-|
-
-
-  2) Please note that the import_cdr script can be used to import CDRs from other FusionPBX hosts to provide testing of correct CDR formatting of your FusionPBX setup. You can find more information here for installation and use https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html
-     
-.. warning::  Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.
-   
-|
-
-
-Installing Server Module
-**************************
-
-.. note:: 
-
- You may recieve a bundled zip package ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip - this will have both the FusionPBX and WHMCS Server Module packages
- The server module within this package will not be compressed. 
-
-|
-
-|
-Adding your server module to WHMCS. We will provide an example of the FusionPBX server module install but the same steps can be used for other server modules. 
-
- 1. You may purchase your server module here: `ictVoIP Billing Software <https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
-
-
-    Download the ictVoIP Server module and extract to /home/$user/tmp.
-
- i.e. Archive: 
-
-::
-
- /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1.zip
-
-|
- After uploading and uncompressing your package copy the files from
- 
-::
-
- /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1/includes
- /home/$user/tmp/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1/ictvoip_fusionPBX_module-release-1.3.2_PHP7.4-8.1/modules
-
-|
- To
- 
-::
-
- /home/$user/public_html/
-
-|
-Once copied your directory server module files and directory structure should be:
-
-::
-
- /home/$user/public_html/includes/hooks
- /home/$user/public_html/modules/servers/fusionpbx
- /home/$user/public_html/modules/servers/fusionpbx/img
- /home/$user/public_html/modules/servers/fusionpbx/lib
- /home/$user/public_html/modules/servers/fusionpbx/templates
-
-|
-
-Create the Server(s)
-*********************
-
-|
-Within WHMCS to add and setup your servers go here:
-
-::
-
- WHMCS/System Settings/Products & Services/Servers
-
-|
-
-
 |
 
  .. image:: ../_static/images/admin/servers_edit2.png
@@ -138,6 +281,40 @@ Within WHMCS to add and setup your servers go here:
         
 |
 
+ .. image:: ../_static/images/admin/connection_test2.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
+
+ .. image:: ../_static/images/admin/server_widget3.png
+        :scale: 70%
+        :align: center
+        :alt: FusionPBX Server Status
+        
+|
+
+ .. image:: ../_static/images/admin/server_widget_link2.png
+        :scale: 70%
+        :align: center
+        :alt: Server widget link
+        
+|
+
+ .. image:: ../_static/images/admin/show_widgets.png
+        :scale: 70%
+        :align: center
+        :alt: Server widget link
+        
+|
+
+ .. image:: ../_static/images/admin/servers_edit2.png
+        :scale: 50%
+        :align: center
+        :alt: Adding a new Provider or PBX
+        
+|
 
 Server Module Requirements:
 ############################

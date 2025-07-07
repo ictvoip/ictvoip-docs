@@ -2,134 +2,321 @@
         :scale: 100%
         :align: center
         :alt: ictVoIP Canada
-|
+
 ictVoIP Billing Administrators Guide for WHMCS
 ==============================================
 
-**ictVoIP Billing**
---------------------
+**ictVoIP Billing Management System**
+------------------------------------
 
+ictVoIP Billing Management System is a comprehensive WHMCS addon application that supports multiple providers and various PBX systems. It calculates call times and allows for tariff-based or custom rate billing. The system provides automation for billing overage minutes based on metered plans or VoIP product plans, with CDR views for customer reports based on billing cycles. Client Area addons for customers are continuously expanding within our development roadmap.
 
-ictVoIP Billing Management System is a WHMCS addon application that supports multi providers and various PBXs which calculates call times and allows for Tariff and or custom rate for billing. Automation of billing for overage minutes used based on metered plans or based on VoIP product plans. Allowing CDR views for customer reports based on billing cycles. Client Area addons for customers are currently expanding within our development roadmap. Note:   This project is under active development.
+.. note::
 
+   This project is under active development.
+   Supported WHMCS versions include 8.12+.
+   Supported PHP versions include 8.1, 8.2, and 8.3.
 
+🎬 Watch the Introduction Video
+------------------------------
 
-CLICK to Watch the Video
-------------------------
-|
+.. image:: _static/images/home/video_intro2.png
+   :scale: 65%
+   :align: center
+   :alt: Click to watch the ictVoIP Billing Introduction Video
+   :target: https://blackwolf.riverdog.ca/s/XeEc9ygZ7Hycaan
 
- .. image:: _static/images/home/video_intro2.png
-        :scale: 65%
-        :align: center
-        :alt: Click to watch the ictVoIP Billing Intro
-        :target: https://cloud.icts.ca/index.php/s/c86SoQ6LQPWpZ7k
-        
+.. raw:: html
 
-Some of the FusionPBX Billing Features
-***************************************
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+       var videoImage = document.querySelector('img[alt="Click to watch the ictVoIP Billing Introduction Video"]');
+       if (videoImage) {
+           videoImage.style.cursor = 'pointer';
+           videoImage.addEventListener('click', function(e) {
+               e.preventDefault();
+               e.stopPropagation();
+               window.open('https://blackwolf.riverdog.ca/s/XeEc9ygZ7Hycaan', '_blank');
+               return false;
+           });
+       }
+   });
+   </script>
 
+.. image:: _static/images/qr_video_intro.png
+   :scale: 50%
+   :align: center
+   :alt: QR Code for ictVoIP Billing Introduction Video
 
-The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Billing System, offers a robust set of features for managing VoIP services. Here's a breakdown of the key benefits:
+.. note::
 
-1. **Single or Multi PBX Support:**
-   - The billing system supports both single and multi-PBX environments, providing flexibility for different infrastructure setups.
+   **📱 Mobile Access**: Scan the QR code above to watch the video on your mobile device.
+   
+   **🔗 Direct Link**: `Watch the video directly here <https://blackwolf.riverdog.ca/s/XeEc9ygZ7Hycaan>`_ (opens in new tab)
 
-2. **Multi-Tenant or Single-Tenant:**
-   - Accommodates both multi-tenant and single-tenant configurations, allowing for diverse use cases and customer structures.
+.. raw:: html
 
-3. **Multi-Currency Support:**
-   - Supports multiple currencies, enabling businesses to operate and bill clients in different currencies.
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+       // Make direct link open in new tab
+       var links = document.querySelectorAll('a[href="https://blackwolf.riverdog.ca/s/XeEc9ygZ7Hycaan"]');
+       links.forEach(function(link) {
+           link.setAttribute('target', '_blank');
+           link.setAttribute('rel', 'noopener noreferrer');
+       });
+   });
+   </script>
 
-4. **Postpaid or Prepaid Invoicing:**
-   - Offers flexibility with both postpaid and prepaid invoicing models, allowing businesses to choose the billing approach that suits their needs.
+✨ Key Features
+**************
 
-5. **Invoicing of National and International Calls:**
-   - Handles invoicing for both national and international calls, providing detailed billing information for various call types.
+The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Billing System, offers a robust set of features for managing VoIP services:
 
-6. **Tariff Billing Management:**
-   - Provides a comprehensive tariff billing management system, allowing administrators to set and manage tariffs from various providers and customizations.
+* **🏢 Single or Multi PBX Support** - Flexible infrastructure setups
+* **🏢 Multi-Tenant or Single-Tenant** - Diverse customer structures
+* **💱 Multi-Currency Support** - Operate in different currencies
+* **💳 Postpaid or Prepaid Invoicing** - Flexible billing models
+* **🌍 National and International Call Billing** - Comprehensive call handling
+* **📊 Tariff Billing Management** - Comprehensive rate management
+* **💰 Markup based on Tariffs and Custom Rates** - Flexible pricing strategies
+* **📞 Automatic CDR Collection** - Streamlined call data gathering
+* **👤 Client Portal Access** - End-user account management
+* **📈 Metered or Pay As You Go** - Precise usage-based billing
+* **🔔 Payment Reminders** - Automated payment notifications
 
-7. **Markup based on Tariffs and Custom Rates:**
-   - Supports the application of markups based on predefined tariffs or custom rates, giving businesses the flexibility to adjust pricing according to their strategies.
+🔧 Compatibility
+***************
 
-8. **Automatic CDR Collection:**
-   - Offers automatic Call Detail Record (CDR) collection, streamlining the process of gathering call data for accurate billing.
+ictVoIP Billing is compatible with:
 
-9. **Client Portal Access:**
-   - Provides a client portal, giving end-users access to their billing information, call details, and account management features.
-
-10. **Metered or Pay As You Go:**
-    - Supports metered billing or pay-as-you-go models, allowing for precise billing based on actual usage.
-
-11. **Payment Reminders:**
-    - Sends payment reminders to users, helping ensure timely payments and reducing the likelihood of overdue accounts.
-
-These features collectively contribute to a comprehensive VoIP billing solution that caters to the diverse needs of businesses and service providers. The integration with the ictVoIP Billing System provides a seamless management experience, making it easier for administrators to handle various aspects of billing and customer account management.
-
-
-ictVoIP Billing is compatible with WHMCS v8+, PHP7.4, PHP8.1, Apache and LiteSpeed. 
+* **WHMCS**: 8.12+
+* **PHP**: 8.1, 8.2, 8.3
+* **Web Servers**: Apache, LiteSpeed, Nginx
+* **Databases**: MySQL 5.7+, MariaDB 10.3+
 
 You may select your server module required for your PBX or Provider API here:
-https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software
+`ictVoIP Billing Software Store <https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
 
-Check out the :doc:`getting_started` section for quick setup, including
-how to install the ictVoIP Billing and modules.
-
-
-Getting Started
-=====================
-
-.. toctree::
-   :maxdepth: 4
-   
-   getting_started.rst
-
-Admin Area
-===========
-
-.. toctree::
-   :maxdepth: 4
-   
-   admin.rst
-
-Client Admin
-=============
-
-.. toctree::
-   :maxdepth: 4
-   
-   clientadmin/clientadmin.rst
-
-Client Area
-=============
-
-.. toctree::
-   :maxdepth: 4
-   
-   clientarea.rst
-
-Extra Addons & Features
+🚀 Installation & Setup
 =======================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
+   :caption: Installation Guide
 
+   getting_started.rst
+
+⚙️ System Administration
+========================
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Administration Guide
+
+   admin.rst
+
+🔌 Server Modules
+=================
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Supported PBX Systems
+
+   modules/fusionpbx
+   modules/vodia
+   modules/lesnet
+   modules/providers
+   modules/custom_integration
+
+👥 Client Management
+====================
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Client Features
+
+   clientadmin.rst
+   clientarea.rst
    extra_addons.rst
 
+🔌 API Reference
+================
 
-Contributing
-=============
-
-.. toctree::
-   :maxdepth: 4
-
-   contributing.rst
-
-Other
-=======
+ictVoIP Billing provides comprehensive API access for integration, automation, and management across all supported modules. See the sections below for quick access to API documentation for each module and general API usage.
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
+   :caption: API Documentation
 
-   other.rst
+   api/overview
+   modules/fusionpbx/api_endpoints
+   modules/vodia
+   modules/providers
+   api/whmcs_integration
+   api/pbx_apis
+   api/billing_apis
+   api/webhooks
 
+📋 How-To Guides
+================
+
+The following guides provide step-by-step instructions for installing, configuring, and maintaining the complete ictVoIP Billing system:
+
+- **Quick Install:** Fast setup for ictVoIP Billing on WHMCS, including module upload, activation, and licensing.
+- **CDR Maintenance:** How to manage and maintain Call Detail Records (CDRs) for accurate billing and reporting.
+- **Additional Information:** Special notes, tips, and troubleshooting for advanced scenarios.
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Practical Guides
+
+   getting_started/quick_install
+   cdr_main/cdr_maint
+   additional_information/additional_information
+
+📚 Reference
+============
+
++-------------------------+-----------------------------------------------+
+| Technology              | Official Site                                 |
++=========================+===============================================+
+| WHMCS                   | https://www.whmcs.com/                        |
++-------------------------+-----------------------------------------------+
+| PHP                     | https://www.php.net/                          |
++-------------------------+-----------------------------------------------+
+| PostgreSQL              | https://www.postgresql.org/                   |
++-------------------------+-----------------------------------------------+
+| MySQL                   | https://www.mysql.com/                        |
++-------------------------+-----------------------------------------------+
+| MariaDB                 | https://mariadb.org/                          |
++-------------------------+-----------------------------------------------+
+| phpMyAdmin              | https://www.phpmyadmin.net/                   |
++-------------------------+-----------------------------------------------+
+| FusionPBX               | https://www.fusionpbx.com/                    |
++-------------------------+-----------------------------------------------+
+| Vodia PBX               | https://vodia.com/                            |
++-------------------------+-----------------------------------------------+
+| FreeSWITCH              | https://freeswitch.com/                       |
++-------------------------+-----------------------------------------------+
+| LiteSpeed               | https://www.litespeedtech.com/                |
++-------------------------+-----------------------------------------------+
+| Apache HTTP Server      | https://httpd.apache.org/                     |
++-------------------------+-----------------------------------------------+
+| Nginx                   | https://nginx.org/                            |
++-------------------------+-----------------------------------------------+
+| cPanel                  | https://cpanel.net/                           |
++-------------------------+-----------------------------------------------+
+| Debian                  | https://www.debian.org/                       |
++-------------------------+-----------------------------------------------+
+| Ubuntu                  | https://ubuntu.com/                           |
++-------------------------+-----------------------------------------------+
+| SSL/TLS (Let's Encrypt) | https://letsencrypt.org/                      |
++-------------------------+-----------------------------------------------+
+| CRON                    | https://en.wikipedia.org/wiki/Cron            |
++-------------------------+-----------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Core Technologies
+
+   reference/whmcs
+   reference/php
+   reference/postgresql
+   reference/mysql
+   reference/mariadb
+   reference/phpmyadmin
+   reference/fusionpbx
+   reference/vodia
+   reference/freeswitch
+   reference/litespeed
+   reference/apache
+   reference/nginx
+   reference/cpanel
+   reference/debian
+   reference/ubuntu
+   reference/ssl_tls
+   reference/cron
+
+📞 Support
+==========
+
+Below are support and community resources for the core technologies used in the ictVoIP Billing system:
+
++-------------------------+--------------------------------------------------------------+
+| Technology              | Support / Community Links                                    |
++=========================+==============================================================+
+| ictVoIP Canada          | https://www.icttech.ca/index.php?rp=/knowledgebase           |
++-------------------------+--------------------------------------------------------------+
+| WHMCS Help              | https://help.whmcs.com/                                      |
++-------------------------+--------------------------------------------------------------+
+| WHMCS Forums            | https://forums.whmcs.com/                                    |
++-------------------------+--------------------------------------------------------------+
+| PHP                     | https://www.php.net/support.php                              |
++-------------------------+--------------------------------------------------------------+
+| PHP Repo                | https://github.com/php/php-src                               |
++-------------------------+--------------------------------------------------------------+
+| PostgreSQL Community    | https://www.postgresql.org/community/                        |
++-------------------------+--------------------------------------------------------------+
+| PostgreSQL General      | https://www.postgresql.org/list/pgsql-general/               |
++-------------------------+--------------------------------------------------------------+
+| MySQL Forums            | https://forums.mysql.com/                                    |
++-------------------------+--------------------------------------------------------------+
+| MySQL Repo              | https://github.com/mysql/mysql-server                        |
++-------------------------+--------------------------------------------------------------+
+| MariaDB Community       | https://mariadb.org/community/                               |
++-------------------------+--------------------------------------------------------------+
+| MariaDB Knowledgebase   | https://mariadb.com/kb/en/mariadb-community/                 |
++-------------------------+--------------------------------------------------------------+
+| phpMyAdmin              | https://github.com/phpmyadmin/phpmyadmin                     |
++-------------------------+--------------------------------------------------------------+
+| phpMyAdmin Questions    | https://stackoverflow.com/questions/tagged/phpmyadmin        |
++-------------------------+--------------------------------------------------------------+
+| FusionPBX Forums        | https://www.pbxforums.com/                                   |
++-------------------------+--------------------------------------------------------------+
+| FusionPBX Repo          | https://github.com/fusionpbx/fusionpbx                       |
++-------------------------+--------------------------------------------------------------+
+| Vodia PBX               | https://forum.vodia.com/                                     |
++-------------------------+--------------------------------------------------------------+
+| FreeSWITCH              | https://freeswitch.org/confluence/display/FREESWITCH/Support |
++-------------------------+--------------------------------------------------------------+
+|                         | https://github.com/signalwire/freeswitch                     |
++-------------------------+--------------------------------------------------------------+
+| LiteSpeed               | https://forum.litespeedtech.com/                             |
++-------------------------+--------------------------------------------------------------+
+|                         | https://github.com/litespeedtech                             |
++-------------------------+--------------------------------------------------------------+
+| Apache HTTP Server      | https://httpd.apache.org/lists.html                          |
++-------------------------+--------------------------------------------------------------+
+|                         | https://github.com/apache/httpd                              |
++-------------------------+--------------------------------------------------------------+
+| Nginx                   | https://forum.nginx.org/                                     |
++-------------------------+--------------------------------------------------------------+
+|                         | https://github.com/nginx/nginx                               |
++-------------------------+--------------------------------------------------------------+
+| cPanel                  | https://forums.cpanel.net/                                   |
++-------------------------+--------------------------------------------------------------+
+|                         | https://github.com/CpanelInc                                 |
++-------------------------+--------------------------------------------------------------+
+| Debian                  | https://forums.debian.net/                                   |
++-------------------------+--------------------------------------------------------------+
+|                         | https://salsa.debian.org/                                    |
++-------------------------+--------------------------------------------------------------+
+| Ubuntu                  | https://ubuntuforums.org/                                    |
++-------------------------+--------------------------------------------------------------+
+|                         | https://github.com/canonical                                 |
++-------------------------+--------------------------------------------------------------+
+| SSL/TLS (Let's Encrypt) | https://community.letsencrypt.org/                           |
++-------------------------+--------------------------------------------------------------+
+|                         | https://github.com/letsencrypt/letsencrypt                   |
++-------------------------+--------------------------------------------------------------+
+| CRON                    | https://unix.stackexchange.com/questions/tagged/cron         |
++-------------------------+--------------------------------------------------------------+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Support Resources
+
+   support/faq
+   support/contact
+   contributing.rst 

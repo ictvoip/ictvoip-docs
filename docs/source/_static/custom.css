@@ -1,0 +1,491 @@
+/* Custom CSS for improved navigation - Updated for current Sphinx theme */
+
+/* Fix TOC navigation and breadcrumbs */
+.wy-nav-side {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 200;
+    background: #343131;
+}
+
+/* Better breadcrumb styling */
+.wy-breadcrumbs {
+    margin-bottom: 1em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #e1e4e5;
+    background: #f8f9fa;
+}
+
+.wy-breadcrumbs li {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.wy-breadcrumbs li:after {
+    content: " » ";
+    color: #999;
+}
+
+.wy-breadcrumbs li:last-child:after {
+    content: "";
+}
+
+/* Improve navigation context */
+.wy-nav-content {
+    margin-left: 300px;
+    padding: 1.618em 3.236em;
+    max-width: none;
+}
+
+/* Better section navigation */
+.wy-menu-vertical li.current > a {
+    background: #2980B9;
+    color: white;
+}
+
+.wy-menu-vertical li.current > a:hover {
+    background: #3498db;
+}
+
+/* Improve mobile navigation */
+@media screen and (max-width: 768px) {
+    .wy-nav-side {
+        left: -300px;
+    }
+    
+    .wy-nav-content {
+        margin-left: 0;
+    }
+    
+    .wy-nav-side.shift {
+        left: 0;
+    }
+}
+
+/* Better TOC highlighting */
+.wy-menu-vertical li.toctree-l1.current > a {
+    background: #2980B9;
+    color: white;
+}
+
+.wy-menu-vertical li.toctree-l2.current > a {
+    background: #3498db;
+    color: white;
+}
+
+/* Improve navigation breadcrumbs */
+.wy-breadcrumbs-aside {
+    float: right;
+    margin-top: 0;
+}
+
+/* Better section headers */
+.wy-nav-content-wrap {
+    background: #fcfcfc;
+}
+
+/* Improve navigation depth visibility */
+.wy-menu-vertical li.toctree-l1 > a {
+    font-weight: bold;
+}
+
+.wy-menu-vertical li.toctree-l2 > a {
+    padding-left: 2em;
+}
+
+.wy-menu-vertical li.toctree-l3 > a {
+    padding-left: 3em;
+}
+
+.wy-menu-vertical li.toctree-l4 > a {
+    padding-left: 4em;
+}
+
+/* Fix for current Sphinx RTD theme */
+.rtd-wrapper {
+    display: flex;
+}
+
+.wy-grid-for-nav {
+    position: relative;
+}
+
+/* Ensure TOC stays visible */
+.wy-nav-side {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 300px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    z-index: 200 !important;
+    background: #343131 !important;
+}
+
+/* Fix breadcrumb navigation */
+.breadcrumb {
+    background: #f8f9fa;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #e9ecef;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "»";
+    color: #6c757d;
+    padding: 0 0.5rem;
+}
+
+/* Ensure proper TOC highlighting */
+.toctree-wrapper {
+    display: block !important;
+}
+
+.toctree-l1.current > a {
+    background: #2980B9 !important;
+    color: white !important;
+}
+
+.toctree-l2.current > a {
+    background: #3498db !important;
+    color: white !important;
+}
+
+/* Fix navigation depth */
+.toctree-l1 > a {
+    font-weight: bold !important;
+}
+
+.toctree-l2 > a {
+    padding-left: 2em !important;
+}
+
+.toctree-l3 > a {
+    padding-left: 3em !important;
+}
+
+.toctree-l4 > a {
+    padding-left: 4em !important;
+}
+
+/* Ensure proper content area */
+.wy-nav-content {
+    margin-left: 300px !important;
+    padding: 1.618em 3.236em !important;
+    max-width: none !important;
+}
+
+/* Fix mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .wy-nav-side {
+        left: -300px !important;
+    }
+    
+    .wy-nav-content {
+        margin-left: 0 !important;
+    }
+    
+    .wy-nav-side.shift {
+        left: 0 !important;
+    }
+}
+
+/* CRITICAL FIXES FOR BREADCRUMB NAVIGATION */
+/* Ensure breadcrumbs persist across navigation */
+.wy-breadcrumbs {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    background: #f8f9fa !important;
+    border-bottom: 1px solid #e1e4e5 !important;
+    padding: 0.5em 0 !important;
+    margin-bottom: 1em !important;
+}
+
+/* Fix breadcrumb hierarchy */
+.wy-breadcrumbs li {
+    display: inline-block !important;
+    margin-right: 0.5em !important;
+}
+
+.wy-breadcrumbs li:after {
+    content: " » " !important;
+    color: #999 !important;
+}
+
+.wy-breadcrumbs li:last-child:after {
+    content: "" !important;
+}
+
+/* Ensure TOC hierarchy is maintained */
+.wy-menu-vertical li.toctree-l1.current > a {
+    background: #2980B9 !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.wy-menu-vertical li.toctree-l2.current > a {
+    background: #3498db !important;
+    color: white !important;
+}
+
+.wy-menu-vertical li.toctree-l3.current > a {
+    background: #5dade2 !important;
+    color: white !important;
+}
+
+/* Fix parent-child TOC relationships */
+.wy-menu-vertical li.toctree-l1.current > ul {
+    display: block !important;
+}
+
+.wy-menu-vertical li.toctree-l2.current > ul {
+    display: block !important;
+}
+
+/* Ensure proper navigation state */
+.wy-menu-vertical li.current > a {
+    background: #2980B9 !important;
+    color: white !important;
+}
+
+.wy-menu-vertical li.current > a:hover {
+    background: #3498db !important;
+}
+
+/* Fix breadcrumb navigation persistence */
+.wy-breadcrumbs-aside {
+    float: right !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure TOC stays in hierarchy */
+.wy-nav-side {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 300px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    z-index: 200 !important;
+    background: #343131 !important;
+}
+
+/* Fix navigation content area */
+.wy-nav-content {
+    margin-left: 300px !important;
+    padding: 1.618em 3.236em !important;
+    max-width: none !important;
+}
+
+/* Ensure proper page structure */
+.wy-grid-for-nav {
+    position: relative !important;
+}
+
+.rtd-wrapper {
+    display: flex !important;
+}
+
+/* Fix breadcrumb visibility */
+.wy-breadcrumbs {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure TOC items stay highlighted */
+.wy-menu-vertical li.toctree-l1.current > a,
+.wy-menu-vertical li.toctree-l2.current > a,
+.wy-menu-vertical li.toctree-l3.current > a {
+    background: #2980B9 !important;
+    color: white !important;
+}
+
+/* Fix navigation depth visibility */
+.wy-menu-vertical li.toctree-l1 > a {
+    font-weight: bold !important;
+}
+
+.wy-menu-vertical li.toctree-l2 > a {
+    padding-left: 2em !important;
+}
+
+.wy-menu-vertical li.toctree-l3 > a {
+    padding-left: 3em !important;
+}
+
+.wy-menu-vertical li.toctree-l4 > a {
+    padding-left: 4em !important;
+}
+
+/* SPECIFIC FIXES FOR INSTALLATION PROCESS → QUICK INSTALL NAVIGATION */
+/* Prevent breadcrumbs from disappearing during navigation */
+.wy-breadcrumbs {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    background: #f8f9fa !important;
+    border-bottom: 1px solid #e1e4e5 !important;
+    padding: 0.5em 0 !important;
+    margin-bottom: 1em !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 2.5em !important;
+}
+
+/* Ensure breadcrumb container is always visible */
+.wy-breadcrumbs-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 2.5em !important;
+}
+
+/* Fix breadcrumb list visibility */
+.wy-breadcrumbs ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+/* Ensure breadcrumb items are always visible */
+.wy-breadcrumbs li {
+    display: inline-block !important;
+    margin-right: 0.5em !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Fix breadcrumb links */
+.wy-breadcrumbs a {
+    color: #2980B9 !important;
+    text-decoration: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.wy-breadcrumbs a:hover {
+    color: #3498db !important;
+    text-decoration: underline !important;
+}
+
+/* Ensure TOC hierarchy is maintained during navigation */
+.wy-menu-vertical li.toctree-l1.current > a {
+    background: #2980B9 !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.wy-menu-vertical li.toctree-l2.current > a {
+    background: #3498db !important;
+    color: white !important;
+}
+
+.wy-menu-vertical li.toctree-l3.current > a {
+    background: #5dade2 !important;
+    color: white !important;
+}
+
+/* Ensure parent TOC items stay expanded */
+.wy-menu-vertical li.toctree-l1.current > ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.wy-menu-vertical li.toctree-l2.current > ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Fix navigation state persistence */
+.wy-menu-vertical li.current > a {
+    background: #2980B9 !important;
+    color: white !important;
+}
+
+.wy-menu-vertical li.current > a:hover {
+    background: #3498db !important;
+}
+
+/* Ensure proper page transitions */
+.wy-nav-content {
+    transition: none !important;
+}
+
+.wy-breadcrumbs {
+    transition: none !important;
+}
+
+/* Fix for Sphinx RTD theme specific issues */
+.wy-nav-content-wrap {
+    background: #fcfcfc !important;
+}
+
+.wy-grid-for-nav {
+    position: relative !important;
+}
+
+.rtd-wrapper {
+    display: flex !important;
+}
+
+/* Ensure breadcrumb navigation doesn't break */
+.wy-breadcrumbs-aside {
+    float: right !important;
+    margin-top: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Fix for mobile navigation */
+@media screen and (max-width: 768px) {
+    .wy-nav-side {
+        left: -300px !important;
+    }
+    
+    .wy-nav-content {
+        margin-left: 0 !important;
+    }
+    
+    .wy-nav-side.shift {
+        left: 0 !important;
+    }
+    
+    .wy-breadcrumbs {
+        position: relative !important;
+        top: auto !important;
+    }
+}
+
+/* Custom code block styling for dark background and light text */
+div.highlight pre, pre.literal-block, pre {
+    background: #23272e !important;
+    color: #f8f8f2 !important;
+    border-radius: 6px;
+    padding: 1em;
+    font-size: 1em;
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+code, .rst-content tt, .rst-content code {
+    background: #23272e !important;
+    color: #f8f8f2 !important;
+    border-radius: 4px;
+    padding: 0.1em 0.3em;
+} 
