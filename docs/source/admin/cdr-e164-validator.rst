@@ -23,6 +23,7 @@ The CDR E.164 Validator provides comprehensive validation of CDR data to ensure 
 * Live CDR validation from FusionPBX
 * International country code support
 * Smart issue detection with visual indicators
+* Extension recognition: Inbound calls routed to local extensions are recognized as valid and not flagged for E.164 issues
 * Copy-paste dialplan commands
 * Direction-aware recommendations
 * Auto-population of tenant from product
@@ -136,18 +137,19 @@ Understanding the Results
 * **🔵 Blue**: Inbound calls with issues
 * **🟠 Orange**: Outbound calls with issues
 * **🔴 Red**: Invalid CDRs
+* **'Extension'**: Destination is a local extension (valid for inbound calls)
 
 **Issue Indicators:**
 
 ✅ **Valid**
 ~~~~~~~~~~~
 
-Number is correctly formatted with proper country code.
+Number is correctly formatted with proper country code, or (for inbound) is a local extension.
 
 ⚠️ **Wrong Country**
 ~~~~~~~~~~~~~~~~~~~
 
-Number has a country code, but it's not the expected one for your package.
+Number has a country code, but it's not the expected one for your package. (Not shown for inbound caller IDs; inbound calls can originate from any country.)
 
 **Example**: Package configured for UK (44) but number has US country code (1)
 
@@ -161,6 +163,11 @@ Number doesn't follow E.164 format (missing country code, too short, etc.).
 **Example**: ``5551234567`` (missing country code)
 
 **Fix**: Hover for dialplan command to add country code
+
+'Extension'
+~~~~~~~~~~~
+
+For inbound calls, if the destination is a local extension (e.g., 3-5 digits), it is recognized as valid and not flagged for E.164 issues.
 
 FusionPBX Integration
 ---------------------
@@ -216,7 +223,9 @@ The tool integrates with the FusionPBX CDR class to:
 1. **Country Code Detection**: Matches number against all country codes
 2. **Priority Matching**: Prioritizes common countries (US, UK, etc.)
 3. **Length Validation**: Ensures 7-15 digit total length
-4. **Package Code Comparison**: Flags mismatched country codes
+4. **Package Code Comparison**: Flags mismatched country codes (except for inbound caller IDs)
+5. **Extension Detection**: For inbound calls, if the destination is a local extension (3-5 digits), it is treated as valid and not checked for E.164 compliance
+6. **Inbound Caller ID**: Inbound caller IDs from outside the product country are not flagged as 'Wrong Country' (inbound calls can originate from any country)
 
 Benefits
 --------
