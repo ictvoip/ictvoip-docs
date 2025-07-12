@@ -29,7 +29,7 @@ Make the following entries
 
 |
 
- .. image:: ../_static/images/fusionpbx/create_cdr_maint_menu.png
+ .. image:: ../_static/images/fusionpbx/create_cdr_maint_menu_v2.png
         :scale: 45%
         :align: center
         :alt: Package Rates
@@ -42,7 +42,7 @@ Once you have saved and reloaded you must logout and log back in to view your ne
 
 |
 
- .. image:: ../_static/images/fusionpbx/menu_item_save.png
+ .. image:: ../_static/images/fusionpbx/menu_item_save_v2.png
         :scale: 45%
         :align: center
         :alt: Package Rates
@@ -50,8 +50,8 @@ Once you have saved and reloaded you must logout and log back in to view your ne
 |
 
 
-Exporting
-*********
+Exporting (any v5.1+)
+*********************
 
 Select the tenant of CDRs you wish to export and choose Apps / Call Detail records and click Export / Format / CSV
 
@@ -84,70 +84,48 @@ Save your CSV Exported CDR for use to import onto your DEV or new production Fus
 Importing
 *********
 
-.. warning::  Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.
+.. updated::  Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
 
 |
 
-Currently supporting CDRs Exported from versions 5.0.x and 5.1.x and allows the importing of these CDRs based on Extension by Extension.
-If importing from tenant accounts extension then you must at minimum create the extensions which you require CDR details. The tenant (domain) should match from the exported FPBX host from where the CDRs have been exported.
-Once you have the tenant and extensions required to import then select the tenant then extension.
+Currently supports Importing of CDRs Exported from v5.0.x, 5.1.x, 5.2.x and 5.3.x and allows the importing of these CDRs based on Tenant/Extension by Extension or all.
+If importing from tenant accounts extension then you must at minimum create the extension(s) which you require CDR details. The tenant (domain) should match from the exported FPBX host from where the CDRs have been exported.
+Once you have the tenant and extensions configured to import then select the tenant then extension to begin.
 
 
 |
 
- .. image:: ../_static/images/fusionpbx/CDR_Maint.png
+ .. image:: ../_static/images/fusionpbx/import_export1.png
         :scale: 45%
         :align: center
-        :alt: Package Rates
+        :alt: Import Tool
         
 |
 
 
-Select browse to upload your CSV exported from your production host.
+Select the tenant and extention(s) you wish to import from your CSV exported from your production host. Choose your CSV to import then click Import CDRs.
 
 
 |
 
- .. image:: ../_static/images/fusionpbx/import_cdrs.png
+ .. image:: ../_static/images/fusionpbx/import_full.png
         :scale: 45%
         :align: center
-        :alt: Package Rates
+        :alt: Import Tool
         
 |
 
-Select your file and then open button
+Selective Exporting
+*******************
+
+The import tool also comes with a custom selective export tool which allows the selection of the tenant, all extensions or individual extensions by date range.
 
 |
 
- .. image:: ../_static/images/fusionpbx/import_CDR_by_EXT.png
+ .. image:: ../_static/images/fusionpbx/export_1.png
         :scale: 45%
         :align: center
-        :alt: Package Rates
+        :alt: Import Tool
         
 |
 
-
-
-Once selected click submit to begin import
-
-|
-
- .. image:: ../_static/images/fusionpbx/submit_import.png
-        :scale: 45%
-        :align: center
-        :alt: Package Rates
-        
-|
-
-Depending on the size of your exported CDR the process will complete as follows.
-
-
-
-|
-
- .. image:: ../_static/images/fusionpbx/import_completed.png
-        :scale: 45%
-        :align: center
-        :alt: Package Rates
-        
-|
