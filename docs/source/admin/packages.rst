@@ -286,9 +286,6 @@ Each package can be linked to a specific provider tariff table. The Package Rate
 * Enable special handling for North American 10-digit numbers (NAPA)
 * Enable tracking and billing of inbound minutes separately
 
-**Custom Tariff Support**
-
-You can enable custom rate tables for a package using the "Enable Custom Tariff" option. This allows for highly granular rate management beyond standard provider tariffs.
 
 **Markup, Free Minutes, and Incremental Billing**
 
