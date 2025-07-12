@@ -34,6 +34,9 @@ The CDR E.164 Validator provides comprehensive validation of CDR data to ensure 
    :align: center
    :alt: CDR E.164 Validator Tool Interface
 
+*Figure: The ictVoIP Billing CDR E.164 Validator for FusionPBX, showing all valid results.*
+
+
 What is E.164?
 --------------
 
