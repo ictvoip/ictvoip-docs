@@ -5,7 +5,7 @@ FusionPBX CDR Maintenance
 Getting Started
 ***************
 
-.. warning::  Use with caution as this script will overwrite any existing CDRs that maybe assigned to an existing Domain/Tenant.
+ .. updated::  Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
 
 |
 
@@ -84,7 +84,7 @@ Save your CSV Exported CDR for use to import onto your DEV or new production Fus
 Importing
 *********
 
-.. updated::  Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
+ .. updated::  Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
 
 |
 
