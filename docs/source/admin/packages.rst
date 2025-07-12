@@ -232,6 +232,10 @@ Best Practices
 * **Proper country codes** - Accurate geographic settings
 * **CDR optimization** - Efficient call processing
 * **Database maintenance** - Regular cleanup
+* **Extension detection** - Inbound calls routed to local extensions are recognized as valid and not flagged for E.164 issues
+
+.. note::
+   The CDR E.164 Validator now recognizes inbound calls to local extensions as valid, and does not flag inbound caller IDs from outside the product country as 'Wrong Country'. Review your CDR validation results after package configuration to ensure all settings are correct. See the updated validator documentation and screenshots for details.
 
 Troubleshooting
 --------------
@@ -268,5 +272,44 @@ After package configuration:
 2. **Billing Setup** - Configure automated billing
 3. **Usage Monitoring** - Set up usage tracking
 4. **Performance Testing** - Verify package functionality
+
+Latest Package Rates UI & Functionality Updates
+==============================================
+
+**Tariff and Country Code Assignment**
+
+Each package can be linked to a specific provider tariff table. The Package Rates UI allows you to:
+
+* Select the provider tariff for outbound/inbound calls
+* Set the country code and prefix for number formatting
+* Enable or disable country code enforcement and prefixing
+* Enable special handling for North American 10-digit numbers (NAPA)
+* Enable tracking and billing of inbound minutes separately
+
+**Custom Tariff Support**
+
+You can enable custom rate tables for a package using the "Enable Custom Tariff" option. This allows for highly granular rate management beyond standard provider tariffs.
+
+**Markup, Free Minutes, and Incremental Billing**
+
+The UI allows you to set:
+* Global rate markup (percentage applied to all rates)
+* Free minutes allocation (for metered packages)
+* Incremental cost and rounding for both inbound and outbound calls
+
+**Note:** Global rate markup is bypassed when using custom rates.
+
+These settings are saved per package and affect how rates are calculated and billed.
+
+**UI Improvements**
+
+When editing a package, all current settings (tariff, country code, markups, free minutes, etc.) are pre-populated in the UI for easy review and update.
+
+.. image:: ../_static/images/admin/Package_Rates_2.png
+   :width: 900px
+   :align: center
+   :alt: Updated Package Rates UI
+
+*Figure: The updated Package Rates UI with new controls for tariff assignment, country code, markups, and more.*
 
 
