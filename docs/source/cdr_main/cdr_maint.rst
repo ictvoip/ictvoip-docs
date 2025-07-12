@@ -4,8 +4,8 @@ FusionPBX CDR Maintenance
 
 Getting Started
 ***************
-
- .. updated::  Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
+.. code-block:: text
+   Updated: Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
 
 |
 
@@ -84,7 +84,8 @@ Save your CSV Exported CDR for use to import onto your DEV or new production Fus
 Importing
 *********
 
- .. updated::  Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
+.. code-block:: text
+   Updated: Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
 
 |
 
