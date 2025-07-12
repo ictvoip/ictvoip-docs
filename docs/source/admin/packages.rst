@@ -7,7 +7,7 @@ Package management allows you to create and configure VoIP service packages with
 
 |
 
-.. image:: ../_static/images/admin/package_rates.png
+.. image:: ../_static/images/admin/Package_Rates_2.png
         :scale: 45%
         :align: center
         :alt: Package Management Interface
