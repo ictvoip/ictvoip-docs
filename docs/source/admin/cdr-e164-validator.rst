@@ -29,6 +29,11 @@ The CDR E.164 Validator provides comprehensive validation of CDR data to ensure 
 * Auto-population of tenant from product
 * Debug mode for troubleshooting
 
+.. image:: ../_static/images/admin/validator_2.png
+   :width: 900px
+   :align: center
+   :alt: CDR E.164 Validator Tool Interface
+
 What is E.164?
 --------------
 
