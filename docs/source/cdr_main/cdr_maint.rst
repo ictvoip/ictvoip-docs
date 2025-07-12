@@ -95,7 +95,7 @@ Once you have the tenant and extensions configured to import then select the ten
 
 |
 
- .. image:: ../_static/images/fusionpbx/import_export1.png
+ .. image:: ../_static/images/fusionpbx/Import_export1.png
         :scale: 45%
         :align: center
         :alt: Import Tool
