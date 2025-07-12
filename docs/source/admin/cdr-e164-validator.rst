@@ -86,7 +86,7 @@ To determine the expected country code for validation:
 2. Click on **Packages**.
 3. View the assigned product and check the associated **Country Code** in the Package Rates section.
 
-.. image:: ../_static/images/admin/package-rates-country-code.png
+.. image:: ../_static/images/admin/Package_Rates_2.png
    :width: 900px
    :align: center
    :alt: Package Rates Country Code Setting
