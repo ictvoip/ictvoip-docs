@@ -200,7 +200,7 @@ The system calculates rates using the following formula:
 1. **Custom Rates** - Highest priority
 2. **Package Rates** - Medium priority
 3. **Provider Rates** - Base priority
-4. **Global Markup** - Applied to all rates
+4. **Global Markup** - Applied to all tariff rates but does not apply to **Custom Rates**
 
 **Rate Validation:**
 
