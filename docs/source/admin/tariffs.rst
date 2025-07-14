@@ -55,10 +55,10 @@ Use a descriptive naming convention for your tariffs:
 
 **Step 3: Upload CSV File**
 
-1. Enter the tariff name
+1. Highlight the tariff name
 2. Click **Open** to access the file upload dialog
-3. Select your provider's CSV rate card
-4. Click **Upload** to import the file
+3. Select your provider's CSV rate card tariff
+4. Click **Upload** to begin the processing
 
 CSV Mapping Requirements
 -----------------------
@@ -69,11 +69,11 @@ Your CSV file must contain the following minimum columns:
 
 .. code-block:: text
 
-   Description | Prefix | RateValue | Increment
-   ------------|--------|-----------|----------
-   Local Call  | 1      | 0.01      | 60
-   Long Distance| 1      | 0.05      | 60
-   International| 011    | 0.15      | 60
+   Description                | Prefix | RateValue | Increment
+   ---------------------------|--------|-----------|----------
+   Canada - 204 Manitoba      | 1204   | 0.01      | 6
+   Canada - 226 Ontario       | 1226   | 0.01      | 6
+   Canada - 416 Metro Toronto | 1416   | 0.01      | 6
 
 |
 
