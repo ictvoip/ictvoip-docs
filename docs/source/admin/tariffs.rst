@@ -30,7 +30,7 @@ Tariff Import Process
 
 **Step 1: Prepare Rate Card**
 
-Download your provider's rate card in CSV format. Ensure it contains the required columns for proper import.
+Download your provider's rate card in CSV format. Ensure it contains the required columns for proper import. **Only the first row may contain the header column names** as mapping only checks the first row as header. If you have 2 rows before the actual rate mapping will not be suitable.
 
 **Step 2: Create Tariff**
 
