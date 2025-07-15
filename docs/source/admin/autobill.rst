@@ -8,9 +8,9 @@ The Autobill system processes call detail records (CDRs) and generates automated
 |
 
 .. image:: ../_static/images/admin/autobill_dashboard.png
-        :scale: 50%
-        :align: center
-        :alt: Autobill Dashboard
+   :width: 900px
+   :align: center
+   :alt: Autobill Dashboard
 |
 
 Overview
