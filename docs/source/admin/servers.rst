@@ -296,7 +296,7 @@ After successful server configuration:
         
 |
 
- .. image:: ../_static/images/admin/server_widget_link2.png
+ .. image:: ../_static/images/admin/server_widget_link3.png
    :width: 900px
    :align: center
    :alt: Server widget link
