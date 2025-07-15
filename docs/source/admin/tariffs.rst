@@ -8,11 +8,10 @@ Tariff management allows you to import, configure, and manage rate structures fr
 |
 
 .. image:: ../_static/images/admin/billing_management.png
-        :scale: 40%
-        :align: center
-        :alt: Tariff Management Interface
+   :width: 900px
+   :align: center
+   :alt: Tariff Management Interface
 |
-
 Overview
 --------
 
@@ -78,9 +77,9 @@ Your CSV file must contain the following minimum columns:
 |
 
 .. image:: ../_static/images/admin/tariff_mapping2.png
-        :scale: 60%
-        :align: center
-        :alt: CSV Import Mapping
+   :width: 900px
+   :align: center
+   :alt: CSV Import Mapping
 |
 
 **Column Descriptions:**
@@ -134,9 +133,9 @@ Execute the import process:
 |
 
 .. image:: ../_static/images/admin/import_complete.png
-        :scale: 50%
-        :align: center
-        :alt: Import Complete
+   :width: 900px
+   :align: center
+   :alt: Import Complete
 |
 
 **Post-Import Actions:**
