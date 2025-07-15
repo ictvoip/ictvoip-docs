@@ -2,7 +2,7 @@
 Quick Install
 *************
 .. image:: ../_static/images/document_logo.png
-        :scale: 100%
+        :scale: 80%
 
 |
 
@@ -63,10 +63,10 @@ Make sure you have licensed you product by checking your client area.
 
 |
 
- .. image:: ../_static/images/clientarea/client_lic.png
-        :scale: 40%
-        :align: center
-        :alt: Checking valid license
+ .. image:: ../_static/images/clientarea/license2.png
+   :width: 900px
+   :align: center
+   :alt: Checking valid license
         
 |
 
