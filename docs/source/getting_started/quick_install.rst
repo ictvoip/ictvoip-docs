@@ -81,9 +81,9 @@ i.e. LeasedictVoIP_a3174afbf93b3b8ba8f3
 |
 
  .. image:: ../_static/images/admin/addon_lic.png
-        :scale: 40%
-        :align: center
-        :alt: Adding a new Provider or PBX
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
         
 |
 
@@ -103,9 +103,9 @@ i.e. LeasedFusionPBX_f14fa0a312e4fac10107
 |
 
  .. image:: ../_static/images/admin/product_module_fpbx.png
-        :scale: 40%
-        :align: center
-        :alt: Adding a new Provider or PBX
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
         
 |
 
@@ -121,9 +121,9 @@ i.e. LeasedVodia_f14fa0a312e4fac10107
 |
 
  .. image:: ../_static/images/admin/product_module_vodia.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
         
 |
 
