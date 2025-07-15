@@ -458,7 +458,7 @@ WHMCS Setup
 |
 
  .. image:: ../_static/images/admin/server_widget_link3.png
-   :width: 900px
+   :width: 600px
    :align: center
    :alt: Server widget link
         
