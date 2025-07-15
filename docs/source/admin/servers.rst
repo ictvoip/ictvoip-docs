@@ -44,8 +44,9 @@ FusionPBX Integration
 **Package Information:**
 
 You may receive a bundled package containing both FusionPBX and WHMCS modules:
-* **Package:** `ictvoip_fusionPBX_module-release-1.3.2_PHP8.1-8.3.zip`
+* **Package:** `ictvoip_fusionPBX_module-release-1.3.x_PHP8.x.zip`
 * **Contents:** FusionPBX API scripts + WHMCS Server Module
+* We now offer an install script
 
 FusionPBX API Installation
 --------------------------
@@ -138,7 +139,7 @@ Click **Add New Server** and configure the following settings:
 
 |
 
-.. image:: ../_static/images/admin/servers_edit2.png
+.. image:: ../_static/images/admin/servers_edit3.png
    :width: 900px
    :align: center
    :alt: Server Configuration
@@ -274,14 +275,14 @@ After successful server configuration:
         
 |
 
- .. image:: ../_static/images/admin/servers_edit2.png
+ .. image:: ../_static/images/admin/servers_edit3.png
    :width: 900px
    :align: center
    :alt: Adding a new Provider or PBX
         
 |
 
- .. image:: ../_static/images/admin/connection_test2.png
+ .. image:: ../_static/images/admin/connection_test3.png
    :width: 900px
    :align: center
    :alt: Adding a new Provider or PBX
@@ -309,7 +310,7 @@ After successful server configuration:
         
 |
 
- .. image:: ../_static/images/admin/servers_edit2.png
+ .. image:: ../_static/images/admin/servers_edit3.png
    :width: 900px
    :align: center
    :alt: Adding a new Provider or PBX
@@ -323,7 +324,7 @@ Server Module Requirements:
 Server Name [Just text] could be the FQDN of your hosted FusionPBX.
 ::
 
- Name: waterloo3.ictvoip.ca - FusionPBX v5.1.1
+ Name: voipsrv1.ictvoip.ca - FusionPBX v5.3.x
 |
 Hostname must be the FQDN of your hosted FusionPBX with active SSL certificate.
 ::
@@ -384,7 +385,7 @@ After your server details have been entered and saved you can now test your conn
 
 |
 
- .. image:: ../_static/images/admin/connection_test2.png
+ .. image:: ../_static/images/admin/connection_test3.png
    :width: 900px
    :align: center
    :alt: Adding a new Provider or PBX
@@ -400,7 +401,7 @@ Server Widget
 
 |
 
- .. image:: ../_static/images/admin/server_widget3.png
+ .. image:: ../_static/images/admin/server_widget4.png
    :width: 900px
    :align: center
    :alt: FusionPBX Server Status
@@ -456,7 +457,7 @@ WHMCS Setup
  
 |
 
- .. image:: ../_static/images/admin/server_widget_link2.png
+ .. image:: ../_static/images/admin/server_widget_link3.png
    :width: 900px
    :align: center
    :alt: Server widget link
@@ -470,7 +471,7 @@ WHMCS Setup
 |
 
  .. image:: ../_static/images/admin/show_widgets.png
-   :width: 900px
+   :width: 300px
    :align: center
    :alt: Server widget link
         
