@@ -8,10 +8,10 @@ This guide provides step-by-step instructions for installing and configuring the
 
 |
 
-.. image:: ../_static/images/admin/ictvoip_billing_dashboard.png
-        :scale: 45%
-        :align: center
-        :alt: ictVoIP Billing Dashboard
+.. image:: ../_static/images/admin/ictvoip_billing2.png
+   :width: 900px
+   :align: center
+   :alt: ictVoIP Billing Dashboard
 |
 
 System Requirements
@@ -131,9 +131,9 @@ Enter your license key in the configuration:
 |
 
 .. image:: ../_static/images/admin/addon_lic.png
-        :scale: 50%
-        :align: center
-        :alt: Addon License Configuration
+   :width: 900px
+   :align: center
+   :alt: Addon License Configuration
 |
 
 **Step 4: Configure Access Control**
