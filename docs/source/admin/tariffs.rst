@@ -77,8 +77,8 @@ Your CSV file must contain the following minimum columns:
 
 |
 
-.. image:: ../_static/images/admin/import_mapping.png
-        :scale: 50%
+.. image:: ../_static/images/admin/tariff_mapping2.png
+        :scale: 60%
         :align: center
         :alt: CSV Import Mapping
 |
