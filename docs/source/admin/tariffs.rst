@@ -85,14 +85,19 @@ Your CSV file must contain the following minimum columns:
 
 **Column Descriptions:**
 
-* **Description** - Human-readable description of the rate
-* **Prefix** - Dialing prefix or country code
-* **RateValue** - Rate per minute or unit
-* **Increment** - Billing increment in seconds
+* **ShortDescription** - If available Human-readable short description
+* **Description** - REQ-Human-readable description of the rate
+* **Prefix** - REQ-Dialing prefix & or country code
+* **RateValue** - REQ-Base Rate per minute or unit
+* **Increment** - REQ-Billing increment in seconds
+* **Lastratechangedate** - If available last known rate change date
+* **Oldrate** - If available the old rate
+* **RatePremium** - If available the Premium rate
+* **Select Column Mapping (not used)** - DEFAULT-When set to this it will not be mapped & imported
 
 **Optional Columns:**
 
-Additional columns may be supported depending on your provider:
+Additional columns may be supported depending on your provider but mapping is not recommended and should be left as DEFAULT **Select Column Mapping (not used)**
 * **Setup Fee** - Connection charges
 * **Minimum Duration** - Minimum call duration
 * **Grace Period** - Grace period for short calls
@@ -115,6 +120,7 @@ Map your CSV columns to the system requirements:
 * Select the appropriate column for each field
 * Verify data types and formats
 * Set default values if needed
+Once your mapping has been saved you can then highlight the tariff and upload the latest rates from your provider and the mapped fields will already be saved.
 
 **Step 3: Import Execution**
 
@@ -136,9 +142,9 @@ Execute the import process:
 **Post-Import Actions:**
 
 1. **Review imported rates** - Verify accuracy
-2. **Configure filtering** - Set up exclusions
-3. **Assign to providers** - Link to provider accounts
-4. **Test billing** - Verify rate application
+2. **Configure filtering** - Set up exclusions if required
+3. **Assign to providers** - Link to provider accounts and packages
+4. **Test billing** - Verify rate application autobill against CDRs
 
 Rate Filtering
 -------------
@@ -200,6 +206,7 @@ Best Practices
 * Include all required columns
 * Validate data accuracy
 * Test with sample data
+* Only the first row allowed as header for columns
 
 **Naming Conventions:**
 
@@ -231,10 +238,11 @@ Troubleshooting
 * **Format Errors** - Check CSV formatting and encoding
 * **Rate Validation** - Verify rate values are numeric
 * **Duplicate Entries** - Check for duplicate prefixes
+* check import_debug Logs
 
 **Import Errors:**
 
-* **File Size** - Large files may timeout
+* **File Size** - Large files may timeout over 100MB
 * **Encoding Issues** - Use UTF-8 encoding
 * **Special Characters** - Avoid special characters in data
 * **Date Formats** - Use consistent date formatting
@@ -246,7 +254,7 @@ For tariff-related issues, provide:
 * Error messages
 * Import configuration
 * Expected vs actual results
-
+* All debug logs within the LOGS dir of the ictVoIP Billing addon.
 Next Steps
 ----------
 
@@ -255,5 +263,5 @@ After tariff configuration:
 1. **Provider Assignment** - Link tariffs to providers
 2. **Package Configuration** - Create service packages
 3. **Billing Setup** - Configure automated billing
-4. **Testing** - Verify rate application
+4. **Testing** - Verify rate application with autobill
 
