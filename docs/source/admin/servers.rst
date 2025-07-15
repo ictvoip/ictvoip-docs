@@ -149,13 +149,13 @@ Click **Add New Server** and configure the following settings:
 
 .. code-block:: text
 
-   Server Name: waterloo3.ictvoip.ca - FusionPBX v5.1.1
-   Hostname: waterloo3.ictvoip.ca
+   Server Name: voipsrv1.ictvoip.ca - FusionPBX v5.1.1
+   Hostname: voipsrv1.ictvoip.ca
    IP Address: 102.100.100.20
    Assigned IP addresses: 102.100.100.20
    Maximum No. of Accounts: 100
    Module: Fusionpbx
-   Username: ictwat3api
+   Username: voipsrv1api
    Password: [YOUR_SECURE_PASSWORD]
 
 **Configuration Details:**
@@ -289,7 +289,7 @@ After successful server configuration:
         
 |
 
- .. image:: ../_static/images/admin/server_widget3.png
+ .. image:: ../_static/images/admin/server_widget4.png
    :width: 900px
    :align: center
    :alt: FusionPBX Server Status
