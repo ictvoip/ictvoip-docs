@@ -10,21 +10,21 @@ Welcome to the ictVoIP Billing installation quick guide.
 
 |
 
-ictVoIP Billing can be installed on WHMCS v8.5.x, v8.6.x, v8.7.x and v8.8.x running PHP7.x and PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled and understand the administration of the WHMCS platform. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA. For a more comprehensive install and setup please refer to the WHMCS sections as outlined in the rest of this document.
+ictVoIP Billing can be installed on WHMCS v8.5.x through to v8.13.x running PHP7.x through PHP8.2. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled and understand the administration of the WHMCS platform. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA. For a more comprehensive install and setup please refer to the WHMCS sections as outlined in the rest of this document.
 
 Install ictVoIP Billing Addon
 =============================
 
 |
 
- 1. Downloading the ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip from your client area licenses.
+ 1. Downloading the ictvoip_billing_release-####.zip from your client area licenses.
 
 Upload the ictVoIP Billing addon module zip file to /home/$user/tmp.
 
 i.e. Archive: 
 ::
 
-/home/$user/tmp/ictvoip_billing_release-1.3.0_PHP7.4-8.1.zip
+/home/$user/tmp/ictvoip_billing_release-####.zip
 
 |
  2. Uncompress the module and copy the contents to your WHMCS root installation. Your directories which should be copied would be like this:
@@ -90,11 +90,10 @@ i.e. LeasedictVoIP_a3174afbf93b3b8ba8f3
 
 FusionPBX Server Module
 -----------------------
-Current Supported versions of FPBX: v5.0.x & 5.1.x
+Current Supported versions of FPBX: v5.0.x through 5.3.x
 
 .. note::
 
-  We can no longer provide support for this module as development has been paused at this time.
 
 System Settings / Products & Services /
 - Create your new VoIP Product with description and with the Module Settings Tab, select Fusionpbx Module name and then place your License Key in the box, save. 
@@ -175,14 +174,14 @@ To allow timeout overrides in Litespeed.
 
 |
 
-PHP Requirements [Apache & Litespeed]
--------------------------------------
+PHP Recommended Requirements [Apache & Litespeed]
+-------------------------------------------------
 
 i.e.
 
 ::
 
-  IfModule php7_module
+  IfModule php82_module
 
    -php_flag display_errors On (for troubleshooting purposes)
    
@@ -194,7 +193,7 @@ i.e.
    
    -php_value memory_limit 8192M (2048M is minimum)
    
-   -php_value session.gc_maxlifetime 1440
+   -php_value session.gc_maxlifetime 3600
    
    -php_value session.save_path "/tmp"
    
@@ -221,7 +220,7 @@ i.e.
    
    -php_value memory_limit 8192M (2048M is minimum)
    
-   -php_value session.gc_maxlifetime 1440
+   -php_value session.gc_maxlifetime 3600
    
    -php_value session.save_path "/tmp"
    
@@ -258,8 +257,8 @@ Edit the timezone to the appropriate timezone of your PBX server. Save the file.
 Ubuntu
 ---------
 
-CRON issues running cPanel on Ubuntu maybe found where you should enable normal shell for the user account in which the CRON is being run from.
-For Ubuntu CRON issues please contact cPanel if utilized.
+CRON issues running cPanel on Ubuntu/AlmaLinux maybe found where you should enable normal shell for the user account in which the CRON is being run from.
+For Ubuntu/AlmaLinux CRON issues please contact cPanel Support if utilized.
 
 WHM/cPanel Support Advice:
 ----------------------------
@@ -272,21 +271,20 @@ WHM/cPanel Support Advice:
 Autobill CRON
 --------------
 
-To be able to bill VoIP CDRs from your server module we use a script called Autobill. This script should be assigned to execute before your WHMCS daily CRON job. For instance, if your WHMCS Daily CRON is set to run at 1AM then set the CRON for Autobill to run at 12:55AM. This should allow enough time if you have many servers and domains/tenants for each server module. If you find this is not enough time then move your daily CRON in WHMCS to 2AM and your Autobill CRON at 12:45AM
+To be able to bill VoIP CDRs from your server module we use a script called Autobill. This script should be assigned to execute before your WHMCS daily CRON job. For instance, if your WHMCS Daily CRON is set to run at 1AM then set the CRON for Autobill to run at 12:45AM. This should allow enough time if you have many servers and domains/tenants for each server module. If you find this is not enough time then move your daily CRON in WHMCS to 2AM and your Autobill CRON at 12:30AM
 
-Your CRON entry could be as follows:
+Your CRON entry could be run as follows:
 *(replace MYMODULE with the server module you have installed)*
 ::
 
- 55 	00 	* 	* 	*  GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
+ 45 	00 	* 	* 	*  GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
  
 |
 
 You may also test run your install by populating the script link into your browser. Be sure to set the next due date of the client's VoIP product to be the current date. Running the Autobill script does not increment the products next billing date as this is done throught the WHMCS daily CRON at which time if your product is set to monthly with Generate the monthly invoice after the Autobill and change to the next due date.
 
-One method of displaying the calculations from the CDR billing from the Autobill script is to enable the check box located within the Providers Mangement dashboard. 
-This can be found within the Tariff Management dashboard here: `Tariff Management <../admin/tariffs.html>`_
-You would then run a manual autobill run by executing https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php.
+One method of displaying the calculations from the CDR billing from the Autobill script is to enable debug check box located within the Billing Mangement dashboard. 
+You would then run a manual autobill by executing https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php.
 
 |
 
@@ -302,7 +300,7 @@ ictVoIP Billing Module Setup
 =============================
 
 1) Create new Provider/PBX (i.e Telnyx - FusionPBX)  (you would require a server module for your PBX or provider)
-2) Import and map your Tariff or Rate Card CSV from your VoIP provider. 
+2) Import and map your Tariff or Rate Card CSV from your VoIP provider. (note: there can only be **1 header row** if more than 1 row your mapping will no be suitable)
    Attention to the required mapped column fields from your providers CSV:
    /Description/Prefix/RateValue/Increment/
 3) Setting up your Package Rates (you would require a server module for your PBX or provider)
