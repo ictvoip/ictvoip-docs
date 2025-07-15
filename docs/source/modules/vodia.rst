@@ -9,10 +9,10 @@ Vodia Module Dashboard
 |
 
  .. image:: ../_static/images/clientadmin/product_module_vodia.png
-        :scale: 50%
-        :align: center
-        :alt: Vodia Module Dashboard
-        :class: module-dashboard
+   :width: 900px
+   :align: center
+   :alt: Vodia Module Dashboard
+   :class: module-dashboard
 |
 
 
@@ -133,8 +133,8 @@ When assigning VoIP products to clients, follow these specific formatting requir
 
 |
 
- .. image:: ../_static/images/clientadmin/vodia_format2.png
-   :scale: 60%
+ .. image:: ../_static/images/clientadmin/vodia_format3.png
+   :width: 900px
    :align: center
    :alt: Example Vodia Product Assignment Formatting
    :class: vodia-formatting
@@ -165,7 +165,7 @@ When assigning VoIP products to clients, follow these specific formatting requir
 .. code-block:: text
 
    Server: Vodia PBX - Main
-   Tenant | DIDs: rucken.wat1.ictvoip.ca | 5484815577 | 5197830020 | 8300
+   Tenant | DIDs: client.srv1.ictvoip.ca | 5484815577 | 5197830020 | 8300
    Extension: 8300
    First Name: John Smith
    Inbound Search String: 8300
