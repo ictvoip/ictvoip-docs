@@ -7,10 +7,10 @@ The Server Management section covers the installation and configuration of PBX s
 
 |
 
-.. image:: ../_static/images/admin/servers.png
-        :scale: 50%
-        :align: center
-        :alt: Server Management Dashboard
+.. image:: ../_static/images/admin/servers_3.png
+   :width: 900px
+   :align: center
+   :alt: Server Management Dashboard
 |
 
 Overview
@@ -19,7 +19,7 @@ Overview
 Server modules allow you to provision and manage PBX servers directly from your WHMCS admin panel. This integration provides automated provisioning, billing, and management capabilities for your PBX infrastructure.
 
 **Supported PBX Platforms:**
-* FusionPBX 5.1.x and higher
+* FusionPBX 5.3.x
 * Vodia PBX
 * Custom PBX integrations
 
@@ -57,7 +57,7 @@ Download the FusionPBX API package and extract it to your FusionPBX server:
 .. code-block:: bash
 
    # Extract to FusionPBX root directory
-   unzip ictvoip_fusionpbx_5-1-x_extras.zip -d /var/www/fusionpbx/
+   unzip ictvoip_fusionpbx_5-3-x_apis.zip -d /var/www/fusionpbx/
 
 **Step 2: Upload Files**
 
@@ -72,8 +72,8 @@ Upload the API scripts to your FusionPBX host using WinSCP, FTP, or SCP:
    /var/www/fusionpbx/app/xml_cdr/img/
    /var/www/fusionpbx/app/xml_cdr/img/loading.gif
 
-.. warning::
-   The import_cdr script can overwrite existing CDRs. Use with caution and ensure proper backups.
+.. update::
+   The import_cdr script will not overwrite existing CDRs, checks for duplicates. Always backup your host data and DB
 
 **Step 3: Verify Installation**
 
@@ -96,7 +96,7 @@ Download the WHMCS server module from your client area:
 
 .. code-block:: text
 
-   Package: ictvoip_fusionPBX_module-release-1.3.2_PHP8.1-8.3.zip
+   Package: ictvoip_fusionPBX_module-release-1.3.x_PHP8.x.zip
    Location: /home/$user/tmp/
 
 **Step 2: Extract and Copy Files**
@@ -106,7 +106,7 @@ Extract the package and copy the required files:
 .. code-block:: bash
 
    # Extract the package
-   unzip ictvoip_fusionPBX_module-release-1.3.2_PHP8.1-8.3.zip
+   unzip ictvoip_fusionPBX_module-release-1.3.x_PHP8.x.zip
    
    # Copy WHMCS files
    cp -r includes/hooks /home/$user/public_html/includes/
@@ -139,9 +139,9 @@ Click **Add New Server** and configure the following settings:
 |
 
 .. image:: ../_static/images/admin/servers_edit2.png
-        :scale: 50%
-        :align: center
-        :alt: Server Configuration
+   :width: 900px
+   :align: center
+   :alt: Server Configuration
 |
 
 **Required Configuration:**
@@ -267,52 +267,52 @@ After successful server configuration:
 3. **Package Creation** - Create service packages
 4. **Client Provisioning** - Set up client accounts
 
- .. image:: ../_static/images/admin/servers.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
+ .. image:: ../_static/images/admin/servers_3.png
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
         
 |
 
  .. image:: ../_static/images/admin/servers_edit2.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
         
 |
 
  .. image:: ../_static/images/admin/connection_test2.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
         
 |
 
  .. image:: ../_static/images/admin/server_widget3.png
-        :scale: 70%
-        :align: center
-        :alt: FusionPBX Server Status
+   :width: 900px
+   :align: center
+   :alt: FusionPBX Server Status
         
 |
 
  .. image:: ../_static/images/admin/server_widget_link2.png
-        :scale: 70%
-        :align: center
-        :alt: Server widget link
+   :width: 900px
+   :align: center
+   :alt: Server widget link
         
 |
 
  .. image:: ../_static/images/admin/show_widgets.png
-        :scale: 70%
-        :align: center
-        :alt: Server widget link
+    :width: 900px
+   :align: center
+   :alt: Server widget link
         
 |
 
  .. image:: ../_static/images/admin/servers_edit2.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
         
 |
 
@@ -328,7 +328,7 @@ Server Name [Just text] could be the FQDN of your hosted FusionPBX.
 Hostname must be the FQDN of your hosted FusionPBX with active SSL certificate.
 ::
 
- Hostname: waterloo3.ictvoip.ca
+ Hostname: voipsrv1.ictvoip.ca
 
 |
 IP Address can be the local IP or public
@@ -358,7 +358,7 @@ Module in this case we select the Fusionpbx server module
 This user should be created on the Fusion PBX side with superadmin group rights.
 ::
 
- Username: ictwat3api
+ Username: ictvoipsrvapi
 
 |
 This would be the password assigned to the FusionPBX API user
@@ -385,9 +385,9 @@ After your server details have been entered and saved you can now test your conn
 |
 
  .. image:: ../_static/images/admin/connection_test2.png
-        :scale: 50%
-        :align: center
-        :alt: Adding a new Provider or PBX
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
         
 |
 
@@ -401,9 +401,9 @@ Server Widget
 |
 
  .. image:: ../_static/images/admin/server_widget3.png
-        :scale: 70%
-        :align: center
-        :alt: FusionPBX Server Status
+   :width: 900px
+   :align: center
+   :alt: FusionPBX Server Status
         
 |
 
@@ -457,9 +457,9 @@ WHMCS Setup
 |
 
  .. image:: ../_static/images/admin/server_widget_link2.png
-        :scale: 70%
-        :align: center
-        :alt: Server widget link
+   :width: 900px
+   :align: center
+   :alt: Server widget link
         
 |
 
@@ -470,9 +470,9 @@ WHMCS Setup
 |
 
  .. image:: ../_static/images/admin/show_widgets.png
-        :scale: 70%
-        :align: center
-        :alt: Server widget link
+   :width: 900px
+   :align: center
+   :alt: Server widget link
         
 |
   
