@@ -40,7 +40,7 @@ Server Configuration
 * **Hostname**: FusionPBX server IP or domain
 * **Username**: FusionPBX admin username
 * **Password**: FusionPBX admin password
-* **Port**: 80 (HTTP) or 443 (HTTPS)
+* **Port**: 443 (HTTPS)
 * **Secure**: Check if using HTTPS
 
 **Optional Fields:**
@@ -54,20 +54,20 @@ Product Configuration
 **Product Setup:**
 
 1. **Create Product Group**
-   * Go to **Setup > Products/Services > Products/Services**
-   * Create new group: "ictVoIP SIP Services"
+   * Go to **Setup > Products/Services**
+   * Create new group: "VoIP Products"
 
 2. **Create Product**
-   * **Product Type**: Other
-   * **Module**: ictVoIP SIP Registration
-   * **Server**: Select your FusionPBX server
+   * **Product Type**: Shared Hosting
+   * **Module**: Fusionpbx
+   * **License**: Enter your FusionPBX Server Module License Key
 
 **Module Settings:**
 
 * **Domain**: Default tenant domain
-* **Extension Range**: Starting extension number
+* **Extensions**: 1122 | 2233 | 2234 | 2235
 * **Extension Length**: Number of digits (usually 4)
-* **Default Password**: Default SIP password
+* **Default Password**: Not required
 * **Email Template**: Welcome email template
 
 API Configuration
@@ -87,11 +87,44 @@ The FusionPBX module requires secure API authentication to communicate with your
 
 **Security Best Practices:**
 
-* Use HTTPS for all API communications
+* Use HTTPS  and Whitelists for all API communications
 * Implement API rate limiting
 * Use strong, unique passwords
 * Enable IP whitelisting if possible
 * Regularly rotate API credentials
+
+API Whitelist Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `/chkcon.php` endpoint now uses an IP and CIDR-based whitelist for authentication. Only requests originating from trusted IP addresses or subnets listed in the `chkcon_whitelist.conf` file will be granted API access.
+
+- **No username or password is required** for whitelisted IPs.
+- All other requests will be denied with a clear error message.
+- The whitelist is managed in a plain text file (`chkcon_whitelist.conf`), one IP or CIDR per line.
+
+**Sample whitelist file:**
+::
+
+    # chkcon_whitelist.conf
+    192.168.1.20
+    192.168.1.0/24
+
+**WHMCS Integration Note:**
+When configuring the FusionPBX server in WHMCS, the "Test Connection" button now checks API access based on the IP whitelist. Username and password fields are not required for this endpoint. Ensure your WHMCS server's public IP is included in `chkcon_whitelist.conf` on the FusionPBX server.
+
+**Response Examples:**
+
+.. code-block:: json
+
+    {
+      "success": 1,
+      "message": "API Access Granted: Whitelisted IP"
+    }
+
+    {
+      "success": 0,
+      "message": "API Access Denied: Only whitelisted IPs may access this endpoint."
+    }
 
 API Endpoints
 ~~~~~~~~~~~~~

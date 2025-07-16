@@ -9,27 +9,38 @@ This document provides an overview of the API endpoints available for FusionPBX 
 Authentication
 --------------
 
-All API endpoints require secure authentication using FusionPBX administrator credentials.
+The endpoint now uses IP/CIDR-based whitelisting for authentication.
 
 **Authentication Requirements:**
 
-* **Method**: POST form data
-* **Required Fields**: Username and password
-* **Security**: HTTPS encryption required
-* **Rate Limiting**: Implemented for API protection
+* No username or password required for whitelisted IPs.
+* Requests from non-whitelisted IPs will be denied and logged.
+* Whitelist is managed in `chkcon_whitelist.conf`.
 
-**Security Best Practices:**
+**Response Examples:**
 
-* Use strong, unique passwords
-* Implement IP whitelisting when possible
-* Regularly rotate API credentials
-* Monitor API usage and access logs
+.. code-block:: json
+
+    {
+      "success": 1,
+      "message": "API Access Granted: Whitelisted IP"
+    }
+
+    {
+      "success": 0,
+      "message": "API Access Denied: Only whitelisted IPs may access this endpoint."
+    }
+
+WHMCS Integration Note
+----------------------
+
+When configuring the FusionPBX server in WHMCS, the "Test Connection" button now checks API access based on the IP whitelist. Username and password fields are not required for this endpoint. Ensure your WHMCS server's public IP is included in `chkcon_whitelist.conf` on the FusionPBX server.
 
 API Endpoints
 -------------
 
 Status Endpoint
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 **Purpose:** System health and status monitoring
 
@@ -68,7 +79,7 @@ Registration Status Endpoint
 
 **Purpose:** Check extension registration status
 
-**Endpoint:** `/app/registrations/check_registration.php`
+**Endpoint:** `check_registration.php`
 
 **Method:** POST
 
@@ -103,7 +114,7 @@ Gateway Management Endpoint
 
 **Purpose:** Manage SIP gateway configurations
 
-**Endpoint:** `/app/gateways/provision.php`
+**Endpoint:** `provision.php`
 
 **Method:** POST
 
@@ -140,7 +151,7 @@ Gateway List Endpoint
 
 **Purpose:** Retrieve configured gateway information
 
-**Endpoint:** `/app/gateways/provision_list.php`
+**Endpoint:** `provision_list.php`
 
 **Method:** POST
 
@@ -178,7 +189,7 @@ CDR Export Endpoint
 
 **Purpose:** Export call detail records for billing and reporting
 
-**Endpoint:** `/app/xml_cdr/export_cdr.php`
+**Endpoint:** `export_cdr.php`
 
 **Method:** POST
 

@@ -16,6 +16,21 @@ Key Features
 * **CDR Collection** - Automated call detail record collection for billing
 * **Multi-tenant Support** - Support for multiple domains and tenants
 
+API Access Whitelist
+--------------------
+
+The `/app/xml_cdr/chkcon.php` endpoint now uses an IP and CIDR-based whitelist for authentication. Only requests originating from trusted IP addresses or subnets listed in the `chkcon_whitelist.conf` file will be granted API access.
+
+- No username or password is required for whitelisted IPs.
+- All other requests will be denied with a clear error message.
+- The whitelist is managed in a plain text file (`chkcon_whitelist.conf`), one IP or CIDR per line.
+
+**Sample whitelist file:**
+::
+    # chkcon_whitelist.conf
+    10.10.50.1
+    192.168.1.0/24
+
 Supported Versions
 -----------------
 
