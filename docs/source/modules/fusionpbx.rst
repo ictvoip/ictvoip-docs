@@ -18,6 +18,13 @@ Key Features
 
 API Access Whitelist
 --------------------
+|
+
+.. image:: ../_static/images/fusionpbx/whitelist_manager.png
+   :width: 900px
+   :align: center
+   :alt: ictVoIP Whitelist Manager
+|
 
 The `/app/xml_cdr/chkcon.php` endpoint now uses an IP and CIDR-based whitelist for authentication. Only requests originating from trusted IP addresses or subnets listed in the `chkcon_whitelist.conf` file will be granted API access.
 
