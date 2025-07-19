@@ -28,7 +28,7 @@ The `/app/xml_cdr/chkcon.php` endpoint now uses an IP and CIDR-based whitelist f
 **Sample whitelist file:**
 ::
     # chkcon_whitelist.conf
-    10.10.50.1
+    192.168.1.100
     192.168.1.0/24
 
 Supported Versions
