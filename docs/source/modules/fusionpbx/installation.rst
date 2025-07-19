@@ -12,21 +12,23 @@ Prerequisites
 Before installing the ictVoIP Billing integration, ensure you have:
 
 * **FusionPBX v5.3.x** (recommended) or v5.1.x
+* **FusionPBX FQDN** for main host with SSL Cert applied 
 * **WHMCS v8+** installed and configured
 * **Root access** to your FusionPBX server
 * **PostgreSQL database** access
 * **nginx** or **Apache** web server
 * **PHP 8.2+** with required extensions (PHP 8.3+ under development)
+* **ionCube Loader v12+** at minimum.
 
 System Requirements
 -------------------
 
 * **Operating System**: Debian 12+ (recommended)
-* **PHP**: 8.2+ with FPM (PHP 8.3+ under development)
+* **PHP**: Current 8.1+ with FPM (PHP 8.3+ under development)
 * **Database**: PostgreSQL 12+
-* **Web Server**: nginx (recommended) or Apache
-* **Memory**: Minimum 2GB RAM
-* **Storage**: 10GB+ available space
+* **Web Server**: nginx (recommended)
+* **Memory**: Minimum 2GB RAM (depending on your production environment needs adjust)
+* **Storage**: 50GB+ available space (depending on your production environment needs adjust)
 
 Installation Methods
 --------------------
@@ -43,10 +45,10 @@ Step 1: Download Installation Package
 
 ::
 
-    # Download the ictVoIP FusionPBX customizations
-    # Note: This is a private repository - you will receive the zip file from ictVoIP
-    unzip ictvoip_fpbxv5-3_customizations.zip
-    cd ictvoip_fpbxv5-3_customizations
+    # Download the ictVoIP FusionPBX Server Module 
+    # Note: All custom FPBX scripts will be inside your module.
+    unzip ictvoip_fpbx_apis.zip
+    cd ictvoip_fpbx_apis
 
 Step 2: Install API Customizations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,7 +56,7 @@ Step 2: Install API Customizations
 ::
 
     # Install API endpoints
-    chmod +x install_apis.sh
+    sudo chmod +x install_apis.sh
     sudo ./install_apis.sh
 
 Step 3: Install Theme Customizations
@@ -62,7 +64,7 @@ Step 3: Install Theme Customizations
 
 ::
 
-    # Install theme and branding
+    # Install theme and branding (Optional)
     chmod +x install_theme.sh
     sudo ./install_theme.sh
 
@@ -72,7 +74,7 @@ Step 4: Verify Installation
 ::
 
     # Check API endpoints
-    curl -X POST https://your-fusionpbx.com/app/status/index.php
+    Within WHMCS Server Edit setting click the Test connection button (you must have whitelisted your WHMCS IP first)
 
     # Check login page
     # Visit: https://your-fusionpbx.com/
@@ -115,7 +117,7 @@ Step 3: Install Theme Files
     sudo chown -R www-data:www-data /var/www/fusionpbx/themes/
     sudo chown -R www-data:www-data /var/www/fusionpbx/core/authentication/
 
-Step 4: Configure Database
+Step 4: Configure Database (for Custom Login Page)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -210,8 +212,7 @@ After installation, verify the following:
 ::
 
     # Test status API
-    curl -X POST https://your-fusionpbx.com/app/status/index.php \
-      -d "username=admin&password=your-password"
+    Within WHMCS add Server Status and refresh (make sure to use the current WHMCS version from status/index.php)
 
     # Test registration API
     curl -X POST https://your-fusionpbx.com/app/registrations/check_registration.php \
