@@ -15,7 +15,15 @@ The endpoint now uses IP/CIDR-based whitelisting for authentication.
 
 * API username / password & whitelisted IPs.
 * Requests from non-whitelisted IPs will be denied and logged.
-* Whitelist is managed in `chkcon_whitelist.conf`.
+* Whitelist is managed in `chkcon_whitelist.conf` or use out tool Whitelist Manager.
+
+|
+
+.. image:: ../_static/images/fusionpbx/whitelist_manager.png
+   :width: 900px
+   :align: center
+   :alt: ictVoIP Whitelist Manager
+|
 
 **Response Examples:**
 
