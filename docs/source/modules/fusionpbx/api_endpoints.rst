@@ -19,7 +19,7 @@ The endpoint now uses IP/CIDR-based whitelisting for authentication.
 
 |
 
-.. image:: ../_static/images/fusionpbx/whitelist_manager.png
+.. image:: ../../_static/images/fusionpbx/whitelist_manager.png
    :width: 900px
    :align: center
    :alt: ictVoIP Whitelist Manager
