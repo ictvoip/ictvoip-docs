@@ -13,7 +13,7 @@ The endpoint now uses IP/CIDR-based whitelisting for authentication.
 
 **Authentication Requirements:**
 
-* No username or password required for whitelisted IPs.
+* API username / password & whitelisted IPs.
 * Requests from non-whitelisted IPs will be denied and logged.
 * Whitelist is managed in `chkcon_whitelist.conf`.
 
@@ -42,7 +42,7 @@ API Endpoints
 Status Endpoint
 ~~~~~~~~~~~~~~~
 
-**Purpose:** System health and status monitoring
+**Purpose:** System health and status monitoring within WHMCS Admin Dashboard
 
 **Endpoint:** `/app/status/index.php`
 
@@ -51,6 +51,7 @@ Status Endpoint
 **Parameters:**
 * Username (required): Administrator username
 * Password (required): Administrator password
+* Whitelisted (required): Whitelist Managed
 
 **Response Format:**
 
