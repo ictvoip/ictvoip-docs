@@ -43,8 +43,8 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
    });
    </script>
 
-.. image:: _static/images/qr_video_intro2.png
-   :scale: 35%
+.. image:: _static/images/qr_video_intro3.png
+   :scale: 50%
    :align: center
    :alt: QR Code for ictVoIP Billing Introduction Video
 
