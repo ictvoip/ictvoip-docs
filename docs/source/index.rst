@@ -24,7 +24,7 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
    :scale: 65%
    :align: center
    :alt: Click to watch the ictVoIP Billing Introduction Video
-   :target: https://blackwolf.riverdog.ca/s/XeEc9ygZ7Hycaan
+   :target: https://blackwolf.riverdog.ca/s/Z2tZTzLRbKfTgo6
 
 .. raw:: html
 
@@ -36,7 +36,7 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
            videoImage.addEventListener('click', function(e) {
                e.preventDefault();
                e.stopPropagation();
-               window.open('https://blackwolf.riverdog.ca/s/XeEc9ygZ7Hycaan', '_blank');
+               window.open('https://blackwolf.riverdog.ca/s/Z2tZTzLRbKfTgo6', '_blank');
                return false;
            });
        }
