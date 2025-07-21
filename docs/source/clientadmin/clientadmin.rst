@@ -197,6 +197,14 @@ Low Balance
         
 |
 
+You may also check that your Low Balance Alerts are working with CRON by invoking the WHMCS CRON manually and setting the low balance to less than the clients account balance.
+
+::
+
+  php -q /home/$user/whmcsdata/crons/cron.php all -F -vvv
+
+|
+
 Suspend
 **********
 
