@@ -7,10 +7,10 @@ Provider management allows you to configure VoIP providers and PBX systems, link
 
 |
 
-.. image:: ../_static/images/admin/new_provider3.png
-        :scale: 70%
-        :align: center
-        :alt: Provider Configuration Interface
+.. image:: ../_static/images/admin/new_provider2.png
+   :width: 900px
+   :align: center
+   :alt: ictVoIP Billing Dashboard
 |
 
 Overview
