@@ -7,10 +7,10 @@ The Admin Area provides comprehensive management tools for configuring and setti
 
 |
 
-.. image:: _static/images/admin/providers.png
-        :scale: 45%
-        :align: center
-        :alt: ictVoIP Admin Dashboard
+.. image:: ../_static/images/admin/main_UI_1-3-3.png
+   :width: 900px
+   :align: center
+   :alt: ictVoIP Billing Dashboard
 |
 
 Overview
