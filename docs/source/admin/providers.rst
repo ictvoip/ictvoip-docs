@@ -7,7 +7,7 @@ Provider management allows you to configure VoIP providers and PBX systems, link
 
 |
 
-.. image:: ../_static/images/admin/new_provider.png
+.. image:: ../_static/images/admin/new_provider2.png
         :scale: 70%
         :align: center
         :alt: Provider Configuration Interface
