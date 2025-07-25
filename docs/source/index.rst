@@ -52,14 +52,14 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
 
    **📱 Mobile Access**: Scan the QR code above to watch the video on your mobile device.
    
-   **🔗 Direct Link**: `Watch the video directly here <https://blackwolf.riverdog.ca/s/XeEc9ygZ7Hycaan>`_ (opens in new tab)
+   **🔗 Direct Link**: `Watch the video directly here <https://blackwolf.riverdog.ca/s/Z2tZTzLRbKfTgo6>`_ (opens in new tab)
 
 .. raw:: html
 
    <script>
    document.addEventListener('DOMContentLoaded', function() {
        // Make direct link open in new tab
-       var links = document.querySelectorAll('a[href="https://blackwolf.riverdog.ca/s/XeEc9ygZ7Hycaan"]');
+       var links = document.querySelectorAll('a[href="https://blackwolf.riverdog.ca/s/Z2tZTzLRbKfTgo6"]');
        links.forEach(function(link) {
            link.setAttribute('target', '_blank');
            link.setAttribute('rel', 'noopener noreferrer');
