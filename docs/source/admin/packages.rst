@@ -7,7 +7,7 @@ Package management allows you to create and configure VoIP service packages with
 
 |
 
-.. image:: ../_static/images/admin/package.png
+.. image:: ../_static/images/admin/package2.png
    :width: 900px
    :align: center
    :alt: Package Rates
@@ -305,7 +305,7 @@ When editing a package, all current settings (tariff, country code, markups, fre
 
 |
 
-.. image:: ../_static/images/admin/package.png
+.. image:: ../_static/images/admin/package2.png
    :width: 900px
    :align: center
    :alt: Package Rates
