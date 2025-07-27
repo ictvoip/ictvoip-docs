@@ -10,7 +10,7 @@ Package management allows you to create and configure VoIP service packages with
 .. image:: ../_static/images/admin/package.png
    :width: 900px
    :align: center
-   :alt: Tariff Management Interface
+   :alt: Package Rates
 |
 
 
@@ -303,10 +303,13 @@ These settings are saved per package and affect how rates are calculated and bil
 
 When editing a package, all current settings (tariff, country code, markups, free minutes, etc.) are pre-populated in the UI for easy review and update.
 
-.. image:: ../_static/images/admin/Package_Rates_2.png
+|
+
+.. image:: ../_static/images/admin/package.png
    :width: 900px
    :align: center
-   :alt: Updated Package Rates UI
+   :alt: Package Rates
+|
 
 *Figure: The updated Package Rates UI with new controls for tariff assignment, country code, markups, and more.*
 
