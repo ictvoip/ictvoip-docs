@@ -7,7 +7,7 @@ Tariff management allows you to import, configure, and manage rate structures fr
 
 |
 
-.. image:: ../_static/images/admin/billing_management2.png
+.. image:: ../_static/images/admin/billing.png
    :width: 900px
    :align: center
    :alt: Tariff Management Interface
