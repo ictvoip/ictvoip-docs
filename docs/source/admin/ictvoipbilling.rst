@@ -8,7 +8,7 @@ This guide provides step-by-step instructions for installing and configuring the
 
 |
 
-.. image:: ../_static/images/admin/main_UI_1-3-3_full.png
+.. image:: ../_static/images/admin/main.png
    :width: 900px
    :align: center
    :alt: ictVoIP Billing Dashboard
