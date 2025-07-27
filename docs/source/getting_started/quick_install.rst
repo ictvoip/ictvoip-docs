@@ -189,7 +189,7 @@ i.e.
    
    -php_value max_input_time 8600
    
-   -php_value max_input_vars 1000
+   -php_value max_input_vars 5000
    
    -php_value memory_limit 8192M (2048M is minimum)
    
@@ -216,7 +216,7 @@ i.e.
    
    -php_value max_input_time 8600
    
-   -php_value max_input_vars 1000
+   -php_value max_input_vars 5000
    
    -php_value memory_limit 8192M (2048M is minimum)
    
