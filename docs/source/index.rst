@@ -94,8 +94,8 @@ ictVoIP Billing is compatible with:
 * **Web Servers**: Apache, LiteSpeed, Nginx
 * **Databases**: MySQL 5.7+, MariaDB 10.3+
 
-You may select your server module required for your PBX or Provider API here:
-`ictVoIP Billing Software Store <https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
+You may contact us for a 14day Trial for your FusionPBX and WHMCS systems:
+`ictVoIP Billing Software Contact <https://www.icttech.ca/contact.php>`_
 
 🚀 Installation & Setup
 =======================
