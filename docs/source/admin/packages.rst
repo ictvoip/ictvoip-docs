@@ -20,11 +20,21 @@ Overview
 VoIP packages define the service offerings available to your clients. Each package can include specific rates, features, and billing structures tailored to different market segments and client needs.
 
 **Key Features:**
-* Flexible package configuration
-* Custom rate structures
-* Metered and unlimited options
-* Global markup management
-* Country-specific pricing
+
+Configurable Options:
+
+
+* **Flexible package** configuration
+* **Custom rate** structures
+* **Metered or unlimited** options
+* **Global markup** management
+* **Country-tariff** specific pricing
+* **Assign Realtime** Billing
+* **Enable or Disbale** Billing for Inbound Calls
+* **Enable NAPA 10-digit** to E.164 conversion
+* **Enable prefix** correction
+* **PBX Location** Configuration
+
 
 Package Configuration
 --------------------
@@ -305,7 +315,7 @@ When editing a package, all current settings (tariff, country code, markups, fre
 
 |
 
-.. image:: ../_static/images/admin/package2.png
+.. image:: ../_static/images/admin/package3.png
    :width: 900px
    :align: center
    :alt: Package Rates
