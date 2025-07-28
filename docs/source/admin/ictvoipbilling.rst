@@ -147,7 +147,7 @@ Now after installing you modules you can run the System Health Check to verify p
 
 |
 
-.. image:: ../_static/images/admin/health.png
+.. image:: ../_static/images/admin/health2.png
    :width: 900px
    :align: center
    :alt: Addon License Configuration
