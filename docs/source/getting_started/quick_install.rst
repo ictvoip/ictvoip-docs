@@ -3,14 +3,13 @@ Quick Install
 *************
 .. image:: ../_static/images/document_logo.png
         :scale: 80%
-
 |
 
 Welcome to the ictVoIP Billing installation quick guide.
 
 |
 
-ictVoIP Billing can be installed on WHMCS v8.5.x through to v8.13.x running PHP7.x through PHP8.2. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled and understand the administration of the WHMCS platform. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA. For a more comprehensive install and setup please refer to the WHMCS sections as outlined in the rest of this document.
+ictVoIP Billing can be installed on WHMCS v8.5.x through to v8.13.x running PHP7.x through PHP8.1. Compatible with Apache and Litespeed. However this guide assumes you are starting with a **basic** install of WHMCS with https enabled and understand the administration of the WHMCS platform. This install has been designed to be fast, simple and modular, and generally takes 5 minutes or less. Install Video TBA. For a more comprehensive install and setup please refer to the WHMCS sections as outlined in the rest of this document.
 
 Install ictVoIP Billing Addon
 =============================
@@ -298,6 +297,18 @@ Ensure your WHMCS System URL is set to HTTPS.
 
 ictVoIP Billing Module Setup
 =============================
+
+**After instial Install of your ictVoIP Billing addon and server module you may check the health of the installation by clicking the Check System Heath button on the main UI of the ictVoIP Billing.**
+
+|
+
+ .. image:: ../_static/images/admin/health2.png
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
+        
+|
+
 
 1) Create new Provider/PBX (i.e Telnyx - FusionPBX)  (you would require a server module for your PBX or provider)
 2) Import and map your Tariff or Rate Card CSV from your VoIP provider. (note: there can only be **1 header row** if more than 1 row your mapping will no be suitable)
