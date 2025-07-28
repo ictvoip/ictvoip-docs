@@ -140,8 +140,20 @@ Enter your license key in the configuration:
 
 Set the appropriate access control groups for your administrators and save the configuration.
 
-Verification
------------
+** NEW System Health Check
+-------------------------
+
+Now after installing you modules you can run the System Health Check to verify proper configuration and setup of Addon and Server Modules
+
+|
+
+.. image:: ../_static/images/admin/health.png
+   :width: 900px
+   :align: center
+   :alt: Addon License Configuration
+|
+
+**Manual Verify Checks**
 
 **1. Check Module Status**
 
