@@ -50,12 +50,12 @@ Manage and select your VoIPms Provider table.
 |
 
 
-Log View and Export to Excel
-############################
+Log View and Export to Excel or CSV
+##################################
 
 |
 
- .. image:: ../_static/images/ictsipreg/Log_View2.png
+ .. image:: ../_static/images/ictsipreg/regstat_voipms_new.png
         :scale: 45%
         :align: center
         :alt: Package Rates
@@ -102,14 +102,13 @@ FusionPBX Registrations Status
 Track and alert Admins on SIP registration drops and recieve email alerts on key registrations. Retain logs for any number of days. Assign one or multiple admins to a registration account. Emails for registration lost sent once with detailed information and then upon a restored registration.
 
 
-Log View and Export to CSV
-###########################
+Log View and Export to Excel or CSV
+##################################
 
-Log View and Export to CSV
 
 |
 
- .. image:: ../_static/images/ictsipreg/log_view_fpbx.png
+ .. image:: ../_static/images/ictsipreg/regstatus_new.png
         :scale: 45%
         :align: center
         :alt: Package Rates
