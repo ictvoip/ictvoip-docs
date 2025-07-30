@@ -7,7 +7,7 @@ Package management allows you to create and configure VoIP service packages with
 
 |
 
-.. image:: ../_static/images/admin/package2.png
+.. image:: ../_static/images/admin/packagerates_new.png
    :width: 900px
    :align: center
    :alt: Package Rates
@@ -50,7 +50,7 @@ Link the package to a specific tariff or rate card:
 .. code-block:: text
 
    Package: Premium VoIP Service
-   Tariff: Telnyx_Outbound_2024_01
+   Tariff: telnyx_outbound_2025_06
    Provider: FusionPBX - Telnyx - Global
 
 **Step 3: Configure Country Settings**
@@ -67,7 +67,7 @@ Configure country code settings for proper CDR processing:
 
 |
 
-.. image:: ../_static/images/admin/prepend_country_code.png
+.. image:: ../_static/images/admin/country_new.png
         :scale: 50%
         :align: center
         :alt: Country Code Configuration
@@ -123,7 +123,7 @@ Create specialized rate structures for specific needs:
 
 |
 
-.. image:: ../_static/images/admin/custom_rates.png
+.. image:: ../_static/images/admin/custom_new.png
         :scale: 50%
         :align: center
         :alt: Custom Rate Configuration
