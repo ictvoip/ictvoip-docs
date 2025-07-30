@@ -21,7 +21,7 @@ System Requirements
 * WHMCS 8.12+
 
 **PHP Requirements:**
-* PHP 8.1, 8.2, 8.3
+* PHP 8.1
 
 **Web Server:**
 * Apache 2.4+
@@ -39,16 +39,16 @@ System Requirements
 Purchase & Download
 ------------------
 
-**1. Purchase the Module**
+**1. Purchase or start a Triale**
 
-If you haven't already purchased the ictVoIP Billing addon module, you can do so here:
+If you haven't already purchased the ictVoIP Billing addon module or wish to request a trial, you can request so here:
 
-`ictVoIP Billing Software <https://www.icttech.ca/index.php?rp=/store/ictvoip-billing-software>`_
+`ictVoIP Billing Software Contact Us <https://www.icttech.ca/contact.php>`_
 
 **2. Download the Package**
 
-Download the latest release package from your client area:
-* **Package:** `ictvoip_billing_release-1.3.0_PHP8.1-8.3.zip`
+To purchase or begin a trial setup an account and download the latest release package from your client area:
+* **Package:** `ictvoip_billing_release-1.3.x_PHP8.x.zip`
 * **Location:** Your client area licenses section
 
 Installation Process
@@ -60,7 +60,7 @@ Upload the ictVoIP Billing addon module zip file to your server:
 
 .. code-block:: bash
 
-   /home/$user/tmp/ictvoip_billing_release-1.3.0_PHP8.1-8.3.zip
+   /home/$user/tmp/ictvoip_billing_release-1.3.x_PHP8.x.zip
 
 **Step 2: Extract and Copy Files**
 
@@ -68,43 +68,20 @@ Uncompress the module and copy the contents to your WHMCS root installation:
 
 .. code-block:: bash
 
-   # Extract the package
-   unzip ictvoip_billing_release-1.3.0_PHP8.1-8.3.zip
+   # Extract the package to a tmp dir
+   extract ictvoip_billing_release-1.3.x_PHP8.x.zip
    
    # Copy files to WHMCS directories
-   cp -r admin/* /home/$user/public_html/admin/
-   cp -r images/* /home/$user/public_html/images/
-   cp -r modules/addons/ictvoipbilling /home/$user/public_html/modules/addons/
-
-**Required Directory Structure:**
-
-.. code-block:: text
-
-   /home/$user/public_html/admin/
-   /home/$user/public_html/admin/lang
-   /home/$user/public_html/admin/lang/overrides
-   /home/$user/public_html/images/
-   /home/$user/public_html/modules/addons/ictvoipbilling
-   /home/$user/public_html/modules/addons/ictvoipbilling/Actions
-   /home/$user/public_html/modules/addons/ictvoipbilling/Utility
-   /home/$user/public_html/modules/addons/ictvoipbilling/crons
-   /home/$user/public_html/modules/addons/ictvoipbilling/import
-   /home/$user/public_html/modules/addons/ictvoipbilling/tariff
+   cd /home/$user/tmp/ictvoip_billing_module_v1-3-x_PHP8.x
+   cp -r WHMCS/* /home/$user/public_html/
+   
 
 Database Setup
 --------------
 
 **Import Required Tables**
 
-Import the Country Codes table to your WHMCS database:
-
-.. code-block:: sql
-
-   -- Import the country codes table
-   mysql -u username -p database_name < mod_ictvoipbilling_country_codes.sql
-
-.. note::
-   Replace `username`, `database_name` with your actual WHMCS database credentials.
+Country Codes table are now initialized after activating you ictVoIP Billing addone:
 
 License Activation
 -----------------
@@ -147,7 +124,7 @@ Now after installing you modules you can run the System Health Check to verify p
 
 |
 
-.. image:: ../_static/images/admin/health2.png
+.. image:: ../_static/images/admin/healthcheck_new.png
    :width: 900px
    :align: center
    :alt: Addon License Configuration
