@@ -296,18 +296,6 @@ Ensure your WHMCS System URL is set to HTTPS.
 ictVoIP Billing Module Setup
 =============================
 
-**After instial Install of your ictVoIP Billing addon and server module you may check the health of the installation by clicking the Check System Heath button on the main UI of the ictVoIP Billing.**
-
-|
-
- .. image:: ../_static/images/admin/health2.png
-   :width: 900px
-   :align: center
-   :alt: Adding a new Provider or PBX
-        
-|
-
-
 1) Create new Provider/PBX (i.e Telnyx - FusionPBX)  (you would require a server module for your PBX or provider)
 2) Import and map your Tariff or Rate Card CSV from your VoIP provider. (note: there can only be **1 header row** if more than 1 row your mapping will no be suitable)
    Attention to the required mapped column fields from your providers CSV:
@@ -328,4 +316,31 @@ ictVoIP Billing Module Setup
     Set your incremental inbound/outbound costs to sell at. ie. 0.00967
     Set your custom incremental billing value in sec. ie. 6/6 or 30/6 or 1/1
     If you wish to use Custom Rates for specific prefixes or regions you must set [status] column to 0 in order for those Prefixes to bill using the set custom rates.
+
+|
+
+ictVoIP System Health Checks
+=============================
+
+**After instial Install of your ictVoIP Billing addon and server module you may check the health of the installation by clicking the ictVoIP Heath Check button on the main UI of the ictVoIP Billing. Version 1.3.3+. This can help identify inproper installations or incorrect settings**
+
+|
+
+ .. image:: ../_static/images/admin/health2.png
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
+        
+|
+
+**Now Included with your ictVoIP Billing addon is a standalone System Health Check for older versions of ictVoIP Billing System. File: healthecheck_portable.php which can be run from the admin area of your older installation /home/$user/public_html/modules/addons/ictvoipbilling/healthcheck_portable.php. Make sure to place the script into your Addon directory. This can help identify inproper installations or incorrect settings. In obtaing your portable ictVoIP Health Check please contact us for download instructions.**
+
+|
+
+ .. image:: ../_static/images/admin/healthcheck_portable.png
+   :width: 900px
+   :align: center
+   :alt: Adding a new Provider or PBX
+        
+|
   
