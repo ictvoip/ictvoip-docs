@@ -26,7 +26,7 @@ Activating your addon enter your addon license key. Note you have the option whe
 
 |
 
- .. image:: ../_static/images/ictsipreg/SIP_Reg_Activation.png
+ .. image:: ../_static/images/ictsipreg/sipreg_lic.png
         :scale: 45%
         :align: center
         :alt: Package Rates
