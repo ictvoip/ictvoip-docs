@@ -87,6 +87,12 @@ Template Assignments
 
 Assign default template Routes for checkout provisioning
 
+1. Navigate to **Addons → ictVoIP Box → Route Templates**
+2. Review available Inbound and Outbound templates
+3. Select default templates per provider:
+   - **Inbound Routes** - For DID routing to extensions
+   - **Outbound Routes** - For outbound calling configuration
+
 |
 
  .. image:: ../_static/images/admin/ictvoipbox_template_routes.png
@@ -97,7 +103,6 @@ Assign default template Routes for checkout provisioning
 |
 
 Setup your default Gateway template for checkout provisioning.
-### 4. Configure Gateway Templates
 
 1. Navigate to **Addons → ictVoIP Box → Gateway Templates**
 2. Review available templates from ictvoipbilling
