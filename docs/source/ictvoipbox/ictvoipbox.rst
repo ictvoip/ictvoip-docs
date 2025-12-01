@@ -28,6 +28,14 @@ To begin create your Provider.
 
 Configure the settings for your Provider
 
+1. Navigate to **Addons → ictVoIP Box**
+2. Click **Providers** tab
+3. Add your Providers credentials:
+   - **Provider Name:** MyProvider Production
+   - **API Username:** Your MyProvider main account email
+   - **API Password:** Your MyProvider API password
+   - **Account Number:** Your MyProvider account number (e.g., 190312)
+   - **Settings:** Configure defaults for routing, codecs, etc.
 
 |
 
