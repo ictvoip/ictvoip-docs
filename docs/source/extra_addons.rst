@@ -8,10 +8,10 @@ Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services,
   :maxdepth: 3
   :glob:
 
+  ictvoipbox/ictvoipbox.rst
+  ictpopupmanager/ictpopupmanager.rst
   themes/custom_themes.rst
   cdr_main/cdr_maint.rst
   ictsipreg/ictsipreg.rst
-  ictvoipbox/ictvoipbox.rst
-  ictpopupmanager/ictpopupmanager.rst
   clientarea/clientareaproviders.rst#faxing
   admin/servers.rst#server-widget
