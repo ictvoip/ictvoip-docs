@@ -6,7 +6,7 @@ Getting Started
 ***************
 
 .. note::
-   Updated: Client Side facing provisioning Addon.
+   Updated: Client Side facing provisioning Addon with custom chckout ordering system.
 
 
 |
@@ -38,41 +38,15 @@ Configure the settings for your Provider
         
 |
 
-Be sure to save and reload your new menu item.
-Once you have saved and reloaded you must logout and log back in to view your new menu item.
 
-
-|
-
- .. image:: ../_static/images/fusionpbx/menu_item_save_v2.png
-        :scale: 45%
-        :align: center
-        :alt: Package Rates
-        
-|
-
-
-Exporting (any v5.1+)
+Checkout API Setting
 *********************
 
-Select the tenant of CDRs you wish to export and choose Apps / Call Detail records and click Export / Format / CSV
+Set your Provider API settings and include the Countries you wish to offer provisioning for.
 
 |
 
- .. image:: ../_static/images/fusionpbx/export_cdr.png
-        :scale: 45%
-        :align: center
-        :alt: Package Rates
-        
-|
-
-
-Save your CSV Exported CDR for use to import onto your DEV or new production FusionPBX host
-
-
-|
-
- .. image:: ../_static/images/fusionpbx/sace_CDR.png
+ .. image:: ../_static/images/admin/ictvoipbox_api_settings.png
         :scale: 45%
         :align: center
         :alt: Package Rates
@@ -83,11 +57,11 @@ Save your CSV Exported CDR for use to import onto your DEV or new production Fus
 
 
 
-Importing
-*********
+Product Mapping
+***************
 
 .. note::
-   Updated: Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
+   Updated: Improved mapping for groups and individual products to be assigned to checkout ordering.
 
 
 |
@@ -99,7 +73,7 @@ Once you have the tenant and extensions configured to import then select the ten
 
 |
 
- .. image:: ../_static/images/fusionpbx/Import_export1.png
+ .. image:: ../_static/images/admin/ictvoipbox_prod_mapping.png
         :scale: 45%
         :align: center
         :alt: Import Tool
@@ -107,20 +81,9 @@ Once you have the tenant and extensions configured to import then select the ten
 |
 
 
-Select the tenant and extention(s) you wish to import from your CSV exported from your production host. Choose your CSV to import then click Import CDRs.
 
-
-|
-
- .. image:: ../_static/images/fusionpbx/import_full.png
-        :scale: 45%
-        :align: center
-        :alt: Import Tool
-        
-|
-
-Selective Exporting
-*******************
+Template Assignments
+********************
 
 The import tool also comes with a custom selective export tool which allows the selection of the tenant, all extensions or individual extensions by date range.
 
