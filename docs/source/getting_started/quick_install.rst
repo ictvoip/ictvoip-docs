@@ -60,7 +60,7 @@ Make sure you have licensed you product by checking your client area.
 
 |
 
- .. image:: ../_static/images/admin/ictvoipbilling_addon_key.png
+ .. image:: ../_static/images/admin/license2.png
    :width: 900px
    :align: center
    :alt: Checking valid license
@@ -77,7 +77,7 @@ i.e. LeasedictVoIP_a3174afbf93b3b8ba8f3
 
 |
 
- .. image:: ../_static/images/admin/addon_lic.png
+ .. image:: ../_static/images/admin/ictvoipbilling_addon_key.png
    :width: 900px
    :align: center
    :alt: Adding a new Provider or PBX
