@@ -18,7 +18,7 @@ To begin create your menu item
 
 |
 
- .. image:: ../_static/images/fusionpbx/add_menu_item.png
+ .. image:: ../_static/images/admin/ictvoipbox_main.png
         :scale: 45%
         :align: center
         :alt: Package Rates
