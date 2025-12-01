@@ -85,11 +85,22 @@ Once you have the tenant and extensions configured to import then select the ten
 Template Assignments
 ********************
 
-The import tool also comes with a custom selective export tool which allows the selection of the tenant, all extensions or individual extensions by date range.
+Assign default template Routes for checkout provisioning
 
 |
 
- .. image:: ../_static/images/fusionpbx/export_1.png
+ .. image:: ../_static/images/admin/ictvoipbox_template_routes.png
+        :scale: 45%
+        :align: center
+        :alt: Import Tool
+        
+|
+
+Setup your default Gateway template for checkout provisioning.
+
+|
+
+ .. image:: ../_static/images/admin/ictvoipbox_templates_gateway.png
         :scale: 45%
         :align: center
         :alt: Import Tool
