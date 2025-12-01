@@ -11,20 +11,21 @@ Prerequisites
 
 Before installing the ictVoIP Billing integration, ensure you have:
 
-* **FusionPBX v5.3.x** (recommended) or v5.1.x
+* **FusionPBX v5.4.x** (recommended) or v5.3.x
 * **FusionPBX FQDN** for main host with SSL Cert applied 
+* **FusionPBX FQDN WildCard** for tenant domains with wildcard SSL Cert applied (see our instructions)
 * **WHMCS v8+** installed and configured
 * **Root access** to your FusionPBX server
 * **PostgreSQL database** access
 * **nginx** or **Apache** web server
-* **PHP 8.2+** with required extensions (PHP 8.3+ under development)
-* **ionCube Loader v12+** at minimum.
+* **PHP 8.1+** with required extensions (PHP 8.3)
+* **ionCube Loader v14+** at minimum.
 
 System Requirements
 -------------------
 
 * **Operating System**: Debian 12+ (recommended)
-* **PHP**: Current 8.1+ with FPM (PHP 8.3+ under development)
+* **PHP**: Current 8.1+ with FPM (PHP 8.3 preferred)
 * **Database**: PostgreSQL 12+
 * **Web Server**: nginx (recommended)
 * **Memory**: Minimum 2GB RAM (depending on your production environment needs adjust)
@@ -75,7 +76,8 @@ Step 4: Verify Installation
 
     # Check API endpoints
     Within WHMCS Server Edit setting click the Test connection button (you must have whitelisted your WHMCS IP first)
-
+    Alternatively you can use the ictVoIP Health Check to verify installation of ictVoIP Billing Addon and FusionPBX APIs
+    Also alternatively you can check authentications to your FusionPBX APIs by using the Client Services/Settings and verify
     # Check login page
     # Visit: https://your-fusionpbx.com/
 
