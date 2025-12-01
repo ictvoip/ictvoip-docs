@@ -6,14 +6,14 @@ Getting Started
 ***************
 
 .. note::
-   Updated: Imporoved Import will not overwrite or duplicate any existing CDRs that may already exist with a Domain/Tenant.
+   Updated: Client Side facing provisioning Addon.
 
 
 |
 
-Once you have installed the addon features for your FusionPBX ictVoIP Billing module you can then create a new menu item for your CDR maintenance when testing or migrating from other FusionPBX hosts.
+Once you have installed the addon feature for your FusionPBX ictVoIP Billing module you can then create a new Provider for Selling DIDs and provisioning Gateways via our template manager.
 
-To begin create your menu item
+To begin create your Provider.
 
 
 |
