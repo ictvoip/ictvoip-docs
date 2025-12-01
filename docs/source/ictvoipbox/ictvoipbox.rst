@@ -97,6 +97,19 @@ Assign default template Routes for checkout provisioning
 |
 
 Setup your default Gateway template for checkout provisioning.
+### 4. Configure Gateway Templates
+
+1. Navigate to **Addons → ictVoIP Box → Gateway Templates**
+2. Review available templates from ictvoipbilling
+3. Select default gateway template per provider
+4. Templates support dynamic variables:
+   - `{username}` - VoIP.ms sub-account username
+   - `{password}` - VoIP.ms sub-account password
+   - `{from_user}` - SIP From User
+   - `{from_domain}` - Tenant domain
+   - `{context}` - Server IP address
+   - `{description}` - Tenant description
+
 
 |
 
