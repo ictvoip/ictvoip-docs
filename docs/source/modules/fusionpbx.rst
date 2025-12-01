@@ -15,6 +15,7 @@ Key Features
 * **Gateway Management** - Programmatic gateway provisioning and monitoring
 * **CDR Collection** - Automated call detail record collection for billing
 * **Multi-tenant Support** - Support for multiple domains and tenants
+* **NEW** **Client Facing Self Provisioning Support** - Client Facing addon **ictVoIP Box** for Selling Direct to Public
 
 API Access Whitelist
 --------------------
@@ -41,8 +42,8 @@ The `/app/xml_cdr/chkcon.php` endpoint now uses an IP and CIDR-based whitelist f
 Supported Versions
 -----------------
 
-* **FusionPBX v5.3.x** (Recommended)
-* **FusionPBX v5.1.x** (Legacy support)
+* **FusionPBX v5.4.x** (Recommended)
+* **FusionPBX v5.3.x** (Legacy support)
 * **FreeSWITCH v1.10+**
 * **PostgreSQL v12+**
 
