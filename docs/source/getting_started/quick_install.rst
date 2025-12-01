@@ -60,7 +60,7 @@ Make sure you have licensed you product by checking your client area.
 
 |
 
- .. image:: ../_static/images/admin/license2.png
+ .. image:: ../_static/images/clientarea/license2.png
    :width: 900px
    :align: center
    :alt: Checking valid license
