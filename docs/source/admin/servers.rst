@@ -7,7 +7,7 @@ The Server Management section covers the installation and configuration of PBX s
 
 |
 
-.. image:: ../_static/images/admin/servers_3.png
+.. image:: ../_static/images/admin/ictvoipbilling_servers.png
    :width: 900px
    :align: center
    :alt: Server Management Dashboard
@@ -19,7 +19,7 @@ Overview
 Server modules allow you to provision and manage PBX servers directly from your WHMCS admin panel. This integration provides automated provisioning, billing, and management capabilities for your PBX infrastructure.
 
 **Supported PBX Platforms:**
-* FusionPBX 5.3.x
+* FusionPBX 5.3.x+
 * Vodia PBX
 * Custom PBX integrations
 
@@ -34,9 +34,8 @@ FusionPBX Integration
 --------------------
 
 **Supported Versions:**
-* FusionPBX 5.1.x (current)
-* FusionPBX 5.2.x (current)
 * FusionPBX 5.3.x (current)
+* FusionPBX 5.4.x (current)
 
 .. note::
    For older version support, please contact our support team.
@@ -44,7 +43,7 @@ FusionPBX Integration
 **Package Information:**
 
 You may receive a bundled package containing both FusionPBX and WHMCS modules:
-* **Package:** `ictvoip_fusionPBX_module-release-1.3.x_PHP8.x.zip`
+* **Package:** `ictvoip_fusionPBX_module-v1.4.x_PHP8.1-PHP8.3.zip`
 * **Contents:** FusionPBX API scripts + WHMCS Server Module
 * We now offer an install script
 
@@ -58,46 +57,24 @@ Download the FusionPBX API package and extract it to your FusionPBX server:
 .. code-block:: bash
 
    # Extract to FusionPBX root directory
-   unzip ictvoip_fusionpbx_5-3-x_apis.zip -d /var/www/fusionpbx/
+   unzip ictvoip_fusionpbx_apis-theme.zip -d /root/
 
-**Step 2: Upload Files**
-
-Upload the API scripts to your FusionPBX host using WinSCP, FTP, or SCP:
-
-.. code-block:: text
-
-   Required file locations:
-   /var/www/fusionpbx/app/xml_cdr/chkcon.php
-   /var/www/fusionpbx/app/xml_cdr/export_cdr.php
-   /var/www/fusionpbx/app/xml_cdr/import_cdr.php
-   /var/www/fusionpbx/app/xml_cdr/img/
-   /var/www/fusionpbx/app/xml_cdr/img/loading.gif
-
-.. update::
-   The import_cdr script will not overwrite existing CDRs, checks for duplicates. Always backup your host data and DB
+**Step 2: Run Install Script install.sh**
 
 **Step 3: Verify Installation**
 
-Check that all files are properly uploaded and have correct permissions:
-
-.. code-block:: bash
-
-   # Check file permissions
-   ls -la /var/www/fusionpbx/app/xml_cdr/
-   
-   # Verify API accessibility
-   curl -I https://your-fusionpbx-domain.com/app/xml_cdr/chkcon.php
+Review the install log or output presented during install.
 
 WHMCS Server Module Installation
 -------------------------------
 
-**Step 1: Download Server Module**
+**Step 1: Download ictVoIP WHMCS Server Module**
 
 Download the WHMCS server module from your client area:
 
 .. code-block:: text
 
-   Package: ictvoip_fusionPBX_module-release-1.3.x_PHP8.x.zip
+   Package: ictvoip_fusionPBX_module-v1.4.x_PHP8.1-PHP8.3.zip
    Location: /home/$user/tmp/
 
 **Step 2: Extract and Copy Files**
@@ -107,23 +84,13 @@ Extract the package and copy the required files:
 .. code-block:: bash
 
    # Extract the package
-   unzip ictvoip_fusionPBX_module-release-1.3.x_PHP8.x.zip
+   unzip ictvoip_fusionPBX_module-v1.4.x_PHP8.1-PHP8.3.zip
    
    # Copy WHMCS files
-   cp -r includes/hooks /home/$user/public_html/includes/
-   cp -r modules/servers/fusionpbx /home/$user/public_html/modules/servers/
 
 **Step 3: Verify Directory Structure**
 
 Ensure the following structure exists:
-
-.. code-block:: text
-
-   /home/$user/public_html/includes/hooks
-   /home/$user/public_html/modules/servers/fusionpbx
-   /home/$user/public_html/modules/servers/fusionpbx/img
-   /home/$user/public_html/modules/servers/fusionpbx/lib
-   /home/$user/public_html/modules/servers/fusionpbx/templates
 
 Server Configuration
 -------------------
@@ -149,7 +116,7 @@ Click **Add New Server** and configure the following settings:
 
 .. code-block:: text
 
-   Server Name: voipsrv1.ictvoip.ca - FusionPBX v5.1.1
+   Server Name: voipsrv1.ictvoip.ca - FusionPBX v5.4.6
    Hostname: voipsrv1.ictvoip.ca
    IP Address: 102.100.100.20
    Assigned IP addresses: 102.100.100.20
