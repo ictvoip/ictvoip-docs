@@ -5,8 +5,9 @@ ictVoIP Box
 Getting Started
 ***************
 
-.. note::
-   Updated: Client Side facing provisioning Addon with custom chckout ordering system.
+## Overview
+
+The **ictVoIP Box** provisioning system provides complete automated tenant, extension, user management, SIP trunk provisioning, and gateway/route configuration for FusionPBX through WHMCS. This system integrates seamlessly with the **ictvoipbilling** addon and **ictvoipboxfpbx** server module to deliver a fully automated end-to-end VoIP service provisioning experience.
 
 
 |
