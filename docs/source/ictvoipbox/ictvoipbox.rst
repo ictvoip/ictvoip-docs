@@ -26,12 +26,12 @@ To begin create your Provider.
 |
 
 
-Make the following entries
+Configure the settings for your Provider
 
 
 |
 
- .. image:: ../_static/images/fusionpbx/create_cdr_maint_menu_v2.png
+ .. image:: ../_static/images/admin/ictvoipbox_provider_setting.png
         :scale: 45%
         :align: center
         :alt: Package Rates
