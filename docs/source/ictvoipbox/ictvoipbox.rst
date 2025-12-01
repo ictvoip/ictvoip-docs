@@ -26,6 +26,26 @@ To begin create your Provider.
         
 |
 
+## What's New in Version 2.0
+
+### 🚀 Automated SIP Trunk Provisioning
+- **VoIP.ms API Integration** - Automatic sub-account creation on VoIP.ms with correct parameters
+- **Gateway Templates** - Pre-configured gateway templates with dynamic variable substitution
+- **Route Templates** - Inbound and outbound route templates for automated routing configuration
+- **Post-Checkout Automation** - Complete provisioning flow from checkout to fully configured service
+
+### 🎨 Enhanced UI/UX
+- **Professional Admin Interface** - Redesigned to match ictvoipbilling aesthetic
+- **Template Management** - DataTables-powered interface for managing gateway and route templates
+- **Tab Navigation** - Improved navigation with clickable tabs instead of dropdowns
+- **Dashboard Enhancement** - Centered, professional dashboard layout
+
+### ⚡ Complete Automation Flow
+1. **Tenant + Users + Extensions** → Created on FusionPBX
+2. **VoIP.ms Sub-Account** → Created with tenant-specific credentials
+3. **Gateway Provisioning** → Created from template with dynamic data
+4. **Inbound Route Creation** → Created and synced from FusionPBX to WHMCS
+5. **User Notification** → Professional overlay during provisioning
 
 Configure the settings for your Provider
 
