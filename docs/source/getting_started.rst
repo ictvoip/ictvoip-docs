@@ -21,7 +21,7 @@ Supported Versions
 
 * **WHMCS v8.13.x** (Recommended)
 * **Limited support for some older WHMCS versions**
-* **PHP 8.1, 8.2, 8.3** (in progress)
+* **PHP 8.1, 8.2, 8.3
 
 Installation Process
 -------------------
