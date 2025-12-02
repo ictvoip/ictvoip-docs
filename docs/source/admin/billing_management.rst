@@ -7,7 +7,7 @@ The Billing Management dashboard provides comprehensive tools for managing CDR p
 
 |
 
-.. image:: ../_static/images/admin/ictvoipbilling_bill_management.png
+.. image:: ../_static/images/admin/ictvoipbilling_package_mngt.png
         :scale: 40%
         :align: center
         :alt: Billing Management Dashboard
