@@ -20,34 +20,35 @@ Administration of server modules and billing would be setup with client products
 Formatting to FusionPBX API
 *****************************
 
-Once your VoIP product has been assigned there are fields which must follow the following formats.
+In ictVoIP Billing v1.4.0, FusionPBX tenant and extension details are
+normally managed through the **Client Services Admin Area** rather than
+manually typed into the product fields.
 
 |
 
- 1) Assign your FusionPBX server from the drop down. If only one server has been assigned it will appear and be selected. 
+ 1) Assign your FusionPBX-backed VoIP product to the client as usual.
+    Behind the scenes this links the WHMCS service to a FusionPBX
+    server record and tenant.
 
-.. image:: ../_static/images/clientadmin/client_admin_server2.png
+.. image:: ../_static/images/admin/client-services_ext.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
         
 |
 
- 2) Assign the Domain/Tenant with Main DID attached to Domain 
-::
- 
-  mcon.wat7.ictvoip.ca | 5192229000
-  
+ 2) Use the **Client Services Admin Area** (:doc:`/admin/client_services`)
+    to create or manage the tenant/domain and to provision extensions.
+    When you add extensions and assign them to the client service from
+    there, the required formatting for CDR views and billing is handled
+    automatically.
+
 |
- 3) Assign the extension you wish to have within the clients billing. Multi extension should use the | as the seperator.
-  
-::
-  
-   2112 | 2113 | 2114 | 2115 | 2216
-   
-|
- 4) Save and then test your API connectivity to your FusionPBX account by then going to the Client's account CDR view in Client Area.
- 
+
+ 3) To validate that everything is wired correctly, open the client's
+    CDR view in the Client Area for the FusionPBX service and confirm
+    that calls are displayed as expected.
+
 |
 
 Formatting to Vodia API

@@ -19,6 +19,9 @@ Key Features
 * **Backup and Recovery** - Complete backup and restoration procedures
 * **Multi-language Support** - Internationalization and localization features
 * **Firewall Configuration** - Network security and access control setup
+* **Provisioning & PBX Integration** - Orientation to the
+  :doc:`applications/provision` overview and PBX module documentation
+  for FusionPBX, Vodia, and other supported systems
 
 Supported Versions
 -----------------

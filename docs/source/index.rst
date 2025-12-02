@@ -83,6 +83,7 @@ The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Bill
 * **👤 Client Portal Access** - End-user account management
 * **📈 Metered or Pay As You Go** - Precise usage-based billing
 * **🧩 Client Services Admin Dashboard** - Centralized WHMCS admin interface to manage FusionPBX tenants, extensions, gateways, and provisioning status per provider/PBX.
+* **📦 ictVoIP Box Addon** - Optional front-facing FusionPBX provisioning and DID/trunk automation for new and existing WHMCS clients.
 * **🔔 Payment Reminders** - Automated payment notifications
 
 🔧 Compatibility
@@ -100,6 +101,21 @@ You may contact us for a limited Trial for your FusionPBX and WHMCS. Please be s
 
 🚀 Installation & Setup
 =======================
+
+For new deployments of **ictVoIP Billing v1.4.0**, a typical onboarding
+path is:
+
+* Start with :doc:`getting_started` and the
+  :doc:`getting_started/quick_install` checklist.
+* Apply :doc:`getting_started/security` and
+  :doc:`getting_started/lets_encrypt` for security and SSL/TLS.
+* Define your :doc:`getting_started/backup` and
+  :doc:`getting_started/restore` strategy.
+* Move into the **Admin Area** (:doc:`admin`) and **Client Services
+  Admin Area** (:doc:`admin/client_services`) to configure providers,
+  servers, tariffs, packages, and tenant/extension provisioning.
+* Review the :doc:`applications/provision` overview and PBX-specific
+  modules under **Server Modules**.
 
 .. toctree::
    :maxdepth: 3
@@ -139,6 +155,15 @@ You may contact us for a limited Trial for your FusionPBX and WHMCS. Please be s
    clientadmin.rst
    clientarea.rst
    extra_addons.rst
+
+🧩 Optional Addons & Apps
+=========================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Optional Addons & Apps
+
+   ictvoipbox/ictvoipbox
 
 🔌 API Reference
 ================
