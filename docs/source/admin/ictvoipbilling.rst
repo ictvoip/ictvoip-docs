@@ -117,8 +117,8 @@ Enter your license key in the configuration:
 
 Set the appropriate access control groups for your administrators and save the configuration.
 
-** NEW System Health Check
--------------------------
+** System Health Check
+----------------------
 
 Now after installing you modules you can run the System Health Check to verify proper configuration and setup of Addon and Server Modules
 
