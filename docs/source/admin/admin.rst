@@ -2,25 +2,43 @@
 ictVoIP Billing Management
 *********************************
 
-Add new Provider/PBX - This name will link your Tariff and Package rates. 
-Some formatting would be as follows:
-- PBX Vendor - Provider Tariff - Region or Custom
+Overview
+--------
 
-i.e. [FusionPBX - Telnyx - New York] - custom rates could then be applied to New York state or only for the selected prefixes.
+The Administration section groups the core ictVoIP Billing management
+features for WHMCS admins. From here you can configure providers,
+tariffs, packages, PBX servers, and use the dedicated **Client
+Services** admin dashboard for day-to-day FusionPBX operations.
 
-i.e. [FusionPBX - AQL - India] - custom rate for flat rates which a package could be assigned as metered minutes (1000 minutes).
+Key Features
+------------
 
-i.e. [FusionPBX - Telnyx - Global] - no custom rates and all prefixes will billed with Global Markup.
+* **Client Services Admin Area** – Centralized dashboard for managing
+  FusionPBX tenants, extensions, gateways, ACLs, destination routes,
+  logs, and real-time provisioning statistics. See
+  :doc:`/admin/client_services`.
+* **Provider Management** – Define PBX/VoIP providers and link them to
+  tariffs and packages for automated billing. See
+  :doc:`/admin/providers`.
+* **Tariff Management** – Configure rate tables and markup strategies
+  used for call rating. See :doc:`/admin/tariffs`.
+* **Package Management** – Build VoIP packages that combine tariffs,
+  limits, and options for WHMCS products. See :doc:`/admin/packages`.
+* **Server Management** – Register and test PBX servers, including
+  FusionPBX hosts, and configure API connectivity. See
+  :doc:`/admin/servers`.
+* **CDR & E.164 Tools** – Validate and normalize CDR data for accurate
+  billing. See :doc:`/admin/cdr-e164-validator`.
 
-This naming convention will allow you to place packages assigned to the FusionPBX server module and allow for custom rates for a particular region.
+Details for each area are provided in the sections below.
 
 .. toctree::
    :maxdepth: 3
-   :glob:
 
-   admin/providers.rst
-   admin/tariffs.rst
-   admin/packages.rst
-   admin/servers.rst
-   admin/cdr-e164-validator.rst
+   client_services
+   providers
+   tariffs
+   packages
+   servers
+   cdr-e164-validator
   

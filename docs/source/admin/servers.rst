@@ -163,14 +163,17 @@ Navigate to the **Client Services** area within the ictVoIP Billing
 admin UI and open the **Settings** or **Server Provisioning
 Settings** panel for the provider/PBX you are configuring.
 
-From there you can:
-* Load the WHMCS server credentials (username, password, and optional
-  access hash) for a selected server.
-* Run a **credential test** to verify that the FusionPBX (or other
-  PBX) login works over HTTPS.
-* Run a **whitelist/API reachability test** to confirm that the WHMCS
-  server IP is allowed by the PBX IP whitelist and that the expected
-  version/status endpoints respond.
+From there you can load the WHMCS server credentials (username,
+password, and optional access hash) for a selected server, so that
+the addon can use them for connection and provisioning tests.
+
+You can also run a **credential test** to verify that the FusionPBX
+(or other PBX) login works over HTTPS using the configured
+credentials.
+
+Finally, you can run a **whitelist/API reachability test** to confirm
+that the WHMCS server IP is allowed by the PBX IP whitelist and that
+the expected version/status endpoints respond.
 
 These tests are read-only from the PBX perspective and are intended
 to help you validate server configuration before you rely on

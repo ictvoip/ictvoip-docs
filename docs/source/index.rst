@@ -82,6 +82,7 @@ The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Bill
 * **📞 Automatic CDR Collection** - Streamlined call data gathering
 * **👤 Client Portal Access** - End-user account management
 * **📈 Metered or Pay As You Go** - Precise usage-based billing
+* **🧩 Client Services Admin Dashboard** - Centralized WHMCS admin interface to manage FusionPBX tenants, extensions, gateways, and provisioning status per provider/PBX.
 * **🔔 Payment Reminders** - Automated payment notifications
 
 🔧 Compatibility

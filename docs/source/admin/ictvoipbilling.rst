@@ -132,6 +132,10 @@ Confirm the required tables were created:
 
    SHOW TABLES LIKE '%ictvoipbilling%';
 
+For day-to-day administration of tenants, extensions, gateways, and
+related provisioning tasks, see the :doc:`/admin/client_services`
+documentation.
+
 Server Provisioning Settings & Tests
 -----------------------------------
 

@@ -30,6 +30,11 @@ Key Features
 * **Auto-Billing**: Automated payment processing and invoicing
 * **CDR E.164 Validator**: Validate and fix phone number formatting in FusionPBX CDRs
 
+* **Client Services Admin Area**: Centralized WHMCS admin dashboard for
+  managing FusionPBX tenants, extensions, gateways, ACLs, destination
+  routes, logs, and real-time provisioning statistics per
+  provider/PBX. See :doc:`/admin/client_services`.
+
 .. toctree::
    :maxdepth: 2
    :caption: Installation & Setup
@@ -41,6 +46,12 @@ Key Features
    :caption: Server Management
 
    admin/servers.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Client Services
+
+   admin/client_services.rst
 
 .. toctree::
    :maxdepth: 2
