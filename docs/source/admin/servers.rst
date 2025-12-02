@@ -112,7 +112,7 @@ Click **Add New Server** and configure the following settings:
    :alt: Server Configuration
 |
 
-**Required Configuration:**
+**Required Configuration (WHMCS Server Record):**
 
 .. code-block:: text
 
@@ -124,17 +124,22 @@ Click **Add New Server** and configure the following settings:
    Module: Fusionpbx
    Username: voipsrv1api
    Password: [YOUR_SECURE_PASSWORD]
+   Access Hash: [OPTIONAL_API_ACCESS_HASH]
 
 **Configuration Details:**
 
-* **Server Name:** Descriptive name for your server
-* **Hostname:** FQDN with active SSL certificate
-* **IP Address:** Local or public IP address
-* **Assigned IP:** IP addresses available for this server
-* **Maximum Accounts:** Maximum tenants or extensions
-* **Module:** Select "Fusionpbx" from dropdown
-* **Username:** FusionPBX API user with superadmin rights
-* **Password:** Secure password for API user
+* **Server Name:** Descriptive name for your server.
+* **Hostname:** FQDN with an active SSL certificate that matches the
+  PBX web interface.
+* **IP Address / Assigned IP:** Local or public IP address used to
+  reach the PBX.
+* **Maximum Accounts:** Maximum tenants or extensions for this PBX.
+* **Module:** Select the relevant PBX module (for example,
+  "Fusionpbx").
+* **Username / Password:** FusionPBX (or other PBX) admin/API
+  credentials.
+* **Access Hash (optional):** Long token used by some integrations as
+  an alternative or complement to username/password for API access.
 
 **Step 3: Create API User & Generate Hash Key**
 
@@ -152,12 +157,25 @@ On your FusionPBX server, create a new user with superadmin group rights via UI 
 API Credential/Whitelist Verification
 -------------------------------------
 
-**Option 1**
+**Option 1: Client Services / Server Provisioning Settings**
 
-.. note::
-   new option for verifying credentials and whitelista for your servers, see below:
+Navigate to the **Client Services** area within the ictVoIP Billing
+admin UI and open the **Settings** or **Server Provisioning
+Settings** panel for the provider/PBX you are configuring.
 
-Navigate to Client Services tab within the ictVoIP Billing UI and click Settings.
+From there you can:
+* Load the WHMCS server credentials (username, password, and optional
+  access hash) for a selected server.
+* Run a **credential test** to verify that the FusionPBX (or other
+  PBX) login works over HTTPS.
+* Run a **whitelist/API reachability test** to confirm that the WHMCS
+  server IP is allowed by the PBX IP whitelist and that the expected
+  version/status endpoints respond.
+
+These tests are read-only from the PBX perspective and are intended
+to help you validate server configuration before you rely on
+automated provisioning. For additional security guidance on API
+whitelisting, see :doc:`/getting_started/security`.
 
 |
 

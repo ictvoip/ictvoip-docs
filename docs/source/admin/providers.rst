@@ -16,7 +16,7 @@ Provider management allows you to configure VoIP providers and PBX systems, link
 Overview
 --------
 
-Providers in the ictVoIP Billing system represent VoIP service providers or PBX systems that you integrate with for billing and provisioning. Each provider can be linked to specific tariffs and packages, enabling flexible rate management and automated billing processes.
+Providers in the ictVoIP Billing system represent VoIP service providers or PBX systems that you integrate with for billing and provisioning. Each provider is typically linked to one or more PBX servers (configured under :doc:`/admin/servers`) and can be associated with specific tariffs and packages, enabling flexible rate management and automated billing processes.
 
 **Key Features:**
 * Multiple provider support
@@ -81,7 +81,7 @@ Tariff Linking
 
 **Linking Providers to Tariffs:**
 
-Each provider can be linked to specific tariffs for automated billing:
+Each provider can be linked to specific tariffs for automated billing and provisioning. In a typical v1.4.0 deployment, a provider sits between one or more PBX servers and the tariffs/packages that define how usage is rated for client services.
 
 .. code-block:: text
 
@@ -201,7 +201,8 @@ Next Steps
 
 After configuring providers:
 
-1. **Tariff Setup** - Configure rate structures
-2. **Package Creation** - Create service packages
-3. **Client Assignment** - Assign providers to clients
-4. **Billing Configuration** - Set up automated billing
+1. **Tariff Setup** - Configure rate structures.
+2. **Package Creation** - Create service packages.
+3. **Client Assignment** - Assign providers to clients and services.
+4. **Billing Configuration** - Set up automated billing.
+5. **Provisioning Flow Review** - See :doc:`/applications/provision` for how providers, tariffs, PBX servers, and WHMCS products work together in the end-to-end provisioning process.

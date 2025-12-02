@@ -6,6 +6,74 @@ Overview
 
 This document provides an overview of the API endpoints available for FusionPBX integration. These endpoints enable programmatic access to FusionPBX functionality for external system integration and automation.
 
+.. note::
+   All ictVoIP FusionPBX API scripts are distributed as ionCube-
+   encoded PHP files and require **ionCube Loader v14+** to be
+   installed and active on both the FusionPBX host PHP environment
+   and the WHMCS host PHP environment.
+
+API Summary
+-----------
+The table below summarizes the core ictVoIP FusionPBX APIs used by
+ictVoIP Billing and WHMCS. Each API advertises a version string that
+can be viewed in the ictVoIP Billing **System Health Check** under
+the FusionPBX section.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 35 40
+
+   * - API
+     - Endpoint (example path)
+     - Primary Use
+   * - Status
+     - ``/app/status/index.php``
+     - Reports FusionPBX health, version, and basic statistics for the
+       ictVoIP Billing dashboard.
+   * - Registration Status
+     - ``/app/registrations/check_registration.php``
+     - Checks SIP registration status for a specific extension and
+       tenant domain.
+   * - Gateway Management
+     - ``/app/gateways/manage_gateway.php``
+     - Creates, updates, and lists SIP gateways used by tenants.
+   * - Gateway Provisioning
+     - ``/app/gateways/provision.php``
+     - Provisions or refreshes a single SIP gateway on demand.
+   * - Gateway List
+     - ``/app/gateways/provision_list.php``
+     - Returns a list of configured SIP gateways and their status.
+   * - Destinations
+     - ``/app/destinations/manage_destinations.php``
+     - Manages inbound destinations (DIDs) for tenants.
+   * - Outbound Dialplans
+     - ``/app/dialplan_outbound/manage_outbound.php``
+     - Manages outbound dialplans and routing patterns per tenant.
+   * - Extensions
+     - ``/app/extensions/manage_extension.php``
+     - Manages extension CRUD and provisioning aligned to tenant
+       domains.
+   * - CDR Export
+     - ``/app/xml_cdr/export_cdr.php``
+     - Exports call detail records for billing and reporting.
+   * - CDR Health & Connection
+     - ``/app/xml_cdr/chkcon.php``
+     - Connectivity / whitelist / API readiness check used by
+       **Test Connection** and the System Health Check.
+   * - CDR Data Access
+     - ``/app/xml_cdr/get_cdr_data.php``
+     - Retrieves CDR data for analysis and reporting.
+   * - CDR Import
+     - ``/app/xml_cdr/import_cdr.php``
+     - Imports CDR data from external sources.
+   * - Access Control / Whitelist
+     - ``/app/xml_cdr/whitelist_manager.php``
+     - Manages IP and CIDR entries that are allowed to access the
+       APIs.
+
+For parameter details, example requests, and response formats, see
+the endpoint sections below.
+
 Authentication
 --------------
 

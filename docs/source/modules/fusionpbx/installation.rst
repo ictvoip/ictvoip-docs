@@ -31,6 +31,36 @@ System Requirements
 * **Memory**: Minimum 2GB RAM (depending on your production environment needs adjust)
 * **Storage**: 50GB+ available space (depending on your production environment needs adjust)
 
+Compatibility Matrix
+--------------------
+
+The ictVoIP FusionPBX API installer is designed and tested for the
+following FusionPBX versions:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 15 65
+
+   * - FusionPBX Version
+     - Status
+     - Notes
+   * - 5.1.x – 5.3.x
+     - Limited
+     - Basic API functionality only; whitelist-based security
+       features are not fully available and these versions are
+       considered legacy.
+   * - 5.4.0 – 5.4.4
+     - Compatible
+     - Full API functionality with whitelist-based security.
+   * - 5.4.5+
+     - Fully Compatible
+     - All current features, including enhanced security and
+       monitoring.
+   * - 5.5.x
+     - Expected Compatible
+     - Designed to be forward-compatible with 5.5.x; verify in
+       staging before production use.
+
 Installation Methods
 --------------------
 

@@ -54,34 +54,14 @@ To purchase or begin a trial setup an account and download the latest release pa
 Installation Process
 -------------------
 
-**Step 1: Upload the Package**
+For a complete step-by-step installation checklist, including environment requirements, package upload, file extraction, and initial verification, see the :doc:`/getting_started/quick_install` guide.
 
-Upload the ictVoIP Billing addon module zip file to your server:
-
-.. code-block:: bash
-
-   /home/$user/tmp/ictvoip_billing_release-1.4.x_PHP8.1-PHP8.3.zip
-
-**Step 2: Extract and Copy Files**
-
-Uncompress the module and copy the contents to your WHMCS root installation:
-
-.. code-block:: bash
-
-   # Extract the package to a tmp dir
-   extract ictvoip_billing_release-1.4.x_PHP8.1-PHP8.3.zip
-   
-   # Copy files to WHMCS directories
-   cd /home/$user/tmp/ictvoip_billing_release-1.4.x_PHP8.1-PHP8.3.zip
-   cp -r WHMCS/* /home/$user/public_html/
-   
+Once the files have been deployed to your WHMCS document root, continue with the steps below to activate and configure the ictVoIP Billing addon.
 
 Database Setup
 --------------
 
-**Import Required Tables**
-
-Country Codes table are now initialized after activating you ictVoIP Billing addone:
+When the ictVoIP Billing addon is activated for the first time, it will automatically create and initialize the required database tables, including country codes and configuration tables.
 
 License Activation
 -----------------
@@ -99,11 +79,11 @@ Navigate to your WHMCS admin panel:
 
 **Step 3: Enter License Key**
 
-Enter your license key in the configuration:
+Enter your ictVoIP Billing license key in the configuration:
 
 .. code-block:: text
 
-   License Key: LeasedictVoIP_a3174afbf93b3b8ba8f3
+   License Key: YOUR-ICTVOIP-LICENSE-KEY
 
 |
 
@@ -120,7 +100,7 @@ Set the appropriate access control groups for your administrators and save the c
 System Health Check
 -------------------
 
-Now after installing you modules you can run the System Health Check to verify proper configuration and setup of Addon and Server Modules
+After installing and activating the ictVoIP Billing addon, you can run the System Health Check to verify proper configuration and setup of the addon and server modules.
 
 |
 
@@ -152,6 +132,18 @@ Confirm the required tables were created:
 
    SHOW TABLES LIKE '%ictvoipbilling%';
 
+Server Provisioning Settings & Tests
+-----------------------------------
+
+Within the ictVoIP Billing admin area, the **Client Services** or **Server Provisioning Settings** screens allow you to configure and validate connections to your PBX servers (for example, FusionPBX hosts) using the standard WHMCS server records.
+
+At a high level, these screens provide:
+* Server Credentials Management – Reads and updates the WHMCS ``tblservers`` record for the selected PBX server (username, encrypted password, and API access hash), using WHMCS encryption for password storage and avoiding plaintext passwords in logs.
+* Credential Test (FusionPBX Login) – Uses either a username/password combination or an API access hash (depending on your integration pattern) to validate that the configured credentials can successfully log in to the PBX web interface over HTTPS and returns a simple pass/fail result so you can correct credentials before enabling automated provisioning.
+* Whitelist / API Reachability Test – Performs a lightweight HTTP check against one or more PBX API endpoints to confirm that the WHMCS server is allowed by the PBX IP whitelist and reports whether the PBX returned a version/status response (whitelist OK) or an access-denied/login page (indicating the WHMCS IP may not be fully whitelisted).
+
+These tools do not change PBX configuration themselves; they are designed to help you verify that the underlying FusionPBX (or other PBX) API access is correctly configured before relying on automated provisioning and billing.
+
 Troubleshooting
 --------------
 
@@ -173,9 +165,9 @@ If you encounter issues during installation, please contact our support team wit
 Next Steps
 ----------
 
-After successful installation, proceed to:
+After successful installation and a clean System Health Check, proceed to:
 
-1. **Server Configuration** - Set up your PBX servers
-2. **Provider Setup** - Configure your VoIP providers
+1. **Server Configuration** - Set up your PBX servers (see :doc:`/admin/servers`)
+2. **Provider Setup** - Configure your VoIP providers (see :doc:`/admin/providers`)
 3. **Tariff Management** - Set up your pricing structure
-4. **Package Configuration** - Create service packages
+4. **Package Configuration** - Create service packages and assign them to clients
