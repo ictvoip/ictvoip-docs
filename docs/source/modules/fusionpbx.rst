@@ -126,6 +126,20 @@ the ictVoIP Billing **System Health Check** under the FusionPBX
 section, allowing you to verify that the correct API set and
 versions are installed.
 
+At a high level, these APIs are consumed by:
+
+* The **Client Services Admin Area** (:doc:`/admin/client_services`),
+  which uses the domain, gateway, destination, extension, and access
+  control APIs to manage tenants and related resources from within
+  WHMCS.
+* The **Autobill** components (:doc:`/admin/autobill`), which use the
+  CDR-related APIs to collect call records and support usage-based
+  billing.
+
+The implementation details of these integrations are handled by the
+WHMCS server modules and addon; administrators interact primarily with
+the higher-level Client Services and Billing Management screens.
+
 .. toctree::
    :maxdepth: 2
 
@@ -133,3 +147,4 @@ versions are installed.
    fusionpbx/configuration
    fusionpbx/api_endpoints
    fusionpbx/troubleshooting
+

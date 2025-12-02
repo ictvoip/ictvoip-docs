@@ -10,6 +10,9 @@ provision tenants, gateways, extensions, and related resources. It is
 intended for administrators who want to understand the end-to-end
 provisioning flow rather than implementation details.
 
+For PBX-specific details, see :doc:`/modules/fusionpbx` (FusionPBX
+Integration) and :doc:`/modules/vodia` (Vodia Module).
+
 Key Concepts
 ------------
 
@@ -93,3 +96,24 @@ Where to Configure What
 For module-specific provisioning details and API usage, see the
 relevant module documentation under :doc:`/modules/fusionpbx` and
 :doc:`/modules/vodia`.
+
+How Admin Tools Use This Flow
+-----------------------------
+
+The provisioning concepts in this overview are surfaced to
+administrators through dedicated tools in the ictVoIP Billing addon:
+
+* The **Client Services Admin Area** (:doc:`/admin/client_services`)
+  provides a WHMCS-based dashboard for managing tenants/domains,
+  gateways, extensions, destination routes, and related resources.
+  Behind the scenes, it uses the same PBX APIs described in the module
+  docs to apply changes to FusionPBX (or other PBXs) while keeping
+  WHMCS services aligned.
+* The **Autobill** system (:doc:`/admin/autobill`) consumes CDRs
+  exported from the PBX and applies tariffs and package rules
+  configured in Billing Management to turn call usage into
+  billable charges.
+
+Together, these tools allow you to provision PBX resources and bill
+for usage from within WHMCS, while the low-level API and dialplan
+logic remain on the PBX itself.
