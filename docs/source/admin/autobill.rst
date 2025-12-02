@@ -25,6 +25,18 @@ Autobill is a critical component that processes CDRs from your PBX servers and g
 * Flexible scheduling
 * Debug and testing capabilities
 
+In **ictVoIP Billing v1.4.0**, Autobill remains the engine that turns
+rated CDRs into billable usage, but the **recommended** approach for
+FusionPBX is to use the enhanced **Autobill v2** script
+(``autobill_v2.php``). Autobill v2 provides a modern browser-based UI
+with real-time statistics, progress indicators, and color-coded debug
+output while using the same underlying billing logic as the original
+``autobill.php`` script.
+
+Other supported server modules (for example, Vodia or custom
+integrations) continue to ship with their own ``autobill.php``-style
+scripts, which are typically used only for headless CRON execution.
+
 CRON Configuration
 -----------------
 
@@ -50,10 +62,10 @@ Replace `MYMODULE` with your installed server module:
 .. code-block:: bash
 
    # Standard CRON format
-   55 00 * * * GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
+   55 00 * * * GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
    
    # Alternative format with more time
-   45 00 * * * GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
+   45 00 * * * GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
 
 **CRON Parameters:**
 
@@ -64,9 +76,14 @@ Replace `MYMODULE` with your installed server module:
 
 **Server Module Examples:**
 
-* **FusionPBX:** `fusionpbx/autobill.php`
-* **Vodia:** `vodia/autobill.php`
-* **Custom:** `custom/autobill.php`
+* **FusionPBX (recommended):** ``fusionpbx/autobill_v2.php runfrom=cron``
+* **Vodia:** ``vodia/autobill.php``
+* **Custom:** ``custom/autobill.php``
+
+For FusionPBX deployments, you should normally point your CRON at the
+enhanced **Autobill v2** script. The scheduling principles remain the
+same; v2 adds a richer UI and statistics without changing how charges
+are calculated.
 
 Manual Testing
 -------------
@@ -77,7 +94,13 @@ Test your Autobill installation by accessing the script directly in your browser
 
 .. code-block:: text
 
-   URL: https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php
+   # FusionPBX (Autobill v2)
+   URL: https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill_v2.php?runfrom=cron
+   Method: GET
+   Authentication: Required
+
+   # Other modules (generic example)
+   URL: https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
    Method: GET
    Authentication: Required
 

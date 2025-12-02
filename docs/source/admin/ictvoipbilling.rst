@@ -175,3 +175,8 @@ After successful installation and a clean System Health Check, proceed to:
 2. **Provider Setup** - Configure your VoIP providers (see :doc:`/admin/providers`)
 3. **Tariff Management** - Set up your pricing structure
 4. **Package Configuration** - Create service packages and assign them to clients
+5. **Admin Area Overview** - Review the Admin Area guide for a summary of
+   configuration options and tools (see :doc:`/admin`)
+6. **Client Services Admin Area** - Use the Client Services dashboard
+   for day-to-day management of tenants, extensions, gateways, and
+   related provisioning tasks (see :doc:`/admin/client_services`)

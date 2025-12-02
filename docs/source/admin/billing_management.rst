@@ -16,7 +16,21 @@ The Billing Management dashboard provides comprehensive tools for managing CDR p
 Overview
 --------
 
-The Billing Management system handles call detail record (CDR) processing, rate application, filtering, and automated billing. It provides tools for configuring billing rules, managing exclusions, and monitoring billing processes.
+The Billing Management system is where you prepare and control how
+ictVoIP Billing turns raw CDRs into billable usage. In a typical
+v1.4.0 deployment you will:
+
+* Import and maintain **tariffs** that define per-destination rates.
+* Configure **packages** that link tariffs to WHMCS products and
+  include any free minutes or custom rules.
+* Apply **CDR filters** so internal calls, test numbers, or emergency
+  calls are handled correctly.
+* Use **Autobill** to process CDRs and hand the resulting charges to
+  WHMCS for invoicing.
+
+This page focuses on tariffs, packages, filters, and the built-in
+Autobill debug view. For the CRON execution and runtime details of the
+Autobill scripts themselves, see :doc:`/admin/autobill`.
 
 **Key Features:**
 * CDR processing and filtering
@@ -58,11 +72,13 @@ Configure VoIP service packages with specific rates and features. For detailed i
 * Global markup management
 
 Autobill Debug
--------------
+--------------
 
 **Debug Configuration**
 
-Enable CDR Autobill Debug to test and monitor the billing process:
+The **CDR Autobill Debug** settings on this page control the addon’s
+built-in debug view for CDR processing. Use this to test and monitor
+how billing rules are applied before enabling fully automated runs.
 
 |
 

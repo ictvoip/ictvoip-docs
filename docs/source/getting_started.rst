@@ -26,6 +26,7 @@ Supported Versions
 * **WHMCS v8.13.x** (recommended)
 * **Limited support for some older WHMCS versions**
 * **PHP 8.1, 8.2, 8.3**
+* **ionCube Loader v14**
 
 Installation Process
 -------------------
@@ -39,6 +40,12 @@ The ictVoIP Billing installation consists of several key steps:
 * **Security Hardening** - Security best practices and access control
 * **SSL Certificate Setup** - Secure communications configuration
 * **Backup Configuration** - Data protection and recovery planning
+
+After you complete the installation and basic security steps, continue
+with the **Admin Area** documentation (:doc:`/admin`) to configure
+servers, providers, tariffs, and packages. For ongoing day-to-day
+management of tenants, extensions, and gateways, use the **Client
+Services Admin Area** (:doc:`/admin/client_services`).
 
 .. toctree::
    :maxdepth: 3

@@ -24,6 +24,7 @@ Supported Versions
 
 * **WHMCS:** 8.13.x
 * **PHP:** 8.1.x – 8.3.x
+* **ionCube Loader v14**
 * **Web Server:** Apache or LiteSpeed with HTTPS enabled
 
 For older ictVoIP Billing versions or non‑standard environments, please refer to the archived documentation or contact support.
