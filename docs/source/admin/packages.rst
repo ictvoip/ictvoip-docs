@@ -7,7 +7,7 @@ Package management allows you to create and configure VoIP service packages with
 
 |
 
-.. image:: ../_static/images/admin/packagerates_new.png
+.. image:: ../_static/images/admin/ictvoipbilling_package_mngt.png
    :width: 900px
    :align: center
    :alt: Package Rates
