@@ -157,6 +157,8 @@ API Credential/Whitelist Verification
 .. note::
    new option for verifying credentials and whitelista for your servers, see below:
 
+Navigate to Client Services tab within the ictVoIP Billing UI and click Settings.
+
 |
 
 .. image:: ../_static/images/admin/server_verify.png
