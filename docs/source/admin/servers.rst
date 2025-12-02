@@ -152,10 +152,23 @@ On your FusionPBX server, create a new user with superadmin group rights via UI 
 API Credential/Whitelist Verification
 -------------------------------------
 
-**Test Server Connection:**
+**Option 1**
 
 .. note::
-   new option for testing credentials and whitelist verifications for your servers, see below:
+   new option for verifying credentials and whitelista for your servers, see below:
+
+|
+
+.. image:: ../_static/images/admin/server_verify.png
+   :width: 900px
+   :align: center
+   :alt: Server Management Dashboard
+|
+
+
+**Option 2**
+
+**Test Server Connection:**
 
 1. In WHMCS, go to **Servers** → **Test Connection**
 2. Verify the connection is successful
