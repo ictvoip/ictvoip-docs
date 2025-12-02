@@ -21,7 +21,7 @@ System Requirements
 * WHMCS 8.12+
 
 **PHP Requirements:**
-* PHP 8.1
+* PHP 8.1+
 
 **Web Server:**
 * Apache 2.4+
@@ -39,7 +39,7 @@ System Requirements
 Purchase & Download
 ------------------
 
-**1. Purchase or start a Triale**
+**1. Purchase or start a Trial**
 
 If you haven't already purchased the ictVoIP Billing addon module or wish to request a trial, you can request so here:
 
@@ -48,7 +48,7 @@ If you haven't already purchased the ictVoIP Billing addon module or wish to req
 **2. Download the Package**
 
 To purchase or begin a trial setup an account and download the latest release package from your client area:
-* **Package:** `ictvoip_billing_release-1.3.x_PHP8.x.zip`
+* **Package:** `ictvoip_billing_release-1.4.x_PHP8.1-PHP8.3.zip`
 * **Location:** Your client area licenses section
 
 Installation Process
@@ -60,7 +60,7 @@ Upload the ictVoIP Billing addon module zip file to your server:
 
 .. code-block:: bash
 
-   /home/$user/tmp/ictvoip_billing_release-1.3.x_PHP8.x.zip
+   /home/$user/tmp/ictvoip_billing_release-1.4.x_PHP8.1-PHP8.3.zip
 
 **Step 2: Extract and Copy Files**
 
@@ -69,10 +69,10 @@ Uncompress the module and copy the contents to your WHMCS root installation:
 .. code-block:: bash
 
    # Extract the package to a tmp dir
-   extract ictvoip_billing_release-1.3.x_PHP8.x.zip
+   extract ictvoip_billing_release-1.4.x_PHP8.1-PHP8.3.zip
    
    # Copy files to WHMCS directories
-   cd /home/$user/tmp/ictvoip_billing_module_v1-3-x_PHP8.x
+   cd /home/$user/tmp/ictvoip_billing_release-1.4.x_PHP8.1-PHP8.3.zip
    cp -r WHMCS/* /home/$user/public_html/
    
 
