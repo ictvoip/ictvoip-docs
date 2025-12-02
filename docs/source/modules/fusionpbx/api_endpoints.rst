@@ -6,6 +6,23 @@ Overview
 
 This document provides an overview of the API endpoints available for FusionPBX integration. These endpoints enable programmatic access to FusionPBX functionality for external system integration and automation.
 
+In ictVoIP Billing v1.4.0, these APIs are primarily consumed by the
+WHMCS server modules and addon features such as the **Client Services
+Admin Area** (:doc:`/admin/client_services`) and **Autobill**
+(:doc:`/admin/autobill`). Administrators normally interact with those
+higher-level tools; this page is intended for advanced integration,
+troubleshooting, and staging validation.
+
+For day-to-day administration, **authentication and IP whitelist
+checks** for these APIs are exposed through the Client Services
+**Settings (Server Provisioning Settings)** screen. From there you can
+load and save WHMCS server credentials (including an optional access
+hash) for FusionPBX hosts and run credential and whitelist tests before
+enabling automated provisioning. Use this when first connecting a PBX
+server or when rotating credentials or tightening whitelists. See also
+the :doc:`/admin/servers` guide and the security hardening overview in
+the :doc:`/getting_started/security` documentation.
+
 .. note::
    All ictVoIP FusionPBX API scripts are distributed as ionCube-
    encoded PHP files and require **ionCube Loader v14+** to be

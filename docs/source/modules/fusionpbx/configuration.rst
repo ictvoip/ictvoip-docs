@@ -4,12 +4,12 @@ FusionPBX Configuration Guide
 Overview
 --------
 
-This guide covers the configuration of ictVoIP Billing integration with FusionPBX, including WHMCS module setup, API configuration, and system settings.
+This guide covers the configuration of ictVoIP Billing integration with FusionPBX, including WHMCS server/module setup, API configuration, and system settings. Together with the :doc:`installation` guide and the high-level :doc:`/applications/provision` overview, this page explains how to wire FusionPBX into ictVoIP Billing v1.4.0.
 
 WHMCS Module Configuration
 -------------------------
 
-**Note**: The ictsipreg WHMCS module is a separate optional addon that provides WHMCS integration capabilities. This module is not included in the standard FusionPBX customizations and requires separate licensing and installation.
+**Note**: The ictsipreg WHMCS module is a separate optional addon that provides additional WHMCS integration capabilities. This module is not required for the core ictVoIP Billing integration (servers, providers, Client Services, Autobill) and requires separate licensing and installation.
 
 Module Installation
 ~~~~~~~~~~~~~~~~~~
@@ -34,7 +34,7 @@ Module Installation
 Server Configuration
 ~~~~~~~~~~~~~~~~~~~
 
-**Required Fields:**
+**Required Fields:** (see also :doc:`/admin/servers`)
 
 * **Server Name**: Descriptive name (e.g., "ictVoIP FusionPBX Server")
 * **Hostname**: FusionPBX server IP or domain
@@ -76,7 +76,7 @@ API Configuration
 Authentication Setup
 ~~~~~~~~~~~~~~~~~~~
 
-The FusionPBX module requires secure API authentication to communicate with your FusionPBX server.
+The FusionPBX module requires secure API authentication to communicate with your FusionPBX server. These same credentials are later used by the ictVoIP Billing addon (for example, from the **Client Services / Server Provisioning Settings** screen) to run connectivity and whitelist tests.
 
 **Required Credentials:**
 

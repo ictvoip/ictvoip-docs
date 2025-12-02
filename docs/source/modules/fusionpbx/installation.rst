@@ -4,7 +4,16 @@ FusionPBX Installation Guide
 Overview
 --------
 
-This guide covers the installation of ictVoIP Billing integration with FusionPBX systems. The installation process varies depending on your FusionPBX version and deployment method.
+This guide covers the installation of ictVoIP Billing integration with
+FusionPBX systems. The installation process varies depending on your
+FusionPBX version and deployment method, but the goals are the same in
+ictVoIP Billing **v1.4.0**:
+
+* Install the required FusionPBX API and theme customizations.
+* Ensure SSL/TLS and whitelist configuration are in place.
+* Verify that the APIs required by the WHMCS server modules and addon
+  (Client Services, Autobill, Health Check) are reachable and
+  functioning.
 
 Prerequisites
 -------------
@@ -335,13 +344,26 @@ Next Steps
 
 After successful installation:
 
-1. **Configure WHMCS Integration** - Set up the WHMCS module (optional)
-   * Note: The ictsipreg WHMCS module is a separate optional addon
-   * Contact ictVoIP for WHMCS module installation and licensing
-2. **Set Up API Credentials** - Configure authentication
-3. **Test All Endpoints** - Verify API functionality
-4. **Customize Branding** - Adjust logos and styling
-5. **Set Up Monitoring** - Configure health checks
+1. **Configure WHMCS Integration** - If you are using the optional
+   ictsipreg WHMCS module, follow its installation guide and configure
+   the server in WHMCS.
+2. **Register PBX Servers in WHMCS** - Add your FusionPBX host as a
+   server in WHMCS and verify connectivity from the
+   :doc:`/admin/servers` page.
+3. **Run System Health Check** - Use the ictVoIP Billing Health Check
+   to confirm that required FusionPBX APIs are detected and that
+   whitelisting is correctly configured.
+4. **Review Provisioning Flow** - Review the
+   :doc:`/applications/provision` overview so you understand how
+   providers, products, tenants, gateways, and extensions will be
+   provisioned.
+5. **Test Client Services Connectivity** - From the
+   :doc:`/admin/client_services` area, use **Settings / Server
+   Provisioning Settings** to test credentials and whitelisting to your
+   FusionPBX server.
+6. **Confirm CDR Export for Billing** - Once calls are flowing, verify
+   that CDRs can be exported via the configured APIs and that
+   :doc:`/admin/autobill` can consume them during test runs.
 
 For detailed configuration instructions, see the :doc:`configuration` guide.
 
