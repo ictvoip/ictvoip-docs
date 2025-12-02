@@ -107,7 +107,7 @@ Enter your license key in the configuration:
 
 |
 
-.. image:: ../_static/images/admin/addon_lic.png
+.. image:: ../_static/images/admin/ictvoipbilling_addon_key.png
    :width: 900px
    :align: center
    :alt: Addon License Configuration
