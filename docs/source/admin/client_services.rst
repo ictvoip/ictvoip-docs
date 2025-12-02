@@ -14,6 +14,14 @@ Core Tools
 
 From the Client Services admin area you can:
 
+|
+
+.. image:: ../_static/images/admin/client-services_main.png
+   :width: 800px
+   :align: center
+   :alt: Client services
+|
+
 * **Manage Tenant Domains** – Create, import, synchronize, and update
   FusionPBX tenant domains for the selected provider, including
   capacity limits and descriptions, while keeping related WHMCS
