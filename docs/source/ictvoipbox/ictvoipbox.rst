@@ -67,6 +67,28 @@ Existing WHMCS clients can also purchase ictVoIP Box-backed services:
    to administrators through the standard **Client Services Admin Area**
    (:doc:`/admin/client_services`).
 
+Checkout Experience (4-Step Wizard)
+-----------------------------------
+
+From the client's perspective, ictVoIP Box presents a simple
+four-step wizard during checkout. You can attach screenshots for each
+step when documenting your own deployment.
+
+1. **Company Details** – The client enters their company name and basic
+   contact information to identify the new PBX tenant.
+2. **DID Selection** – The client selects a main DID from the numbers
+   you have made available, typically filtered by
+   country/province/region, rate center, and specific number.
+3. **Tenant & Extensions Preview** – A summary view shows the tenant
+   hostname/domain that will be created and the maximum number of
+   extensions or seats included with the chosen package.
+4. **Create Admin User** – The final modal collects the admin user
+   details for the new ictPBX tenant (assigned server and tenant
+   domain, admin username/password, email, timezone, language, and
+   group). When the client clicks **Create User & Complete Order**, the
+   backend provisioning sequence runs and leaves the tenant ready to
+   place calls.
+
 Admin Setup Checklist
 =====================
 
