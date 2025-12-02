@@ -59,7 +59,7 @@ Download the FusionPBX API package and extract it to your FusionPBX server:
    # Extract to FusionPBX root directory
    unzip ictvoip_fusionpbx_apis-theme.zip -d /root/
 
-**Step 2: Run Install Script install.sh**
+**Step 2: chmod +x install.sh then run the Install Script ./install.sh**
 
 **Step 3: Verify Installation**
 
@@ -88,9 +88,6 @@ Extract the package and copy the required files:
    
    # Copy WHMCS files
 
-**Step 3: Verify Directory Structure**
-
-Ensure the following structure exists:
 
 Server Configuration
 -------------------
@@ -101,6 +98,9 @@ Navigate to your WHMCS admin panel:
 * **System Settings** → **Products & Services** → **Servers**
 
 **Step 2: Add New Server**
+
+.. note::
+   before adding your server(s) you must have FPBX host SSL cert applied.
 
 Click **Add New Server** and configure the following settings:
 
@@ -136,9 +136,9 @@ Click **Add New Server** and configure the following settings:
 * **Username:** FusionPBX API user with superadmin rights
 * **Password:** Secure password for API user
 
-**Step 3: Create API User**
+**Step 3: Create API User & Generate Hash Key**
 
-On your FusionPBX server, create a new user with superadmin group rights:
+On your FusionPBX server, create a new user with superadmin group rights via UI or:
 
 .. code-block:: sql
 
@@ -149,10 +149,13 @@ On your FusionPBX server, create a new user with superadmin group rights:
    INSERT INTO v_group_users (group_user_uuid, domain_uuid, group_name, user_uuid, group_user_enabled)
    VALUES (uuid_generate_v4(), 'your-domain-uuid', 'superadmin', 'user-uuid', 'true');
 
-Connection Verification
-----------------------
+API Credential/Whitelist Verification
+-------------------------------------
 
 **Test Server Connection:**
+
+.. note::
+   new option for testing credentials and whitelist verifications for your servers, see below:
 
 1. In WHMCS, go to **Servers** → **Test Connection**
 2. Verify the connection is successful
