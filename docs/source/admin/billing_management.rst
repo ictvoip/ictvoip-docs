@@ -66,7 +66,7 @@ Enable CDR Autobill Debug to test and monitor the billing process:
 
 |
 
-.. image:: ../_static/images/admin/enable_debug.png
+.. image:: ../_static/images/admin/ictvoipbilling_autobill_debug.png
         :scale: 50%
         :align: center
         :alt: Autobill Debug Configuration
