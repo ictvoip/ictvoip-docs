@@ -209,6 +209,66 @@ Let's Encrypt certificates are typically valid for 90 days. The
 FusionPBX helper script and ``dehydrated`` can be configured to renew
 certificates automatically via cron.
 
+Automatic Renewal (Cron + dehydrated)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In many deployments, the FusionPBX installation process installs
+``dehydrated`` and registers a cron job that runs it in "cron" mode.
+At a high level:
+
+* A daily cron entry calls ``dehydrated -c``.
+* ``dehydrated`` checks existing certificates and renews them when they
+  are within the renewal window.
+* Hook scripts (configured by FusionPBX or your distribution) reload
+  the web server and related services after a successful renewal.
+
+Typical components include:
+
+* A ``dehydrated`` executable in a system path (for example,
+  ``/usr/local/sbin/dehydrated``).
+* Configuration and certificate directories (for example,
+  ``/etc/dehydrated/`` and ``/etc/dehydrated/certs/``).
+* A cron entry similar to::
+
+      @daily /usr/local/sbin/dehydrated -c
+
+  or, using a specific schedule (for example, every Monday at 05:00)::
+
+      0 5 * * 1 /usr/local/sbin/dehydrated -c
+
+Always adjust these example paths to match your own distribution and
+FusionPBX installation notes.
+
+Verifying Renewal Setup
+~~~~~~~~~~~~~~~~~~~~~~~
+
+To confirm that automatic renewal is in place:
+
+1. **Check cron configuration**
+   
+   * As a privileged user, review the root crontab or system cron
+     configuration.
+   * Look for an entry that runs ``dehydrated -c`` on a regular
+     schedule (for example, daily).
+
+2. **Manually test renewal**
+   
+   * From a shell on the FusionPBX host, run (adjusting the path as
+     needed)::
+
+         /usr/local/sbin/dehydrated -c
+
+   * Review the output for any errors related to DNS validation,
+     permissions, or connectivity.
+
+3. **Confirm certificate usage**
+   
+   * Check that the certificate files under the configured certs
+     directory have recent modification times.
+   * Reload or restart the web server (if not handled automatically by
+     hooks) and verify that the renewed certificate is presented by the
+     FusionPBX web interface.
+
 General recommendations:
 
 * Ensure the renewal script is scheduled (for example, daily) on the

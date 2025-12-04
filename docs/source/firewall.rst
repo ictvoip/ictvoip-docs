@@ -25,6 +25,10 @@ Core Principles
   - Where possible, separate WHMCS, database, and PBX components into
     appropriate network segments.
 
+For guidance on HTTPS certificate issuance and automatic renewal for
+FusionPBX hosts (for example, Let's Encrypt and ``dehydrated``
+workflows), see :doc:`getting_started/lets_encrypt`.
+
 Typical Port Considerations
 ---------------------------
 

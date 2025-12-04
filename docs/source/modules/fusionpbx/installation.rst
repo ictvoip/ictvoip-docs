@@ -364,6 +364,10 @@ After successful installation:
 6. **Confirm CDR Export for Billing** - Once calls are flowing, verify
    that CDRs can be exported via the configured APIs and that
    :doc:`/admin/autobill` can consume them during test runs.
+7. **Verify HTTPS Certificates and Renewal** - Ensure your FusionPBX
+   host is using valid HTTPS certificates and that automatic renewal is
+   configured. See :doc:`/getting_started/lets_encrypt` for an overview
+   of certificate issuance and cron-based renewal patterns.
 
 For detailed configuration instructions, see the :doc:`configuration` guide.
 

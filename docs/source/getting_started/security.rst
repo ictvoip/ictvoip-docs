@@ -57,6 +57,10 @@ For FusionPBX integrations:
 * Use the ictVoIP Billing **Client Services** or **Server Provisioning Settings** tools to run credential and whitelist tests against your PBX servers so you can confirm that the WHMCS host can reach the API endpoints before enabling automated provisioning.
 * Keep FusionPBX and its dependencies updated with security patches.
 
+For certificate issuance and automatic renewal patterns (including
+``dehydrated`` and cron-based renewal), see the
+:doc:`/getting_started/lets_encrypt` guide.
+
 For an overview of the FusionPBX APIs and security model, see
 :doc:`/modules/fusionpbx` and :doc:`/modules/fusionpbx/api_endpoints`.
 
