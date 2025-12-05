@@ -8,7 +8,7 @@ This guide will help you install and configure the ictVoIP Billing
 application for **ictVoIP Billing v1.4.0** and later. Follow the steps
 in the menu to the left for a streamlined setup experience. For PDF and
 EPUB versions of this documentation, click the **v:latest** menu at the
-bottom left.
+bottom.
 
 Key Features
 -----------
