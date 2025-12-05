@@ -97,6 +97,10 @@ Enter your ictVoIP Billing license key in the configuration:
 
 Set the appropriate access control groups for your administrators and save the configuration.
 
+.. note::
+
+   **Upgrading from v1.3.3:** When upgrading from ictVoIP Billing v1.3.3 (or any 1.3.x build) to v1.4.0 or later, you must re-run the addon activation inside WHMCS after uploading the new files. If the addon is already active, click **Deactivate**, then **Activate** again. This ensures that all new database tables and columns required by the new version are created and updated.
+
 System Health Check
 -------------------
 
