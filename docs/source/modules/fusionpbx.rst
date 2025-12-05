@@ -81,51 +81,121 @@ In a typical ictVoIP Billing v1.4.0 deployment:
 Included APIs & Versions
 -------------------------
 
-The ictVoIP FusionPBX Server Module installs a standard set of API
-endpoints on your FusionPBX host. These APIs are used by ictVoIP
-Billing and WHMCS for provisioning, monitoring, and billing
-operations.
+The ictVoIP FusionPBX Server Module installs a standard set of
+application-level APIs on your FusionPBX host. These APIs are used by
+ictVoIP Billing and WHMCS for provisioning, monitoring, and billing
+operations. Each API is implemented as one or more HTTP endpoints
+behind the scenes, but those internal paths are not exposed here for
+security and intellectual-property reasons.
 
-**Gateway Management APIs**
-* Purpose: Provision and manage SIP gateways for tenant domains.
-* Example endpoints: `/app/gateways/manage_gateway.php` (gateway CRUD and listing used by the WHMCS server module), `/app/gateways/provision.php` (provision or refresh a single gateway), `/app/gateways/provision_list.php` (return a list of configured gateways for monitoring and sync).
+The main custom applications and their responsibilities are:
 
-**Domain Management APIs**
-* Purpose: Manage tenant domains (create, update, query) for multi-tenant deployments.
-* Example endpoint: `/app/domains/manage_domain.php` (tenant domain CRUD operations with centralized whitelist security).
+**Access Control & Whitelist (`access_controls` / `access_control`)**
 
-**Destinations Management APIs**
-* Purpose: Manage inbound destinations (DIDs) for tenants.
-* Example endpoint and version: `/app/destinations/manage_destinations.php` (DID CRUD and listing for tenant domains), version `1.2.7-destinations`.
+* Manages API access control lists and IP/CIDR whitelists.
+* Provides connectivity and readiness checks used by the Health
+  Check and "Test Connection" tools.
 
-**Outbound Dialplan Management APIs**
-* Purpose: Manage outbound dialplans and routing patterns per tenant.
-* Example endpoint and version: `/app/dialplan_outbound/manage_outbound.php` (outbound dialplan CRUD and listing for tenant contexts), version `1.2.5-outbound`.
+**Destinations / Inbound Routing (`destinations`, `inbound`)**
 
-**Extension Management APIs**
-* Purpose: Create, update, and delete extensions aligned with tenant domains and service plans.
-* Example endpoint and version: `/app/extensions/manage_extension.php` (extension CRUD and provisioning operations), version `2.0-extensions`.
+* Manages inbound destinations (DIDs) for tenant domains.
+* Supports create, update, and delete operations for inbound routes
+  and links them to tenants and billing rules.
 
-**Registration Status APIs**
-* Purpose: Check SIP registration status for extensions.
-* Example endpoint: `/app/registrations/check_registration.php` (returns registration state and basic registration details for a specific extension and tenant).
+**Outbound Dialplan (`dialplan_outbound` / `outbound`)**
 
-**System Status APIs**
-* Purpose: Report FusionPBX health and basic metrics for dashboards.
-* Example endpoint: `/app/status/index.php` (lightweight status probe returning high-level system information).
+* Manages outbound dialplans and routing patterns per tenant.
+* Controls how outbound calls are normalized, matched, and routed to
+  gateways based on country codes, prefixes, and service plans.
 
-**CDR Management APIs**
-* Purpose: Support billing and reporting workflows by exporting and validating call detail records.
-* Example endpoints: `/app/xml_cdr/check_cdrs.php` (CDR availability and basic consistency checks), `/app/xml_cdr/chkcon.php` (connectivity / whitelist / API readiness check used by "Test Connection" and Health Check), `/app/xml_cdr/export_cdr.php` (export CDRs over a specified time range), `/app/xml_cdr/get_cdr_data.php` (retrieve CDR data for analysis and reporting), `/app/xml_cdr/import_cdr.php` (import CDR data from external sources).
+**Dialplans (`dialplans`)**
 
-**Access Control & Whitelist APIs**
-* Purpose: Support safe operation of all APIs via centralized access control and whitelisting.
-* Example endpoints: `/app/access_controls/manage_access_control.php` (view access control lists and validate API deployment/version), `/app/xml_cdr/whitelist_manager.php` (manage IP and CIDR entries allowed to access the APIs).
+* Provides supporting dialplan utilities used by other applications.
+* Helps maintain consistent contexts and patterns across tenants.
 
-Each of these APIs advertises a version string that is displayed in
-the ictVoIP Billing **System Health Check** under the FusionPBX
-section, allowing you to verify that the correct API set and
-versions are installed.
+**Domains (`domains` / `domain`)**
+
+* Manages tenant domains in multi-tenant deployments.
+* Supports creating, updating, and querying tenants, including
+  synchronized limits and descriptions used by Client Services.
+
+**Extensions (`extensions` / `extension`)**
+
+* Handles lifecycle management for extensions (create, update,
+  disable, delete) in alignment with tenant domains and WHMCS
+  services.
+* Ensures extension properties (number ranges, passwords, limits)
+  match the client’s assigned package and billing configuration.
+
+**Gateways (`gateway`, `provision`, `provision-list`)**
+
+* Provisions and manages SIP gateways for tenant domains.
+* Provides operations to create or modify gateways and to list
+  configured gateways for synchronization and monitoring.
+
+**Registrations (`registrations` / `registration`)**
+
+* Exposes registration status information for extensions and
+  gateways.
+* Used by dashboards and troubleshooting tools to show whether
+  devices are currently registered and reachable.
+
+**System Status (`status`)**
+
+* Provides a lightweight health and status view of the FusionPBX
+  instance.
+* Used by WHMCS and internal dashboards to confirm basic system
+  availability and high-level metrics.
+
+**XML CDR & Billing (`xml_cdr`)**
+
+* Implements CDR collection, validation, export, and import
+  workflows.
+* Provides connectivity checks, CDR availability checks, and data
+  retrieval/export functions used by autobill, real-time billing,
+  and reporting tools.
+
+.. list-table:: Custom FusionPBX applications and WHMCS usage
+   :header-rows: 1
+
+   * - Application
+     - Aliases
+     - Primary WHMCS usage
+   * - Access Control & Whitelist
+     - ``access_controls``, ``access_control``
+     - Health Check, Test Connection tools, and API whitelist validation in Client Services.
+   * - Destinations / Inbound Routing
+     - ``destinations``, ``inbound``
+     - Managing inbound DIDs and destinations for tenants in Client Services.
+   * - Outbound Dialplan
+     - ``dialplan_outbound``, ``outbound``
+     - Managing outbound routing patterns and normalisation rules for tenants.
+   * - Dialplans
+     - ``dialplans``
+     - Supporting dialplan utilities referenced by other provisioning flows.
+   * - Domains
+     - ``domains``, ``domain``
+     - Tenant creation, updates, and synchronisation in Client Services.
+   * - Extensions
+     - ``extensions``, ``extension``
+     - Extension provisioning and lifecycle management from WHMCS services.
+   * - Gateways
+     - ``gateway``, ``provision``, ``provision-list``
+     - Gateway provisioning, listing, and synchronisation in Client Services.
+   * - Registrations
+     - ``registrations``, ``registration``
+     - Status views and diagnostics for registered devices and gateways.
+   * - System Status
+     - ``status``
+     - High-level FusionPBX health and availability checks used by dashboards.
+   * - XML CDR & Billing
+     - ``xml_cdr``
+     - CDR collection and export/import workflows for autobill and reporting.
+
+Each of these applications exposes a version string that is
+displayed in the ictVoIP Billing **System Health Check** under the
+FusionPBX section, allowing you to verify that the correct API set
+and versions are installed.
 
 At a high level, these APIs are consumed by:
 

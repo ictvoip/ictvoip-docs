@@ -9,10 +9,6 @@ Within the WHMCS **Admin Area**, the ictVoIP Billing addon provides a
 administrator-facing dashboard that allows you to manage FusionPBX
 hosts and client VoIP services without leaving WHMCS.
 
-Core Tools
-----------
-
-From the Client Services admin area you can:
 |
 
 .. image:: ../_static/images/admin/client-services_main.png
@@ -21,9 +17,30 @@ From the Client Services admin area you can:
    :alt: Client services
 |
 
+Core Tools
+----------
+
+From the Client Services admin area you can:
+
+Core Tools Index
+~~~~~~~~~~~~~~~~
+
+- :ref:`Manage Tenant Domains <client_services_manage_tenant_domains>`
+- :ref:`Provision Extensions <client_services_provision_extensions>`
+- :ref:`Configure Gateways <client_services_configure_gateways>`
+- :ref:`Manage ACLs <client_services_manage_acls>`
+- :ref:`Manage Destination Routes <client_services_manage_destination_routes>`
+- :ref:`Service Directory <client_services_service_directory>`
+- :ref:`Quick Create Tenant <client_services_quick_create_tenant>`
+- :ref:`View Logs <client_services_view_logs>`
+- :ref:`Settings (Server Provisioning Settings) <client_services_settings_server_provisioning>`
+
+
 Typical workflow: choose a provider/PBX at the top of the screen, then
 use the tabs and actions in the Client Services view to locate tenants
 and services, run provisioning actions, and review recent activity.
+
+.. _client_services_manage_tenant_domains:
 
 * **Manage Tenant Domains** – Create, import, synchronize, and update
   FusionPBX tenant domains for the selected provider, including
@@ -43,6 +60,8 @@ limits and description, then edit or sync details as needed. Use the
 "add" or "import" actions when onboarding a new customer or bringing
 an existing FusionPBX tenant under management.
 
+.. _client_services_provision_extensions:
+
 * **Provision Extensions** – Add, view, and manage extensions for each
   tenant, provision them to FusionPBX, and link or unlink extensions to
   WHMCS services for billing and lifecycle control. Use this to keep
@@ -61,6 +80,8 @@ create or edit extensions as required, then ensure each extension is
 linked to the correct WHMCS service so billing stays in sync with
 provisioned resources.
 
+.. _client_services_configure_gateways:
+
 * **Configure Gateways** – Use gateway templates and provider-scoped
   settings to configure and sync SIP gateways for tenants, keeping
   provider trunks and PBX routing aligned with billing. Use this when
@@ -77,6 +98,8 @@ Typical workflow: select the provider and tenant, choose an
 appropriate gateway template, adjust any tenant-specific parameters
 (such as credentials or hostnames), then apply and sync the gateway to
 FusionPBX.
+
+.. _client_services_manage_acls:
 
 * **Manage ACLs** – Review and adjust provider-side access control
   lists that determine which source IP addresses are allowed to reach
@@ -96,6 +119,8 @@ addresses, compare it against your WHMCS and management hosts, then
 add or remove entries so the provider-side ACLs reflect your intended
 access policy.
 
+.. _client_services_manage_destination_routes:
+
 * **Manage Destination Routes** – View and manage destination routing
   information (such as inbound numbers/DIDs and associated tenants) to
   keep PBX routing and billing destinations in sync. Use this when
@@ -111,6 +136,8 @@ access policy.
 Typical workflow: search for an inbound number or DID, confirm which
 tenant it is attached to, then update the routing or assignment when
 numbers are moved between tenants or new DIDs are activated.
+
+.. _client_services_service_directory:
 
 * **Service Directory** – Browse and filter client services associated
   with the provider/PBX, helping you quickly locate which tenants,
@@ -129,6 +156,8 @@ investigating, use the directory filters to locate it, then drill into
 the associated tenant, extensions, or gateways to continue
 troubleshooting.
 
+.. _client_services_quick_create_tenant:
+
 * **Quick Create Tenant** – Use guided forms to rapidly create new
   FusionPBX tenants (domains) and optionally bind them to WHMCS
   services and main DIDs in a single workflow. Use this for fast,
@@ -144,6 +173,8 @@ troubleshooting.
 Typical workflow: select the provider/PBX, enter the new tenant domain
 and main DID, choose or confirm the related WHMCS service, then submit
 the form to create and link the tenant in a single step.
+
+.. _client_services_view_logs:
 
 * **View Logs** – Inspect recent provisioning and sync logs for
   tenants, extensions, gateways, and API interactions to assist with
@@ -161,6 +192,8 @@ Typical workflow: when a provisioning or sync task does not behave as
 expected, open the logs view, filter by provider, tenant, or time
 range, and review recent actions and error messages before making
 changes or re-running the action.
+
+.. _client_services_settings_server_provisioning:
 
 * **Settings (Server Provisioning Settings)** – Load and save WHMCS
   server credentials (including optional access hash) for FusionPBX

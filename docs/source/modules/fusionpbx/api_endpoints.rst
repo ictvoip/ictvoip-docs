@@ -31,62 +31,49 @@ the :doc:`/getting_started/security` documentation.
 
 API Summary
 -----------
-The table below summarizes the core ictVoIP FusionPBX APIs used by
-ictVoIP Billing and WHMCS. Each API advertises a version string that
-can be viewed in the ictVoIP Billing **System Health Check** under
-the FusionPBX section.
+The table below summarizes the core ictVoIP FusionPBX applications
+used by ictVoIP Billing and WHMCS. Each application advertises a
+version string that can be viewed in the ictVoIP Billing **System
+Health Check** under the FusionPBX section. Internal endpoint paths
+are intentionally not exposed here.
 
-.. list-table::
+.. list-table:: FusionPBX applications and primary use
    :header-rows: 1
    :widths: 25 35 40
 
-   * - API
-     - Endpoint (example path)
+   * - Application
+     - Aliases
      - Primary Use
-   * - Status
-     - ``/app/status/index.php``
-     - Reports FusionPBX health, version, and basic statistics for the
-       ictVoIP Billing dashboard.
-   * - Registration Status
-     - ``/app/registrations/check_registration.php``
-     - Checks SIP registration status for a specific extension and
-       tenant domain.
-   * - Gateway Management
-     - ``/app/gateways/manage_gateway.php``
-     - Creates, updates, and lists SIP gateways used by tenants.
-   * - Gateway Provisioning
-     - ``/app/gateways/provision.php``
-     - Provisions or refreshes a single SIP gateway on demand.
-   * - Gateway List
-     - ``/app/gateways/provision_list.php``
-     - Returns a list of configured SIP gateways and their status.
-   * - Destinations
-     - ``/app/destinations/manage_destinations.php``
-     - Manages inbound destinations (DIDs) for tenants.
-   * - Outbound Dialplans
-     - ``/app/dialplan_outbound/manage_outbound.php``
-     - Manages outbound dialplans and routing patterns per tenant.
+   * - Access Control & Whitelist
+     - ``access_controls``, ``access_control``
+     - Health Check, Test Connection tools, and API whitelist validation for FusionPBX servers.
+   * - Destinations / Inbound Routing
+     - ``destinations``, ``inbound``
+     - Managing inbound DIDs and destinations for tenants, linked to billing.
+   * - Outbound Dialplan
+     - ``dialplan_outbound``, ``outbound``
+     - Managing outbound dialplans and routing patterns per tenant.
+   * - Dialplans
+     - ``dialplans``
+     - Supporting dialplan utilities referenced by other provisioning flows.
+   * - Domains
+     - ``domains``, ``domain``
+     - Tenant creation, updates, and synchronisation with Client Services.
    * - Extensions
-     - ``/app/extensions/manage_extension.php``
-     - Manages extension CRUD and provisioning aligned to tenant
-       domains.
-   * - CDR Export
-     - ``/app/xml_cdr/export_cdr.php``
-     - Exports call detail records for billing and reporting.
-   * - CDR Health & Connection
-     - ``/app/xml_cdr/chkcon.php``
-     - Connectivity / whitelist / API readiness check used by
-       **Test Connection** and the System Health Check.
-   * - CDR Data Access
-     - ``/app/xml_cdr/get_cdr_data.php``
-     - Retrieves CDR data for analysis and reporting.
-   * - CDR Import
-     - ``/app/xml_cdr/import_cdr.php``
-     - Imports CDR data from external sources.
-   * - Access Control / Whitelist
-     - ``/app/xml_cdr/whitelist_manager.php``
-     - Manages IP and CIDR entries that are allowed to access the
-       APIs.
+     - ``extensions``, ``extension``
+     - Extension provisioning and lifecycle management tied to WHMCS services.
+   * - Gateways
+     - ``gateway``, ``provision``, ``provision-list``
+     - SIP gateway provisioning, listing, and synchronisation in Client Services.
+   * - Registrations
+     - ``registrations``, ``registration``
+     - Registration status checks for extensions and gateways.
+   * - System Status
+     - ``status``
+     - High-level FusionPBX health and availability checks used by dashboards.
+   * - XML CDR & Billing
+     - ``xml_cdr``
+     - CDR collection and export/import workflows for autobill and reporting.
 
 For parameter details, example requests, and response formats, see
 the endpoint sections below.
@@ -94,13 +81,20 @@ the endpoint sections below.
 Authentication
 --------------
 
-The endpoint now uses IP/CIDR-based whitelisting for authentication.
+FusionPBX APIs use a combination of **IP/CIDR-based whitelisting** and
+an **API integration identity** (API user plus optional access
+hash/token).
 
 **Authentication Requirements:**
 
-* API username / password & whitelisted IPs.
+* API integration user (dedicated account for ictVoIP Billing).
+* Access hash or API token (where configured) and/or API password.
+* Calling host must be on the IP/CIDR whitelist for the FusionPBX
+  server.
 * Requests from non-whitelisted IPs will be denied and logged.
-* Whitelist is managed in `chkcon_whitelist.conf` or use out tool Whitelist Manager.
+* The whitelist is typically managed using the chkcon whitelist
+  configuration or the Whitelist Manager utility on the FusionPBX
+  host.
 
 |
 
@@ -127,17 +121,32 @@ The endpoint now uses IP/CIDR-based whitelisting for authentication.
 WHMCS Integration Note
 ----------------------
 
-When configuring the FusionPBX server in WHMCS, the "Test Connection" button now checks API access based on the IP whitelist. Username and password fields are not required for this endpoint. Ensure your WHMCS server's public IP is included in `chkcon_whitelist.conf` on the FusionPBX server.
+When configuring the FusionPBX server in WHMCS, the **Test Connection**
+button checks API access using the server definition, which includes
+the API integration user, optional access hash/token, and the
+whitelisted IP of the WHMCS host. Ensure the WHMCS server's public IP
+is present on the FusionPBX whitelist before enabling automated
+provisioning.
+
+**Verification steps (Client Services / Settings – Server Provisioning Settings):**
+
+1. Open **Client Services** in the WHMCS Admin Area
+   (:doc:`/admin/client_services`).
+2. Select the relevant FusionPBX server and open **Settings** →
+   **Server Provisioning Settings**.
+3. Confirm the API integration user and access hash/token values.
+4. Click **Test Connection** to validate credentials, whitelist, and
+   basic API readiness.
+5. Resolve any reported errors (credentials, whitelist, or SSL) before
+   turning on automated provisioning or autobill.
 
 API Endpoints
 -------------
 
-Status Endpoint
-~~~~~~~~~~~~~~~
+Status API
+~~~~~~~~~~
 
-**Purpose:** System health and status monitoring within WHMCS Admin Dashboard
-
-**Endpoint:** `/app/status/index.php`
+**Purpose:** System health and status monitoring within WHMCS Admin Dashboard.
 
 **Method:** POST
 
@@ -161,19 +170,10 @@ Status Endpoint
       "registered_extensions": 142
     }
 
-**Usage Example:**
+Registration Status API
+~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: bash
-
-    curl -X POST https://your-fusionpbx.com/app/status/index.php \
-      -d "username=admin&password=your-password"
-
-Registration Status Endpoint
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Purpose:** Check extension registration status
-
-**Endpoint:** `check_registration.php`
+**Purpose:** Check extension registration status.
 
 **Method:** POST
 
@@ -196,19 +196,10 @@ Registration Status Endpoint
       "register_useragent": "SIP Client/1.0"
     }
 
-**Usage Example:**
+Gateway Provisioning API
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: bash
-
-    curl -X POST https://your-fusionpbx.com/app/registrations/check_registration.php \
-      -d "username=admin&password=your-password&extension=1001&tenant_domain=yourdomain.com"
-
-Gateway Management Endpoint
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Purpose:** Manage SIP gateway configurations
-
-**Endpoint:** `provision.php`
+**Purpose:** Manage SIP gateway configurations.
 
 **Method:** POST
 
@@ -233,19 +224,10 @@ Gateway Management Endpoint
       "gateway_enabled": "true"
     }
 
-**Usage Example:**
+Gateway List API
+~~~~~~~~~~~~~~~~
 
-.. code-block:: bash
-
-    curl -X POST https://your-fusionpbx.com/app/gateways/provision.php \
-      -d "username=admin&password=your-password&gateway_name=primary_gateway&gateway_domain=sip.provider.com&gateway_username=account&gateway_password=password"
-
-Gateway List Endpoint
-~~~~~~~~~~~~~~~~~~~~
-
-**Purpose:** Retrieve configured gateway information
-
-**Endpoint:** `provision_list.php`
+**Purpose:** Retrieve configured gateway information.
 
 **Method:** POST
 
@@ -271,19 +253,10 @@ Gateway List Endpoint
       ]
     }
 
-**Usage Example:**
+CDR Export API
+~~~~~~~~~~~~~~
 
-.. code-block:: bash
-
-    curl -X POST https://your-fusionpbx.com/app/gateways/provision_list.php \
-      -d "username=admin&password=your-password"
-
-CDR Export Endpoint
-~~~~~~~~~~~~~~~~~~
-
-**Purpose:** Export call detail records for billing and reporting
-
-**Endpoint:** `export_cdr.php`
+**Purpose:** Export call detail records for billing and reporting.
 
 **Method:** POST
 
@@ -306,12 +279,25 @@ CDR Export Endpoint
       "export_format": "JSON"
     }
 
-**Usage Example:**
+The exact URLs and deployment structure for these APIs are
+intentionally not documented here. All calls are made by the ictVoIP
+Billing server modules and addons using server definitions and
+credentials configured in WHMCS.
 
-.. code-block:: bash
+Developer Notes
+---------------
 
-    curl -X POST https://your-fusionpbx.com/app/xml_cdr/export_cdr.php \
-      -d "username=admin&password=your-password&date_start=2024-01-01&date_end=2024-01-31&format=JSON"
+* These APIs are designed to be consumed **indirectly** via ictVoIP
+  Billing and the associated WHMCS server modules and addons. Custom
+  integrations should follow the same authentication and whitelist
+  model.
+* Each FusionPBX application (for example, access control, gateways,
+  domains, extensions, registrations, status, XML CDR) exposes a
+  **version string** that is surfaced in the ictVoIP Billing **System
+  Health Check** under the FusionPBX section.
+* When APIs are updated, the application version is incremented so
+  that operators can verify that all FusionPBX servers are running the
+  expected API set before enabling new features.
 
 Error Handling
 -------------
