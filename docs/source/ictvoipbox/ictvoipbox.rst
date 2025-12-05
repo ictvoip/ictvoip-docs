@@ -196,6 +196,7 @@ Typical steps:
         
 |
 
+
 Checkout API Settings
 =====================
 
@@ -222,6 +223,44 @@ Typical uses:
         
 |
 
+Bundled Product Setup (Max Seats)
+---------------------------------
+
+Before you can effectively use **Product Mapping**, you should first
+create one or more WHMCS **bundled products** that define how many
+seats (extensions) are included with each PBX offer.
+
+|
+
+ .. image:: ../_static/images/admin/product_module_settings.png
+        :scale: 45%
+        :align: center
+        :alt: ictVoIP Box provider settings
+        
+|
+
+At a high level:
+
+* **Create a WHMCS product bundle** that represents your PBX offer
+  (for example, ``PBX Starter – Up to 10 Seats``).
+* Include one or more **seat-related products** in the bundle whose
+  quantities will represent the maximum seats. For example, a
+  ``PBX Seat`` product where the quantity allowed in the bundle
+  determines the Max Seats shown in the checkout wizard.
+* Once the bundle and its seat products are configured, go back to the
+  ictVoIP Box **Product Mapping** screen and map that bundle to the
+  appropriate provider, gateway template, and route templates.
+
+When a client orders the bundle, ictVoIP Box reads the mapped bundle
+and its included products to determine the **Max Seats** value
+presented on Step 3 of the checkout wizard (Tenant & Extensions
+Preview).
+
+After your own product naming and bundle structure in WHMCS are
+finalized, you can optionally add internal notes or screenshots showing
+the WHMCS bundle configuration side-by-side with the corresponding
+ictVoIP Box Product Mapping entry.
+
 Product Mapping
 ===============
 
@@ -242,6 +281,7 @@ In this area you can:
         :alt: ictVoIP Box product mapping
         
 |
+
 
 Route Template Assignments
 ==========================
