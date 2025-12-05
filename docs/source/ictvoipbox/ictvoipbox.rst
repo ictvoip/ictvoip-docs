@@ -16,6 +16,14 @@ FusionPBX server modules so that the PBX side (tenants, extensions,
 gateways, routes) and the billing side (services, CDRs, packages) stay
 aligned.
 
+|
+
+ .. image:: ../_static/images/clientarea/ictvoipbox_main.png
+        :scale: 45%
+        :align: center
+        :alt: ictVoIP Box dashboard
+        
+|
 High-Level Capabilities
 =======================
 
