@@ -27,11 +27,12 @@ API Access Whitelist
    :alt: ictVoIP Whitelist Manager
 |
 
-The `/app/xml_cdr/chkcon.php` endpoint now uses an IP and CIDR-based whitelist for authentication. Only requests originating from trusted IP addresses or subnets listed in the `chkcon_whitelist.conf` file will be granted API access.
+The `chkcon.php` endpoint now uses multi authentication using an IP and CIDR-based whitelist for authentication. Only requests originating from trusted IP addresses or subnets listed in the `chkcon_whitelist.conf` file will be granted API access and we also recommend using an API user with API Key Tokens.
 
-* No username or password is required for whitelisted IPs.
+* Include am API username and password recommended with whitelisted IPs for better security.
+* Include an API Key Token is also recommended with whitelisted IPs for better security.
 * All other requests will be denied with a clear error message.
-* The whitelist is managed in a plain text file (`chkcon_whitelist.conf`), one IP or CIDR per line.
+* The whitelist is managed by (`chkcon_whitelist.conf`), one IP or CIDR per line.
 
 **Sample whitelist file:**
 ::
