@@ -105,7 +105,8 @@ Example nginx Tenant Server Block
 The following example illustrates a typical nginx HTTPS server block
 for FusionPBX tenant subdomains using a wildcard certificate. Adapt
 all hostnames, paths, and PHP-FPM socket names to match your
-environment.
+environment. Typically
+/etc/nginx/sites-available/fusionpbx
 
 .. code-block:: nginx
 
