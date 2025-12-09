@@ -7,6 +7,12 @@ Quick Install
 
 |
 
+.. tip::
+
+   **Upgrading an existing installation?** See :doc:`/upgrades` for the
+   recommended upgrade procedure covering the ictVoIP Billing addon,
+   FusionPBX server module, and API files.
+
 Welcome to the ictVoIP Billing installation quick guide for WHMCS.
 
 This guide walks you through a standard deployment of the ictVoIP Billing addon and server modules on a fresh WHMCS installation. It is designed to get you from zero to a working system in under 30 minutes.
@@ -155,3 +161,7 @@ With the addon installed and verified, the next steps are:
   * :doc:`/modules/vodia`
 
 Once your providers and server modules are configured, you can begin creating packages and provisioning client services.
+
+.. seealso::
+
+   For future upgrades and maintenance procedures, see :doc:`/upgrades`.

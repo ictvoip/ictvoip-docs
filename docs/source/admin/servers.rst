@@ -24,11 +24,15 @@ Server modules allow you to provision and manage PBX servers directly from your 
 * Custom PBX integrations
 
 **Key Features:**
+
 * Automated server provisioning
 * Real-time server status monitoring
 * Integrated billing and management
 * API-based communication
 * Multi-server support
+
+For version-specific upgrade steps for the FusionPBX server module and related
+APIs, refer to :doc:`/upgrades`.
 
 FusionPBX Integration
 --------------------

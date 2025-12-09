@@ -23,6 +23,9 @@ server or when rotating credentials or tightening whitelists. See also
 the :doc:`/admin/servers` guide and the security hardening overview in
 the :doc:`/getting_started/security` documentation.
 
+For information on upgrading the FusionPBX API set and server module between
+releases, see :doc:`/upgrades`.
+
 .. note::
    All ictVoIP FusionPBX API scripts are distributed as ionCube-
    encoded PHP files and require **ionCube Loader v14+** to be

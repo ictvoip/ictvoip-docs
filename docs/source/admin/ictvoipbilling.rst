@@ -2,6 +2,12 @@
 Installing ictVoIP Billing
 ############################
 
+.. tip::
+
+   **Upgrading an existing installation?** See :doc:`/upgrades` for the
+   recommended upgrade procedure covering the ictVoIP Billing addon,
+   FusionPBX server module, and API files.
+
 **Complete Installation Guide for ictVoIP Billing System**
 
 This guide provides step-by-step instructions for installing and configuring the ictVoIP Billing system on your WHMCS platform.
@@ -100,6 +106,11 @@ Set the appropriate access control groups for your administrators and save the c
 .. note::
 
    **Upgrading from v1.3.3:** When upgrading from ictVoIP Billing v1.3.3 (or any 1.3.x build) to v1.4.0 or later, you must re-run the addon activation inside WHMCS after uploading the new files. If the addon is already active, click **Deactivate**, then **Activate** again. This ensures that all new database tables and columns required by the new version are created and updated.
+
+.. seealso::
+
+   For the complete upgrade procedure, including FusionPBX server module and
+   API updates, see :doc:`/upgrades`.
 
 System Health Check
 -------------------

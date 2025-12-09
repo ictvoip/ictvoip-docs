@@ -32,6 +32,11 @@ Key Features
 
 Details for each area are provided in the sections below.
 
+.. seealso::
+
+   Upgrade procedures for the ictVoIP Billing addon and FusionPBX module are
+   documented in :doc:`/upgrades`.
+
 .. toctree::
    :maxdepth: 3
 

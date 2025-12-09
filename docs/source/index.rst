@@ -123,6 +123,15 @@ path is:
 
    getting_started.rst
 
+🔄 Upgrades & Maintenance
+=========================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Upgrades & Maintenance
+
+   upgrades
+
 ⚙️ System Administration
 ========================
 

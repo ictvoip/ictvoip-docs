@@ -35,6 +35,11 @@ Key Features
   routes, logs, and real-time provisioning statistics per
   provider/PBX. See :doc:`/admin/client_services`.
 
+.. seealso::
+
+   Upgrade procedures for the ictVoIP Billing addon and FusionPBX module are
+   documented in :doc:`/upgrades`.
+
 .. toctree::
    :maxdepth: 2
    :caption: Installation & Setup
