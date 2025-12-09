@@ -114,14 +114,11 @@ environment.
        listen 443 ssl;
        server_name *.pbx.yourdomain.com;
 
-       ssl_certificate     /etc/letsencrypt/live/pbx.yourdomain.com/fullchain.pem;
-       ssl_certificate_key /etc/letsencrypt/live/pbx.yourdomain.com/privkey.pem;
+       ssl_certificate     /etc/dehydrated/certs/pbx.yourdomain.com/fullchain.pem;
+       ssl_certificate_key /etc/dehydrated/certs/pbx.yourdomain.com/privkey.pem;
        ssl_protocols           TLSv1.2 TLSv1.3;
        ssl_prefer_server_ciphers on;
-       ssl_ciphers             ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:
-                               ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:
-                               ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:
-                               DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+       ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
        ssl_session_cache       shared:SSL:40m;
        ssl_session_timeout     2h;
        ssl_session_tickets     off;
@@ -186,7 +183,7 @@ environment.
        location ~^.+\.(db)$ { deny all; }
        location ~ /\.git { deny all; }
        location ~ /\.lua { deny all; }
-       location ~ /\.
+       location ~ /\. { deny all; }
    }
 
 This example is provided for reference only; always review and
@@ -198,7 +195,7 @@ practices.
    After configuring certificates and web server blocks:
 
    * Test the web server configuration (for example, ``nginx -t``).
-   * Reload or restart the web server.
+   * Reload or restart the web server. (systemctl reload nginx)
    * Verify that both the primary FusionPBX FQDN and any tenant
      subdomains load over HTTPS without certificate warnings.
 
