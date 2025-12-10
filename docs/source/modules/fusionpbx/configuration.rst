@@ -48,6 +48,13 @@ Server Configuration
 * **Access Hash**: For additional security
 * **Notes**: Internal notes about this server
 
+.. tip::
+
+   **Multi-server environments:** If you have multiple FusionPBX servers,
+   designate one as the default by clicking its name in the WHMCS server
+   list. See :ref:`Setting a Default FusionPBX Server <admin/servers:Setting a Default FusionPBX Server>`
+   in the Server Management guide.
+
 Product Configuration
 ~~~~~~~~~~~~~~~~~~~~
 

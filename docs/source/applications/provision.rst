@@ -88,6 +88,14 @@ Where to Configure What
   - High-level provisioning preferences (per module).
   - Server provisioning settings for PBX hosts, including credentials and API access hashes, along with tools to test connectivity and IP whitelisting before enabling automated provisioning.
 
+.. tip::
+
+   **Multi-server environments:** If you have multiple FusionPBX servers
+   configured in WHMCS, designate one as the default server. New services
+   without a specific server assignment will use the default. To set a
+   default, navigate to **System Settings → Products & Services → Servers**
+   and click on the server name. See :doc:`/admin/servers` for details.
+
 * **PBX (for example, FusionPBX)**
   - Actual domains/tenants.
   - Gateways, dialplans, and extensions.

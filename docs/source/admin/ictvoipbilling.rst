@@ -54,7 +54,7 @@ If you haven't already purchased the ictVoIP Billing addon module or wish to req
 **2. Download the Package**
 
 To purchase or begin a trial setup an account and download the latest release package from your client area:
-* **Package:** `ictvoip_billing_release-1.4.x_PHP8.1-PHP8.3.zip`
+* **Package:** `ictvoip_billing_release-1.4_PHP8.1-8.3.zip`
 * **Location:** Your client area licenses section
 
 Installation Process
@@ -93,7 +93,7 @@ Enter your ictVoIP Billing license key in the configuration:
 
 |
 
-.. image:: ../_static/images/admin/ictvoipbilling_addon_key.png
+.. image:: ../_static/images/admin/addon_lic2.png
    :width: 900px
    :align: center
    :alt: Addon License Configuration
@@ -119,8 +119,8 @@ After installing and activating the ictVoIP Billing addon, you can run the Syste
 
 |
 
-.. image:: ../_static/images/admin/healthcheck_new.png
-   :width: 900px
+.. image:: ../_static/images/admin/healthcheck_new2.png
+   :width: 500px
    :align: center
    :alt: Addon License Configuration
 |
