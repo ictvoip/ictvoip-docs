@@ -71,14 +71,16 @@ Upgrade the FusionPBX Server Module (WHMCS)
 Update the FusionPBX API Files (Each FusionPBX Server)
 ------------------------------------------------------
 
-The FusionPBX API and theme files are distributed in the
-``fpbx_apis-theme`` folder included in the FusionPBX ZIP download. Use
-the included installer script for proper installation and patching.
+The FusionPBX API and theme files are distributed in the FusionPBX Server
+module package (``ictvoip_fusionPBX_module-release-v1.4_PHP8.1-8.3.zip``).
+Use the included installer script for proper installation and patching.
 
-1. Upload the installer folders to the FusionPBX server
+1. Extract and upload the installer folders
 
-   * Extract the FusionPBX package and upload the following folders to
-     ``/root/`` on each FusionPBX server:
+   * Extract the package on your local machine.
+   * Navigate into ``FusionPBX Host/fpbx_apis-theme/``.
+   * Using SFTP (e.g., WinSCP), upload the following folders to ``/root/``
+     on each FusionPBX server:
 
      * ``ictvoip_fpbx5-3_apis`` – API integration files
      * ``ictvoip_fpbx5-3_theme`` – Optional branding/theme files
