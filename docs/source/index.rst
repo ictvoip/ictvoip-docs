@@ -280,7 +280,7 @@ Below are support and community resources for the core technologies used in the 
 +-------------------------+--------------------------------------------------------------+
 | Technology              | Support / Community Links                                    |
 +=========================+==============================================================+
-| ictVoIP Canada          | https://www.icttech.ca/index.php?rp=/knowledgebase           |
+| ictVoIP Canada          | https://www.ictvoip.ca/training.html                         |
 +-------------------------+--------------------------------------------------------------+
 | WHMCS Help              | https://help.whmcs.com/                                      |
 +-------------------------+--------------------------------------------------------------+
