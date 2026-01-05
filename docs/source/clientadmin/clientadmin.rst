@@ -250,9 +250,23 @@ AutoSuspend
 The CRON for autosuspend example: 
 *(replace MYMODULE with the server module you have installed)*
 
+.. important::
+   **AlmaLinux 9 / systemd Timezone Configuration**
+   
+   On AlmaLinux 9 / systemd-based systems, cron jobs may default to UTC even when the server timezone is correctly configured.
+   
+   **Solutions:**
+   
+   1. **Per-CRON Timezone (Recommended):** Specify ``TZ=`` explicitly in each WHMCS cron job to ensure automation runs at the expected time.
+   2. **System-Wide PHP INI:** Update the system PHP INI configuration to set ``date.timezone`` system-wide if this option is available on your hosting environment.
+
 ::
 
-  */5    *    *    *    *  https://www.mywhmcsserver.com/modules/servers/MYMODULE/autosuspend.php?runfrom=cron >/dev/null 2>&1
+  # With explicit timezone (recommended for AlmaLinux 9 / systemd)
+  */5    *    *    *    *  TZ=America/Toronto https://www.mywhmcsserver.com/modules/servers/MYMODULE/autosuspend.php?runfrom=cron >/dev/null 2>&1
+  
+  # Alternative: Using curl with timezone
+  */5    *    *    *    *  TZ=America/Toronto curl -s "https://www.mywhmcsserver.com/modules/servers/MYMODULE/autosuspend.php?runfrom=cron" >/dev/null 2>&1
 
 |
 

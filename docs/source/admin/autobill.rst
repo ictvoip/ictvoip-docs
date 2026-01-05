@@ -44,6 +44,22 @@ CRON Configuration
 
 The Autobill script must run before your WHMCS daily CRON job to ensure proper billing processing.
 
+.. important::
+   **AlmaLinux 9 / systemd Timezone Configuration**
+   
+   On AlmaLinux 9 / systemd-based systems, cron jobs may default to UTC even when:
+   
+   * Server time is correct
+   * PHP-FPM timezone is correct
+   * WHMCS timezone is correctly configured
+   
+   WHMCS automation relies on the execution time of cron.php, not just internal settings.
+   
+   **Solutions:**
+   
+   1. **Per-CRON Timezone (Recommended):** Specify ``TZ=`` explicitly in each WHMCS cron job to avoid automation running early or late after server migrations.
+   2. **System-Wide PHP INI:** Update the system PHP INI configuration to set ``date.timezone`` system-wide if this option is available on your hosting environment.
+
 **Recommended Schedule:**
 
 .. code-block:: text
@@ -57,21 +73,25 @@ The Autobill script must run before your WHMCS daily CRON job to ensure proper b
 
 **CRON Entry Format:**
 
-Replace `MYMODULE` with your installed server module:
+Replace `MYMODULE` with your installed server module and `America/Toronto` with your timezone:
 
 .. code-block:: bash
 
-   # Standard CRON format
-   55 00 * * * GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
+   # Standard CRON format (with timezone for AlmaLinux 9 / systemd)
+   55 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
    
    # Alternative format with more time
-   45 00 * * * GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
+   45 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
+   
+   # PHP CLI format (alternative)
+   55 00 * * * TZ=America/Toronto /usr/bin/php -q /home/USERNAME/public_html/whmcs/modules/servers/MYMODULE/autobill_v2.php runfrom=cron
 
 **CRON Parameters:**
 
-* **55 00** - Time (12:55 AM)
+* **TZ=America/Toronto** - Explicit timezone (required for AlmaLinux 9 / systemd)
+* **55 00** - Time (12:55 AM in specified timezone)
 * **\* \* \*** - Daily execution
-* **GET** - HTTP method
+* **GET** - HTTP method (or /usr/bin/php -q for CLI)
 * **runfrom=cron** - Execution parameter
 
 **Server Module Examples:**
