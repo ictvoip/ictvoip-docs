@@ -13,6 +13,10 @@ Package management allows you to create and configure VoIP service packages with
    :alt: Package Rates
 |
 
+.. contents:: On this page
+   :local:
+   :depth: 2
+
 
 Overview
 --------
@@ -114,12 +118,18 @@ Configure free minutes for metered packages:
    Free Minutes: 0 (unlimited)
    Overage Rate: N/A
 
+.. _fusionpbx-real-time-billing:
+
 FusionPBX Real-Time Billing
 ---------------------------
 
 FusionPBX real-time billing processes call detail records (CDRs) directly from the FusionPBX environment and applies usage charges automatically as calls are completed.
 
 This mode is designed for environments where you want near real-time usage processing instead of periodic batch invoicing.
+
+.. contents:: In this section
+   :local:
+   :depth: 2
 
 **Key characteristics:**
 
