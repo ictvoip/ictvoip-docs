@@ -114,6 +114,66 @@ Configure free minutes for metered packages:
    Free Minutes: 0 (unlimited)
    Overage Rate: N/A
 
+FusionPBX Real-Time Billing
+---------------------------
+
+FusionPBX real-time billing processes call detail records (CDRs) directly from the FusionPBX environment and applies usage charges automatically as calls are completed.
+
+This mode is designed for environments where you want near real-time usage processing instead of periodic batch invoicing.
+
+**Key characteristics:**
+
+* **Direct CDR access** using the FusionPBX server module CDR integration
+* **Separate CDR storage** in `mod_ictvoipbilling_fusionpbx_cdrs`
+* **Prevents duplicate processing** by tracking unique call records
+* **Audit trail** of activation/deactivation events in `mod_ictvoipbilling_realtime_stamp`
+
+.. note::
+   Real-time billing must be enabled per package. Services on packages with real-time billing enabled should not be billed by standard batch usage processing to avoid double billing.
+
+Enable Real-Time Billing per Package
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Navigate to **Addons → ictVoIP Billing → Package Rates**
+2. Select the package you want to configure
+3. In the real-time billing section, enable **Real-Time Billing**
+4. Configure usage-related options as needed (free minutes, markups, incremental billing, inbound billing)
+5. Save the package configuration
+
+Cron Processing
+^^^^^^^^^^^^^^^
+
+Real-time billing is executed by running the FusionPBX server module `realtimebilling.php` script on a schedule.
+
+Typical schedules run every 5 minutes:
+
+.. code-block:: bash
+
+   */5 * * * * /usr/bin/php /path/to/whmcs/modules/servers/fusionpbx/realtimebilling.php?runfrom=cron
+
+Automatic Package Change Detection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If an administrator changes a service’s package in WHMCS, certain admin-side package changes may not trigger the standard lifecycle hooks. The real-time billing cron includes an automatic consistency check to keep real-time billing state aligned with the service’s current package configuration:
+
+* If a service is moved **to** a package with real-time billing enabled, the system will automatically activate real-time billing for that service on the next cron run.
+* If a service is moved **off** a package with real-time billing enabled, the system will automatically deactivate real-time billing for that service on the next cron run.
+
+Monitoring & Troubleshooting
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To verify real-time billing is working:
+
+* Confirm the cron is running successfully
+* Check that new rows appear in `mod_ictvoipbilling_fusionpbx_cdrs` after calls complete
+* Verify billing/credit events in WHMCS logs (for example, credit log entries associated with usage deductions)
+
+Common issues:
+
+* **No CDRs retrieved**: verify FusionPBX connectivity/credentials and ensure the CDR integration library is present in the server module.
+* **Billing not applied**: confirm the package has real-time billing enabled and the service is on that package.
+* **Duplicate CDRs**: investigate uniqueness/duplicate prevention and confirm the CDR table is not being repopulated by another process.
+
 Custom Rate Configuration
 ------------------------
 
