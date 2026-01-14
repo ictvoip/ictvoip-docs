@@ -247,6 +247,9 @@ Suspend
 AutoSuspend
 *************
 
+.. seealso::
+   For detailed testing procedures and troubleshooting stuck suspension states, see :ref:`autosuspend_testing`.
+
 The CRON for autosuspend example: 
 *(replace MYMODULE with the server module you have installed)*
 
