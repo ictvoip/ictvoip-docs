@@ -273,6 +273,16 @@ For FusionPBX server module products, administrators can configure how services 
    - Scenarios where you want to suspend specific extensions without affecting the entire trunk
    - Services where extensions are assigned per-client in the Dedicated IP field
 
+.. warning::
+   **Do not change Auto Suspend Mode while clients are suspended**
+   
+   The unsuspend process uses the **current** product setting, not the mode that was used when suspending. If you change the mode while a client is suspended:
+   
+   - Client suspended with **Extension** mode → Admin changes to **Gateway** → Unsuspend enables gateway but **extensions remain disabled**
+   - Client suspended with **Gateway** mode → Admin changes to **Extension** → Unsuspend enables extensions but **gateway remains disabled**
+   
+   If you must change modes, manually unsuspend affected clients first, then change the setting.
+
 .. image:: ../_static/images/clientadmin/auto_suspend_mode.png
    :scale: 60%
    :align: center
