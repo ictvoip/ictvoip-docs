@@ -250,6 +250,39 @@ AutoSuspend
 .. seealso::
    For detailed testing procedures and troubleshooting stuck suspension states, see :ref:`autosuspend_testing`.
 
+Auto Suspend Mode (FusionPBX)
+==============================
+
+For FusionPBX server module products, administrators can configure how services are suspended when credit runs out or manual suspension is triggered. This setting is found in the **Product/Service Module Settings**.
+
+.. list-table:: Auto Suspend Mode Options
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Mode
+     - Description
+   * - **Gateway** (Default)
+     - Disables the SIP trunk gateway on FusionPBX, preventing **all** inbound/outbound calls for the entire domain. This is the traditional suspension method.
+   * - **Extension**
+     - Disables only the individual extensions assigned to the service (stored in the service's Dedicated IP field). The gateway remains active, allowing other extensions on the same domain to continue making calls.
+
+.. note::
+   **When to use Extension mode:**
+   
+   - Multi-tenant environments where multiple clients share a single FusionPBX domain
+   - Scenarios where you want to suspend specific extensions without affecting the entire trunk
+   - Services where extensions are assigned per-client in the Dedicated IP field
+
+.. image:: ../_static/images/clientadmin/auto_suspend_mode.png
+   :scale: 60%
+   :align: center
+   :alt: Auto Suspend Mode Configuration
+
+|
+
+AutoSuspend CRON
+=================
+
 The CRON for autosuspend example: 
 *(replace MYMODULE with the server module you have installed)*
 
@@ -299,6 +332,11 @@ Some settings for client VoIP services should be defined if you wish to use the 
 
 Autosuspend
 *************
+
+.. note::
+   **Only Applies to our Custom API Modules:**
+   
+   - These fields have no affect if using the FusionPBX Server Module
 
 Required to enable autosuspend "Has VoIP Service" to Yes. "Manual VoIP Suspend" can be used to suspend all VoIP services and "VoIP Suspended" will provide the state of suspension which can produce an override by selecting Yes or No. "None" is the default position for Autosuspend.
 
