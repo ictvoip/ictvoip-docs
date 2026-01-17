@@ -77,6 +77,49 @@ Product Configuration
 * **Default Password**: Not required
 * **Email Template**: Welcome email template
 
+License Activation
+~~~~~~~~~~~~~~~~~~
+
+The FusionPBX server module requires a valid license key to operate. The module includes built-in license management buttons in the Product Module Settings.
+
+**License Buttons:**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Button
+     - Description
+   * - **Activate** (Green)
+     - Registers your current WHMCS domain and IP address with the license key. Use this for **new installations** or when moving to a new server.
+   * - **Verify** (Blue)
+     - Checks if the license is valid for the current domain/IP. Use this to confirm the license is active.
+
+**New Installation Steps:**
+
+1. Enter your license key in the **License Key** field
+2. Click the **Activate** button to register your domain/IP with the license
+3. Click the **Verify** button to confirm activation was successful
+4. Save the product settings
+
+**License Status Indicators:**
+
+* **License Active** - License is valid, shows registered domain and expiry date
+* **License Activated** - Domain/IP successfully registered with the license
+* **Invalid License** - License key not found or not registered for this domain/IP
+* **License Expired** - License needs renewal
+* **License Suspended** - Contact support
+
+.. note::
+   The **Activate** button sends a reissue request to the licensing server, which updates the allowed domain and IP for your license key. This is required when:
+   
+   - Setting up a new WHMCS installation
+   - Moving WHMCS to a new server or domain
+   - Changing the server's IP address
+
+.. warning::
+   Each license key can only be active on one domain/IP at a time. Activating on a new server will deactivate the license on the previous server.
+
 API Configuration
 ----------------
 

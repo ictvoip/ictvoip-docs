@@ -68,6 +68,24 @@ Upgrade the FusionPBX Server Module (WHMCS)
      that uses this module.
    * Verify hostname, credentials, and SSL settings are still correct.
 
+3. Activate/Verify the license
+
+   * Go to **Setup > Products/Services > Products/Services**.
+   * Edit each product that uses the FusionPBX server module.
+   * In the **Module Settings** tab, locate the **License Key** field.
+   * If this is a new server or the domain/IP has changed:
+   
+     * Click the **Activate** button (green) to register the new domain/IP with your license.
+     
+   * Click the **Verify** button (blue) to confirm the license is active.
+   * Ensure you see "License Active" with your domain and expiry date.
+   * Save the product settings.
+
+.. note::
+
+   The **Activate** button is required when moving WHMCS to a new server or domain.
+   Each license key can only be active on one domain/IP at a time.
+
 Update the FusionPBX API Files (Each FusionPBX Server)
 ------------------------------------------------------
 
