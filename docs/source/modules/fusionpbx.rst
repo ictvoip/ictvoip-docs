@@ -21,7 +21,8 @@ Key Features
 * **Gateway Management** - Programmatic gateway provisioning and monitoring
 * **CDR Collection** - Automated call detail record collection for billing
 * **Multi-tenant Support** - Support for multiple domains and tenants
-* **NEW** **Client Facing Self Provisioning Support** - Client Facing addon **ictVoIP Box** for Selling Direct to Public
+* **Client Facing Self Provisioning Support** - Client Facing addon **ictVoIP Box** for Selling Direct to Public
+* **Special Number Billing** - Product-level custom billing rules for special prefixes (1300*, 1800*, 13*) with flat, per-minute, or hybrid billing modes
 
 API Access Whitelist
 --------------------

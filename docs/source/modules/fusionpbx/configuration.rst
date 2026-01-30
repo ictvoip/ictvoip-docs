@@ -334,6 +334,94 @@ Enable XML CDR for call detail record collection. Configure CDR settings for:
 * Error handling
 * Performance optimization
 
+Special Number Billing
+----------------------
+
+Special Number Billing allows you to configure custom billing rules for specific number patterns at the product level. This is particularly useful for Australian Smartnumbers (1300*, 1800*, 13*) or any other special prefixes that require different billing treatment than standard tariff rates.
+
+**Key Features:**
+
+* **Product-Level Configuration** - Each product can have its own set of special rate rules
+* **Pattern Matching** - Supports prefix matching (e.g., ``1300*``) or regex patterns
+* **Multiple Billing Modes** - Flat per call, per minute, or hybrid (flat + per minute)
+* **Direction-Specific Rules** - Configure rules for inbound, outbound, or both directions
+* **Priority-Based Matching** - Higher priority rules are evaluated first
+* **Bypass Global Exclude** - Special rate patterns take precedence over global provider exclude lists
+
+Enabling Special Number Billing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Navigate to **Setup > Products/Services > Products/Services**
+2. Edit the FusionPBX product
+3. Go to the **Module Settings** tab
+4. Enable the **Special Number Billing** toggle
+5. Click **Configure Special Rates** to open the rule management modal
+
+.. warning::
+   When Special Number Billing is enabled, **all standard tariff billing is bypassed** for that product. Only calls matching special rate patterns will be billed. Calls that don't match any pattern will not be charged.
+
+Configuring Special Rate Rules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Each rule consists of the following fields:
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Field
+     - Description
+   * - **Pattern**
+     - The number pattern to match (e.g., ``1300``, ``1800``, ``13``)
+   * - **Pattern Type**
+     - ``prefix`` (default) or ``regex`` for advanced matching
+   * - **Direction**
+     - ``outbound``, ``inbound``, or ``both``
+   * - **Billing Mode**
+     - ``flat_per_call``, ``per_minute``, or ``hybrid``
+   * - **Flat Rate**
+     - Fixed charge per call (used with flat_per_call and hybrid modes)
+   * - **Per Minute Rate**
+     - Charge per minute (used with per_minute and hybrid modes)
+   * - **Priority**
+     - Higher values are matched first (default: 10)
+   * - **Rule Name**
+     - Optional descriptive name for the rule
+   * - **Enabled**
+     - Toggle to enable/disable the rule
+
+**Billing Mode Examples:**
+
+* **flat_per_call**: $0.35 per call regardless of duration
+* **per_minute**: $0.05 per minute of call duration
+* **hybrid**: $0.20 connection fee + $0.03 per minute
+
+Invoice Display
+~~~~~~~~~~~~~~~
+
+Special rate calls are grouped by pattern and direction on invoices:
+
+.. code-block:: text
+
+   Special Rate Calls (29/12/2025 to 29/01/2026)
+   [OUTBOUND] 1300* (flat_per_call): 4 calls, 11 min, $1.40
+   [OUTBOUND] 1800* (flat_per_call): 1 calls, 5.7 min, $0.35
+   [OUTBOUND] 13* (flat_per_call): 1 calls, 4.1 min, $0.35
+
+Real-Time Billing Integration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Special Number Billing works with both standard autobill and real-time billing:
+
+* **Autobill**: Special rates are checked before the global exclude filter
+* **Real-Time Billing**: Uses the existing real-time billing flag from Package Rates Configurator
+
+To enable real-time billing for special rates:
+
+1. Assign the product to a package in **Package Rates Configurator**
+2. Enable **Real-time Billing** for that package
+3. Configure special rate rules in the product's Module Settings
+
 Billing Integration Setup
 ------------------------
 

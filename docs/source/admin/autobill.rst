@@ -19,11 +19,13 @@ Overview
 Autobill is a critical component that processes CDRs from your PBX servers and generates billing records in WHMCS. The system runs as a scheduled CRON job and integrates seamlessly with WHMCS billing cycles.
 
 **Key Features:**
+
 * Automated CDR processing
 * Real-time billing generation
 * Multi-server support
 * Flexible scheduling
 * Debug and testing capabilities
+* Special Number Billing support
 
 In **ictVoIP Billing v1.4.0**, Autobill remains the engine that turns
 rated CDRs into billable usage, but the **recommended** approach for
