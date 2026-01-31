@@ -339,6 +339,12 @@ Special Number Billing
 
 Special Number Billing allows you to configure custom billing rules for specific number patterns at the product level. This is particularly useful for Australian Smartnumbers (1300*, 1800*, 13*) or any other special prefixes that require different billing treatment than standard tariff rates.
 
+.. versionadded:: 1.4.0-Beta.10
+   Special Number Billing feature introduced
+
+.. versionchanged:: 1.4.0-Beta.11
+   Performance optimization (159x faster), CDR view filtering, and bug fixes
+
 **Key Features:**
 
 * **Product-Level Configuration** - Each product can have its own set of special rate rules
@@ -347,6 +353,25 @@ Special Number Billing allows you to configure custom billing rules for specific
 * **Direction-Specific Rules** - Configure rules for inbound, outbound, or both directions
 * **Priority-Based Matching** - Higher priority rules are evaluated first
 * **Bypass Global Exclude** - Special rate patterns take precedence over global provider exclude lists
+* **CDR View Filtering** - Client area only shows CDRs matching special rate patterns
+
+Use Cases
+~~~~~~~~~
+
+Special Number Billing is designed for scenarios where certain number prefixes require different billing treatment:
+
+**Australian Smartnumbers:**
+
+* **1300*** - Local rate numbers (caller pays local call rate, receiver pays difference)
+* **1800*** - Toll-free numbers (receiver pays full cost)
+* **13**** - 6-digit national numbers
+
+**Other Applications:**
+
+* Premium rate numbers (e.g., 1900*, 0900*)
+* International toll-free (e.g., 800*, 00800*)
+* Short codes and special services
+* Custom internal billing codes
 
 Enabling Special Number Billing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -359,6 +384,13 @@ Enabling Special Number Billing
 
 .. warning::
    When Special Number Billing is enabled, **all standard tariff billing is bypassed** for that product. Only calls matching special rate patterns will be billed. Calls that don't match any pattern will not be charged.
+
+.. tip::
+   **Separate Products Strategy:** Create separate WHMCS products for special rate billing vs standard tariff billing. This allows you to:
+   
+   * Assign special rate products to handle only 1300/1800/13 prefixes
+   * Assign standard tariff products to handle all other international/national calls
+   * Use global exclude lists on standard products to filter out special prefixes
 
 Configuring Special Rate Rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -396,6 +428,47 @@ Each rule consists of the following fields:
 * **per_minute**: $0.05 per minute of call duration
 * **hybrid**: $0.20 connection fee + $0.03 per minute
 
+Example Configuration
+~~~~~~~~~~~~~~~~~~~~~
+
+Here's a typical configuration for Australian Smartnumbers:
+
+.. list-table::
+   :widths: 15 15 15 15 15 15 10
+   :header-rows: 1
+
+   * - Pattern
+     - Type
+     - Direction
+     - Mode
+     - Flat Rate
+     - Per Min
+     - Priority
+   * - 1800
+     - prefix
+     - outbound
+     - flat_per_call
+     - $0.35
+     - -
+     - 20
+   * - 1300
+     - prefix
+     - outbound
+     - flat_per_call
+     - $0.35
+     - -
+     - 15
+   * - 13
+     - prefix
+     - outbound
+     - flat_per_call
+     - $0.35
+     - -
+     - 10
+
+.. note::
+   **Priority Order:** The ``1800`` pattern has the highest priority (20), so it will be matched first. The ``13`` pattern has the lowest priority (10), ensuring it only matches 6-digit 13XXXX numbers that don't start with 1300 or 1800.
+
 Invoice Display
 ~~~~~~~~~~~~~~~
 
@@ -407,6 +480,17 @@ Special rate calls are grouped by pattern and direction on invoices:
    [OUTBOUND] 1300* (flat_per_call): 4 calls, 11 min, $1.40
    [OUTBOUND] 1800* (flat_per_call): 1 calls, 5.7 min, $0.35
    [OUTBOUND] 13* (flat_per_call): 1 calls, 4.1 min, $0.35
+
+Client Area CDR View
+~~~~~~~~~~~~~~~~~~~~
+
+When Special Number Billing is enabled for a product, the client area CDR view is automatically filtered to show only calls matching the configured special rate patterns. This provides a clean view for clients who are only being billed for special numbers.
+
+**Behavior:**
+
+* Standard billing products: Show all CDRs (filtered by global suppress/exclude)
+* Special rate products: Show only CDRs matching special rate patterns
+* Non-matching CDRs are hidden from the client view
 
 Real-Time Billing Integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -421,6 +505,42 @@ To enable real-time billing for special rates:
 1. Assign the product to a package in **Package Rates Configurator**
 2. Enable **Real-time Billing** for that package
 3. Configure special rate rules in the product's Module Settings
+
+**Real-Time Billing Behavior:**
+
+* CDRs matching special rate patterns are inserted with ``calltype='SpecialRate'``
+* Non-matching CDRs are skipped entirely (not inserted into the database)
+* Credit deduction only applies to matching special rate calls
+
+Troubleshooting Special Rates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Calls not being billed:**
+
+1. Verify the pattern matches the destination number format in your CDRs
+2. Check that the rule is enabled
+3. Ensure the product has Special Number Billing toggle enabled
+4. Review the autobill debug output for pattern matching details
+
+**Wrong rate applied:**
+
+1. Check rule priorities - higher priority rules match first
+2. Verify pattern specificity (``1300`` vs ``13``)
+3. Ensure direction matches the call type (inbound/outbound)
+
+**Debug Output:**
+
+Run autobill with debug enabled to see special rate matching:
+
+.. code-block:: text
+
+   === SPECIAL RATE CHECK ===
+   Destination: 1300123456
+   Checking pattern: 1800 (priority: 20) - NO MATCH
+   Checking pattern: 1300 (priority: 15) - MATCH!
+   Billing Mode: flat_per_call
+   Flat Rate: $0.35
+   ===========================
 
 Billing Integration Setup
 ------------------------

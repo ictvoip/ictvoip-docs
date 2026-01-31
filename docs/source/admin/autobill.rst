@@ -203,6 +203,9 @@ Autobill integrates with WHMCS billing cycles:
 Performance Optimization
 -----------------------
 
+.. versionadded:: 1.4.0-Beta.11
+   Tariff lookup performance optimization (159x faster)
+
 **Processing Time Considerations:**
 
 * **Small Installations** - 5 minutes before WHMCS CRON
@@ -215,6 +218,45 @@ Performance Optimization
 * **CDR Volume** - Higher call volume = longer processing
 * **Server Performance** - CPU and memory limitations
 * **Network Latency** - API response times
+* **Tariff Table Size** - Larger tariff tables require more lookups
+
+**Tariff Lookup Optimization (v1.4.0-Beta.11+):**
+
+The FusionPBX module includes an optimized tariff lookup system that dramatically improves processing speed for large CDR volumes:
+
+* **In-Memory Cache** - Tariff tables under 500,000 entries are loaded into memory once
+* **Zero DB Queries Per CDR** - After initial cache load, lookups are pure in-memory operations
+* **Automatic Strategy Selection** - System chooses optimal approach based on table size
+* **Verified Results** - Billing amounts remain identical to previous versions
+
+**Performance Benchmarks:**
+
+.. list-table::
+   :widths: 30 35 35
+   :header-rows: 1
+
+   * - Metric
+     - Before (v1.4.0-Beta.10)
+     - After (v1.4.0-Beta.11)
+   * - Processing Time (2,400 CDRs)
+     - 636 seconds (~10.6 min)
+     - 4 seconds
+   * - DB Queries per CDR
+     - Up to 10 (recursive)
+     - 0 (cached lookup)
+   * - Memory Usage
+     - Low
+     - ~50MB for 322K tariff entries
+
+**PHP Memory Requirements:**
+
+For optimal tariff cache performance, ensure your PHP configuration meets these requirements:
+
+.. code-block:: ini
+
+   ; Recommended PHP settings for large tariff tables
+   memory_limit = 8096M
+   max_execution_time = 300
 
 **Optimization Tips:**
 
@@ -222,6 +264,29 @@ Performance Optimization
 * **Adjust Scheduling** - Increase time buffer if needed
 * **Server Optimization** - Improve server performance
 * **CDR Cleanup** - Regular CDR database maintenance
+* **Memory Allocation** - Ensure sufficient PHP memory for tariff caching
+
+Special Number Billing
+----------------------
+
+Autobill supports Special Number Billing for products configured with custom rate rules. When enabled, special rate patterns are processed before standard tariff billing.
+
+**How It Works:**
+
+1. CDRs are checked against special rate patterns first
+2. Matching CDRs are billed using the configured special rate rules
+3. Non-matching CDRs are skipped (not billed) when special rates are enabled
+4. Special rate calls are grouped by pattern on invoices
+
+**Invoice Display:**
+
+.. code-block:: text
+
+   Special Rate Calls (29/12/2025 to 29/01/2026)
+   [OUTBOUND] 1300* (flat_per_call): 4 calls, 11 min, $1.40
+   [OUTBOUND] 1800* (flat_per_call): 1 calls, 5.7 min, $0.35
+
+For detailed configuration, see :doc:`/modules/fusionpbx/configuration` under "Special Number Billing".
 
 Error Handling
 -------------

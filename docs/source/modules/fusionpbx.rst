@@ -23,6 +23,7 @@ Key Features
 * **Multi-tenant Support** - Support for multiple domains and tenants
 * **Client Facing Self Provisioning Support** - Client Facing addon **ictVoIP Box** for Selling Direct to Public
 * **Special Number Billing** - Product-level custom billing rules for special prefixes (1300*, 1800*, 13*) with flat, per-minute, or hybrid billing modes
+* **High-Performance Tariff Lookup** - In-memory tariff caching for 159x faster autobill processing (v1.4.0-Beta.11+)
 
 API Access Whitelist
 --------------------
@@ -50,7 +51,8 @@ The `chkcon.php` endpoint now uses multi authentication using an IP and CIDR-bas
 Supported Versions
 -----------------
 
-* **FusionPBX v5.4.x** (Recommended)
+* **FusionPBX v5.5.x** (Recommended - Newly Supported)
+* **FusionPBX v5.4.x** (Supported)
 * **FusionPBX v5.3.x** (Legacy support)
 * **FreeSWITCH v1.10+**
 * **PostgreSQL v12+**

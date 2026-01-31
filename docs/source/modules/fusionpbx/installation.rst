@@ -26,7 +26,7 @@ Prerequisites
 
 Before installing the ictVoIP Billing integration, ensure you have:
 
-* **FusionPBX v5.4.x** (recommended) or v5.3.x
+* **FusionPBX v5.5.x** (recommended) or v5.4.x/v5.3.x
 * **FusionPBX FQDN** for main host with SSL Cert applied 
 * **FusionPBX FQDN WildCard** for tenant domains with wildcard SSL Cert applied (see our instructions)
 * **WHMCS v8+** installed and configured
@@ -72,9 +72,8 @@ following FusionPBX versions:
      - All current features, including enhanced security and
        monitoring.
    * - 5.5.x
-     - Expected Compatible
-     - Designed to be forward-compatible with 5.5.x; verify in
-       staging before production use.
+     - Fully Compatible
+     - Tested with v5.5.6. Recommended for new installations.
 
 Installation Methods
 --------------------

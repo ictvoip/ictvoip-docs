@@ -3,7 +3,7 @@
 # -- Project information
 
 project = "ictVoIP Billing for WHMCS"
-copyright = "2025, ictVoIP Canada"
+copyright = "2026, ictVoIP Canada"
 author = "ictVoIP Canada"
 
 version = "1.4.0"
