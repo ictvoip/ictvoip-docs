@@ -293,6 +293,7 @@ Prerequisites
 * Your domain's DNS must be managed by Cloudflare
 * A Cloudflare API token with DNS edit permissions
 * ``curl`` and ``jq`` installed on the FusionPBX server
+* Wildcard A record must exist in Cloudflare DNS for tenant domains
 
 Step 1: Create Cloudflare API Token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -470,9 +471,22 @@ Verify the configuration::
 Step 6: Configure Domains
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ensure ``/etc/dehydrated/domains.txt`` includes your wildcard domain::
+Ensure ``/etc/dehydrated/domains.txt`` includes both your wildcard domain
+AND your host FQDN::
 
     *.pbx.yourdomain.com > pbx.yourdomain.com
+    pbx.yourdomain.com
+
+.. important::
+
+   You need **two entries** in ``domains.txt``:
+
+   1. **Wildcard domain** (``*.pbx.yourdomain.com``) - for tenant subdomains
+   2. **Host FQDN** (``pbx.yourdomain.com``) - for the main server hostname
+
+   A wildcard certificate for ``*.pbx.yourdomain.com`` does **NOT** cover
+   ``pbx.yourdomain.com`` (different subdomain pattern). The host FQDN
+   needs its own separate certificate.
 
 The format ``*.domain.com > domain.com`` tells dehydrated to:
 
@@ -522,6 +536,22 @@ File Locations Summary
      - Generated certificates
    * - ``/var/log/dehydrated.log``
      - Renewal log (if cron configured)
+
+Automated Setup Script
+~~~~~~~~~~~~~~~~~~~~~~
+
+For ictVoIP managed FusionPBX servers, an automated setup script
+(``ict_setup_fusionpbx_wildcard.sh``) is available upon request. This
+script handles:
+
+* DNS record verification and creation in Cloudflare
+* Hook script installation and configuration
+* Dehydrated configuration for DNS-01 challenge
+* Automatic cron job setup for daily renewals
+* Both wildcard and host FQDN certificate requests
+
+Contact ictVoIP support to request the automated setup script for your
+deployment.
 
 Security Best Practices
 ~~~~~~~~~~~~~~~~~~~~~~~
