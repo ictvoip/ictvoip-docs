@@ -276,6 +276,264 @@ General recommendations:
 * Confirm that renewed certificates are correctly reloaded by the web
   server and FreeSWITCH.
 
+Automated Wildcard Renewal with Cloudflare
+------------------------------------------
+
+The manual DNS-01 challenge workflow described above requires adding a
+TXT record each time the certificate renews. For fully automated wildcard
+certificate renewal, you can integrate ``dehydrated`` with the Cloudflare
+DNS API.
+
+This approach automatically creates and removes the ``_acme-challenge``
+TXT records during renewal, eliminating manual intervention.
+
+Prerequisites
+~~~~~~~~~~~~~
+
+* Your domain's DNS must be managed by Cloudflare
+* A Cloudflare API token with DNS edit permissions
+* ``curl`` and ``jq`` installed on the FusionPBX server
+
+Step 1: Create Cloudflare API Token
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Log in to the `Cloudflare Dashboard <https://dash.cloudflare.com>`_
+2. Navigate to **My Profile** → **API Tokens**
+3. Click **Create Token**
+4. Select the **Edit zone DNS** template
+5. Configure:
+
+   * **Permissions:** Zone → DNS → Edit
+   * **Zone Resources:** Include → Specific zone → ``yourdomain.com``
+
+6. Create the token and copy it immediately
+
+Verify the token from your server::
+
+    curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+      -H "Authorization: Bearer YOUR_TOKEN_HERE"
+
+Step 2: Install Dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    apt-get update && apt-get install -y jq curl
+
+Step 3: Create Credentials File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create a secure credentials file::
+
+    cat > /etc/dehydrated/cloudflare.env << 'EOF'
+    # Cloudflare API Token for DNS-01 challenge
+    CF_TOKEN="YOUR_CLOUDFLARE_API_TOKEN_HERE"
+    EOF
+
+    chmod 600 /etc/dehydrated/cloudflare.env
+
+Step 4: Create Cloudflare Hook Script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create the hooks directory and script::
+
+    mkdir -p /etc/dehydrated/hooks
+
+Create ``/etc/dehydrated/hooks/cloudflare.sh``:
+
+.. code-block:: bash
+
+    #!/usr/bin/env bash
+    #===============================================================================
+    # Cloudflare DNS-01 Hook for Dehydrated
+    # Automates wildcard SSL certificate renewal via Cloudflare DNS API
+    #===============================================================================
+
+    source /etc/dehydrated/cloudflare.env
+
+    deploy_challenge() {
+        local DOMAIN="${1}" TOKEN_FILENAME="${2}" TOKEN_VALUE="${3}"
+        
+        # Extract base domain (e.g., *.sub.example.com -> example.com)
+        local BASE_DOMAIN=$(echo "$DOMAIN" | sed 's/^\*\.//' | rev | cut -d. -f1-2 | rev)
+        
+        echo "[Cloudflare Hook] Looking up zone for: ${BASE_DOMAIN}"
+        
+        local ZONE_RESPONSE=$(curl -s -X GET \
+            "https://api.cloudflare.com/client/v4/zones?name=${BASE_DOMAIN}" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json")
+        
+        local ZONE_ID=$(echo "$ZONE_RESPONSE" | jq -r '.result[0].id')
+        
+        if [[ "$ZONE_ID" == "null" ]] || [[ -z "$ZONE_ID" ]]; then
+            echo "[Cloudflare Hook] ERROR: Could not find zone for ${BASE_DOMAIN}"
+            return 1
+        fi
+        
+        echo "[Cloudflare Hook] Found Zone ID: ${ZONE_ID}"
+        
+        local RECORD_NAME="_acme-challenge.${DOMAIN}"
+        RECORD_NAME=$(echo "$RECORD_NAME" | sed 's/\*\.//')
+        
+        echo "[Cloudflare Hook] Creating TXT record: ${RECORD_NAME}"
+        
+        local RESULT=$(curl -s -X POST \
+            "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data "{\"type\":\"TXT\",\"name\":\"${RECORD_NAME}\",\"content\":\"${TOKEN_VALUE}\",\"ttl\":120}")
+        
+        local SUCCESS=$(echo "$RESULT" | jq -r '.success')
+        
+        if [[ "$SUCCESS" == "true" ]]; then
+            echo "[Cloudflare Hook] TXT record created successfully"
+            echo "[Cloudflare Hook] Waiting 30 seconds for DNS propagation..."
+            sleep 30
+        else
+            echo "[Cloudflare Hook] ERROR creating TXT record: $RESULT"
+            return 1
+        fi
+    }
+
+    clean_challenge() {
+        local DOMAIN="${1}" TOKEN_FILENAME="${2}" TOKEN_VALUE="${3}"
+        
+        local BASE_DOMAIN=$(echo "$DOMAIN" | sed 's/^\*\.//' | rev | cut -d. -f1-2 | rev)
+        
+        local ZONE_ID=$(curl -s -X GET \
+            "https://api.cloudflare.com/client/v4/zones?name=${BASE_DOMAIN}" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" | jq -r '.result[0].id')
+        
+        if [[ "$ZONE_ID" == "null" ]] || [[ -z "$ZONE_ID" ]]; then
+            return 0
+        fi
+        
+        local RECORD_NAME="_acme-challenge.${DOMAIN}"
+        RECORD_NAME=$(echo "$RECORD_NAME" | sed 's/\*\.//')
+        
+        echo "[Cloudflare Hook] Cleaning up TXT record: ${RECORD_NAME}"
+        
+        local RECORD_ID=$(curl -s -X GET \
+            "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records?type=TXT&name=${RECORD_NAME}" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" | jq -r ".result[] | select(.content==\"${TOKEN_VALUE}\") | .id")
+        
+        if [[ -n "$RECORD_ID" ]] && [[ "$RECORD_ID" != "null" ]]; then
+            curl -s -X DELETE \
+                "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records/${RECORD_ID}" \
+                -H "Authorization: Bearer ${CF_TOKEN}" \
+                -H "Content-Type: application/json" > /dev/null
+            echo "[Cloudflare Hook] TXT record deleted"
+        fi
+    }
+
+    deploy_cert() {
+        local DOMAIN="${1}" KEYFILE="${2}" CERTFILE="${3}" FULLCHAINFILE="${4}"
+        
+        echo "[Cloudflare Hook] Certificate deployed for ${DOMAIN}"
+        
+        systemctl reload nginx 2>/dev/null && echo "[Cloudflare Hook] nginx reloaded" || true
+        systemctl restart freeswitch 2>/dev/null && echo "[Cloudflare Hook] freeswitch restarted" || true
+    }
+
+    unchanged_cert() {
+        local DOMAIN="${1}"
+        echo "[Cloudflare Hook] Certificate for ${DOMAIN} is still valid"
+    }
+
+    HANDLER="$1"; shift
+    if [[ "${HANDLER}" =~ ^(deploy_challenge|clean_challenge|deploy_cert|unchanged_cert)$ ]]; then
+        "$HANDLER" "$@"
+    fi
+
+Make the script executable::
+
+    chmod +x /etc/dehydrated/hooks/cloudflare.sh
+
+Step 5: Configure Dehydrated for DNS-01
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add the following to ``/etc/dehydrated/config``::
+
+    # Use DNS-01 challenge (required for wildcard certs)
+    CHALLENGETYPE="dns-01"
+
+    # Cloudflare hook script for DNS record management
+    HOOK="/etc/dehydrated/hooks/cloudflare.sh"
+
+Verify the configuration::
+
+    grep -E "^(CHALLENGETYPE|HOOK)=" /etc/dehydrated/config
+
+Step 6: Configure Domains
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ensure ``/etc/dehydrated/domains.txt`` includes your wildcard domain::
+
+    *.pbx.yourdomain.com > pbx.yourdomain.com
+
+The format ``*.domain.com > domain.com`` tells dehydrated to:
+
+* Request a wildcard certificate for ``*.pbx.yourdomain.com``
+* Store it in a directory named ``pbx.yourdomain.com``
+
+Step 7: Test Automated Renewal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Force a renewal to verify the automation works::
+
+    /usr/local/sbin/dehydrated -c --force
+
+Expected output includes::
+
+    [Cloudflare Hook] Looking up zone for: yourdomain.com
+    [Cloudflare Hook] Found Zone ID: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    [Cloudflare Hook] Creating TXT record: _acme-challenge.pbx.yourdomain.com
+    [Cloudflare Hook] TXT record created successfully
+    [Cloudflare Hook] Waiting 30 seconds for DNS propagation...
+    ...
+    [Cloudflare Hook] Cleaning up TXT record: _acme-challenge.pbx.yourdomain.com
+    [Cloudflare Hook] TXT record deleted
+    [Cloudflare Hook] Certificate deployed for *.pbx.yourdomain.com
+
+Once configured, the daily cron job (``dehydrated -c``) will automatically
+renew wildcard certificates without manual DNS intervention.
+
+File Locations Summary
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   * - File
+     - Purpose
+   * - ``/etc/dehydrated/config``
+     - Main dehydrated configuration
+   * - ``/etc/dehydrated/domains.txt``
+     - List of domains to manage
+   * - ``/etc/dehydrated/cloudflare.env``
+     - Cloudflare API credentials
+   * - ``/etc/dehydrated/hooks/cloudflare.sh``
+     - DNS-01 challenge hook script
+   * - ``/etc/dehydrated/certs/``
+     - Generated certificates
+   * - ``/var/log/dehydrated.log``
+     - Renewal log (if cron configured)
+
+Security Best Practices
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* **Protect credentials:** Ensure ``cloudflare.env`` has mode ``600`` and
+  is owned by root.
+* **Use scoped tokens:** Create API tokens with minimal permissions
+  (only DNS edit for specific zones).
+* **Rotate tokens periodically:** Update ``cloudflare.env`` with new
+  tokens as part of regular security maintenance.
+* **Monitor renewals:** Check ``/var/log/dehydrated.log`` for failures.
+
 Troubleshooting
 ---------------
 
@@ -293,6 +551,19 @@ Common issues and checks:
 * **Renewal failures:** Review the renewal script logs and ensure your
   DNS provider and firewall rules still allow the validation method
   (DNS-01 or HTTP-01) you are using.
+* **Cloudflare hook errors:** If using the Cloudflare automation:
+
+  * Verify the API token has DNS edit permissions for the correct zone.
+  * Check for stale ``_acme-challenge`` TXT records in Cloudflare DNS.
+  * Test zone lookup manually::
+
+        source /etc/dehydrated/cloudflare.env
+        curl -s "https://api.cloudflare.com/client/v4/zones?name=yourdomain.com" \
+          -H "Authorization: Bearer ${CF_TOKEN}" | jq .
+
+  * Increase the DNS propagation wait time in the hook script if
+    challenges fail due to timing issues (change ``sleep 30`` to
+    ``sleep 60``).
 
 For deployment-specific examples and deeper operational details, refer
 to your internal deployment documentation or consult ictVoIP Canada
