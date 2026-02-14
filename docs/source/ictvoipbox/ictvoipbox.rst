@@ -18,7 +18,7 @@ aligned.
 
 |
 
- .. image:: ../_static/images/clientarea/ictvoipbox_main.png
+ .. image:: ../_static/images/admin/ictvoipbox_mainv2.png
         :scale: 45%
         :align: center
         :alt: ictVoIP Box dashboard
@@ -52,14 +52,18 @@ In a typical new-customer scenario:
    your WHMCS order form.
 2. During checkout, they provide key details such as tenant name,
    contact information, main DID, and seat count.
-3. After payment, ictVoIP Box runs an automated provisioning flow that:
+3. After payment, the order enters a pending state awaiting
+   administrator review and approval.
+4. An administrator reviews the order details and triggers the
+   automated provisioning sequence (see
+   :ref:`admin-controlled-provisioning`), which:
    
    * Creates the FusionPBX tenant/domain and admin user.
    * Creates a starter set of extensions and associates them with the
      tenant.
    * Provisions a SIP trunk using the configured provider templates.
    * Applies inbound and outbound route templates so calls can flow.
-4. A welcome email is sent with the tenant login details and key
+5. A welcome email is sent with the tenant login details and key
    service information.
 
 Existing Client Purchase
@@ -69,9 +73,11 @@ Existing WHMCS clients can also purchase ictVoIP Box-backed services:
 
 1. The client logs into the WHMCS Client Area and places an order for a
    PBX package that uses ictVoIP Box automation.
-2. The same provisioning flow runs behind the scenes, creating or
-   attaching a FusionPBX tenant and provisioning the trunk and routes.
-3. The resulting tenant, gateway, and destination records are visible
+2. The order enters a pending state for administrator review.
+3. An administrator triggers the provisioning sequence (see
+   :ref:`admin-controlled-provisioning`), creating or attaching a
+   FusionPBX tenant and provisioning the trunk and routes.
+4. The resulting tenant, gateway, and destination records are visible
    to administrators through the standard **Client Services Admin Area**
    (:doc:`/admin/client_services`).
 
@@ -120,8 +126,8 @@ step when documenting your own deployment.
    details for the new ictPBX tenant (assigned server and tenant
    domain, admin username/password, email, timezone, language, and
    group). When the client clicks **Create User & Complete Order**, the
-   backend provisioning sequence runs and leaves the tenant ready to
-   place calls.
+   order is placed in a pending state for administrator review and
+   provisioning (see :ref:`admin-controlled-provisioning`).
 
 |
 
@@ -170,7 +176,7 @@ the main dashboard.
 
 |
 
- .. image:: ../_static/images/admin/ictvoipbox_main.png
+ .. image:: ../_static/images/admin/ictvoipbox_mainv2.png
         :scale: 45%
         :align: center
         :alt: ictVoIP Box dashboard
@@ -195,7 +201,6 @@ Typical steps:
         :alt: ictVoIP Box provider settings
         
 |
-
 
 Checkout API Settings
 =====================
@@ -331,6 +336,116 @@ Typical configuration steps:
         :alt: ictVoIP Box gateway templates
         
 |
+
+.. _admin-controlled-provisioning:
+
+Admin-Controlled Provisioning
+==============================
+
+ictVoIP Box now provides **admin-controlled provisioning** that gives
+administrators time to review and verify orders before executing the
+complete provisioning sequence. This replaces the previous automatic
+client-side provisioning and provides greater control over the
+deployment process.
+
+Provisioning Workflow
+---------------------
+
+When a client completes an order through the ictVoIP Box checkout
+wizard, the order is placed in a **pending provisioning** state rather
+than being automatically provisioned. Administrators can then:
+
+1. **Review the order** – Verify client details, selected DID, tenant
+   configuration, and admin user information.
+2. **Confirm provisioning** – Once verified, trigger the automated
+   provisioning sequence from the admin dashboard.
+3. **Monitor progress** – Watch real-time provisioning status as the
+   system creates the tenant, provisions DIDs and trunks, configures
+   gateways, and sets up routing.
+
+This approach ensures that:
+
+* Orders are validated before resources are consumed
+* Administrators can catch configuration issues early
+* Provisioning can be scheduled during appropriate maintenance windows
+* Complete audit trail is maintained for compliance
+
+Provisioning Methods
+--------------------
+
+ictVoIP Box supports **three provisioning methods**, all controlled by
+administrators:
+
+**1. Client Portal Orders**
+   Clients place orders through the WHMCS client area using the 4-step
+   checkout wizard. Orders enter pending state and await admin approval
+   before provisioning.
+
+**2. Admin Order Placement**
+   Administrators can place orders directly from the WHMCS admin area
+   on behalf of clients, with immediate access to provisioning controls.
+
+**3. Admin Impersonation**
+   Administrators can impersonate a client account to place orders with
+   the client's context, useful for quick turnaround provisioning or
+   assisted onboarding.
+
+All three methods result in the same automated provisioning sequence
+once the administrator confirms the order.
+
+Live Provisioning Process
+--------------------------
+
+When an administrator triggers provisioning, the system executes a
+comprehensive automation sequence that typically completes in **under 3
+minutes**:
+
+|
+
+ .. image:: ../_static/images/admin/Provisioning.png
+        :scale: 45%
+        :align: center
+        :alt: ictVoIP Box live provisioning
+        
+|
+
+The provisioning sequence includes:
+
+**Provider Provisioning:**
+   * Real-time DID search and availability check
+   * Automatic DID ordering with the upstream provider
+   * SIP trunk creation and credential generation
+
+**ictVoIP Billing Integration:**
+   * Automatic service creation in WHMCS
+   * Invoice generation with proper billing rates
+   * CDR collection setup for usage tracking
+   * Billing sync with provider tariff rates (metered or real-time)
+
+**FusionPBX Provisioning:**
+   * Tenant/domain creation on designated FusionPBX server
+   * Admin user account creation with credentials
+   * Gateway configuration with SIP registration details
+   * Inbound/outbound routing and dialplan creation
+   * Extension provisioning based on package seat count
+
+**Completion:**
+   * Welcome email sent to client with all credentials
+   * Service marked as active in WHMCS
+   * Client can immediately begin making and receiving calls
+
+|
+
+ .. image:: ../_static/images/admin/welcomemail.png
+        :scale: 45%
+        :align: center
+        :alt: ictVoIP Box welcome email
+        
+|
+
+This complete three-way integration (Provider → ictVoIP Billing →
+FusionPBX) ensures that all systems remain synchronized and the client
+receives a fully functional PBX service without manual intervention.
 
 Next Steps
 ==========
