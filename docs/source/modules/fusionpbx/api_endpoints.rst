@@ -131,6 +131,11 @@ whitelisted IP of the WHMCS host. Ensure the WHMCS server's public IP
 is present on the FusionPBX whitelist before enabling automated
 provisioning.
 
+.. important::
+   **fail2ban Configuration:**
+   
+   In special cases, you may need to configure fail2ban to allow the WHMCS IP address. If your FusionPBX server uses fail2ban for security, add the WHMCS server IP to the fail2ban whitelist to prevent API access issues during billing operations and automated provisioning tasks.
+
 **Verification steps (Client Services / Settings – Server Provisioning Settings):**
 
 1. Open **Client Services** in the WHMCS Admin Area

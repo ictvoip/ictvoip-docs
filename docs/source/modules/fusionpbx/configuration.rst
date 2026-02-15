@@ -162,6 +162,11 @@ The `/chkcon.php` endpoint now uses an IP and CIDR-based whitelist for authentic
 **WHMCS Integration Note:**
 When configuring the FusionPBX server in WHMCS, the "Test Connection" button now checks API access based on the IP whitelist. Username and password fields are not required for this endpoint. Ensure your WHMCS server's public IP is included in `chkcon_whitelist.conf` on the FusionPBX server.
 
+.. important::
+   **fail2ban Configuration:**
+   
+   In special cases, you may need to configure fail2ban to allow the WHMCS IP address. If your FusionPBX server uses fail2ban for security, add the WHMCS server IP to the fail2ban whitelist to prevent API access issues during billing operations and automated provisioning tasks.
+
 **Response Examples:**
 
 .. code-block:: json
@@ -381,6 +386,18 @@ Enabling Special Number Billing
 3. Go to the **Module Settings** tab
 4. Enable the **Special Number Billing** toggle
 5. Click **Configure Special Rates** to open the rule management modal
+
+.. figure:: /_static/images/admin/special_numbers.png
+   :alt: Special Number Billing Product Module Setting
+   :align: center
+   
+   Special Number Billing toggle in Product Module Settings
+
+.. figure:: /_static/images/admin/special_numbers2.png
+   :alt: Special Rate Rule Management
+   :align: center
+   
+   Configure Special Rates modal for rule management
 
 .. warning::
    When Special Number Billing is enabled, **all standard tariff billing is bypassed** for that product. Only calls matching special rate patterns will be billed. Calls that don't match any pattern will not be charged.
