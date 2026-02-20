@@ -18,7 +18,7 @@ aligned.
 
 |
 
- .. image:: ../_static/images/admin/ictvoipbox_mainv2.png
+ .. image:: ../_static/images/admin/ictvoipbox_mainv3.png
         :scale: 45%
         :align: center
         :alt: ictVoIP Box dashboard
@@ -176,7 +176,7 @@ the main dashboard.
 
 |
 
- .. image:: ../_static/images/admin/ictvoipbox_mainv2.png
+ .. image:: ../_static/images/admin/ictvoipbox_mainv3.png
         :scale: 45%
         :align: center
         :alt: ictVoIP Box dashboard
