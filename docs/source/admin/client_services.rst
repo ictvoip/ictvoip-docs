@@ -80,12 +80,120 @@ create or edit extensions as required, then ensure each extension is
 linked to the correct WHMCS service so billing stays in sync with
 provisioned resources.
 
+Extension Management Enhancements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Searchable Dropdowns (Select2 Integration)**
+
+All client and service selection dropdowns in extension management now
+feature real-time search filtering powered by Select2. This
+significantly improves usability when working with large client
+databases (2K+ clients).
+
+|
+
+.. image:: ../_static/images/admin/client-services_ext_select2.png
+   :width: 800px
+   :align: center
+   :alt: Extension management searchable dropdowns
+|
+
+**Features:**
+
+- **Real-time Search** – Type to instantly filter clients and services
+- **Clear Buttons** – Quickly reset selections
+- **Proper Modal Handling** – Search works correctly within modal dialogs
+- **WHMCS Theme Styling** – Matches the admin interface design
+
+**Available in:**
+
+- Assign Extension modal
+- Add Extension modal
+- Bulk Assign Extensions modal
+- Sync Extensions modal
+- Assign to Additional Service modal
+
+**Service Column Enhancement**
+
+The Service column now displays the actual WHMCS product name (e.g.,
+"VoIP Extension Service", "Smartnumbers Gold") instead of the tenant
+domain, making it easier to identify which billing package each
+extension is assigned to.
+
+|
+
+.. image:: ../_static/images/admin/client-services_ext_service_column.png
+   :width: 800px
+   :align: center
+   :alt: Extension service column with product names
+|
+
+**Multi-Product Extension Assignment (Smartnumbers Support)**
+
+Extensions can now be assigned to multiple WHMCS products
+simultaneously, designed specifically for Smartnumbers and Special
+Number Billing use cases where the same extensions need to appear on
+both a regular VoIP product and a Special Number Billing product.
+
+|
+
+.. image:: ../_static/images/admin/client-services_ext_multi_product.png
+   :width: 800px
+   :align: center
+   :alt: Multi-product extension assignment
+|
+
+**Key Features:**
+
+- **Primary + Secondary Assignments** – Extensions have one primary
+  service and unlimited secondary assignments
+- **Visual Indicators** – Service column shows badges (+1, +2) for
+  secondary assignments with product name tooltips
+- **Assign to Additional Service** – Blue + button to assign extensions
+  to additional Special Number Billing services
+- **Manage Additional Services** – Blue list icon button to view and
+  unassign secondary services
+- **Automatic Filtering** – Service dropdown shows only products with
+  Special Number Billing enabled (configoption3 = 'on')
+- **Client-based Filtering** – Shows all Special Billing services for
+  the same client
+- **Real-time Updates** – DataTable refreshes automatically after
+  assign/unassign operations
+
+|
+
+.. image:: ../_static/images/admin/client-services_ext_manage_secondary.png
+   :width: 800px
+   :align: center
+   :alt: Manage secondary service assignments
+|
+
+**Typical workflow for multi-product assignment:**
+
+1. Locate an extension already assigned to a primary service
+2. Click the blue + button to open "Assign to Additional Service" modal
+3. Select a Special Number Billing service from the filtered dropdown
+4. Click Assign to create the secondary assignment
+5. The Service column updates to show a +1 badge with tooltip
+6. Click the blue list icon to manage or unassign secondary services
+
+**Validation:**
+
+- Prevents duplicate assignments to the same service
+- Validates service has Special Number Billing enabled
+- Provides clear error messages for admin context
+- Backward compatible with existing single-product assignments
+
 .. _client_services_configure_gateways:
 
-* **Configure Gateways** – Use gateway templates and provider-scoped
-  settings to configure and sync SIP gateways for tenants, keeping
-  provider trunks and PBX routing aligned with billing. Use this when
-  deploying or adjusting connectivity to upstream carriers.
+Configure Gateways
+~~~~~~~~~~~~~~~~~~
+
+Use gateway templates and provider-scoped settings to configure and 
+sync SIP gateways for tenants, keeping provider trunks and PBX routing 
+aligned with billing. Use this when deploying or adjusting connectivity 
+to upstream carriers.
+
 |
 
 .. image:: ../_static/images/admin/client-services_gateway.png
@@ -101,11 +209,14 @@ FusionPBX.
 
 .. _client_services_manage_acls:
 
-* **Manage ACLs** – Review and adjust provider-side access control
-  lists that determine which source IP addresses are allowed to reach
-  the PBX or provider services. Use this when adding or modifying
-  PBX/provider ACL entries that relate to your WHMCS or management
-  hosts.
+Manage ACLs
+~~~~~~~~~~~
+
+Review and adjust provider-side access control lists that determine 
+which source IP addresses are allowed to reach the PBX or provider 
+services. Use this when adding or modifying PBX/provider ACL entries 
+that relate to your WHMCS or management hosts.
+
 |
 
 .. image:: ../_static/images/admin/client-services_acl.png
@@ -121,10 +232,14 @@ access policy.
 
 .. _client_services_manage_destination_routes:
 
-* **Manage Destination Routes** – View and manage destination routing
-  information (such as inbound numbers/DIDs and associated tenants) to
-  keep PBX routing and billing destinations in sync. Use this when
-  assigning new DIDs to tenants or auditing existing inbound routing.
+Manage Destination Routes
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+View and manage destination routing information (such as inbound 
+numbers/DIDs and associated tenants) to keep PBX routing and billing 
+destinations in sync. Use this when assigning new DIDs to tenants or 
+auditing existing inbound routing.
+
 |
 
 .. image:: ../_static/images/admin/client-services_routes.png
@@ -139,10 +254,14 @@ numbers are moved between tenants or new DIDs are activated.
 
 .. _client_services_service_directory:
 
-* **Service Directory** – Browse and filter client services associated
-  with the provider/PBX, helping you quickly locate which tenants,
-  extensions, and gateways belong to which WHMCS services. Use this as
-  a lookup tool when troubleshooting or answering customer questions.
+Service Directory
+~~~~~~~~~~~~~~~~~
+
+Browse and filter client services associated with the provider/PBX, 
+helping you quickly locate which tenants, extensions, and gateways 
+belong to which WHMCS services. Use this as a lookup tool when 
+troubleshooting or answering customer questions.
+
 |
 
 .. image:: ../_static/images/admin/client-services_descovery.png
@@ -158,10 +277,13 @@ troubleshooting.
 
 .. _client_services_quick_create_tenant:
 
-* **Quick Create Tenant** – Use guided forms to rapidly create new
-  FusionPBX tenants (domains) and optionally bind them to WHMCS
-  services and main DIDs in a single workflow. Use this for fast,
-  standardized onboarding of new client sites.
+Quick Create Tenant
+~~~~~~~~~~~~~~~~~~~
+
+Use guided forms to rapidly create new FusionPBX tenants (domains) and 
+optionally bind them to WHMCS services and main DIDs in a single 
+workflow. Use this for fast, standardized onboarding of new client sites.
+
 |
 
 .. image:: ../_static/images/admin/client-services_create_tenant.png
@@ -176,10 +298,14 @@ the form to create and link the tenant in a single step.
 
 .. _client_services_view_logs:
 
-* **View Logs** – Inspect recent provisioning and sync logs for
-  tenants, extensions, gateways, and API interactions to assist with
-  troubleshooting and audit trails. Use this whenever a provisioning
-  action does not behave as expected.
+View Logs
+~~~~~~~~~
+
+Inspect recent provisioning and sync logs for tenants, extensions, 
+gateways, and API interactions to assist with troubleshooting and audit 
+trails. Use this whenever a provisioning action does not behave as 
+expected.
+
 |
 
 .. image:: ../_static/images/admin/client-services_logs.png
@@ -195,12 +321,15 @@ changes or re-running the action.
 
 .. _client_services_settings_server_provisioning:
 
-* **Settings (Server Provisioning Settings)** – Load and save WHMCS
-  server credentials (including optional access hash) for FusionPBX
-  hosts, and run credential and IP whitelist tests before enabling
-  automated provisioning. Use this when first connecting a PBX server
-  or when rotating credentials or tightening whitelists. See also
-  :doc:`/admin/servers` and :doc:`/getting_started/security`.
+Settings (Server Provisioning Settings)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Load and save WHMCS server credentials (including optional access hash) 
+for FusionPBX hosts, and run credential and IP whitelist tests before 
+enabling automated provisioning. Use this when first connecting a PBX 
+server or when rotating credentials or tightening whitelists. See also 
+:doc:`/admin/servers` and :doc:`/getting_started/security`.
+
 |
 
 .. image:: ../_static/images/admin/client-services_settings.png
