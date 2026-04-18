@@ -28,12 +28,30 @@ Autobill is a critical component that processes CDRs from your PBX servers and g
 * Special Number Billing support
 
 In **ictVoIP Billing v1.4.0**, Autobill remains the engine that turns
-rated CDRs into billable usage, but the **recommended** approach for
-FusionPBX is to use the enhanced **Autobill v2** script
-(``autobill_v2.php``). Autobill v2 provides a modern browser-based UI
-with real-time statistics, progress indicators, and color-coded debug
-output while using the same underlying billing logic as the original
-``autobill.php`` script.
+rated CDRs into billable usage. FusionPBX now offers **three billing script options**:
+
+**Autobill v2** (``autobill_v2.php``)
+   The enhanced browser-based UI with real-time statistics, progress indicators,
+   and color-coded debug output. Creates **separate invoices** for each FusionPBX
+   service per client. Recommended for clients who prefer itemized billing.
+
+**Autobill v3** (``autobill_v3.php``) - **New in v1.4.0**
+   Consolidated billing script that combines **multiple FusionPBX services** per
+   client into a **single invoice**. Supports International, National, and Special
+   Rate call types. Provides dynamic admin email notifications that scale to any
+   number of services. Recommended for clients who want simplified billing with
+   one invoice per billing period for all VoIP services.
+
+**Autobill v1** (``autobill.php``)
+   The original headless script for CRON execution. Still supported for legacy
+   deployments.
+
+**Choosing Between v2 and v3:**
+
+* Use **v2** if clients need separate invoices for each service (e.g., different cost centers)
+* Use **v3** if clients want consolidated billing (all VoIP services on one invoice)
+* Both support the same call types and billing features
+* Both use identical underlying billing logic
 
 Other supported server modules (for example, Vodia or custom
 integrations) continue to ship with their own ``autobill.php``-style
@@ -79,14 +97,17 @@ Replace `MYMODULE` with your installed server module and `America/Toronto` with 
 
 .. code-block:: bash
 
-   # Standard CRON format (with timezone for AlmaLinux 9 / systemd)
-   55 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
+   # FusionPBX - Autobill v2 (separate invoices per service)
+   55 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill_v2.php?runfrom=cron
+   
+   # FusionPBX - Autobill v3 (consolidated invoices - NEW in v1.4.0)
+   55 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill_v3.php?runfrom=cron
    
    # Alternative format with more time
-   45 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
+   45 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill_v3.php?runfrom=cron
    
    # PHP CLI format (alternative)
-   55 00 * * * TZ=America/Toronto /usr/bin/php -q /home/USERNAME/public_html/whmcs/modules/servers/MYMODULE/autobill_v2.php runfrom=cron
+   55 00 * * * TZ=America/Toronto /usr/bin/php -q /home/USERNAME/public_html/whmcs/modules/servers/fusionpbx/autobill_v3.php runfrom=cron
 
 **CRON Parameters:**
 
@@ -96,16 +117,22 @@ Replace `MYMODULE` with your installed server module and `America/Toronto` with 
 * **GET** - HTTP method (or /usr/bin/php -q for CLI)
 * **runfrom=cron** - Execution parameter
 
-**Server Module Examples:**
+**FusionPBX Script Selection:**
 
-* **FusionPBX (recommended):** ``fusionpbx/autobill_v2.php runfrom=cron``
+* **autobill_v2.php** - Separate invoices for each service (itemized billing)
+* **autobill_v3.php** - Consolidated invoices (all services combined per client)
+
+**Other Server Module Examples:**
+
 * **Vodia:** ``vodia/autobill.php``
 * **Custom:** ``custom/autobill.php``
 
-For FusionPBX deployments, you should normally point your CRON at the
-enhanced **Autobill v2** script. The scheduling principles remain the
-same; v2 adds a richer UI and statistics without changing how charges
-are calculated.
+.. note::
+   For FusionPBX deployments, choose between **v2** (separate invoices) or **v3** 
+   (consolidated invoices) based on your billing requirements. Both scripts use the 
+   same underlying billing logic and support all call types (International, National, 
+   Special Rates). See the CRON reference documentation at 
+   https://ictvoip.ca/docs/cron-reference.html for detailed setup instructions.
 
 Manual Testing
 -------------
@@ -116,13 +143,18 @@ Test your Autobill installation by accessing the script directly in your browser
 
 .. code-block:: text
 
-   # FusionPBX (Autobill v2)
+   # FusionPBX (Autobill v2 - separate invoices)
    URL: https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill_v2.php?runfrom=cron
    Method: GET
    Authentication: Required
 
+   # FusionPBX (Autobill v3 - consolidated invoices)
+   URL: https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill_v3.php?runfrom=cron
+   Method: GET
+   Authentication: Required
+
    # Other modules (generic example)
-   URL: https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill_v2.php?runfrom=cron
+   URL: https://www.mywhmcsserver.com/modules/servers/MYMODULE/autobill.php?runfrom=cron
    Method: GET
    Authentication: Required
 
