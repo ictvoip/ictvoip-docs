@@ -14,7 +14,7 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
 .. note::
 
    This project is under active development.
-   Supported WHMCS versions include 8.12+.
+   Supported WHMCS versions include 8.12+ and WHMCS v9.
    Supported PHP versions include 8.1+
 
 🎬 Watch the Introduction Video
@@ -91,7 +91,7 @@ The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Bill
 
 ictVoIP Billing is compatible with:
 
-* **WHMCS**: 8.12+
+* **WHMCS**: 8.12+ and WHMCS v9
 * **PHP**: 8.1+
 * **Web Servers**: Apache, LiteSpeed, Nginx
 * **Databases**: MySQL 5.7+, MariaDB 10.3+

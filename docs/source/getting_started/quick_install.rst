@@ -28,7 +28,7 @@ Supported Versions
 
 **Recommended environment:**
 
-* **WHMCS:** 8.13.x
+* **WHMCS:** 8.13.x or WHMCS v9
 * **PHP:** 8.1.x – 8.3.x
 * **ionCube Loader v14**
 * **Web Server:** Apache or LiteSpeed with HTTPS enabled

@@ -6,9 +6,18 @@ This guide explains how to upgrade:
 * The **ictVoIP Billing Addon for WHMCS** from **v1.3.3** to **v1.4.0**.
 * The **FusionPBX Server Module** from **v1.3.3** to **v1.4.0**, including the
   FusionPBX API files.
+* **WHMCS** from **v8.x** to **v9** (optional, but fully supported).
 
 Both components should be upgraded in the same maintenance window so that all
 versions remain in sync.
+
+.. note::
+
+   **WHMCS v9 Compatibility**: ictVoIP Billing v1.4.0 is fully compatible with 
+   WHMCS v9. All Client Services management views (Tenant Domains, Extensions, 
+   Gateways, Destinations, ACL) and server modules (autobill_v2, autobill_v3) 
+   have been tested and verified. No breaking changes were detected during the 
+   WHMCS v9 upgrade process.
 
 Before You Start
 ----------------
