@@ -87,8 +87,8 @@ System Requirements
 WHMCS Platform
 --------------
 
-* **WHMCS Version**: v8.13.1 or lower
-* **PHP Version**: 8.3
+* **WHMCS Version**: v9.0.3 or lower
+* **PHP Version**: 8.3 (preferred)
 * **Database**: MySQL 5.7+ or MariaDB 10.3+
 * **Web Server**: Apache or Nginx with mod_rewrite
 * **SSL Certificate**: Required for secure API communication
