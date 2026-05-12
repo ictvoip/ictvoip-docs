@@ -4,7 +4,7 @@ ictVoIP Box
 
 |
 
- .. image:: ../_static/images/admin/ictvoipbox_dashboard2.png
+ .. image:: ../_static/images/admin/ictvoipbox_dashboard3.png
         :width: 600px
         :align: center
         :alt: ictVoIP Box dashboard
@@ -71,7 +71,7 @@ The complete integration flow follows this sequence::
 
 |
 
- .. image:: ../_static/images/admin/ictvoipbox_dashboard2.png
+ .. image:: ../_static/images/admin/ictvoipbox_dashboard3.png
         :width: 600px
         :align: center
         :alt: ictVoIP Box dashboard
