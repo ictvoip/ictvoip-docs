@@ -1266,6 +1266,6 @@ Getting Help
 **For Module Support:**
 
 * Contact ictVoIP development team
-* Submit bug reports: https://ictvoip.ca/beta-bug-report.html
+* Submit bug reports: https://ictvoip.ca/resources/beta-bug-report
 * Include logs and screenshots with all bug reports
 
