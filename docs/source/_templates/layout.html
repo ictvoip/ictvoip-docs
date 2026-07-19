@@ -1,0 +1,21 @@
+{% extends "!layout.html" %}
+
+{# Add SEO meta tags to head #}
+{% block extrahead %}
+  {{ super() }}
+  <meta name="description" content="ictVoIP Billing for WHMCS - Complete documentation for FusionPBX and FS PBX billing integration, CDR management, and VoIP service provider automation.">
+  <meta name="keywords" content="FusionPBX Billing, FS PBX, WHMCS VoIP, CDR Billing, VoIP Documentation, FusionPBX Integration">
+  <meta name="author" content="ictVoIP Canada">
+  <meta name="robots" content="index, follow">
+  
+  {# Open Graph tags #}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title|striptags|e }}{% if title %} - {% endif %}{{ docstitle|e }}">
+  <meta property="og:description" content="ictVoIP Billing for WHMCS - Complete documentation for FusionPBX and FS PBX billing integration.">
+  <meta property="og:site_name" content="ictVoIP Billing Documentation">
+  
+  {# Twitter Card tags #}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title|striptags|e }}{% if title %} - {% endif %}{{ docstitle|e }}">
+  <meta name="twitter:description" content="ictVoIP Billing for WHMCS - Complete documentation for FusionPBX and FS PBX billing integration.">
+{% endblock %}

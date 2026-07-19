@@ -30,6 +30,10 @@ templates_path = ['_templates']
 
 html_theme = 'sphinx_rtd_theme'
 html_favicon = '_static/images/favicon.ico'
+html_static_path = ['_static']
+
+# Add robots.txt to root of built documentation
+html_extra_path = ['_static/robots.txt']
 
 # Navigation and TOC improvements
 html_theme_options = {
@@ -42,6 +46,7 @@ html_theme_options = {
     'prev_next_buttons_location': 'both',
     'style_external_links': True,
     'style_nav_header_background': '#2980B9',
+    'canonical_url': 'https://docs.ictvoip.ca/en/latest/',
 }
 
 # Enable breadcrumbs

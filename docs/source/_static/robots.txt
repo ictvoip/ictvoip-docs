@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap for all versions
+Sitemap: https://docs.ictvoip.ca/sitemap.xml
+
+# Allow all versions - users can select their preferred version
+# Canonical tags in HTML will indicate /en/latest/ as preferred for SEO
