@@ -1,0 +1,8 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+{% if pagename == 'index' %}
+  <link rel="canonical" href="https://www.ictvoip.ca/whmcs-voip-billing" />
+{% endif %}
+{{ super() }}
+{% endblock %}

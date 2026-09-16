@@ -6,6 +6,10 @@
 ictVoIP Billing Administrators Guide for WHMCS
 ==============================================
 
+.. note::
+
+   For product information and pricing, visit the `ictVoIP Billing product page <https://www.ictvoip.ca/whmcs-voip-billing>`__.
+
 **ictVoIP Billing Management System**
 ------------------------------------
 

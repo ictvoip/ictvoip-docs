@@ -1,0 +1,21 @@
+{# Custom breadcrumb template for better navigation #}
+{%- if theme_breadcrumbs %}
+<nav aria-label="{{ _('Breadcrumbs') }}">
+  <ul class="wy-breadcrumbs">
+    <li><a href="{{ pathto(master_doc) }}" class="icon icon-home"></a> &raquo;</li>
+    {%- for doc in parents %}
+      <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;</li>
+    {%- endfor %}
+    <li>{{ title }}</li>
+    <li class="wy-breadcrumbs-aside">
+      <a href="https://www.ictvoip.ca/whmcs-voip-billing" target="_blank" rel="noopener">ictvoip.ca</a>
+      {%- if pagename != "search" and builder != "singlehtml" %}
+        {%- if show_source and has_source and sourcename %}
+          &middot; <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow"> {{ _('View page source') }}</a>
+        {%- endif %}
+      {%- endif %}
+    </li>
+  </ul>
+  <hr/>
+</nav>
+{%- endif %} 
