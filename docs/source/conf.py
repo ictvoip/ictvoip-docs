@@ -25,6 +25,7 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['../_templates']
+html_static_path = ['_static']
 
 # -- Options for HTML output
 
@@ -62,7 +63,7 @@ html_show_sourcelink = False
 
 # Include custom CSS and JavaScript for better navigation
 html_css_files = [
-    'custom.css',
+    'css/custom-ictvoip.css',
 ]
 
 html_js_files = [
