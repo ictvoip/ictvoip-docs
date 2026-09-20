@@ -346,12 +346,6 @@ Special Number Billing
 
 Special Number Billing allows you to configure custom billing rules for specific number patterns at the product level. This is particularly useful for Australian Smartnumbers (1300*, 1800*, 13*) or any other special prefixes that require different billing treatment than standard tariff rates.
 
-.. versionadded:: 1.4.0-Beta.10
-   Special Number Billing feature introduced
-
-.. versionchanged:: 1.4.0-Beta.11
-   Performance optimization (159x faster), CDR view filtering, and bug fixes
-
 **Key Features:**
 
 * **Product-Level Configuration** - Each product can have its own set of special rate rules
