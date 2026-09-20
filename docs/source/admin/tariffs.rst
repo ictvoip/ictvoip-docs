@@ -145,30 +145,60 @@ Execute the import process:
 3. **Assign to providers** - Link to provider accounts and packages
 4. **Test billing** - Verify rate application autobill against CDRs
 
-Rate Filtering
--------------
+Assigning Custom Rates
+----------------------
 
-**Filter Configuration:**
+.. _assigning-custom-rates:
 
-After import, configure filtering rules to exclude specific numbers or destinations:
+Custom rates let you override the tariff rate for specific prefixes with the per-minute rates configured in a product/package. When a tariff row is set to ``status = 0``, calls matching that prefix use the package custom rate; when it is ``status = 1``, the standard tariff rate is used.
 
-.. code-block:: text
+**When to use custom rates:**
 
-   Filter Type: Toll Free Numbers
-   Action: Exclude from billing
-   Pattern: 1-800-*, 1-888-*, 1-877-*
+* You want to resell a provider tariff with different per-minute rates for specific destinations.
+* You need to create product-specific pricing that does not follow the default tariff.
 
-**Common Filter Types:**
+**Open the Assign Custom Rates modal:**
 
-* **Toll Free Numbers** - 1-800, 1-888, 1-877, etc.
-* **Emergency Numbers** - 911, 112, 999, etc.
-* **Directory Services** - 411, 118, etc.
-* **Premium Numbers** - 1-900, etc.
-* **Custom Patterns** - Specific number ranges
+1. Navigate to **ictVoIP Billing → Tariffs**.
+2. In the Provider Tariffs table, find the tariff you want to configure.
+3. Click **Assign Custom Rates** in the Actions column for that tariff.
 
-**Filter Configuration:**
+.. image:: ../_static/images/admin/assign_custom.png
+   :width: 600px
+   :align: center
+   :alt: Assign Custom Rates modal
+   :class: img-padded
 
-Navigate to `Billing Management <../admin/billing_management.html>`_ for detailed filtering options and configuration.
+
+**Use the modal:**
+
+1. The modal loads any existing rows already set to ``status = 0``.
+2. Use the **Search Description** dropdown to find a description. Type at least two characters, then select a result to load all matching prefixes.
+3. For each prefix you want to override with the package custom rate, check the **Toggle** checkbox. This sets ``status = 0``.
+4. Leave the **Toggle** checkbox unchecked for prefixes that should keep using the tariff rate (``status = 1``).
+5. Use the row select checkboxes and the **Select All** / **Toggle All** headers for bulk selection.
+6. Click **Apply** to save. The button text changes based on the selected states:
+
+   * **Apply (Set Status = 0)** — all toggled rows will be set to ``status = 0``.
+   * **Apply (Set Status = 1)** — all untoggled rows will be set to ``status = 1``.
+   * **Apply (Mixed Status Changes)** — some rows will be set to ``0`` and others to ``1``.
+
+**Status meanings:**
+
+* ``status = 0`` — Custom rate active. The package custom rate (inbound and/or outbound) is used for this prefix.
+* ``status = 1`` — Tariff rate active. The standard imported tariff rate is used for this prefix.
+
+.. note::
+   Markup is not applied to custom rates. The package custom rates are used as-is.
+
+For the package-level custom rate configuration (per-minute inbound/outbound rates, increments, and inbound billing), see `Custom Rate Configuration <https://docs.ictvoip.ca/en/latest/admin/packages.html#custom-rate-configuration>`_.
+
+Special Number Billing
+----------------------
+
+For product-level custom billing rules for special number patterns (for example, Australian Smartnumbers 1300*, 1800*, 13*, short codes, or custom internal codes), see :ref:`Special Number Billing <special-number-billing>`.
+
+This is different from tariff custom rates. Use tariff custom rates for standard prefixes, and use Special Number Billing when the product must bypass the tariff entirely and bill only matched special-rate patterns.
 
 Tariff Management
 ----------------
@@ -260,7 +290,8 @@ Next Steps
 After tariff configuration:
 
 1. **Provider Assignment** - Link tariffs to providers
-2. **Package Configuration** - Create service packages
-3. **Billing Setup** - Configure automated billing
-4. **Testing** - Verify rate application with autobill
+2. **Custom Rate Assignment** - Use the :ref:`assigning-custom-rates` action to mark prefixes that should use package-level custom rates
+3. **Package Configuration** - Create service packages
+4. **Billing Setup** - Configure automated billing
+5. **Testing** - Verify rate application with autobill
 

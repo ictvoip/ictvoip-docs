@@ -515,4 +515,10 @@ html body .wy-nav-content-wrap .wy-nav-content {
     background: #1577D4 !important;
 }
 
+/* Add bottom spacing to images so following headings are not visually glued */
+a.img-padded {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
 

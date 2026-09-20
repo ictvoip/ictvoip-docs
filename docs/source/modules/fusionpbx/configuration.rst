@@ -339,6 +339,8 @@ Enable XML CDR for call detail record collection. Configure CDR settings for:
 * Error handling
 * Performance optimization
 
+.. _special-number-billing:
+
 Special Number Billing
 ----------------------
 

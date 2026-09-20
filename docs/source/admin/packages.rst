@@ -219,21 +219,9 @@ Create specialized rate structures for specific needs:
 
 **Custom Rate Setup:**
 
-To enable custom rates, modify the tariff database:
+To enable custom rates for a tariff, use the :ref:`Assign Custom Rates <assigning-custom-rates>` action in the tariff list. That action lets you mark specific prefixes with ``status = 0`` so the package custom rate is used instead of the tariff rate. See the :ref:`Assigning Custom Rates page <assigning-custom-rates>` for the full procedure.
 
-.. code-block:: sql
-
-   -- Update tariff status to enable custom rates
-   UPDATE mod_ictvoipbilling_tariff_[provider_name]_[date]
-   SET status = 0
-   WHERE prefix = '[target_prefix]';
-
-**Database Location:**
-
-Custom rates are stored in the WHMCS database:
-* **Database:** `ictvoip_dev6733`
-* **Table:** `mod_ictvoipbilling_tariff_[provider]_[date]`
-* **Example:** `mod_ictvoipbilling_tariff_telnyx_outbound_2024_10`
+For billing based on special number patterns (for example, Australian Smartnumbers 1300*, 1800*, 13*, or other product-level special rates), see :ref:`Special Number Billing <special-number-billing>`.
 
 Package Types
 ------------
