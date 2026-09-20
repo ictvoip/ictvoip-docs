@@ -28,7 +28,7 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
    :scale: 65%
    :align: center
    :alt: Click to watch the ictVoIP Billing Introduction Video
-   :target: https://blackwolf.riverdog.ca/s/TGarX2XfKZH9kKT
+   :target: https://www.ictvoip.ca/video/ictVoIP%20Billing%20for%20WHMCS%20and%20FusionPBX%20v1.4.0.mp4
 
 .. raw:: html
 
@@ -40,7 +40,7 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
            videoImage.addEventListener('click', function(e) {
                e.preventDefault();
                e.stopPropagation();
-               window.open('https://blackwolf.riverdog.ca/s/TGarX2XfKZH9kKT', '_blank');
+               window.open('https://www.ictvoip.ca/video/ictVoIP%20Billing%20for%20WHMCS%20and%20FusionPBX%20v1.4.0.mp4', '_blank');
                return false;
            });
        }
@@ -56,14 +56,14 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
 
    **📱 Mobile Access**: Scan the QR code above to watch the video on your mobile device.
    
-   **🔗 Direct Link**: `Watch the video directly here <https://blackwolf.riverdog.ca/s/TGarX2XfKZH9kKT>`_ (opens in new tab)
+   **🔗 Direct Link**: `Watch the video directly here <https://www.ictvoip.ca/video/ictVoIP%20Billing%20for%20WHMCS%20and%20FusionPBX%20v1.4.0.mp4>`_ (opens in new tab)
 
 .. raw:: html
 
    <script>
    document.addEventListener('DOMContentLoaded', function() {
        // Make direct link open in new tab
-       var links = document.querySelectorAll('a[href="https://blackwolf.riverdog.ca/s/Z2tZTzLRbKfTgo6"]');
+       var links = document.querySelectorAll('a[href="https://www.ictvoip.ca/video/ictVoIP%20Billing%20for%20WHMCS%20and%20FusionPBX%20v1.4.0.mp4"]');
        links.forEach(function(link) {
            link.setAttribute('target', '_blank');
            link.setAttribute('rel', 'noopener noreferrer');
