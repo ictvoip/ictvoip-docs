@@ -57,6 +57,28 @@ Other supported server modules (for example, Vodia or custom
 integrations) continue to ship with their own ``autobill.php``-style
 scripts, which are typically used only for headless CRON execution.
 
+Autobill v3 Consolidated Invoicing
+----------------------------------
+
+.. _autobill_v3:
+
+Autobill v3 processes every active FusionPBX service for a client and
+combines the rated CDR charges into **a single WHMCS invoice**.
+
+* It scans all FusionPBX services due on the billing run date.
+* It accumulates charges across services while keeping separate invoice
+  line items for **International**, **National**, and **Special Rate**
+  calls.
+* Special-rate calls are grouped by matching pattern, and regular
+  tariff/custom-rate calls are grouped by service.
+* Once all services for a client are processed, v3 creates one invoice
+  with the consolidated line items instead of one invoice per service.
+* A single email notification is generated per client, summarising the
+  consolidated totals.
+
+This is the recommended autobill mode for clients who prefer one invoice
+per billing period covering all VoIP services.
+
 CRON Configuration
 -----------------
 
@@ -139,7 +161,13 @@ Manual Testing
 
 **Browser Testing:**
 
-Test your Autobill installation by accessing the script directly in your browser:
+Both Autobill v2 and v3 provide a custom browser UI when opened directly
+without a CRON trigger. The page shows real-time progress, client and
+invoice counters, and colour-coded log output. Use this to test and
+debug a billing run before enabling the CRON.
+
+Test your Autobill installation by accessing the script directly in your
+browser:
 
 .. code-block:: text
 
