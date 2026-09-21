@@ -159,8 +159,16 @@ The `/chkcon.php` endpoint now uses an IP and CIDR-based whitelist for authentic
     192.168.1.20
     192.168.1.0/24
 
-**WHMCS Integration Note:**
-When configuring the FusionPBX server in WHMCS, the "Test Connection" button now checks API access based on the IP whitelist. Username and password fields are not required for this endpoint. Ensure your WHMCS server's public IP is included in `chkcon_whitelist.conf` on the FusionPBX server.
+.. note::
+   **WHMCS Integration Note**
+
+   When configuring the FusionPBX server in WHMCS, the **Test
+   Connection** button now checks API access based on the IP whitelist.
+   Further validation and provisioning checks are run from the **Client
+   Services Dashboard → FusionPBX Server Validation / Server Provisioning
+   Settings** screen. Username and password fields are not required for
+   this endpoint. Ensure your WHMCS server's public IP is included in
+   ``chkcon_whitelist.conf`` on the FusionPBX server.
 
 .. important::
    **fail2ban Configuration:**

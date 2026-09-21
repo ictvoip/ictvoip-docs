@@ -93,9 +93,12 @@ per billing period covering all VoIP services.
 CRON Configuration
 -----------------
 
-**Scheduling Requirements:**
+.. note::
 
-The Autobill script must run before your WHMCS daily CRON job to ensure proper billing processing.
+   The Autobill script **must run before** the WHMCS daily CRON job
+   to ensure proper billing processing.
+
+**Scheduling Requirements:**
 
 .. important::
    **AlmaLinux 9 / systemd Timezone Configuration**
@@ -264,12 +267,12 @@ Autobill integrates with WHMCS billing cycles:
 3. **Invoice Delivery** - Send invoices to clients
 4. **Payment Processing** - Handle payment collection
 
-**Important Notes:**
+.. note::
 
-* Autobill does not increment product next billing dates
-* WHMCS daily CRON handles billing date updates
-* Monthly invoices are generated after Autobill processing
-* Billing dates are updated during WHMCS daily CRON execution
+   * Autobill does not increment product next billing dates.
+   * WHMCS daily CRON handles billing date updates.
+   * Monthly invoices are generated after Autobill processing.
+   * Billing dates are updated during WHMCS daily CRON execution.
 
 Performance Optimization
 -----------------------

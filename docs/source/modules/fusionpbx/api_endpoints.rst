@@ -88,16 +88,19 @@ FusionPBX APIs use a combination of **IP/CIDR-based whitelisting** and
 an **API integration identity** (API user plus optional access
 hash/token).
 
-**Authentication Requirements:**
+.. important::
+   **Authentication Requirements**
 
-* API integration user (dedicated account for ictVoIP Billing).
-* Access hash or API token (where configured) and/or API password.
-* Calling host must be on the IP/CIDR whitelist for the FusionPBX
-  server.
-* Requests from non-whitelisted IPs will be denied and logged.
-* The whitelist is typically managed using the chkcon whitelist
-  configuration or the Whitelist Manager utility on the FusionPBX
-  host.
+   * API integration user (dedicated account in the FusionPBX global
+     domain with superadmin privileges).
+   * Use the API integration **username and password**, or an access
+     hash / API token if one is configured.
+   * Calling host must be on the IP/CIDR whitelist for the FusionPBX
+     server.
+   * Requests from non-whitelisted IPs will be denied and logged.
+   * The whitelist is typically managed using the chkcon whitelist
+     configuration or the Whitelist Manager utility on the FusionPBX
+     host.
 
 |
 
@@ -121,27 +124,27 @@ hash/token).
       "message": "API Access Denied: Only whitelisted IPs may access this endpoint."
     }
 
-WHMCS Integration Note
-----------------------
+.. important::
 
-When configuring the FusionPBX server in WHMCS, the **Test Connection**
-button checks API access using the server definition, which includes
-the API integration user, optional access hash/token, and the
-whitelisted IP of the WHMCS host. Ensure the WHMCS server's public IP
-is present on the FusionPBX whitelist before enabling automated
-provisioning.
+   When configuring the FusionPBX server in WHMCS, the **Test
+   Connection** button checks API access using the server definition,
+   which includes the API integration user, optional access hash/token,
+   and the whitelisted IP of the WHMCS host. Ensure the WHMCS server's
+   public IP is present on the FusionPBX whitelist before enabling
+   automated provisioning.
 
 .. important::
    **fail2ban Configuration:**
    
    In special cases, you may need to configure fail2ban to allow the WHMCS IP address. If your FusionPBX server uses fail2ban for security, add the WHMCS server IP to the fail2ban whitelist to prevent API access issues during billing operations and automated provisioning tasks.
 
-**Verification steps (Client Services / Settings – Server Provisioning Settings):**
+**Verification steps (Client Services Dashboard → FusionPBX Server
+Validation / Server Provisioning Settings):**
 
 1. Open **Client Services** in the WHMCS Admin Area
    (:doc:`/admin/client_services`).
-2. Select the relevant FusionPBX server and open **Settings** →
-   **Server Provisioning Settings**.
+2. Select the relevant FusionPBX server and open **FusionPBX Server
+   Validation** or **Settings → Server Provisioning Settings**.
 3. Confirm the API integration user and access hash/token values.
 4. Click **Test Connection** to validate credentials, whitelist, and
    basic API readiness.

@@ -77,11 +77,11 @@ an existing FusionPBX tenant under management.
 .. warning::
 
    Deleting a tenant in Client Services cascades to the local FusionPBX
-   user records stored in WHMCS. When the tenant is deleted, all
-   ``mod_ictvoipbilling_fpbx_users`` entries linked to that tenant are
-   also removed. If the **Delete from FusionPBX** option is selected,
-   the domain and any selected associated objects (such as extensions)
-   are removed from the PBX as well.
+   user records stored in WHMCS. When the tenant is deleted, all local
+   user records linked to that tenant are also removed. If the **Delete
+   from FusionPBX** option is selected, the domain and any selected
+   associated objects (such as extensions) are removed from the PBX as
+   well.
 
 .. _client_services_manage_tenant_users:
 
@@ -390,9 +390,12 @@ Assign and sync
 XML editing
 ***********
 
-While the admin UI exposes a read-only **XML** view, the backend
-endpoint ``save_outbound_xml`` can be used by support to update the stored
-dialplan XML directly. For routine changes, use the Edit modal instead.
+.. warning::
+
+   The admin UI exposes a read-only **XML** view. The backend
+   endpoint ``save_outbound_xml`` can be used by support to update the
+   stored dialplan XML directly. For routine changes, use the Edit
+   modal instead.
 
 .. _client_services_quick_create_tenant:
 
