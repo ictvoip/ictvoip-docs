@@ -12,6 +12,13 @@ Client Services Admin Area
    * You have run a dry-run on any new provisioning action before
      pushing it to the PBX.
 
+.. seealso::
+
+   * :doc:`/admin/providers` — configure providers and rates.
+   * :doc:`/admin/servers` — add and test PBX server connections.
+   * :doc:`/admin/packages` — create packages linked to providers.
+   * :doc:`/admin/autobill` — set up billing after provisioning.
+
 Overview
 --------
 

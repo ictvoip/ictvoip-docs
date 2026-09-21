@@ -436,6 +436,16 @@ For autobill issues, provide:
 * Server module details
 * Processing time information
 
+.. seealso::
+
+   * :doc:`/admin/packages` — configure packages and rates before
+     autobill runs.
+   * :doc:`/admin/providers` — set up the provider linked to the
+     packages.
+   * :doc:`/modules/fusionpbx/configuration` — configure the FusionPBX
+     server for CDR collection and billing.
+   * :doc:`/admin/servers` — add and test the PBX server connection.
+
 Next Steps
 ----------
 

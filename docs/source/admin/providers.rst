@@ -11,6 +11,12 @@ Provider Management
    * You know the provider type (VoIP.ms, DIDWW, etc.) and the
      associated routing settings.
 
+.. seealso::
+
+   * :doc:`/admin/tariffs` — import provider rate cards.
+   * :doc:`/admin/packages` — link providers to billing packages.
+   * :doc:`/admin/servers` — add a PBX server for the provider.
+
 **VoIP Provider & PBX Configuration**
 
 Provider management allows you to configure VoIP providers and PBX systems, linking them to specific tariffs and package rates for automated billing and provisioning.

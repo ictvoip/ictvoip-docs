@@ -12,6 +12,13 @@ Server Management
    * A matching provider is available if the server module requires
      provider-linked billing.
 
+.. seealso::
+
+   * :doc:`/admin/providers` — configure provider credentials.
+   * :doc:`/admin/client_services` — provision tenants and extensions.
+   * :doc:`/modules/fusionpbx/configuration` — FusionPBX API and
+     whitelist setup.
+
 **PBX Server Integration & API Configuration**
 
 The Server Management section covers the installation and configuration of PBX server modules, enabling seamless integration between your WHMCS system and various PBX platforms.

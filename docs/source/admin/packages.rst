@@ -11,6 +11,12 @@ Package Management
    * The correct country code is known for the package's target DID
      range.
 
+.. seealso::
+
+   * :doc:`/admin/providers` — create and configure providers.
+   * :doc:`/admin/tariffs` — import or manage rate cards.
+   * :doc:`/admin/autobill` — configure billing for packages.
+
 **VoIP Service Package Configuration**
 
 Package management allows you to create and configure VoIP service packages with specific rates, features, and billing structures. This system supports both standard and custom rate configurations for flexible service offerings.
