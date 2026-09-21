@@ -10,6 +10,9 @@ Package Management
      provider.
    * The correct country code is known for the package's target DID
      range.
+   * The package is linked to the provider that matches the client's
+     PBX platform. FusionPBX and FS PBX packages use separate
+     providers.
 
 .. seealso::
 

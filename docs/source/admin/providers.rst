@@ -70,6 +70,12 @@ Use a clear, descriptive naming convention for your providers:
 * **Vodia - Bandwidth - International** - International rates
 * **Custom PBX - Local Provider - Local** - Local rate structure
 
+.. important::
+
+   Each PBX platform must have its own provider. A FusionPBX provider
+   cannot be used to provision FS PBX resources, and vice versa. If
+   you support both platforms, create a separate provider for each.
+
 Configuration Options
 --------------------
 

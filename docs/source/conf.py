@@ -6,7 +6,7 @@ project = "ictVoIP Billing for WHMCS"
 copyright = "2026, ictVoIP Canada"
 author = "ictVoIP Canada"
 
-version = "1.4.0"
+version = "1.5.0"
 
 # -- General configuration
 

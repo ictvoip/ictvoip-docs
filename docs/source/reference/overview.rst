@@ -22,6 +22,8 @@ up the ictVoIP Billing system.
 +---------------+-----------------------------------------------+
 | FusionPBX     | https://www.fusionpbx.com/                    |
 +---------------+-----------------------------------------------+
+| FS PBX        | https://www.fspbx.com/                        |
++---------------+-----------------------------------------------+
 | Vodia PBX     | https://vodia.com/                            |
 +---------------+-----------------------------------------------+
 | FreeSWITCH    | https://freeswitch.com/                       |
@@ -54,6 +56,7 @@ up the ictVoIP Billing system.
    mariadb
    phpmyadmin
    fusionpbx
+   fspbx
    vodia
    freeswitch
    litespeed

@@ -131,6 +131,18 @@ Call Recordings & Transcriptions
    transcripts from the provider; ensure the provider account is active and
    API credentials are valid.
 
+ictVoIP Billing v1.5.0 Multi-Provider
+*************************************
+
+.. admonition:: I set up an FS PBX server, but Client Services still
+   manages FusionPBX resources.
+
+   FS PBX is a **separate provider** in ictVoIP Billing v1.5.0. Add an
+   FS PBX provider from **ictVoIP Billing → Provider Management**, link
+   it to the FS PBX server, and configure separate tariffs/package
+   rates. Then select the FS PBX provider in Client Services. Do not
+   reuse an existing FusionPBX provider for FS PBX provisioning.
+
 ictVoIP Box
 ***********
 

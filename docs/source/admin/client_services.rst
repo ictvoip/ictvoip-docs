@@ -32,7 +32,9 @@ FS PBX hosts and client VoIP services without leaving WHMCS.
    Starting with ictVoIP Billing v1.5.0, Client Services detects the
    provider backend automatically. The same dashboard supports
    FusionPBX and FS PBX workflows; the available actions depend on the
-   selected PBX server.
+   selected provider. FS PBX is a separate provider — select the FS PBX
+   provider to provision FS PBX resources, not an existing FusionPBX
+   provider.
 
 |
 

@@ -80,15 +80,52 @@ result, allowing you to fix credentials or data before a live push.
 Authentication
 ==============
 
-FS PBX API requests require:
+FS PBX API requests use an API token only:
 
-* A valid API integration user.
-* An access hash or API token.
+* A valid **API token** for the FS PBX integration user.
 * The WHMCS host IP whitelisted on the FS PBX server.
+* HTTPS access with a valid SSL certificate. HTTPS is mandatory.
+
+The FS PBX server module does not require a username, password, or
+access hash. Enter the API token when adding the server in WHMCS and
+run the connection test to confirm the token and IP whitelist.
 
 If the connection test fails, verify the credentials and the IP
 whitelist first. FS PBX may also require HTTPS with a valid SSL
 certificate.
+
+Provider Setup
+==============
+
+FS PBX is managed as a **separate provider** in ictVoIP Billing. Do
+not reuse an existing FusionPBX provider for FS PBX resources.
+
+To provision FS PBX resources:
+
+1. Go to **ictVoIP Billing → Provider Management**.
+2. Create a new provider and select **FS PBX** as the PBX platform.
+3. Link the new provider to the FS PBX server you added in
+   :doc:`/admin/servers`.
+4. Configure tariffs and package rates specifically for the FS PBX
+   provider. FS PBX package rates are managed separately from
+   FusionPBX rates.
+5. In **Client Services**, select the FS PBX provider to provision
+   tenants, users, destinations, and ring groups on the FS PBX
+   backend.
+
+FS PBX vs FusionPBX
+===================
+
+FS PBX began as a FusionPBX fork, but it has rapidly evolved into a
+separate platform. Both run on FreeSWITCH, but FS PBX adds a modern
+interface, better performance, stronger security, more out-of-the-box
+functionality, and improved multi-tenancy and white-label support.
+
+FS PBX remains open source with paid versions available. If you are
+currently using FusionPBX, FS PBX can be a compelling upgrade because
+you keep the reliability of FreeSWITCH and the familiarity of
+FusionPBX-style workflows while gaining a faster, easier, and more
+powerful management platform.
 
 .. seealso::
 
@@ -97,3 +134,4 @@ certificate.
    * :doc:`/admin/servers` — adding and testing PBX server
      connections.
    * :doc:`/admin/providers` — configuring providers and routing.
+   * :doc:`/reference/fspbx` — FS PBX technology reference.

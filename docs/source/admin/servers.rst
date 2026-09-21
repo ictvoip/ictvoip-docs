@@ -39,6 +39,7 @@ Server modules allow you to provision and manage PBX servers directly from your 
 
 **Supported PBX Platforms:**
 * FusionPBX 5.3.x+
+* FS PBX v1.5.0+
 * Vodia PBX
 * Custom PBX integrations
 
@@ -347,6 +348,54 @@ For additional support, contact our team with:
 * FusionPBX version
 * Error messages and logs
 * Network configuration details
+
+FS PBX Integration
+------------------
+
+**Supported Versions:**
+
+* FS PBX v1.5.0+
+
+.. note::
+
+   For version-specific support, please contact the ictVoIP support
+   team.
+
+**Package Information:**
+
+The FS PBX WHMCS server module is included in the ictVoIP Billing
+v1.5.0 distribution. Upload the module files to the correct WHMCS
+``modules/servers/`` directory and activate the server module.
+
+**Authentication:**
+
+FS PBX uses an API token only:
+
+* **API Token** — the FS PBX API token configured for the integration
+  user. This is the only credential required for the WHMCS server
+  module.
+* **IP Whitelist** — the WHMCS server public IP must be allowed on the
+  FS PBX host.
+* **HTTPS** — the FS PBX API must be reachable over HTTPS with a
+  valid SSL certificate. HTTPS is mandatory.
+
+To add an FS PBX server:
+
+1. Go to **Setup → Products/Services → Servers**.
+2. Click **Add New Server**.
+3. Select the **FS PBX** server module.
+4. Enter the FS PBX host FQDN and the API token.
+5. Click **Test Connection** to verify the IP whitelist and token.
+6. Save the server and link it to the desired provider.
+
+**Troubleshooting:**
+
+If the test connection fails:
+
+* Confirm the API token is correct and has not expired.
+* Verify the WHMCS host IP is whitelisted on FS PBX.
+* Check that HTTPS is reachable and the certificate is valid.
+* Review the WHMCS module logs for the API response.
 
 .. _widget-section:
 Server Widget

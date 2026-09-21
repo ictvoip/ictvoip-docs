@@ -172,8 +172,8 @@ extensions, gateways, ACLs, and outbound routes.
    :caption: Supported PBX Systems
 
    modules/fusionpbx
-   modules/vodia
    modules/fspbx
+   modules/vodia
    modules/lesnet
    modules/providers
    modules/custom_integration

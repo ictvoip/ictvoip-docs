@@ -27,8 +27,10 @@ Step 1: Add a Provider
 4. Enter the provider name and the API credentials.
 5. Save and test the connection if a test button is available.
 
-A provider is the source of call routing, DIDs, and trunk billing. See
-:doc:`/admin/providers` for advanced configuration.
+A provider is the source of call routing, DIDs, and trunk billing. If
+you are using both FusionPBX and FS PBX, create a separate provider
+for each PBX platform. See :doc:`/admin/providers` for advanced
+configuration.
 
 Step 2: Add a PBX Server
 ========================
