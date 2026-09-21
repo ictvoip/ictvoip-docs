@@ -170,4 +170,26 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('beforeunload', function() {
         handleNavigation();
     });
+
+    // Preserve TOC scroll position across page loads so the sidebar does
+    // not jump to the active item and stays where the user left it.
+    function preserveTocScroll() {
+        const menu = document.querySelector('.wy-menu-vertical');
+        if (!menu) return;
+
+        const key = 'ictvoip_toc_scroll';
+        const saved = sessionStorage.getItem(key);
+
+        if (saved !== null) {
+            setTimeout(function() {
+                menu.scrollTop = parseInt(saved, 10);
+            }, 200);
+        }
+
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.setItem(key, menu.scrollTop);
+        });
+    }
+
+    preserveTocScroll();
 }); 
