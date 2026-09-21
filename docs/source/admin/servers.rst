@@ -18,10 +18,11 @@ Server Management
    * :doc:`/admin/client_services` — provision tenants and extensions.
    * :doc:`/modules/fusionpbx/configuration` — FusionPBX API and
      whitelist setup.
+   * :doc:`/modules/fspbx` — FS PBX API and setup.
 
 **PBX Server Integration & API Configuration**
 
-The Server Management section covers the installation and configuration of PBX server modules, enabling seamless integration between your WHMCS system and various PBX platforms.
+The Server Management section covers the installation and configuration of PBX server modules, enabling seamless integration between your WHMCS system and FusionPBX, FS PBX, Vodia, and other supported platforms.
 
 |
 

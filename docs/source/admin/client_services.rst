@@ -24,8 +24,15 @@ Overview
 
 Within the WHMCS **Admin Area**, the ictVoIP Billing addon provides a
 **Client Services** section for each provider/PBX. This is an
-administrator-facing dashboard that allows you to manage FusionPBX
-hosts and client VoIP services without leaving WHMCS.
+administrator-facing dashboard that allows you to manage FusionPBX and
+FS PBX hosts and client VoIP services without leaving WHMCS.
+
+.. note::
+
+   Starting with ictVoIP Billing v1.5.0, Client Services detects the
+   provider backend automatically. The same dashboard supports
+   FusionPBX and FS PBX workflows; the available actions depend on the
+   selected PBX server.
 
 |
 

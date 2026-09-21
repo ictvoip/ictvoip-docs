@@ -66,6 +66,7 @@ Use a clear, descriptive naming convention for your providers:
 
 * **FusionPBX - Telnyx - Global** - Standard global rates
 * **FusionPBX - Twilio - North America** - Regional pricing
+* **FS PBX - VoIP.ms - North America** - FS PBX regional pricing
 * **Vodia - Bandwidth - International** - International rates
 * **Custom PBX - Local Provider - Local** - Local rate structure
 

@@ -138,7 +138,10 @@ The report gathers information across these areas:
 * **ictVoIP Billing addon** — version, license key status, and activation state.
 * **Database** — required ``mod_ictvoipbilling_*`` tables, custom client fields, country codes, and the Low Balance Alert email template.
 * **PBX server modules** — whether the FusionPBX/FS PBX WHMCS server modules are installed and their versions.
-* **FusionPBX server APIs** — HTTPS probes against the configured PBX servers to verify that the WHMCS IP is whitelisted and that each API endpoint (destinations, outbound, dialplans, access controls) responds with a version string.
+* **PBX server APIs** — HTTPS probes against the configured FusionPBX
+  and FS PBX servers to verify that the WHMCS IP is whitelisted and
+  that each API endpoint (destinations, outbound, dialplans, access
+  controls) responds with a version string.
 
 JSON version probe
 ~~~~~~~~~~~~~~~~~~
@@ -186,7 +189,7 @@ The portable check attempts to:
 2. Read the WHMCS version from ``tblconfiguration``.
 3. Verify the ictVoIP Billing addon is active and read the stored license key.
 4. Check for the required custom client fields and the ``mod_ictvoipbilling_country_codes`` table.
-5. Probe the configured FusionPBX servers over HTTPS/HTTP and report reachable API endpoints.
+5. Probe the configured FusionPBX and FS PBX servers over HTTPS/HTTP and report reachable API endpoints.
 
 Use the portable health check when the normal health-check page fails to load because of a fatal error or a missing dependency.
 

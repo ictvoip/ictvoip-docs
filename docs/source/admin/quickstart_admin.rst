@@ -14,8 +14,8 @@ Before You Begin
 
    * A valid ictVoIP Billing license key.
    * Your provider API or trunk credentials (VoIP.ms, DIDWW, etc.).
-   * The FusionPBX/Vodia server hostname and an admin-level access hash
-     or API user.
+   * The FusionPBX, FS PBX, or Vodia server hostname and an admin-level
+     access hash or API user.
    * Your WHMCS server IP whitelisted on the provider and/or PBX.
 
 Step 1: Add a Provider
@@ -36,7 +36,7 @@ Step 2: Add a PBX Server
 1. Go to **Setup → Products/Services → Servers** and click **Add New
    Server**.
 2. Select the server module that matches your PBX (for example,
-   FusionPBX or Vodia).
+   FusionPBX, FS PBX, or Vodia).
 3. Enter the PBX hostname, access hash, and any required credentials.
 4. Save and run the server connectivity test.
 

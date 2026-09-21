@@ -173,6 +173,7 @@ extensions, gateways, ACLs, and outbound routes.
 
    modules/fusionpbx
    modules/vodia
+   modules/fspbx
    modules/lesnet
    modules/providers
    modules/custom_integration
