@@ -10,46 +10,44 @@ Administration of server modules and billing would be setup with client products
 
 |
 
- .. image:: ../_static/images/clientadmin/client_product2.png
+ .. image:: ../_static/images/clientadmin/client_product3.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
         
 |
 
-Formatting to FusionPBX API
+FusionPBX Product Assignment
 *****************************
 
 In ictVoIP Billing v1.4.0, FusionPBX tenant and extension details are
-normally managed through the **Client Services Admin Area** rather than
-manually typed into the product fields.
+managed entirely through the **Client Services Admin Area**. The
+**Dedicated IP** and **Domain** fields on the client product/service
+page are read-only and locked by the WHMCS admin interface; direct
+changes to those product fields are not allowed.
 
-|
+To assign or update a FusionPBX tenant and extensions:
 
  1) Assign your FusionPBX-backed VoIP product to the client as usual.
-    Behind the scenes this links the WHMCS service to a FusionPBX
-    server record and tenant.
+    This links the WHMCS service to a FusionPBX server record, but the
+    tenant and extension values are populated by Client Services.
+
+ 2) Open **ictVoIP Billing > Client Services** and use
+    :ref:`client_services_manage_tenant_domains` to create or import the
+    tenant domain.
+
+ 3) Use :ref:`client_services_provision_extensions` to create and assign
+    extensions to the client's WHMCS service. The required formatting for
+    CDR views and billing is handled automatically.
+
+ 4) To validate that everything is wired correctly, open the client's CDR
+    view in the Client Area for the FusionPBX service and confirm that
+    calls are displayed as expected.
 
 .. image:: ../_static/images/admin/client-services_ext.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
-        
-|
-
- 2) Use the **Client Services Admin Area** (:doc:`/admin/client_services`)
-    to create or manage the tenant/domain and to provision extensions.
-    When you add extensions and assign them to the client service from
-    there, the required formatting for CDR views and billing is handled
-    automatically.
-
-|
-
- 3) To validate that everything is wired correctly, open the client's
-    CDR view in the Client Area for the FusionPBX service and confirm
-    that calls are displayed as expected.
-
-|
 
 Formatting to Vodia API
 ************************

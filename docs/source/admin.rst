@@ -32,8 +32,8 @@ Key Features
 
 * **Client Services Admin Area**: Centralized WHMCS admin dashboard for
   managing FusionPBX tenants, extensions, gateways, ACLs, destination
-  routes, logs, and real-time provisioning statistics per
-  provider/PBX. See :doc:`/admin/client_services`.
+  routes, outbound routes, access control, and real-time provisioning
+  statistics per provider/PBX. See :doc:`/admin/client_services`.
 
 .. seealso::
 
@@ -53,7 +53,7 @@ Key Features
    admin/servers.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Client Services
 
    admin/client_services.rst

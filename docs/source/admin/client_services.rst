@@ -30,7 +30,8 @@ Core Tools Index
 - :ref:`Configure Gateways <client_services_configure_gateways>`
 - :ref:`Manage ACLs <client_services_manage_acls>`
 - :ref:`Manage Destination Routes <client_services_manage_destination_routes>`
-- :ref:`Service Directory <client_services_service_directory>`
+- :ref:`Manage Outbound Routes <client_services_manage_outbound_routes>`
+- :ref:`Access Control Manager <client_services_access_control_manager>`
 - :ref:`Quick Create Tenant <client_services_quick_create_tenant>`
 - :ref:`View Logs <client_services_view_logs>`
 - :ref:`Settings (Server Provisioning Settings) <client_services_settings_server_provisioning>`
@@ -252,28 +253,47 @@ Typical workflow: search for an inbound number or DID, confirm which
 tenant it is attached to, then update the routing or assignment when
 numbers are moved between tenants or new DIDs are activated.
 
-.. _client_services_service_directory:
+.. _client_services_manage_outbound_routes:
 
-Service Directory
-~~~~~~~~~~~~~~~~~
+Manage Outbound Routes
+~~~~~~~~~~~~~~~~~~~~~~
 
-Browse and filter client services associated with the provider/PBX, 
-helping you quickly locate which tenants, extensions, and gateways 
-belong to which WHMCS services. Use this as a lookup tool when 
-troubleshooting or answering customer questions.
+View, create, edit, and assign FusionPBX outbound dialplan routes for
+tenants. Use this to keep outbound routing and billing in sync when
+numbers or upstream carriers change.
 
-|
+||
 
-.. image:: ../_static/images/admin/client-services_descovery.png
+.. image:: ../_static/images/admin/client-services_outbound.png
    :width: 800px
    :align: center
    :alt: Client services
-|
+||
 
-Typical workflow: start from a WHMCS client or service you are
-investigating, use the directory filters to locate it, then drill into
-the associated tenant, extensions, or gateways to continue
-troubleshooting.
+Typical workflow: select the provider and tenant, review the existing
+outbound routes, add or edit dialplan XML and gateway assignments, then
+apply changes to the FusionPBX server.
+
+.. _client_services_access_control_manager:
+
+Access Control Manager
+~~~~~~~~~~~~~~~~~~~~~~
+
+Create and manage Access Control Lists (ACLs) locally. Use this to
+define which source IP addresses can reach the PBX or provider services,
+and sync or push lists to FusionPBX when needed.
+
+||
+
+.. image:: ../_static/images/admin/client-services_access_control.png
+   :width: 800px
+   :align: center
+   :alt: Client services
+||
+
+Typical workflow: add an ACL list, define the allowed CIDRs for each
+entry, save the WHMCS-side configuration, then push the list to the
+selected FusionPBX server to enforce the policy.
 
 .. _client_services_quick_create_tenant:
 
