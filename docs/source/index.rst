@@ -206,7 +206,18 @@ Core technology and component reference for the ictVoIP Billing system.
 
    reference/overview
 
-📞 Support
+� Glossary
+===========
+
+Common terms used across the ictVoIP Billing documentation.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Glossary
+
+   glossary
+
+�📞 Support
 ==========
 
 Below are support and community resources for the core technologies used in the ictVoIP Billing system:
