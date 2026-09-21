@@ -197,63 +197,8 @@ The following guides provide step-by-step instructions for installing, configuri
    cdr_main/cdr_maint
 
 � API Reference
-================
 
-ictVoIP Billing provides comprehensive API access for integration, automation, and management across all supported modules. See the sections below for quick access to API documentation for each module and general API usage.
-
-.. toctree::
-   :maxdepth: 3
-   :caption: API Documentation
-
-   api/overview
-   modules/fusionpbx/api_endpoints
-   modules/vodia
-   modules/providers
-   api/whmcs_integration
-   api/pbx_apis
-   api/billing_apis
-   api/webhooks
-
-�📚 Reference
-============
-
-+-------------------------+-----------------------------------------------+
-| Technology              | Official Site                                 |
-+=========================+===============================================+
-| WHMCS                   | https://www.whmcs.com/                        |
-+-------------------------+-----------------------------------------------+
-| PHP                     | https://www.php.net/                          |
-+-------------------------+-----------------------------------------------+
-| PostgreSQL              | https://www.postgresql.org/                   |
-+-------------------------+-----------------------------------------------+
-| MySQL                   | https://www.mysql.com/                        |
-+-------------------------+-----------------------------------------------+
-| MariaDB                 | https://mariadb.org/                          |
-+-------------------------+-----------------------------------------------+
-| phpMyAdmin              | https://www.phpmyadmin.net/                   |
-+-------------------------+-----------------------------------------------+
-| FusionPBX               | https://www.fusionpbx.com/                    |
-+-------------------------+-----------------------------------------------+
-| Vodia PBX               | https://vodia.com/                            |
-+-------------------------+-----------------------------------------------+
-| FreeSWITCH              | https://freeswitch.com/                       |
-+-------------------------+-----------------------------------------------+
-| LiteSpeed               | https://www.litespeedtech.com/                |
-+-------------------------+-----------------------------------------------+
-| Apache HTTP Server      | https://httpd.apache.org/                     |
-+-------------------------+-----------------------------------------------+
-| Nginx                   | https://nginx.org/                            |
-+-------------------------+-----------------------------------------------+
-| cPanel                  | https://cpanel.net/                           |
-+-------------------------+-----------------------------------------------+
-| Debian                  | https://www.debian.org/                       |
-+-------------------------+-----------------------------------------------+
-| Ubuntu                  | https://ubuntu.com/                           |
-+-------------------------+-----------------------------------------------+
-| SSL/TLS (Let's Encrypt) | https://letsencrypt.org/                      |
-+-------------------------+-----------------------------------------------+
-| CRON                    | https://en.wikipedia.org/wiki/Cron            |
-+-------------------------+-----------------------------------------------+
+Core technology and component reference for the ictVoIP Billing system.
 
 .. toctree::
    :maxdepth: 3
