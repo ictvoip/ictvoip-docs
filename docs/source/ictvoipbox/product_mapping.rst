@@ -5,6 +5,9 @@ Product Mapping Configuration
    :local:
    :depth: 2
 
+.. note::
+   The ``ictvoipbox_cart`` checkout wizard supports only **one billing cycle per product**. Products used in ictVoIP Box bundles or checkout must have a single billing cycle enabled (recommended: **Monthly**). Enabling multiple billing cycles will cause the configure-product page to fall back to a raw placeholder instead of the DID selection, regulatory, and provisioning wizard.
+
 Overview
 --------
 
@@ -170,6 +173,11 @@ Best Practices
 **DIDWW Products:**
    * International DIDs (South Africa, EU, UK, etc.)
    * Regulatory countries requiring verification
-   * ⚠️ **Sandbox mode only** during alpha testing
+   * ⚠️ **Sandbox mode only** during beta testing
    * Do not use production API key yet
+
+Billing cycle limitation
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``ictvoipbox_cart`` configure-product wizard currently supports only **one billing cycle per product**. Products used in ictVoIP Box bundles or checkout must be configured with a single billing cycle (recommended: **Monthly**). Enabling multiple billing cycles (for example Monthly and Annually) will cause the checkout to fall back to the raw ``configureproduct.tpl`` placeholder instead of loading the DID selection, regulatory, and provisioning wizard.
 

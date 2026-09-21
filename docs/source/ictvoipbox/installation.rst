@@ -130,5 +130,6 @@ Create products for:
    * Module: ``ictvoipbox``
    * Product Type: ``Other``
    * Number of Seats: based on per product config
+   * Billing Cycles: enable only **one** billing cycle per product (recommended: **Monthly**). The ``ictvoipbox_cart`` configure-product wizard does not support multiple billing cycles.
 
 
