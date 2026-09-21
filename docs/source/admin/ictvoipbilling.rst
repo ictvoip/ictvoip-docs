@@ -2,6 +2,16 @@
 Installing ictVoIP Billing
 ############################
 
+.. important::
+
+   Before you install, ensure:
+
+   * You have a valid ictVoIP Billing license key.
+   * WHMCS meets the supported version and PHP requirements.
+   * You have SFTP/SSH or file-manager access to the WHMCS document
+     root.
+   * A full WHMCS database and file backup has been completed.
+
 .. tip::
 
    **Upgrading an existing installation?** See :doc:`/upgrades` for the

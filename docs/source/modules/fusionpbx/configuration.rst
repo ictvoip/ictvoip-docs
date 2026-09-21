@@ -1,6 +1,17 @@
 FusionPBX Configuration Guide
 ============================
 
+.. important::
+
+   Before configuring the FusionPBX server module, ensure:
+
+   * The FusionPBX module files are installed on WHMCS.
+   * You have a FusionPBX superadmin user in the global domain, or an
+     access hash/token.
+   * The WHMCS server public IP is whitelisted on the FusionPBX
+     ``chkcon_whitelist.conf``.
+   * A matching provider is configured in ictVoIP Billing.
+
 Overview
 --------
 

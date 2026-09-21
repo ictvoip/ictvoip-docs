@@ -2,6 +2,15 @@
 FusionPBX CDR Maintenance
 **************************
 
+.. important::
+
+   Before running CDR maintenance, ensure:
+
+   * The FusionPBX server module is installed and connected.
+   * You have SSH/SFTP or FusionPBX admin access to the source PBX.
+   * You know the source and destination tenant/domain v_id values.
+   * A CDR maintenance menu item has been created in FusionPBX.
+
 Getting Started
 ***************
 

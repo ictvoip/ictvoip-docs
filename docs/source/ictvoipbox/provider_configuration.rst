@@ -2,6 +2,18 @@
 Provider Configuration
 **********************
 
+.. important::
+
+   Before configuring ictVoIP Box providers, ensure:
+
+   * The ictVoIP Box addon is activated and licensed.
+   * You have valid API credentials for each provider (VoIP.ms, DIDWW,
+     etc.).
+   * You know the provider routing/SIP server settings you want to
+     expose to clients.
+   * Provider accounts are funded and whitelisted for API access where
+     required.
+
 .. _provider-settings:
 
 Provider Settings

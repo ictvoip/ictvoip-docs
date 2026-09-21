@@ -1,6 +1,15 @@
 FusionPBX Installation Guide
 ===========================
 
+.. important::
+
+   Before installing the FusionPBX integration files, ensure:
+
+   * You have SSH/SFTP access to the FusionPBX server.
+   * FusionPBX v5.5.x (recommended) or v5.4.x/v5.3.x is installed.
+   * A valid SSL/TLS certificate is applied to the FusionPBX FQDN.
+   * The WHMCS server IP is whitelisted in ``chkcon_whitelist.conf``.
+
 .. tip::
 
    **Upgrading an existing installation?** See :doc:`/upgrades` for the

@@ -1,6 +1,16 @@
 Tariff Management
 ================
 
+.. important::
+
+   Before working with tariffs, ensure:
+
+   * A provider is configured in ictVoIP Billing.
+   * You have a current provider rate card in CSV format.
+   * You know the country code and currency for the tariff.
+   * The CSV uses a single header row; extra header rows must be
+     removed before import.
+
 **Rate Configuration & Import Management**
 
 Tariff management allows you to import, configure, and manage rate structures from your VoIP providers. This system supports CSV import functionality and provides flexible rate management for different destinations and services.
