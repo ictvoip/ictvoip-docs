@@ -60,12 +60,6 @@ Key Features
    admin/servers.rst
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Client Services
-
-   admin/client_services.rst
-
-.. toctree::
    :maxdepth: 2
    :caption: Configuration
 

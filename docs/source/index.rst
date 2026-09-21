@@ -146,6 +146,18 @@ path is:
    admin/quickstart_admin
    admin.rst
 
+🧑‍💻 Client Services
+=====================
+
+Day-to-day provisioning and management of FusionPBX tenants,
+extensions, gateways, ACLs, and outbound routes.
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Client Services
+
+   admin/client_services
+
 🔌 Server Modules
 =================
 
