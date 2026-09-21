@@ -143,6 +143,7 @@ path is:
    :maxdepth: 3
    :caption: Administration Guide
 
+   admin/quickstart_admin
    admin.rst
 
 🔌 Server Modules
@@ -167,7 +168,23 @@ path is:
 
    extra_addons.rst
 
-🔌 API Reference
+How-To Guides
+=============
+
+The following guides provide step-by-step instructions for installing, configuring, and maintaining the complete ictVoIP Billing system:
+
+- **Quick Install:** Fast setup for ictVoIP Billing on WHMCS, including module upload, activation, and licensing.
+- **CDR Maintenance:** How to manage and maintain Call Detail Records (CDRs) for accurate billing and reporting.
+- **Additional Information:** Special notes, tips, and troubleshooting for advanced scenarios.
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Practical Guides
+
+   getting_started/quick_install
+   cdr_main/cdr_maint
+
+� API Reference
 ================
 
 ictVoIP Billing provides comprehensive API access for integration, automation, and management across all supported modules. See the sections below for quick access to API documentation for each module and general API usage.
@@ -185,24 +202,7 @@ ictVoIP Billing provides comprehensive API access for integration, automation, a
    api/billing_apis
    api/webhooks
 
-📋 How-To Guides
-================
-
-The following guides provide step-by-step instructions for installing, configuring, and maintaining the complete ictVoIP Billing system:
-
-- **Quick Install:** Fast setup for ictVoIP Billing on WHMCS, including module upload, activation, and licensing.
-- **CDR Maintenance:** How to manage and maintain Call Detail Records (CDRs) for accurate billing and reporting.
-- **Additional Information:** Special notes, tips, and troubleshooting for advanced scenarios.
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Practical Guides
-
-   getting_started/quick_install
-   cdr_main/cdr_maint
-   additional_information/additional_information
-
-📚 Reference
+�📚 Reference
 ============
 
 +-------------------------+-----------------------------------------------+
@@ -244,26 +244,10 @@ The following guides provide step-by-step instructions for installing, configuri
 +-------------------------+-----------------------------------------------+
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Core Technologies
 
-   reference/whmcs
-   reference/php
-   reference/postgresql
-   reference/mysql
-   reference/mariadb
-   reference/phpmyadmin
-   reference/fusionpbx
-   reference/vodia
-   reference/freeswitch
-   reference/litespeed
-   reference/apache
-   reference/nginx
-   reference/cpanel
-   reference/debian
-   reference/ubuntu
-   reference/ssl_tls
-   reference/cron
+   reference/overview
 
 📞 Support
 ==========

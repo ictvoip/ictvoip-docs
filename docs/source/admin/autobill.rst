@@ -1,6 +1,17 @@
 Automated Billing (Autobill)
 ============================
 
+.. important::
+
+   Before running Autobill, ensure:
+
+   * A provider and PBX server are configured and connected.
+   * Packages and tariffs are set up and linked to client products.
+   * CDRs are being collected from the PBX.
+   * The WHMCS daily CRON is scheduled.
+   * The autobill CRON is scheduled to run **before** the WHMCS daily
+     CRON.
+
 **CDR Processing & Automated Billing Configuration**
 
 The Autobill system processes call detail records (CDRs) and generates automated billing for VoIP services. This automated process ensures accurate and timely billing for all VoIP usage.

@@ -1,6 +1,17 @@
 Client Services Admin Area
 ===========================
 
+.. important::
+
+   Before using Client Services, ensure:
+
+   * A provider is configured in ictVoIP Billing.
+   * A PBX server is added and the connectivity test passes.
+   * The client has an active VoIP product linked to the PBX server
+     module.
+   * You have run a dry-run on any new provisioning action before
+     pushing it to the PBX.
+
 Overview
 --------
 

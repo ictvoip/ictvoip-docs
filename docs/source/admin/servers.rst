@@ -1,6 +1,17 @@
 Server Management
 =================
 
+.. important::
+
+   Before adding a PBX server, ensure:
+
+   * The server module files are uploaded to the correct WHMCS
+     directory.
+   * The PBX API or access hash is active and the WHMCS server IP is
+     whitelisted.
+   * A matching provider is available if the server module requires
+     provider-linked billing.
+
 **PBX Server Integration & API Configuration**
 
 The Server Management section covers the installation and configuration of PBX server modules, enabling seamless integration between your WHMCS system and various PBX platforms.

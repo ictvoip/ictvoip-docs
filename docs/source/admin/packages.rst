@@ -1,6 +1,16 @@
 Package Management
 ==================
 
+.. important::
+
+   Before configuring packages, ensure:
+
+   * At least one provider is configured in ictVoIP Billing.
+   * Tariffs are imported or custom rates are defined for that
+     provider.
+   * The correct country code is known for the package's target DID
+     range.
+
 **VoIP Service Package Configuration**
 
 Package management allows you to create and configure VoIP service packages with specific rates, features, and billing structures. This system supports both standard and custom rate configurations for flexible service offerings.

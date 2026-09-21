@@ -5,6 +5,13 @@ Admin Area
 
 The Admin Area provides comprehensive management tools for configuring and setting up the ictVoIP Billing system, including Provider management, Tariff configuration, Package Rates, and automated billing processes.
 
+.. tip::
+
+   New to ictVoIP Billing administration? Start with the
+   :doc:`/admin/quickstart_admin` for the recommended first-time setup
+   sequence, then return to this page for detailed reference on each
+   section.
+
 |
 
 .. image:: _static/images/admin/main.png

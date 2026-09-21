@@ -1,6 +1,16 @@
 Provider Management
 ==================
 
+.. important::
+
+   Before configuring a provider, ensure:
+
+   * The provider account is active and the API credentials are valid.
+   * The WHMCS server IP is whitelisted with the provider, where
+     required.
+   * You know the provider type (VoIP.ms, DIDWW, etc.) and the
+     associated routing settings.
+
 **VoIP Provider & PBX Configuration**
 
 Provider management allows you to configure VoIP providers and PBX systems, linking them to specific tariffs and package rates for automated billing and provisioning.

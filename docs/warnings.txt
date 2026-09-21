@@ -1,0 +1,1023 @@
+[91mWARNING: [autosummary] failed to import ictVoIP.
+Possible hints:
+* ValueError: not enough values to unpack (expected 2, got 1)
+* ModuleNotFoundError: No module named 'ictVoIP'
+* KeyError: 'ictVoIP'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:2: WARNING: Title underline too short.
+
+Client Portal Addon
+==================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:20: WARNING: Title underline too short.
+
+Installation
+-----------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:20: WARNING: Title underline too short.
+
+Installation
+-----------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:22: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/installation'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:22: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/configuration'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:22: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/customization'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:32: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/setup'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:32: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/themes'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:32: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/permissions'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:32: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/security'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:43: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/user_guide'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:43: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/features'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:43: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/troubleshooting'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:53: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/themes'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:53: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/widgets'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst:53: WARNING: toctree contains reference to nonexisting document 'addons/client_portal/api_integration'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin.rst:21: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:25: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:94: WARNING: Title underline too short.
+
+CRON Configuration
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:94: WARNING: Title underline too short.
+
+CRON Configuration
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:171: WARNING: Title underline too short.
+
+Manual Testing
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:171: WARNING: Title underline too short.
+
+Manual Testing
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:217: WARNING: Title underline too short.
+
+Debug Configuration
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:217: WARNING: Title underline too short.
+
+Debug Configuration
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:249: WARNING: Title underline too short.
+
+Billing Integration
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:249: WARNING: Title underline too short.
+
+Billing Integration
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:275: WARNING: Title underline too short.
+
+Performance Optimization
+-----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:275: WARNING: Title underline too short.
+
+Performance Optimization
+-----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:363: WARNING: Title underline too short.
+
+Error Handling
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:363: WARNING: Title underline too short.
+
+Error Handling
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:395: WARNING: Title underline too short.
+
+Security Considerations
+----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:395: WARNING: Title underline too short.
+
+Security Considerations
+----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:412: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\autobill.rst:412: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:14: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:43: WARNING: Title underline too short.
+
+Tariff Management
+----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:43: WARNING: Title underline too short.
+
+Tariff Management
+----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:62: WARNING: Title underline too short.
+
+Package Management
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:62: WARNING: Title underline too short.
+
+Package Management
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:89: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:135: WARNING: Title underline too short.
+
+Exclude/Suppress Filtering
+-------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:135: WARNING: Title underline too short.
+
+Exclude/Suppress Filtering
+-------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:181: WARNING: Title underline too short.
+
+Exclude from Billing
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:181: WARNING: Title underline too short.
+
+Exclude from Billing
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:238: WARNING: Title underline too short.
+
+Filter Configuration Best Practices
+---------------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:238: WARNING: Title underline too short.
+
+Filter Configuration Best Practices
+---------------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:284: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\billing_management.rst:284: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:2: WARNING: Title underline too short.
+
+CDR E.164 Validator
+==================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:52: WARNING: Title underline too short.
+
+Installation & Setup
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:52: WARNING: Title underline too short.
+
+Installation & Setup
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:79: WARNING: Title underline too short.
+
+Country Code Detection
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:79: WARNING: Title underline too short.
+
+Country Code Detection
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:140: WARNING: Title underline too short.
+
+Understanding the Results
+------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:140: WARNING: Title underline too short.
+
+Understanding the Results
+------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:153: WARNING: Title underline too short.
+
+✅ **Valid**
+~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:158: WARNING: Title underline too short.
+
+⚠️ **Wrong Country**
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:158: WARNING: Title underline too short.
+
+⚠️ **Wrong Country**
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:167: WARNING: Title underline too short.
+
+❌ **Invalid**
+~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:167: WARNING: Title underline too short.
+
+❌ **Invalid**
+~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:202: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:202: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:219: WARNING: Title underline too short.
+
+Technical Details
+----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:219: WARNING: Title underline too short.
+
+Technical Details
+----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:260: WARNING: Title underline too short.
+
+Best Practices
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:260: WARNING: Title underline too short.
+
+Best Practices
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:288: WARNING: Title underline too short.
+
+Version History
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr-e164-validator.rst:288: WARNING: Title underline too short.
+
+Version History
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr_maint.rst:: WARNING: image file not readable: _static/images/admin/cdr-import-step1-select-tenant.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr_maint.rst:: WARNING: image file not readable: _static/images/admin/cdr-import-step2-upload-csv.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr_maint.rst:: WARNING: image file not readable: _static/images/admin/cdr-import-step3-map-columns.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr_maint.rst:: WARNING: image file not readable: _static/images/admin/cdr-import-step4-confirm.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:29: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:64: WARNING: Bullet list ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:70: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:94: WARNING: Bullet list ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:100: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:114: WARNING: Bullet list ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:120: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:143: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:173: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:188: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:213: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:247: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:270: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:321: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:342: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:358: WARNING: Bullet list ends without a blank line; unexpected unindent.[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:360: ERROR: Unexpected indentation.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:412: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:434: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:458: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:570: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\client_services.rst:: WARNING: image file not readable: _static/images/admin/client-services_outbound.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:21: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:24: WARNING: Title underline too short.
+
+System Requirements
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:46: WARNING: Title underline too short.
+
+Purchase & Download
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:46: WARNING: Title underline too short.
+
+Purchase & Download
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:61: WARNING: Title underline too short.
+
+Installation Process
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:61: WARNING: Title underline too short.
+
+Installation Process
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:73: WARNING: Title underline too short.
+
+License Activation
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:73: WARNING: Title underline too short.
+
+License Activation
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:100: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:189: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:218: WARNING: Title underline too short.
+
+Server Provisioning Settings & Tests
+-----------------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:218: WARNING: Title underline too short.
+
+Server Provisioning Settings & Tests
+-----------------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:230: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\ictvoipbilling.rst:230: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:24: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:54: WARNING: Title underline too short.
+
+Package Configuration
+--------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:54: WARNING: Title underline too short.
+
+Package Configuration
+--------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:88: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:198: WARNING: Title underline too short.
+
+Custom Rate Configuration
+------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:198: WARNING: Title underline too short.
+
+Custom Rate Configuration
+------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:210: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:237: WARNING: Title underline too short.
+
+Package Types
+------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:237: WARNING: Title underline too short.
+
+Package Types
+------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:261: WARNING: Title underline too short.
+
+Rate Management
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:261: WARNING: Title underline too short.
+
+Rate Management
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:292: WARNING: Title underline too short.
+
+Best Practices
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:292: WARNING: Title underline too short.
+
+Best Practices
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:320: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:320: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:356: WARNING: Title underline too short.
+
+Latest Package Rates UI & Functionality Updates
+==============================================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:356: WARNING: Title underline too short.
+
+Latest Package Rates UI & Functionality Updates
+==============================================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\packages.rst:390: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:2: WARNING: Title underline too short.
+
+Provider Management
+==================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:24: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:39: WARNING: Title underline too short.
+
+Provider Configuration
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:39: WARNING: Title underline too short.
+
+Provider Configuration
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:67: WARNING: Title underline too short.
+
+Configuration Options
+--------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:67: WARNING: Title underline too short.
+
+Configuration Options
+--------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:90: WARNING: Title underline too short.
+
+Tariff Linking
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:90: WARNING: Title underline too short.
+
+Tariff Linking
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:117: WARNING: Title underline too short.
+
+Package Integration
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:117: WARNING: Title underline too short.
+
+Package Integration
+------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:137: WARNING: Title underline too short.
+
+Regional Configuration
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:137: WARNING: Title underline too short.
+
+Regional Configuration
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:161: WARNING: Title underline too short.
+
+Best Practices
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:161: WARNING: Title underline too short.
+
+Best Practices
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:185: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\providers.rst:185: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:25: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:49: WARNING: Title underline too short.
+
+FusionPBX Integration
+--------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:49: WARNING: Title underline too short.
+
+FusionPBX Integration
+--------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:145: WARNING: Title underline too short.
+
+Server Configuration
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:145: WARNING: Title underline too short.
+
+Server Configuration
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:167: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:218: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:246: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:285: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:296: WARNING: Title underline too short.
+
+Security Considerations
+----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:296: WARNING: Title underline too short.
+
+Security Considerations
+----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:319: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:319: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:344: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:347: WARNING: Line block ends without a blank line.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:356: WARNING: Line block ends without a blank line.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:362: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\servers.rst:369: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:2: WARNING: Title underline too short.
+
+Tariff Management
+================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:14: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:15: WARNING: Line block ends without a blank line.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:28: WARNING: Title underline too short.
+
+Tariff Import Process
+--------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:28: WARNING: Title underline too short.
+
+Tariff Import Process
+--------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:63: WARNING: Title underline too short.
+
+CSV Mapping Requirements
+-----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:63: WARNING: Title underline too short.
+
+CSV Mapping Requirements
+-----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:83: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:106: WARNING: Title underline too short.
+
+Import Process
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:106: WARNING: Title underline too short.
+
+Import Process
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:139: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:204: WARNING: Title underline too short.
+
+Tariff Management
+----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:204: WARNING: Title underline too short.
+
+Tariff Management
+----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:230: WARNING: Title underline too short.
+
+Best Practices
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:230: WARNING: Title underline too short.
+
+Best Practices
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:262: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:262: WARNING: Title underline too short.
+
+Troubleshooting
+--------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\api.rst:4: WARNING: autosummary: failed to import ictVoIP.
+Possible hints:
+* ValueError: not enough values to unpack (expected 2, got 1)
+* ModuleNotFoundError: No module named 'ictVoIP'
+* KeyError: 'ictVoIP'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:69: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:79: WARNING: Literal block ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:85: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:118: WARNING: Literal block ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:124: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:127: WARNING: Literal block ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:128: WARNING: Line block ends without a blank line.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:132: WARNING: Literal block ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:140: WARNING: Line block ends without a blank line.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:143: WARNING: Line block ends without a blank line.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientarea.rst:7: WARNING: toctree contains reference to nonexisting document 'clientarea/clientareavodia'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientarea.rst:7: WARNING: toctree contains reference to nonexisting document 'clientarea/clientarealesnet'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst:: WARNING: image file not readable: _static/images/logo.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst:: WARNING: image file not readable: _static/images/logo.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst:877: WARNING: image file not readable: _static/images/logo.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst:877: WARNING: image file not readable: _static/images/logo.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst:877: WARNING: image file not readable: _static/images/logo.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst:877: WARNING: image file not readable: _static/images/logo.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst:721: WARNING: download file not readable: C:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\_downloads\sample.py[39;49;00m
+[91msource/admin/servers.rst:5: WARNING: Line block ends without a blank line.[39;49;00m
+[91msource/admin/servers.rst:14: WARNING: Line block ends without a blank line.[39;49;00m
+[91msource/admin/servers.rst:20: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91msource/admin/servers.rst:27: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\firewall.rst:2: WARNING: Title underline too short.
+
+Firewall & Network Access Overview
+=================================[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\firewall.rst:18: ERROR: Unexpected indentation.[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\firewall.rst:22: ERROR: Unexpected indentation.[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\firewall.rst:26: ERROR: Unexpected indentation.[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\firewall.rst:49: ERROR: Unexpected indentation.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started.rst:14: WARNING: Title underline too short.
+
+Key Features
+-----------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started.rst:14: WARNING: Title underline too short.
+
+Key Features
+-----------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started.rst:27: WARNING: Title underline too short.
+
+Supported Versions
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started.rst:27: WARNING: Title underline too short.
+
+Supported Versions
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started.rst:35: WARNING: Title underline too short.
+
+Installation Process
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started.rst:35: WARNING: Title underline too short.
+
+Installation Process
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started.rst:53: WARNING: toctree contains reference to nonexisting document 'getting_started/training'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started.rst:53: WARNING: toctree contains reference to nonexisting document 'getting_started/languages'[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started\backup.rst:19: ERROR: Unexpected indentation.[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started\backup.rst:27: ERROR: Unexpected indentation.[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started\backup.rst:31: ERROR: Unexpected indentation.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started\backup.rst:32: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[31mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started\restore.rst:72: ERROR: Unexpected indentation.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started\restore.rst:73: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\ictsipreg\ictsipreg.rst:1: WARNING: Title overline too short.
+
+*******************************
+ictSIP Registration Status/Alerts
+*******************************[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\ictsipreg\ictsipreg.rst:54: WARNING: Title underline too short.
+
+Log View and Export to Excel or CSV
+##################################[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\ictsipreg\ictsipreg.rst:106: WARNING: Title underline too short.
+
+Log View and Export to Excel or CSV
+##################################[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\ictvoipbox\overview.rst:: WARNING: image file not readable: _static/images/admin/ictvoipbox_dashboard3.png[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\ictvoipbox\provider_configuration.rst:257: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:14: WARNING: Title underline too short.
+
+**ictVoIP Billing Management System**
+------------------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:25: WARNING: Title underline too short.
+
+🎬 Watch the Introduction Video
+------------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:25: WARNING: Title underline too short.
+
+🎬 Watch the Introduction Video
+------------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:75: WARNING: Title underline too short.
+
+✨ Key Features
+**************[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:94: WARNING: Title underline too short.
+
+🔧 Compatibility
+***************[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:94: WARNING: Title underline too short.
+
+🔧 Compatibility
+***************[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:152: WARNING: toctree contains reference to nonexisting document 'modules/lesnet'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:152: WARNING: toctree contains reference to nonexisting document 'modules/providers'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:152: WARNING: toctree contains reference to nonexisting document 'modules/custom_integration'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:165: WARNING: toctree contains reference to nonexisting document '  :maxdepth: 3'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:165: WARNING: toctree contains reference to nonexisting document '  :caption: Optional Addons & Apps'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:165: WARNING: toctree contains reference to nonexisting document '  extra_addons'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:165: WARNING: toctree contains reference to nonexisting document 'How-To Guides'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:172: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:192: WARNING: toctree contains reference to nonexisting document 'api/overview'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:192: WARNING: toctree contains reference to nonexisting document 'modules/providers'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:192: WARNING: toctree contains reference to nonexisting document 'api/whmcs_integration'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:192: WARNING: toctree contains reference to nonexisting document 'api/pbx_apis'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:192: WARNING: toctree contains reference to nonexisting document 'api/billing_apis'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:192: WARNING: toctree contains reference to nonexisting document 'api/webhooks'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:206: WARNING: Title underline too short.
+
+�📚 Reference
+============[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:206: WARNING: Title underline too short.
+
+�📚 Reference
+============[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:328: WARNING: toctree contains reference to nonexisting document 'support/faq'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index.rst:328: WARNING: toctree contains reference to nonexisting document 'support/contact'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index_old.rst:5: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index_old.rst:6: WARNING: Line block ends without a blank line.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx.rst:2: WARNING: Title underline too short.
+
+FusionPBX Integration
+====================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx.rst:16: WARNING: Title underline too short.
+
+Key Features
+-----------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx.rst:16: WARNING: Title underline too short.
+
+Key Features
+-----------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx.rst:36: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx.rst:52: WARNING: Title underline too short.
+
+Supported Versions
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx.rst:52: WARNING: Title underline too short.
+
+Supported Versions
+-----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx.rst:63: WARNING: Title underline too short.
+
+Architecture
+-----------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx.rst:63: WARNING: Title underline too short.
+
+Architecture
+-----------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\api_endpoints.rst:2: WARNING: Title underline too short.
+
+FusionPBX API Endpoints
+======================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\api_endpoints.rst:108: WARNING: Explicit markup ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\api_endpoints.rst:311: WARNING: Title underline too short.
+
+Error Handling
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\api_endpoints.rst:311: WARNING: Title underline too short.
+
+Error Handling
+-------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\api_endpoints.rst:351: WARNING: Title underline too short.
+
+Security Considerations
+----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\api_endpoints.rst:351: WARNING: Title underline too short.
+
+Security Considerations
+----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:2: WARNING: Title underline too short.
+
+FusionPBX Configuration Guide
+============================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:10: WARNING: Title underline too short.
+
+WHMCS Module Configuration
+-------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:10: WARNING: Title underline too short.
+
+WHMCS Module Configuration
+-------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:15: WARNING: Title underline too short.
+
+Module Installation
+~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:35: WARNING: Title underline too short.
+
+Server Configuration
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:35: WARNING: Title underline too short.
+
+Server Configuration
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:59: WARNING: Title underline too short.
+
+Product Configuration
+~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:59: WARNING: Title underline too short.
+
+Product Configuration
+~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:124: WARNING: Title underline too short.
+
+API Configuration
+----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:124: WARNING: Title underline too short.
+
+API Configuration
+----------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:127: WARNING: Title underline too short.
+
+Authentication Setup
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:237: WARNING: Title underline too short.
+
+Database Configuration
+~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:237: WARNING: Title underline too short.
+
+Database Configuration
+~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:265: WARNING: Title underline too short.
+
+System Configuration
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:265: WARNING: Title underline too short.
+
+System Configuration
+-------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:559: WARNING: Title underline too short.
+
+Billing Integration Setup
+------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:559: WARNING: Title underline too short.
+
+Billing Integration Setup
+------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:562: WARNING: Title underline too short.
+
+WHMCS Product Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:606: WARNING: Title underline too short.
+
+Email Templates
+~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:606: WARNING: Title underline too short.
+
+Email Templates
+~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:627: WARNING: Title underline too short.
+
+Monitoring and Maintenance
+-------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:627: WARNING: Title underline too short.
+
+Monitoring and Maintenance
+-------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:630: WARNING: Title underline too short.
+
+Health Checks
+~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:651: WARNING: Title underline too short.
+
+Log Monitoring
+~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:651: WARNING: Title underline too short.
+
+Log Monitoring
+~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:672: WARNING: Title underline too short.
+
+Backup Configuration
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:672: WARNING: Title underline too short.
+
+Backup Configuration
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:693: WARNING: Title underline too short.
+
+Security Configuration
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:693: WARNING: Title underline too short.
+
+Security Configuration
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:2: WARNING: Title underline too short.
+
+FusionPBX Installation Guide
+===========================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:223: WARNING: Title underline too short.
+
+Step 4: Configure Database (for Custom Login Page)
+~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:223: WARNING: Title underline too short.
+
+Step 4: Configure Database (for Custom Login Page)
+~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:254: WARNING: Title underline too short.
+
+Step 5: Restart Services
+~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:254: WARNING: Title underline too short.
+
+Step 5: Restart Services
+~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:343: WARNING: Title underline too short.
+
+4. Test WHMCS Integration (Optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:343: WARNING: Title underline too short.
+
+4. Test WHMCS Integration (Optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:352: WARNING: Title underline too short.
+
+Troubleshooting Installation
+---------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:352: WARNING: Title underline too short.
+
+Troubleshooting Installation
+---------------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:358: WARNING: Title underline too short.
+
+Permission Errors
+^^^^^^^^^^^^^^^^[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:370: WARNING: Title underline too short.
+
+Database Connection Issues
+^^^^^^^^^^^^^^^^^^^^^^^^^[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:370: WARNING: Title underline too short.
+
+Database Connection Issues
+^^^^^^^^^^^^^^^^^^^^^^^^^[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:381: WARNING: Title underline too short.
+
+Service Restart Failures
+^^^^^^^^^^^^^^^^^^^^^^^[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:381: WARNING: Title underline too short.
+
+Service Restart Failures
+^^^^^^^^^^^^^^^^^^^^^^^[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:394: WARNING: Title underline too short.
+
+Theme Not Loading
+^^^^^^^^^^^^^^^^[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\installation.rst:394: WARNING: Title underline too short.
+
+Theme Not Loading
+^^^^^^^^^^^^^^^^[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:2: WARNING: Title underline too short.
+
+FusionPBX Troubleshooting Guide
+==============================[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:13: WARNING: Title underline too short.
+
+Authentication Failures
+~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:43: WARNING: Title underline too short.
+
+API Endpoint Issues
+~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:43: WARNING: Title underline too short.
+
+API Endpoint Issues
+~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:74: WARNING: Title underline too short.
+
+Database Connection Problems
+~~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:74: WARNING: Title underline too short.
+
+Database Connection Problems
+~~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:106: WARNING: Title underline too short.
+
+Theme and Interface Issues
+~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:106: WARNING: Title underline too short.
+
+Theme and Interface Issues
+~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:140: WARNING: Title underline too short.
+
+FreeSWITCH Communication Problems
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:140: WARNING: Title underline too short.
+
+FreeSWITCH Communication Problems
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:172: WARNING: Title underline too short.
+
+CDR Data Collection Issues
+~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:172: WARNING: Title underline too short.
+
+CDR Data Collection Issues
+~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:209: WARNING: Title underline too short.
+
+System Health Check Script
+~~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:250: WARNING: Title underline too short.
+
+System Logs
+~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:299: WARNING: Title underline too short.
+
+Performance Monitoring
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:299: WARNING: Title underline too short.
+
+Performance Monitoring
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:302: WARNING: Title underline too short.
+
+System Resources
+~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:344: WARNING: Title underline too short.
+
+Database Performance
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:344: WARNING: Title underline too short.
+
+Database Performance
+~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:379: WARNING: Title underline too short.
+
+Preventive Maintenance
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:379: WARNING: Title underline too short.
+
+Preventive Maintenance
+---------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:382: WARNING: Title underline too short.
+
+Regular Maintenance Tasks
+~~~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:406: WARNING: Title underline too short.
+
+Backup and Recovery
+~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:406: WARNING: Title underline too short.
+
+Backup and Recovery
+~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:439: WARNING: Title underline too short.
+
+Security Considerations
+----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:439: WARNING: Title underline too short.
+
+Security Considerations
+----------------------[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:442: WARNING: Title underline too short.
+
+Access Control
+~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:466: WARNING: Title underline too short.
+
+Monitoring and Alerting
+~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\troubleshooting.rst:466: WARNING: Title underline too short.
+
+Monitoring and Alerting
+~~~~~~~~~~~~~~~~~~~~~~[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\vodia.rst:16: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\vodia.rst:141: WARNING: Block quote ends without a blank line; unexpected unindent.[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\additional_information.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\additional_information\additional_information.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\addons\client_portal.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\admin.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\cdr_maint.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\api.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\autosuspend_testing.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide\doc_guide.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\index_old.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\packages\packages.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\providers\providers.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\servers\servers.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\tariffs\tariffs.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\usage.rst: WARNING: document isn't included in any toctree[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\admin\tariffs.rst:293: WARNING: Failed to create a cross reference. A title or caption not found: 'assigning-custom-rates'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:35: WARNING: Failed to create a cross reference. A title or caption not found: 'client_services_manage_tenant_domains'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\clientadmin\clientadmin.rst:39: WARNING: Failed to create a cross reference. A title or caption not found: 'client_services_provision_extensions'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\doc_guide.rst:774: WARNING: citation not found: CIT2002[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started\backup.rst:91: WARNING: unknown document: 'getting_started/restore'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\getting_started\lets_encrypt.rst:407: WARNING: Pygments lexer name 'env' is not known[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\ictvoipbox\client_checkout.rst:151: WARNING: undefined label: 'document-upload-phase'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\ictvoipbox\client_checkout.rst:264: WARNING: undefined label: 'admin-queue-management'[39;49;00m
+[91mC:\Users\jim\Documents\PHP Projects\ictVoIP Canada\ictVoIP_ReadTheDocs\docs\source\modules\fusionpbx\configuration.rst:53: WARNING: undefined label: 'admin/servers:setting a default fusionpbx server'[39;49;00m
