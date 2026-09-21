@@ -158,25 +158,14 @@ path is:
    modules/providers
    modules/custom_integration
 
-👥 Client Management
-====================
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Client Features
-
-   clientadmin.rst
-   clientarea.rst
-   extra_addons.rst
-
 🧩 Optional Addons & Apps
 =========================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Optional Addons & Apps
 
-   ictvoipbox/ictvoipbox
+   extra_addons.rst
 
 🔌 API Reference
 ================

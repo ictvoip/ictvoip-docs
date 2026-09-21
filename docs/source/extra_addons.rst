@@ -1,6 +1,6 @@
-**********************
-Optional Addons & Apps 
-**********************
+********
+Overview
+********
 
 Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services, Support and Billing.
 
@@ -9,9 +9,11 @@ Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services,
   :glob:
 
   ictvoipbox/ictvoipbox.rst
-  addons/ictpopupmanager.rst
   themes/custom_themes.rst
+  addons/ictpopupmanager.rst
   cdr_main/cdr_maint.rst
   ictsipreg/ictsipreg.rst
-  clientarea/clientareaproviders.rst#faxing
-  admin/servers.rst#server-widget
+  extra_addons/sip_faxing.rst
+  clientadmin.rst
+  clientarea/clientarea.rst
+  extra_addons/server_widget.rst

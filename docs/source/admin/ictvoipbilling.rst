@@ -117,6 +117,69 @@ System Health Check
 
 After installing and activating the ictVoIP Billing addon, you can run the System Health Check to verify proper configuration and setup of the addon and server modules.
 
+The health check is run from the ictVoIP Billing admin dashboard by clicking the **ictVoIP Health Check** button at the top of the Provider/PBX selection screen.
+
+What it checks
+~~~~~~~~~~~~~~
+
+The report gathers information across these areas:
+
+* **WHMCS environment** — WHMCS version, PHP and ionCube versions, active ionCube loaders, and required PHP extensions.
+* **ictVoIP Billing addon** — version, license key status, and activation state.
+* **Database** — required ``mod_ictvoipbilling_*`` tables, custom client fields, country codes, and the Low Balance Alert email template.
+* **PBX server modules** — whether the FusionPBX/FS PBX WHMCS server modules are installed and their versions.
+* **FusionPBX server APIs** — HTTPS probes against the configured PBX servers to verify that the WHMCS IP is whitelisted and that each API endpoint (destinations, outbound, dialplans, access controls) responds with a version string.
+
+JSON version probe
+~~~~~~~~~~~~~~~~~~
+
+You can query the health-check script itself for a lightweight JSON status:
+
+``GET /modules/addons/ictvoipbilling/healthcheck.php?action=version``
+
+It returns:
+
+.. code-block:: json
+
+   {
+     "name": "ictvoipbilling healthcheck",
+     "version": "1.4.x",
+     "build": "r04 2026-07-02 17:40",
+     "success": true
+   }
+
+This is useful for uptime monitoring and automated probes.
+
+CSV export
+~~~~~~~~~~
+
+When logged in as an admin, the health-check page includes an **Export Report (CSV)** button.
+
+The exported CSV is the standard format used by ictVoIP Canada support for technical troubleshooting. When opening a support ticket, generate the full CSV report and attach it to the request.
+
+* **Full export** — ``action=healthcheck_export`` downloads ``ictvoip_healthcheck_report.csv`` with the report date, WHMCS version, addon version, server-module versions, and one row per check (Section, Check, Status, Details). This is the report ictVoIP Canada support will normally ask for.
+* **Minimal export** — ``action=healthcheck_export_min`` downloads a tiny CSV used by support to quickly verify that the export pipeline itself works.
+
+Show Diagnostics
+~~~~~~~~~~~~~~~~
+
+Click **Show Diagnostics** on the health-check page to include extra technical detail in the report. This can be helpful when troubleshooting 500 errors or support requests.
+
+Portable health check
+~~~~~~~~~~~~~~~~~~~~~
+
+The ``modules/addons/ictvoipbilling/healthcheck_portable.php`` file can be opened directly in a browser. It is designed for older or partially-installed deployments where the addon cannot fully load through WHMCS.
+
+The portable check attempts to:
+
+1. Locate the WHMCS ``configuration.php`` file and initialise the database connection.
+2. Read the WHMCS version from ``tblconfiguration``.
+3. Verify the ictVoIP Billing addon is active and read the stored license key.
+4. Check for the required custom client fields and the ``mod_ictvoipbilling_country_codes`` table.
+5. Probe the configured FusionPBX servers over HTTPS/HTTP and report reachable API endpoints.
+
+Use the portable health check when the normal health-check page fails to load because of a fatal error or a missing dependency.
+
 |
 
 .. image:: ../_static/images/admin/healthcheck_new2.png

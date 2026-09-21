@@ -32,6 +32,21 @@ Key Features
 
 Details for each area are provided in the sections below.
 
+Version Notification Banner
+---------------------------
+
+Starting with ictVoIP Billing v1.4.1, a version-check banner appears at the top of the addon admin pages. Each time an admin page loads, the addon queries the licensing endpoint and compares the installed version with the latest available release.
+
+The banner can show three states:
+
+* **Green (success)** — the installed version matches the latest released version.
+* **Yellow (warning)** — a newer version is available. The banner displays the installed and latest versions and includes links to download the update and view the changelog.
+* **Blue (info)** — the installed version is newer than the version reported by the licensing endpoint.
+
+The result of the version check is cached in the ``tbladdonmodules`` table (``update_available``, ``current_version_info``, and ``last_version_check`` settings) and is updated on each page load.
+
+To hide the banner, keep the addon up to date with the latest release.
+
 .. seealso::
 
    Upgrade procedures for the ictVoIP Billing addon and FusionPBX module are

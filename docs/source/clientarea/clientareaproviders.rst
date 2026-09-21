@@ -42,6 +42,8 @@ CDRs can be viewed by billing period. A CSV export can be downloaded for the sel
         
 |
 
+.. _clientarea-faxing:
+
 Faxing
 *********************
 

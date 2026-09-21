@@ -1,6 +1,6 @@
-**************************
-ictSIP Registration Status
-**************************
+*******************************
+ictSIP Registration Status/Alerts
+*******************************
 
 Track and alert Admins on SIP registration drops and recieve email alerts on key registrations. Retain logs for any number of days. Assign one or multiple admins to a registration account. Emails for registration lost sent once with detailed information and then upon a restored registration.
 
@@ -158,50 +158,6 @@ Adjust the default email template for your company needs
 
 
 
-**********
-SIP Faxing
-**********
+.. seealso::
 
-Fax Panel
-*********
-
-Fax Panel allows for listing of recieved faxes by billing period, download fax PDF attachment, email Fax to another user, assigning emails or groups to receive Faxes, and Send Faxes with attachments.
-
-
-|
-
- .. image:: ../_static/images/clientarea/FaxPanel.png 
-        :scale: 40%
-        :align: center
-        :alt: Client CDRs
-        
-|
-
-Fax View/Email
-##############
-
-Fax list with ability to email to users, download the PDF fax as an attachment and assign users to receive Faxes via adding email address or groups. Fax Send.
-
-
-|
-
- .. image:: ../_static/images/clientarea/faxlist.png 
-        :scale: 40%
-        :align: center
-        :alt: Client CDRs
-        
-|
-
-Sending Faxes
-#############
-
-Send Fax using Attachments. Supported types: pdf, txt, jpg, gif, png, tif
-
-|
-
- .. image:: ../_static/images/clientarea/sendfax.png 
-        :scale: 40%
-        :align: center
-        :alt: Client CDRs
-        
-|
+   For SIP faxing features, see :doc:`/extra_addons/sip_faxing`.
