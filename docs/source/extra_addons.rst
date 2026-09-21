@@ -15,5 +15,7 @@ Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services,
   ictsipreg/ictsipreg.rst
   extra_addons/sip_faxing.rst
   clientadmin/clientadmin.rst
+  voiprecordings/voiprecordings.rst
+  ictvoiptranscribe/ictvoiptranscribe.rst
   clientarea/clientarea.rst
   extra_addons/server_widget.rst
