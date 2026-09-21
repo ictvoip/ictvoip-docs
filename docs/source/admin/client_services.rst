@@ -26,15 +26,17 @@ Core Tools Index
 ~~~~~~~~~~~~~~~~
 
 - :ref:`Manage Tenant Domains <client_services_manage_tenant_domains>`
+- :ref:`Manage Tenant Users & API Keys <client_services_manage_tenant_users>`
 - :ref:`Provision Extensions <client_services_provision_extensions>`
 - :ref:`Configure Gateways <client_services_configure_gateways>`
 - :ref:`Manage ACLs <client_services_manage_acls>`
 - :ref:`Manage Destination Routes <client_services_manage_destination_routes>`
 - :ref:`Manage Outbound Routes <client_services_manage_outbound_routes>`
-- :ref:`Access Control Manager <client_services_access_control_manager>`
 - :ref:`Quick Create Tenant <client_services_quick_create_tenant>`
 - :ref:`View Logs <client_services_view_logs>`
 - :ref:`Settings (Server Provisioning Settings) <client_services_settings_server_provisioning>`
+- :ref:`Dry-Run Provisioning <client_services_dry_run>`
+- :ref:`Template Management <client_services_template_management>`
 
 
 Typical workflow: choose a provider/PBX at the top of the screen, then
@@ -60,6 +62,36 @@ Typical workflow: search for or select an existing tenant, review its
 limits and description, then edit or sync details as needed. Use the
 "add" or "import" actions when onboarding a new customer or bringing
 an existing FusionPBX tenant under management.
+
+.. warning::
+
+   Deleting a tenant in Client Services cascades to the local FusionPBX
+   user records stored in WHMCS. When the tenant is deleted, all
+   ``mod_ictvoipbilling_fpbx_users`` entries linked to that tenant are
+   also removed. If the **Delete from FusionPBX** option is selected,
+   the domain and any selected associated objects (such as extensions)
+   are removed from the PBX as well.
+
+.. _client_services_manage_tenant_users:
+
+* **Manage Tenant Users & API Keys** — Create and manage users inside a
+  FusionPBX tenant domain. When adding a user, you can choose the group
+  (admin, agent, or user), the user type, the status, and whether to
+  generate a FusionPBX API key. The API key is displayed after the user
+  is created successfully and can be used for API integrations or
+  provisioning scripts.
+||
+
+.. image:: ../_static/images/admin/client-services_tenant_users.png
+   :width: 600px
+   :align: center
+   :alt: Client services
+||
+
+Typical workflow: open a tenant, click to add a user, enter the username
+and other details, select the desired group and type, check **Generate
+API Key** if API access is required, then save. The new user is created
+in the FusionPBX tenant and the API key is shown in the form.
 
 .. _client_services_provision_extensions:
 
@@ -213,23 +245,51 @@ FusionPBX.
 Manage ACLs
 ~~~~~~~~~~~
 
-Review and adjust provider-side access control lists that determine 
-which source IP addresses are allowed to reach the PBX or provider 
-services. Use this when adding or modifying PBX/provider ACL entries 
-that relate to your WHMCS or management hosts.
+Review and adjust provider-side Access Control Lists (ACLs) that
+determine which source IP addresses are allowed to reach the PBX or
+provider services. The ACL Manager shows named lists of nodes, each of
+which specifies an action, CIDR, and optional description.
 
-|
+||
 
 .. image:: ../_static/images/admin/client-services_acl.png
    :width: 800px
    :align: center
    :alt: Client services
-|
+||
 
-Typical workflow: review the current list of provider/PBX ACL
-addresses, compare it against your WHMCS and management hosts, then
-add or remove entries so the provider-side ACLs reflect your intended
-access policy.
+ACL list and node management
+****************************
+
+An ACL is a named list of **nodes**. Each node specifies:
+
+* **Action** — ``allow`` or ``deny`` traffic from the matching CIDR.
+* **CIDR** — the source IP address or network (for example,
+  ``203.0.113.0/24`` or ``198.51.100.10``).
+* **Description** — an optional note explaining the entry.
+
+The ACL Manager shows all lists in a DataTable. Select a list to view or
+edit its nodes. From the list view you can:
+
+* **Add Node** — create a new allow/deny entry.
+* **Edit Node** — change the CIDR, action, or description.
+* **Delete Node** — remove an entry from the WHMCS-side list.
+* **Sync from FusionPBX** — download the current list contents from the
+  PBX into WHMCS.
+* **Push to FusionPBX** — upload the WHMCS list to the PBX so it is
+  enforced. Use the dry-run preview first.
+* **Copy** — duplicate a list to another name or server.
+* **Apply to Server** — copy a list from one FusionPBX server to another.
+
+Typical workflow
+****************
+
+1. Click **Add List** and give it a name and description.
+2. Add the required nodes (CIDRs and actions).
+3. Save the WHMCS-side configuration.
+4. Run **Push to FusionPBX** with the dry-run preview to see what would
+   change.
+5. If the plan looks correct, run the live push to enforce the policy.
 
 .. _client_services_manage_destination_routes:
 
@@ -258,9 +318,9 @@ numbers are moved between tenants or new DIDs are activated.
 Manage Outbound Routes
 ~~~~~~~~~~~~~~~~~~~~~~
 
-View, create, edit, and assign FusionPBX outbound dialplan routes for
-tenants. Use this to keep outbound routing and billing in sync when
-numbers or upstream carriers change.
+The **Outbound** tab in the **Destinations** view lists the FusionPBX
+outbound dialplan routes for the selected server and tenant. Use it to
+audit, edit, assign, and sync outbound routing without leaving WHMCS.
 
 ||
 
@@ -270,30 +330,58 @@ numbers or upstream carriers change.
    :alt: Client services
 ||
 
-Typical workflow: select the provider and tenant, review the existing
-outbound routes, add or edit dialplan XML and gateway assignments, then
-apply changes to the FusionPBX server.
+List and search
+***************
 
-.. _client_services_access_control_manager:
+Outbound routes are shown in a DataTable with the route name, dialplan
+expression, order, gateway, enabled state, and assignment status. Use
+the search box and pagination to find routes in large tenant
+configurations.
 
-Access Control Manager
-~~~~~~~~~~~~~~~~~~~~~~
+View route details and XML
+**************************
 
-Create and manage Access Control Lists (ACLs) locally. Use this to
-define which source IP addresses can reach the PBX or provider services,
-and sync or push lists to FusionPBX when needed.
+The **View** button opens a modal with two tabs:
 
-||
+* **Details** — expression, order, description, gateway, and creation
+time.
+* **XML** — the raw FusionPBX dialplan XML. If XML is not stored in the
+  WHMCS cache, it is fetched on demand from the PBX via
+  ``get_outbound_xml``.
 
-.. image:: ../_static/images/admin/client-services_access_control.png
-   :width: 800px
-   :align: center
-   :alt: Client services
-||
+This is useful for support and debugging, or to confirm how the route is
+structured before making changes.
 
-Typical workflow: add an ACL list, define the allowed CIDRs for each
-entry, save the WHMCS-side configuration, then push the list to the
-selected FusionPBX server to enforce the policy.
+Edit an outbound route
+**********************
+
+The **Edit** button opens a modal that lets you update:
+
+* **Dialplan Expression** — the regex used to match dialed numbers.
+* **Order** — the dialplan processing order.
+* **Description** — an optional note.
+* **Enabled** — whether the route is active.
+
+Saving calls ``update_outbound`` and, where possible, applies the change
+to FusionPBX automatically. Gateway changes are not accepted through the
+Edit modal to prevent accidental misrouting.
+
+Assign and sync
+***************
+
+* **Assign** — link an unassigned route to a WHMCS client service.
+* **Unassign** — remove the WHMCS client service link.
+* **Sync from FusionPBX** — import routes that exist on the PBX but are
+  not yet in the WHMCS cache.
+* **Create Template** — save the settings of an existing route as a
+  reusable template.
+
+XML editing
+***********
+
+While the admin UI exposes a read-only **XML** view, the backend
+endpoint ``save_outbound_xml`` can be used by support to update the stored
+dialplan XML directly. For routine changes, use the Edit modal instead.
 
 .. _client_services_quick_create_tenant:
 
@@ -362,6 +450,95 @@ Typical workflow: select the PBX server, load the stored credentials,
 update passwords or access hashes if they have changed, then run the
 credential and whitelist tests to verify connectivity before enabling
 or resuming automated provisioning.
+
+.. _client_services_dry_run:
+
+Dry-Run Provisioning
+--------------------
+
+Several Client Services tools support a **dry-run** or **preview** mode
+that shows exactly what would change on the FusionPBX server before any
+write is committed. Use this to verify that a sync, push, or provision
+action will have the intended effect and to catch mismatches before they
+affect production traffic.
+
+What dry-run can show
+~~~~~~~~~~~~~~~~~~~~~
+
+The preview typically displays:
+
+* **Items to be added** — new routes, gateways, ACL nodes, or
+  destinations that do not yet exist on the PBX.
+* **Items to be updated** — existing records whose XML, expression,
+  order, or CIDR would change.
+* **Items to be deleted** — records present on the PBX but missing from
+  the WHMCS source.
+* **Conflicts or errors** — duplicate names, missing dependencies, or
+  permission issues that would block the action.
+
+Where dry-run is available
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **Gateways** — use the preview before saving or pushing a gateway
+  template to a tenant.
+* **Destination Routes (Inbound)** — preview DID/sync changes before
+  applying them.
+* **Manage ACLs** — preview ACL push and copy operations before they are
+  written to FusionPBX.
+
+Each preview panel returns a JSON or formatted plan. Review the plan,
+close the preview, adjust the source record if needed, then run the
+action again with the live/push option.
+
+.. _client_services_template_management:
+
+Template Management
+-------------------
+
+Gateways, destinations, and outbound routes all support reusable
+templates. Templates store variables, XML fragments, matching
+expressions, and other settings so you can apply a known-good
+configuration to new tenants or services without recreating it each time.
+
+Available template actions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **Export All Templates** — download the entire template library for the
+  current object type (gateways, destinations, or outbound routes) as a
+  JSON file. Use this to back up an existing ictVoIP Billing
+  installation, or to migrate the templates to a new WHMCS install and
+  reuse them there.
+
+* **Import Templates** — upload a previously exported JSON file to create
+  or overwrite templates in bulk. The import accepts ``.json`` files
+  produced by the export function.
+
+* **Copy** — duplicate an existing template. You are prompted for a new
+  display name and, where applicable, a new system name. The copy retains
+  all variables and XML from the original.
+
+* **Rename** — change the display name and/or system name of an existing
+  template. This does not affect templates already applied to services;
+  it only updates the library entry.
+
+* **Delete** — remove a template from the library. This does not delete
+  gateways, destinations, or routes already pushed to FusionPBX.
+
+* **Import into Template** — pull an existing object from the FusionPBX
+  server into the WHMCS template library. This is useful when a gateway,
+  destination, or outbound route was created directly on the PBX and you
+  want to reuse it as a template for future assignments.
+
+Typical workflow
+~~~~~~~~~~~~~~~~
+
+1. Build or import the templates you need in the **Gateways**, **Inbound
+   DIDs**, or **Outbound** template view.
+2. Use **Export All Templates** to save a backup before making bulk
+   changes.
+3. Apply templates by selecting them when configuring a tenant or client
+   service, then review with **Dry-Run Provisioning** before pushing to
+   FusionPBX.
 
 Dashboard Statistics
 --------------------

@@ -233,7 +233,7 @@ Troubleshooting
 
 * **Module not appearing:** Check file permissions and ensure all files were copied correctly
 * **License activation failed:** Verify the license key is correct and has not expired
-* **Database errors:** Ensure the country codes table was imported successfully
+* **Database errors:** Ensure the country codes table was created and initialized successfully
 * **Access denied:** Check that your admin user has the correct access control group assigned
 
 **Support:**
