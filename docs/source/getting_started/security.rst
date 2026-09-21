@@ -5,7 +5,7 @@ Overview
 --------
 
 This guide provides a high-level overview of security best practices
-for deploying ictVoIP Billing v1.4.0 with WHMCS and supported PBX
+for deploying ictVoIP Billing v1.5.0 with WHMCS and supported PBX
 modules such as FusionPBX and Vodia. It focuses on concepts and
 checklists rather than environment-specific implementation details.
 

@@ -20,7 +20,7 @@ Administration of server modules and billing would be setup with client products
 FusionPBX Product Assignment
 *****************************
 
-In ictVoIP Billing v1.4.0, FusionPBX tenant and extension details are
+In ictVoIP Billing v1.5.0, FusionPBX tenant and extension details are
 managed entirely through the **Client Services Admin Area**. The
 **Dedicated IP** and **Domain** fields on the client product/service
 page are read-only and locked by the WHMCS admin interface; direct

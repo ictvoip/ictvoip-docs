@@ -15,7 +15,7 @@ FusionPBX Configuration Guide
 Overview
 --------
 
-This guide covers the configuration of ictVoIP Billing integration with FusionPBX, including WHMCS server/module setup, API configuration, and system settings. Together with the :doc:`installation` guide and the high-level :doc:`/applications/provision` overview, this page explains how to wire FusionPBX into ictVoIP Billing v1.4.0.
+This guide covers the configuration of ictVoIP Billing integration with FusionPBX, including WHMCS server/module setup, API configuration, and system settings. Together with the :doc:`installation` guide and the high-level :doc:`/applications/provision` overview, this page explains how to wire FusionPBX into ictVoIP Billing v1.5.0.
 
 WHMCS Module Configuration
 -------------------------

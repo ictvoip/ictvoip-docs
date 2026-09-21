@@ -112,7 +112,7 @@ You may contact us for a limited Trial for your FusionPBX and WHMCS. Please be s
 🚀 Installation & Setup
 =======================
 
-For new deployments of **ictVoIP Billing v1.4.0**, a typical onboarding
+For new deployments of **ictVoIP Billing v1.5.0**, a typical onboarding
 path is:
 
 * Start with :doc:`getting_started` and the

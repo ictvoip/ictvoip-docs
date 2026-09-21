@@ -18,7 +18,7 @@ Overview
 
 The Billing Management system is where you prepare and control how
 ictVoIP Billing turns raw CDRs into billable usage. In a typical
-v1.4.0 deployment you will:
+v1.5.0 deployment you will:
 
 * Import and maintain **tariffs** that define per-destination rates.
 * Configure **packages** that link tariffs to WHMCS products and

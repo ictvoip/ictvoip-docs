@@ -69,7 +69,7 @@ The ictVoIP FusionPBX integration consists of several components:
 * **Database Layer** - Extended schema for billing and provisioning
 * **WHMCS Module** - Client portal integration and automation
 
-In a typical ictVoIP Billing v1.4.0 deployment:
+In a typical ictVoIP Billing v1.5.0 deployment:
 
 * **PBX servers** are defined in WHMCS (see :doc:`/admin/servers`) and
   store the FusionPBX host details, credentials, and optional access

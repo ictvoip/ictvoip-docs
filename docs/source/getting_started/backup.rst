@@ -6,7 +6,7 @@ Overview
 
 Reliable backups are essential for protecting your ictVoIP Billing and
 PBX environments. This guide provides a high-level backup strategy for
-ictVoIP Billing v1.4.0 deployments using WHMCS and supported PBX
+ictVoIP Billing v1.5.0 deployments using WHMCS and supported PBX
 modules.
 
 What Needs to Be Backed Up

@@ -22,7 +22,7 @@ Overview
 This guide covers the installation of ictVoIP Billing integration with
 FusionPBX systems. The installation process varies depending on your
 FusionPBX version and deployment method, but the goals are the same in
-ictVoIP Billing **v1.4.0**:
+ictVoIP Billing **v1.5.0**:
 
 * Install the required FusionPBX API and theme customizations.
 * Ensure SSL/TLS and whitelist configuration are in place.

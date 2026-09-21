@@ -6,7 +6,7 @@ Overview
 
 This document provides an overview of the API endpoints available for FusionPBX integration. These endpoints enable programmatic access to FusionPBX functionality for external system integration and automation.
 
-In ictVoIP Billing v1.4.0, these APIs are primarily consumed by the
+In ictVoIP Billing v1.5.0, these APIs are primarily consumed by the
 WHMCS server modules and addon features such as the **Client Services
 Admin Area** (:doc:`/admin/client_services`) and **Autobill**
 (:doc:`/admin/autobill`). Administrators normally interact with those

@@ -3,8 +3,8 @@ Upgrading ictVoIP Billing and FusionPBX Integration
 
 This guide explains how to upgrade:
 
-* The **ictVoIP Billing Addon for WHMCS** from **v1.3.3** to **v1.4.0**.
-* The **FusionPBX Server Module** from **v1.3.3** to **v1.4.0**, including the
+* The **ictVoIP Billing Addon for WHMCS** from **v1.3.3** to **v1.5.0**.
+* The **FusionPBX Server Module** from **v1.3.3** to **v1.5.0**, including the
   FusionPBX API files.
 * **WHMCS** from **v8.x** to **v9** (optional, but fully supported).
 
@@ -13,7 +13,7 @@ versions remain in sync.
 
 .. note::
 
-   **WHMCS v9 Compatibility**: ictVoIP Billing v1.4.0 is fully compatible with 
+   **WHMCS v9 Compatibility**: ictVoIP Billing v1.5.0 is fully compatible with 
    WHMCS v9. All Client Services management views (Tenant Domains, Extensions, 
    Gateways, Destinations, ACL) and server modules (autobill_v2, autobill_v3) 
    have been tested and verified. No breaking changes were detected during the 
@@ -30,16 +30,16 @@ Before You Start
 
 * Ensure you have:
 
-  * ictVoIP Billing Addon **v1.4.0** package (for WHMCS).
-  * FusionPBX Server Module **v1.4.0** package (for WHMCS).
-  * FusionPBX API / integration files **v1.4.0** (for each FusionPBX server).
+  * ictVoIP Billing Addon **v1.5.0** package (for WHMCS).
+  * FusionPBX Server Module **v1.5.0** package (for WHMCS).
+  * FusionPBX API / integration files **v1.5.0** (for each FusionPBX server).
 
 Upgrade the ictVoIP Billing Addon (WHMCS)
 -----------------------------------------
 
 1. Upload the new addon files
 
-   * Upload the v1.4.0 addon package to your WHMCS installation.
+   * Upload the v1.5.0 addon package to your WHMCS installation.
    * Overwrite the existing ``modules/addons/ictvoipbilling`` folder and any
      related paths included in the package.
 
@@ -54,7 +54,7 @@ Upgrade the ictVoIP Billing Addon (WHMCS)
    * Then click **Activate** again.
 
    This step runs the install/upgrade routines and initializes or updates all
-   required database tables for v1.4.0.
+   required database tables for v1.5.0.
 
 3. Re-enter your license key
 
@@ -67,7 +67,7 @@ Upgrade the FusionPBX Server Module (WHMCS)
 
 1. Upload the new server module files
 
-   * Upload the v1.4.0 FusionPBX server module to WHMCS
+   * Upload the v1.5.0 FusionPBX server module to WHMCS
      (for example into ``modules/servers/fusionpbx``).
    * Overwrite the existing v1.3.3 files.
 

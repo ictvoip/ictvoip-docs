@@ -104,7 +104,7 @@ Tariff Linking
 
 **Linking Providers to Tariffs:**
 
-Each provider can be linked to specific tariffs for automated billing and provisioning. In a typical v1.4.0 deployment, a provider sits between one or more PBX servers and the tariffs/packages that define how usage is rated for client services.
+Each provider can be linked to specific tariffs for automated billing and provisioning. In a typical v1.5.0 deployment, a provider sits between one or more PBX servers and the tariffs/packages that define how usage is rated for client services.
 
 .. code-block:: text
 

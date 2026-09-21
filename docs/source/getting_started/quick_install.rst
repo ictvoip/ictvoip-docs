@@ -24,7 +24,7 @@ Supported Versions
 
 .. note::
 
-   This Quick Install guide applies to **ictVoIP Billing v1.4.0** and later.
+   This Quick Install guide applies to **ictVoIP Billing v1.5.0** and later.
 
 **Recommended environment:**
 
@@ -126,7 +126,7 @@ Step 4: Activate the ictVoIP Billing Addon
 
 .. note::
 
-   **Upgrading from v1.3.3:** When upgrading from ictVoIP Billing v1.3.3 (or any 1.3.x build) to v1.4.0 or later, you must re-run the addon activation inside WHMCS after uploading the new files. If the addon is already active, click **Deactivate**, then **Activate** again. This ensures that all new database tables and columns required by the new version are created and updated.
+   **Upgrading from v1.3.3:** When upgrading from ictVoIP Billing v1.3.3 (or any 1.3.x build) to v1.5.0 or later, you must re-run the addon activation inside WHMCS after uploading the new files. If the addon is already active, click **Deactivate**, then **Activate** again. This ensures that all new database tables and columns required by the new version are created and updated.
 
 For more details, including screenshots, see :doc:`/admin/ictvoipbilling`.
 
@@ -135,7 +135,7 @@ Database Initialization
 
 When the ictVoIP Billing addon is activated for the first time, it will automatically create and initialize the required database tables, including country codes and configuration tables.
 
-If you are upgrading from ictVoIP Billing v1.3.3 (or any 1.3.x build) to v1.4.0 or later, this same activation step must be allowed to run again so the upgrade routines can add new tables and update existing structures. After copying the new files, re-open **System Settings → Apps & Integrations → Addon Modules**, then **Deactivate** and **Activate** the ictVoIP Billing addon to trigger the database upgrade.
+If you are upgrading from ictVoIP Billing v1.3.3 (or any 1.3.x build) to v1.5.0 or later, this same activation step must be allowed to run again so the upgrade routines can add new tables and update existing structures. After copying the new files, re-open **System Settings → Apps & Integrations → Addon Modules**, then **Deactivate** and **Activate** the ictVoIP Billing addon to trigger the database upgrade.
 
 You can confirm that the tables exist using your MySQL administration tool or CLI:
 
