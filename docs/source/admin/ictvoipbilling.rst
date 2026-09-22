@@ -57,7 +57,7 @@ Purchase & Download
 
 **1. Purchase or start a Trial**
 
-If you haven't already purchased the ictVoIP Billing addon module or wish to request a trial, you can request so here:
+If you haven't already purchased the ictVoIP Billing addon module or wish to request a trial version, you can request so here:
 
 `ictVoIP Billing Software Contact Us <https://www.ictvoip.ca/contact-us>`_
 
