@@ -169,6 +169,63 @@ Enable Real-Time Billing per Package
 4. Configure usage-related options as needed (free minutes, markups, incremental billing, inbound billing)
 5. Save the package configuration
 
+.. warning::
+   Do not toggle **Real-Time Billing** on an existing package that is also
+   used for standard billing. Toggling the flag resets the internal
+   real-time state for that package's services. Create a dedicated
+   real-time product instead — for example ``voip1`` for standard billing
+   and ``voip1 (RT)`` designated always real-time — and subscribe real-time
+   services to the ``(RT)`` product.
+
+Rate Resolution
+^^^^^^^^^^^^^^^
+
+Real-time billing resolves the per-minute rate for each call in the following order:
+
+1. **Tariff match (International)** — the destination is matched against
+   the provider tariff using the longest matching enabled prefix. A match
+   bills the call as *International*: the tariff ``Increment`` is applied
+   to the call duration, then ``RateValue`` plus the configured
+   **International Markup**, then tax.
+2. **Custom rates (Local/National)** — destinations flagged as custom
+   rates, and destinations with no tariff match, are billed from the
+   package's **Custom Inbound** / **Custom Outbound** rates using the
+   configured inbound/outbound billing increments.
+3. **Zero rate fallback** — if no tariff prefix matches and the applicable
+   custom rate is blank, the resolved rate is ``0`` and the call records a
+   ``$0`` cost. This is expected behavior: real-time billing does not
+   substitute a tariff ``RateValue`` for a missing custom rate on local
+   calls.
+
+.. note::
+   A prefix must be assigned Custom Rate status to be treated as local.
+   Local prefixes that are not flagged remain eligible for the tariff
+   lookup and can bill as international with markup instead of the
+   package rate.
+
+Tariff Requirements for Real-Time Billing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* **Prefix values must be dial prefixes** (for example ``27``, ``2779``,
+  ``1204``), not full phone numbers or DIDs. A full number in the
+  ``Prefix`` column can only match calls to that exact number — and those
+  calls bill on the international path with markup applied.
+* **The real-time tariff is the provider's rate deck.** For real-time
+  billing, the tariff must be named after the provider it belongs to. The
+  package-level tariff assignment is used by standard autobill
+  processing.
+* **Assign local prefixes as custom rates.** In **ictVoIP Billing →
+  Tariff Management**, open the tariff used by the package, select each
+  local prefix, and assign it Custom Rate (``status = 0``). This is a
+  required step: the set of prefixes assigned Custom Rate status is what
+  determines which destinations are treated as local and billed at the
+  package custom rates. More than one local prefix may be assigned.
+  See :ref:`Assigning Custom Rates <assigning-custom-rates>`.
+* **Watch for broader enabled prefixes.** The lookup uses the longest
+  enabled prefix that matches. If ``2779`` is flagged as a custom rate
+  but ``27`` remains tariff-rated, calls to ``2779...`` still match
+  ``27`` and bill as international.
+
 Cron Processing
 ^^^^^^^^^^^^^^^
 
@@ -199,8 +256,10 @@ To verify real-time billing is working:
 
 Common issues:
 
-* **No CDRs retrieved**: verify FusionPBX connectivity/credentials and ensure the CDR integration library is present in the server module.
+* **No CDRs retrieved**: verify FusionPBX connectivity/credentials and ensure the CDR integration library is present in the server module. Also confirm the call dates fall inside the service's billing window, which is derived from the service's next due date.
 * **Billing not applied**: confirm the package has real-time billing enabled and the service is on that package.
+* **Calls recording $0 cost**: no enabled tariff prefix matched the destination and the package's applicable custom rate (Custom Inbound / Custom Outbound) is blank. Set the custom rates — see `Rate Resolution`_ above — or correct the provider tariff so it contains dial prefixes rather than full numbers.
+* **Corrected rates not reflected on old calls**: processed CDRs are not rebilled. Place a new test call after updating the configuration to verify the corrected rates.
 * **Duplicate CDRs**: investigate uniqueness/duplicate prevention and confirm the CDR table is not being repopulated by another process.
 
 Custom Rate Configuration
