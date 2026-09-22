@@ -308,5 +308,6 @@ Below are support and community resources for the core technologies used in the 
 
    support/faq
    support/support_policy
+   support/bug_reports
    support/contact
    contributing.rst 
