@@ -42,7 +42,8 @@ Before installing the ictVoIP Billing integration, ensure you have:
 * **Root access** to your FusionPBX server
 * **PostgreSQL database** access
 * **nginx** or **Apache** web server
-* **PHP 8.1+** with required extensions (PHP 8.3)
+* **PHP 8.1+** with required extensions (PHP 8.3). See
+  :doc:`/reference/php` for full PHP requirements.
 * **ionCube Loader v14+** at minimum.
 
 System Requirements

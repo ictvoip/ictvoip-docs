@@ -38,7 +38,7 @@ Autobill is a critical component that processes CDRs from your PBX servers and g
 * Debug and testing capabilities
 * Special Number Billing support
 
-In **ictVoIP Billing v1.4.0**, Autobill remains the engine that turns
+In **ictVoIP Billing v1.5.0**, Autobill remains the engine that turns
 rated CDRs into billable usage. FusionPBX now offers **three billing script options**:
 
 **Autobill v2** (``autobill_v2.php``)
@@ -46,7 +46,7 @@ rated CDRs into billable usage. FusionPBX now offers **three billing script opti
    and color-coded debug output. Creates **separate invoices** for each FusionPBX
    service per client. Recommended for clients who prefer itemized billing.
 
-**Autobill v3** (``autobill_v3.php``) - **New in v1.4.0**
+**Autobill v3** (``autobill_v3.php``) - **New in v1.5.0**
    Consolidated billing script that combines **multiple FusionPBX services** per
    client into a **single invoice**. Supports International, National, and Special
    Rate call types. Provides dynamic admin email notifications that scale to any
@@ -63,6 +63,55 @@ rated CDRs into billable usage. FusionPBX now offers **three billing script opti
 * Use **v3** if clients want consolidated billing (all VoIP services on one invoice)
 * Both support the same call types and billing features
 * Both use identical underlying billing logic
+
+Version Comparison
+------------------
+
+.. list-table:: Key Differences from v1
+   :header-rows: 1
+   :widths: 25 25 25 25
+   :align: left
+
+   * - Feature
+     - ``autobill.php`` (v1)
+     - ``autobill_v2.php``
+     - ``autobill_v3.php``
+   * - UI
+     - Plain text
+     - Modern styled UI
+     - Modern styled UI
+   * - Real-time updates
+     - No
+     - Yes
+     - Yes
+   * - Progress bar
+     - No
+     - Yes
+     - Yes
+   * - Statistics dashboard
+     - No
+     - Yes
+     - Enhanced
+   * - Icons/Emojis
+     - No
+     - Yes
+     - Yes
+   * - Responsive layout
+     - No
+     - Yes
+     - Yes
+   * - Time tracking
+     - No
+     - Yes
+     - Yes
+   * - Multi-module support
+     - FusionPBX only
+     - FusionPBX only
+     - FusionPBX + VoIP + VoIPFax
+   * - Consolidated billing
+     - No
+     - No
+     - Yes
 
 Other supported server modules (for example, Vodia or custom
 integrations) continue to ship with their own ``autobill.php``-style
@@ -136,7 +185,7 @@ Replace `MYMODULE` with your installed server module and `America/Toronto` with 
    # FusionPBX - Autobill v2 (separate invoices per service)
    55 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill_v2.php?runfrom=cron
    
-   # FusionPBX - Autobill v3 (consolidated invoices - NEW in v1.4.0)
+   # FusionPBX - Autobill v3 (consolidated invoices - NEW in v1.5.0)
    55 00 * * * TZ=America/Toronto GET https://www.mywhmcsserver.com/modules/servers/fusionpbx/autobill_v3.php?runfrom=cron
    
    # Alternative format with more time
@@ -169,6 +218,76 @@ Replace `MYMODULE` with your installed server module and `America/Toronto` with 
    same underlying billing logic and support all call types (International, National, 
    Special Rates). See the CRON reference documentation at 
    https://ictvoip.ca/docs/cron-reference.html for detailed setup instructions.
+
+WHMCS Automation and Prorata Behavior
+-------------------------------------
+
+``autobill_v2.php`` and ``autobill_v3.php`` follow WHMCS billing dates
+rather than inventing their own cycle. The service **Next Due Date**,
+WHMCS Automation Settings, and product prorata settings all influence
+when usage invoices are created and what date range they represent.
+
+Automation Settings
+~~~~~~~~~~~~~~~~~~~
+
+* **Monthly invoice generation lead time:**
+  ``CreateInvoiceDaysBeforeMonthly`` is used first for Monthly services.
+  If blank or ``0``, the script falls back to ``CreateInvoiceDaysBefore``.
+* **Invoice creation day:** If WHMCS generates invoices in advance,
+  ``autobill_v2.php`` selects services whose **Next Due Date** matches
+  the automation target date.
+* **Invoice due date:** Usage invoices use the same due date target
+  expected by WHMCS automation.
+
+Prorata Settings
+~~~~~~~~~~~~~~~~
+
+WHMCS product settings such as **Prorata Billing**, **Prorata Date**,
+and **Charge Next Month** affect the service billing cycle that WHMCS
+establishes. Autobill follows the dates WHMCS assigns to the service.
+
+* **Prorata Billing:** Determines whether WHMCS aligns the service onto
+  a calendar billing point.
+* **Prorata Date:** Controls the target calendar day for the service
+  cycle.
+* **Charge Next Month:** Affects initial order/prorata behavior and can
+  change the first invoice outcome depending on signup date.
+
+First Cycle vs Subsequent Cycles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **First cycle:** The CDR class can use the service **Date Registered**
+  (``regdate``) as the start of the first usage billing period when no
+  prior non-cancelled WHMCS ``Hosting`` invoice item exists for that
+  service.
+* **Subsequent cycles:** Once WHMCS has created the normal ``Hosting``
+  invoice item for the service, later autobill runs use the standard
+  rolling cycle for Monthly billing.
+
+Desired Outcome Examples
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **Invoice on the 15th, due on the 1st:**
+  If ``CreateInvoiceDaysBeforeMonthly = 15`` and the service **Next Due
+  Date** is the 1st, autobill creates the usage invoice on the 15th of
+  the prior month and sets the due date to the 1st.
+* **Same-day invoicing:**
+  If both ``CreateInvoiceDaysBeforeMonthly`` and
+  ``CreateInvoiceDaysBefore`` are ``0``, the script behaves as same-day
+  billing and only targets services due today.
+
+Operational Notes
+~~~~~~~~~~~~~~~~~
+
+* **WHMCS daily cron matters:** WHMCS daily automation creates the
+  standard service renewal invoice item that marks the service as
+  having entered its normal cycle.
+* **Payment progression matters:** After the renewal invoice is paid,
+  WHMCS typically advances the service **Next Due Date**; once
+  advanced, the same cycle should no longer be selected by autobill.
+* **Best practice:** Configure WHMCS Automation Settings and product
+  prorata settings together, then verify the resulting service **Next
+  Due Date**.
 
 Manual Testing
 -------------

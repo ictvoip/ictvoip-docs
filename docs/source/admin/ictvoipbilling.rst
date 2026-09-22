@@ -37,7 +37,7 @@ System Requirements
 * WHMCS 8.12+
 
 **PHP Requirements:**
-* PHP 8.1+
+* PHP 8.1+ (see :doc:`/reference/php` for full PHP requirements)
 
 **Web Server:**
 * Apache 2.4+
@@ -59,7 +59,7 @@ Purchase & Download
 
 If you haven't already purchased the ictVoIP Billing addon module or wish to request a trial, you can request so here:
 
-`ictVoIP Billing Software Contact Us <https://www.icttech.ca/contact.php>`_
+`ictVoIP Billing Software Contact Us <https://www.ictvoip.ca/contact-us>`_
 
 **2. Download the Package**
 

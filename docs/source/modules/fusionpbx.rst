@@ -56,7 +56,8 @@ Supported Versions
 * **FusionPBX v5.3.x** (Legacy support)
 * **FreeSWITCH v1.10+**
 * **PostgreSQL v12+**
-* **PHP8.1 - PHP8.3**
+* **PHP 8.1 – 8.3** (see :doc:`/reference/php` for full PHP
+  requirements)
 * **ionCube Loader v14**
 
 Architecture

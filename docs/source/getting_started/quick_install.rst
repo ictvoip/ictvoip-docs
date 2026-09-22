@@ -29,7 +29,8 @@ Supported Versions
 **Recommended environment:**
 
 * **WHMCS:** 8.13.x or WHMCS v9
-* **PHP:** 8.1.x – 8.3.x
+* **PHP:** 8.1.x – 8.3.x (see :doc:`/reference/php` for full PHP
+  requirements)
 * **ionCube Loader v14**
 * **Web Server:** Apache or LiteSpeed with HTTPS enabled
 
@@ -46,6 +47,7 @@ Before You Begin
 
    * **WHMCS** 8.13.x or WHMCS v9 is installed and reachable over HTTPS.
    * **PHP** 8.1, 8.2, or 8.3 with **ionCube Loader v14** enabled.
+     See :doc:`/reference/php` for full PHP requirements.
    * A valid ictVoIP Billing license key available from your client area.
    * Administrator access to the WHMCS admin area.
    * SFTP/SSH or file-manager access to the WHMCS document root.
