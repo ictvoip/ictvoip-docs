@@ -188,6 +188,49 @@ ictVoIP Box
    template with the current provider settings and update the template as
    needed.
 
+Support Requests and Bug Reports
+********************************
+
+.. admonition:: Where do I send a support request?
+
+   All support requests must be sent to ``support@ictvoip.ca``. Please
+   open one ticket per issue and include the ictVoIP Billing version,
+   WHMCS version, PHP version, and any relevant logs or screenshots.
+
+.. admonition:: Why was my support ticket closed as not a bug?
+
+   A license includes software updates and confirmed bug fixes. It does
+   not include unlimited installation, configuration, or
+   troubleshooting. If the behaviour is explained by the documentation
+   (for example, tariff status = 0 or Special Number Billing), the
+   report is handled as a support request. For ongoing configuration or
+   training help, a support plan is required:
+   https://www.ictvoip.ca/email-templates/support-maintenance-services.html
+
+.. admonition:: Are there self-help resources before I open a ticket?
+
+   Yes. The ictVoIP website has How-To guides, a Resource Hub, and the
+   latest changelog that may answer your question:
+
+   * How-To guides: https://www.ictvoip.ca/training
+   * Resource Hub: https://www.ictvoip.ca/resources
+   * Blog & tutorials: https://www.ictvoip.ca/blog
+   * FusionPBX references: https://www.ictvoip.ca/docs/fusionpbx-references
+   * Latest changelog: https://www.ictvoip.ca/docs/changelog-latest
+
+.. admonition:: Where can I find support and maintenance plans?
+
+   Installation, configuration, and ongoing assistance are offered
+   through paid support and maintenance plans. You can view the available
+   options at:
+   https://www.ictvoip.ca/email-templates/support-maintenance-services.html
+
+.. admonition:: Can I open multiple tickets for the same issue?
+
+   No. Opening duplicate tickets for the same issue makes it harder to
+   track and can delay the response. Add all updates to the original
+   ticket.
+
 When to Contact Support
 ************************
 

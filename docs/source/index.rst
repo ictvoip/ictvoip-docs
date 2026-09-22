@@ -307,5 +307,6 @@ Below are support and community resources for the core technologies used in the 
    :caption: Support Resources
 
    support/faq
+   support/support_policy
    support/contact
    contributing.rst 
