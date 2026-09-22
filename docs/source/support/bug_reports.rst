@@ -23,7 +23,7 @@ Workflow
    support ticket for tracking.
 3. **Case issued** — If the issue appears to be a software defect,
    support issues a Bug Report **Case #** (for example,
-   ``BUG-2026-44BB34``) and a one-time link to the bug report form at
+   ``ICTVOIP-2026-44BB34``) and a one-time link to the bug report form at
    ``https://www.ictvoip.ca/bug-report``.
 4. **Client submits** — The client completes the structured form using
    the one-time link. The report is attached to the existing support
