@@ -20,7 +20,53 @@ How It Works
 1. **Suspension Trigger:** When client credit ≤ $0 or outstanding invoices exceed credit
 2. **State Tracking:** Script records ``suspend = 'yes'`` in ``mod_fusionpbx_suspend_account``
 3. **Skip Logic:** If already marked as suspended, script skips (prevents duplicate API calls)
-4. **Unsuspension:** When credit is restored, script sets ``suspend = 'no'`` and re-enables gateway
+4. **Unsuspension:** When credit is restored, script sets ``suspend = 'no'`` and reverses the configured suspension method (re-enables the gateway or extensions per the product's **Auto Suspend Mode**)
+
+Scope, Triggers, and Exemptions
+********************************
+
+AutoSuspend evaluates **every active client holding at least one FusionPBX product**. The decision is based solely on the client's WHMCS credit balance versus outstanding FusionPBX invoices - it does **not** consult the package's Real-Time Billing flag, Free Minutes allowance, or tariff configuration.
+
+.. list-table::
+   :widths: 45 55
+   :header-rows: 1
+
+   * - Condition
+     - Result
+   * - Client credit ≤ $0
+     - All FusionPBX services on the account are suspended
+   * - Outstanding FusionPBX invoices > credit
+     - All FusionPBX services on the account are suspended
+   * - Credit restored / invoices paid
+     - Next cron run unsuspends automatically
+
+Suspension applies to the **VoIP service only** - the client account and non-VoIP services are never affected.
+
+Suspension Method
+==================
+
+The suspension method is configured per product via the module setting **Auto Suspend Mode**:
+
+- **Gateway** - disables the tenant's SIP trunk gateway in FusionPBX (blocks all calls)
+- **Extension** - disables individual extensions assigned to the service (gateway stays active)
+
+Manual suspension should be performed on the service itself (Client Profile → Products/Services → Suspend) so the configured suspension method is invoked. Client-level toggles do not run the module's suspend/unsuspend routines.
+
+Exempting a Client
+==================
+
+To exempt a client from AutoSuspend entirely - for example, a fixed-fee metered subscription that must never be credit-suspended - set the client custom field **FusionPBX Suspended** to ``Never Suspend``. The cron skips that client completely.
+
+.. note::
+   The exemption is client-level and applies to all of the client's FusionPBX services. There is currently no per-product exemption.
+
+Free Minutes and Real-Time Billing
+====================================
+
+Free Minutes is a billing/rating concept only - it has no effect on the AutoSuspend decision. Likewise, the Real-Time Billing flag on a package does not exempt it from AutoSuspend. Any client with a FusionPBX service and a zero or negative credit balance will be suspended on the next cron run unless the ``Never Suspend`` flag is set.
+
+.. warning::
+   Manually unsuspending a service does not change the credit condition that triggered the suspension. If credit remains ≤ $0, the next cron run suspends the service again - including re-triggering when the tracking table still shows ``suspend = 'yes'`` against an unsuspended service. The correct recovery is to add credit or pay the outstanding invoices; the script then unsuspends automatically.
 
 Critical Testing Rules
 ***********************
@@ -67,7 +113,7 @@ Test 1: Suspension
 1. Set client credit to $0 or create unpaid invoice exceeding credit
 2. Run autosuspend script in browser (debug mode)
 3. Verify output shows "Suspending service..."
-4. **Check FusionPBX tenant** - gateway should be disabled
+4. **Check FusionPBX tenant** - gateway disabled (Gateway mode) or extensions disabled (Extension mode)
 5. Confirm ``mod_fusionpbx_suspend_account`` shows ``suspend = 'yes'``
 
 Test 2: Unsuspension
@@ -76,7 +122,7 @@ Test 2: Unsuspension
 1. Add credit to client account (or pay invoice)
 2. Run autosuspend script again
 3. Verify output shows "Unsuspending service..."
-4. **Check FusionPBX tenant** - gateway should be enabled
+4. **Check FusionPBX tenant** - gateway/extensions re-enabled per the product's Auto Suspend Mode
 5. Confirm ``mod_fusionpbx_suspend_account`` shows ``suspend = 'no'``
 
 Test 3: Re-Suspension
