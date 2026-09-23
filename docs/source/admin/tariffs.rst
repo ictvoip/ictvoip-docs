@@ -193,6 +193,9 @@ Custom rates let you override the tariff rate for specific prefixes with the per
    * **Apply (Set Status = 1)** — all untoggled rows will be set to ``status = 1``.
    * **Apply (Mixed Status Changes)** — some rows will be set to ``0`` and others to ``1``.
 
+.. warning::
+   **Apply writes a status to every row in the current results** — checked rows are set to ``status = 0`` (custom) and unchecked rows are set to ``status = 1`` (tariff). Unchecked does **not** mean "leave unchanged." If the loaded results include rows you do not intend to modify, narrow the result set with **Search Description** before clicking Apply, or those rows will be reverted to ``status = 1``.
+
 **Status meanings:**
 
 * ``status = 0`` — Custom rate active. The package custom rate (inbound and/or outbound) is used for this prefix.
