@@ -71,6 +71,7 @@ Key Features
    :maxdepth: 2
    :caption: Billing Management
 
+   admin/billing_models.rst
    admin/billing_management.rst
    admin/autobill.rst
 

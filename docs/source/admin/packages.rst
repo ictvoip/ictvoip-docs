@@ -146,6 +146,14 @@ FusionPBX real-time billing processes call detail records (CDRs) directly from t
 
 This mode is designed for environments where you want near real-time usage processing instead of periodic batch invoicing.
 
+.. important::
+   Real-time billing is a **prepaid** engine. If the product you are building
+   is a metered bundle (a fixed monthly fee with included minutes), do not
+   enable real-time billing — configure the package for the **Autobill**
+   path instead, where free minutes act as the per-period allowance. See
+   :doc:`/admin/billing_models` for how to choose the correct billing model
+   before configuring a product.
+
 .. contents:: In this section
    :local:
    :depth: 2

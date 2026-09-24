@@ -522,3 +522,16 @@ a.img-padded {
     margin-bottom: 20px;
 }
 
+/* Fixed-layout tables: honor column proportions, wrap cell text,
+   never overflow the content column (no horizontal scroll) */
+table.docutils.fit-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table.docutils.fit-table td,
+table.docutils.fit-table th {
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
