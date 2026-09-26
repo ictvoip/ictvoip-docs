@@ -7,6 +7,14 @@ FusionPBX Integration
    recommended upgrade procedure covering the ictVoIP Billing addon,
    FusionPBX server module, and API files.
 
+.. toctree::
+   :maxdepth: 2
+
+   fusionpbx/installation
+   fusionpbx/configuration
+   fusionpbx/api_endpoints
+   fusionpbx/troubleshooting
+
 Overview
 --------
 
@@ -220,19 +228,4 @@ At a high level, these APIs are consumed by:
 The implementation details of these integrations are handled by the
 WHMCS server modules and addon; administrators interact primarily with
 the higher-level Client Services and Billing Management screens.
-
-Versioning and Upgrades
------------------------
-
-The FusionPBX module and its custom applications are upgraded alongside the
-ictVoIP Billing addon. For the recommended upgrade sequence and validation
-steps, see :doc:`/upgrades`.
-
-.. toctree::
-   :maxdepth: 2
-
-   fusionpbx/installation
-   fusionpbx/configuration
-   fusionpbx/api_endpoints
-   fusionpbx/troubleshooting
 

@@ -315,6 +315,22 @@ The CRON for autosuspend example:
 |
 
 
+Included Minutes Exhaustion (FusionPBX)
+******************************************
+
+For FusionPBX server module products, an additional PBX-side enforcement can
+apply independently of credit: when the product's period included-minutes
+allowance is exhausted, the service can be blocked (per its Auto Suspend Mode)
+or the client notified, via the ``exhaustedminutes.php`` cron. Unlike
+AutoSuspend it is driven by **usage**, not credit — and its releases are
+automatic only (period rollover, usage back under cap, or the option disabled).
+
+.. seealso::
+   Full options, warning stages, block/release behavior, and cron setup are
+   documented under :doc:`/modules/fusionpbx/configuration` —
+   **Included Minutes Exhaustion**.
+
+
 Manual Suspend
 *****************
 

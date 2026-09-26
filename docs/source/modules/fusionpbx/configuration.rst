@@ -87,6 +87,7 @@ Product Configuration
 * **Extension Length**: Number of digits (usually 4)
 * **Default Password**: Not required
 * **Email Template**: Welcome email template
+* **Included Minutes Exhaustion** (v1.5.0): optional included-minutes warnings and PBX-side call blocking per product — see the Included Minutes Exhaustion section below
 
 License Activation
 ~~~~~~~~~~~~~~~~~~
@@ -573,6 +574,107 @@ Run autobill with debug enabled to see special rate matching:
    Billing Mode: flat_per_call
    Flat Rate: $0.35
    ===========================
+
+Included Minutes Exhaustion
+---------------------------
+
+Included Minutes Exhaustion (v1.5.0) lets a FusionPBX product enforce or alert
+on the included-minutes allowance configured in the package's **Package Rates**
+(``Free Minutes``). A dedicated cron (``exhaustedminutes.php``) tallies the
+current billed period's minutes from CDRs — the same collection path used by
+Autobill and the client-area CDR view — and compares usage against the
+allowance. Recommended schedule: every 2 minutes.
+
+These settings are found in the **Product/Service Module Settings**, grouped as
+the "Included Minutes Exhaustion" card.
+
+.. list-table:: Included Minutes Exhaustion Options
+   :widths: 30 70
+   :header-rows: 1
+   :class: fit-table
+
+   * - Setting
+     - Description
+   * - **Included Minutes Exhaustion**
+     - ``Off`` (default — no evaluation), ``Warn only`` (email notice at exhaustion, calling continues at metered overage), or ``Block calls when exhausted`` (disables the service at the PBX).
+   * - **Minutes Warning Stage 1 / Stage 2**
+     - Optional usage warnings: ``None`` or ``50%``–``90%`` in 5% steps. Each stage emails the client once per billing period; if a poll skips a stage, only the highest applicable alert is sent.
+   * - **Auto Suspend Mode** (existing)
+     - When blocking, the product's existing Auto Suspend Mode selects the action — ``Gateway`` disables the tenant gateway, ``Extension`` disables the service's assigned extensions.
+
+.. figure:: /_static/images/fusionpbx/included_minutes_exhaustion.png
+   :alt: Included Minutes Exhaustion product module settings
+   :align: center
+
+   Included Minutes Exhaustion card in Product Module Settings
+
+How usage is counted
+~~~~~~~~~~~~~~~~~~~~
+
+Only calls inside the current billed period count — the window runs from
+(``nextduedate`` − billing cycle) to now, so usage resets when WHMCS rolls the
+due date at invoicing. Pool math matches Autobill: outbound non-tariff calls
+count at the configured outbound increment, national tariff calls at their
+tariff increment, and inbound minutes count only when enabled on the package.
+International tariff calls (invoiced separately), special-rate destinations,
+and excluded/suppressed calls do not consume the allowance. ``Unlimited`` or
+non-numeric ``Free Minutes`` values are skipped — there is no cap to enforce.
+
+Blocking behavior
+~~~~~~~~~~~~~~~~~
+
+* The WHMCS service itself stays **Active** — only the PBX-side action fires.
+* Once blocked, the block is held automatically: manual unsuspends are detected
+  and re-blocked on the next run. There is no admin override switch.
+* Release is automatic on: billing-period rollover, usage falling back under the
+  cap (raised allowance or package upgrade), or the option set back to ``Off`` —
+  all skipped while client credit ≤ 0 so AutoSuspend keeps its hold.
+
+Email notifications
+~~~~~~~~~~~~~~~~~~~
+
+The cron sends email alerts automatically:
+
+* **Stage 1 / Stage 2 warnings** — sent once per billing period when usage
+  crosses each configured threshold. If a run skips over both thresholds at
+  once, only the highest applicable stage is sent.
+* **Included Minutes Exhausted** — sent when blocking fires.
+* **Included Minutes Exhausted — Notify Only** — sent when the option is set to
+  ``Warn only``.
+
+The four email templates are auto-generated with sensible default content when
+the cron first runs. They can be edited like any other WHMCS template under
+**Setup → Email Templates** (search for "Included Minutes") — subject, wording,
+branding, and merge fields are all customizable to your installation.
+
+CRON setup
+~~~~~~~~~~
+
+*(replace MYMODULE with the server module you have installed)*
+
+.. code-block:: text
+
+   # With explicit timezone (recommended for AlmaLinux 9 / systemd)
+   */2    *    *    *    *  TZ=America/Toronto curl -s "https://www.mywhmcsserver.com/modules/servers/MYMODULE/exhaustedminutes.php?runfrom=cron" >/dev/null 2>&1
+
+.. important::
+   Replace ``TZ=America/Toronto`` with the timezone of your WHMCS
+   installation (e.g., ``TZ=Europe/London``). An incorrect TZ causes the
+   exhaustion checks, warning emails, and blocking to run at the wrong
+   local time.
+
+.. note::
+   The ``?runfrom=cron`` parameter suppresses HTML output and runs silently.
+   Without it, the script renders a browser debug report showing the period
+   window, a per-call audit tally, and per-service actions. For convenience,
+   administrators can surface this debug URL through their own custom WHMCS
+   admin dashboard widget to provide one-click test access.
+
+.. figure:: /_static/images/fusionpbx/exhaustedminutes_debug.png
+   :alt: Included Minutes Exhaustion debug report
+   :align: center
+
+   exhaustedminutes.php browser debug report
 
 Billing Integration Setup
 ------------------------
