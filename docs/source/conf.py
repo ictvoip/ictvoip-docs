@@ -1,12 +1,14 @@
 # Configuration file for the Sphinx documentation builder.
 
+import os
+
 # -- Project information
 
 project = "ictVoIP Billing for WHMCS"
 copyright = "2026, ictVoIP Canada"
 author = "ictVoIP Canada"
 
-version = "1.5.0"
+version = os.environ.get("READTHEDOCS_VERSION", "1.5.0")
 
 # -- General configuration
 
@@ -16,6 +18,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx_sitemap',
 ]
 
 intersphinx_mapping = {
@@ -28,6 +31,15 @@ templates_path = ['../_templates']
 html_static_path = ['_static']
 
 # -- Options for HTML output
+
+html_baseurl = 'https://docs.ictvoip.ca/'
+
+# sphinx-sitemap: generate a per-page sitemap.xml in each version's build root.
+# RTD serves the default version's sitemap.xml at the domain root, replacing the
+# versions-only sitemap it generates itself.
+sitemap_url_scheme = "{lang}latest/{link}"
+sitemap_locales = [None]
+sitemap_show_lastmod = True
 
 html_theme = 'sphinx_rtd_theme'
 html_favicon = '_static/images/favicon.ico'
