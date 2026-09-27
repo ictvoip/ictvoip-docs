@@ -40,6 +40,7 @@ html_baseurl = 'https://docs.ictvoip.ca/'
 sitemap_url_scheme = "{lang}latest/{link}"
 sitemap_locales = [None]
 sitemap_show_lastmod = True
+sitemap_excludes = ["search.html", "genindex.html", "index_old.html"]
 
 html_theme = 'sphinx_rtd_theme'
 html_favicon = '_static/images/favicon.ico'
