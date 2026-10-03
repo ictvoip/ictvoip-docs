@@ -18,14 +18,20 @@ Depending on your Server Module we have custom VoIP Panels associated for each. 
    WHMCS upgrades; the ``ictvoip`` child theme keeps the custom
    template overrides intact across upgrades.
 
-Client panels are documented for the two primary server module views:
+Client panels are documented for each server module view:
 
 * **FusionPBX Client Area & CDRs** — client CDRs and CSV export for FusionPBX services.
-* **Providers Client Area & VoIP Panel** — the VoIP Panel for provider-based services, including CDRs, faxing, call rates, voicemail, and caller ID blocking.
+* **FS PBX Client Area & CDRs** — client CDRs and CSV export for FS PBX services.
+* **FusionPBX Call Recordings Client Area** — the Call Recordings Dashboard for the FusionPBX recordings module.
+* **FS PBX Call Recordings Client Area** — the Call Recordings Dashboard for the FS PBX recordings module.
+* **VoIPms Client Area & VoIP Panel** — the VoIP Panel for VoIP.ms-based services, including CDRs, faxing, call rates, voicemail, and caller ID blocking.
 
 .. toctree::
   :maxdepth: 3
 
   clientareafusionpbx
+  clientareafspbx
+  clientareafusionpbxrecordings
+  clientareafspbxrecordings
   clientareaproviders
   

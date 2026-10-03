@@ -6,13 +6,26 @@ Use of the FusionPBX server module provides the client to view CDRs and also dow
 
 |
 
- .. image:: ../_static/images/clientarea/Fusion_CDRS3.png
+ .. image:: ../_static/images/clientarea/new_client_area_voip.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
         
 |
 
+
+Reaching the CDR View
+*********************
+
+Two entry points:
+
+* Client area home → click the FusionPBX voice service → **Call
+  Records Dashboard** button on the product page.
+* Client area home → **VoIP Management** card → **Call Records**
+  (the card appears for clients with services in VoIP product
+  groups).
+
+Both open the service's CDR view described below.
 
 CDR View & Export
 *********************
@@ -21,7 +34,7 @@ Within the client panel to view CDRs you would simply click on the client VoIP p
 
 |
 
- .. image:: ../_static/images/clientarea/CDRs_Client.png
+ .. image:: ../_static/images/clientarea/fusionpbx_calldetailreport.png
         :scale: 50%
         :align: center
         :alt: Adding a new Provider or PBX
