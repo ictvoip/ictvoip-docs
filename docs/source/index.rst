@@ -167,7 +167,33 @@ extensions, gateways, ACLs, and outbound routes.
 
    admin/client_services
 
-🔌 Server Modules
+� Client Admin
+===============
+
+Day-to-day client administration inside WHMCS — product assignment,
+low-balance alerts, AutoSuspend, and custom client profile fields.
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Client Admin
+
+   clientadmin/clientadmin
+   clientadmin/autosuspend_testing
+
+🖥️ Client Area
+===============
+
+The client-facing VoIP views — CDR panels, VoIP Management, faxing,
+voicemail, and the ictVoIP child-theme layout — from the
+administrator's perspective.
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Client Area
+
+   clientarea/clientarea
+
+�🔌 Server Modules
 =================
 
 .. toctree::
