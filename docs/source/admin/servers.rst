@@ -58,8 +58,10 @@ FusionPBX Integration
 --------------------
 
 **Supported Versions:**
-* FusionPBX 5.3.x (current)
-* FusionPBX 5.4.x (current)
+* FusionPBX 5.3.x
+* FusionPBX 5.4.x
+* FusionPBX 5.5.x (current)
+* FusionPBX 5.6.x (unverified)
 
 .. note::
    For older version support, please contact our support team.

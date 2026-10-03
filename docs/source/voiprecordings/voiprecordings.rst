@@ -1,4 +1,4 @@
-ictVoIP Call Recordings
+VoIP.ms Call Recordings
 ***********************
 
 The **ictVoIP Call Recordings** module is a WHMCS server module that
@@ -95,7 +95,9 @@ The module can invoice clients for overage recording minutes based on
 VoIP.ms CDRs.
 
 * Use the autobill cron script provided with the module.
-* Recommended cron: daily, after the WHMCS daily cron.
+* Recommended cron: daily, **before** the WHMCS daily cron — the
+  recordings invoice must already exist when WHMCS runs its daily
+  billing pass.
 
 The script:
 
@@ -106,6 +108,11 @@ The script:
 5. Applies per-direction rates and free minutes from the extended rates
    table.
 6. Creates a WHMCS invoice with the calculated overage amount.
+
+.. seealso::
+
+   * :doc:`/admin/autobill` — full autobill scheduling, timezone, and
+     billing-cycle details.
 
 Bulk Backfill Tool
 ==================

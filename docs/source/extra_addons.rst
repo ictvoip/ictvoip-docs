@@ -9,6 +9,8 @@ Our Optional Addons and tools to help with your WHMCS & FusionPBX VoIP Services,
   :glob:
 
   ictvoipbox/ictvoipbox.rst
+  pbxrecordings/fusionpbx_recordings.rst
+  pbxrecordings/fspbx_recordings.rst
   themes/custom_themes.rst
   addons/ictpopupmanager.rst
   cdr_main/cdr_maint.rst

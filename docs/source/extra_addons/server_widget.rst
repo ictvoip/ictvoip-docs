@@ -1,5 +1,5 @@
-FusionPBX Server Widget
-=======================
+Server Status Widget
+====================
 
 .. include:: ../admin/servers.rst
    :start-after: .. _widget-section:

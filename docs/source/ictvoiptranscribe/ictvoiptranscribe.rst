@@ -1,7 +1,7 @@
-ictVoIP Call Transcription
+VoIP.ms Call Transcription
 **************************
 
-The **ictVoIP Call Transcription** module integrates VoIP.ms
+The **VoIP.ms Call Transcription** module integrates VoIP.ms
 Transcribe email handling into WHMCS. It fetches transcription emails,
 presents call transcripts and speaker-separated audio to clients, and
 supports usage-based billing for transcription overages.
@@ -55,6 +55,12 @@ Autobill
 ========
 
 The module includes an autobill cron script for invoicing transcription
-overage minutes. Run it daily, after the WHMCS daily cron, on the
-service due date. The script resolves the per-service sub-account and
+overage minutes. Run it daily, **before** the WHMCS daily cron, on the
+service due date — the transcription invoice must already exist when
+WHMCS runs its daily billing pass. The script resolves the per-service sub-account and
 DID, fetches usage, and creates a WHMCS invoice for any overage.
+
+.. seealso::
+
+   * :doc:`/admin/autobill` — full autobill scheduling, timezone, and
+     billing-cycle details.

@@ -1,5 +1,5 @@
-SIP Faxing
-==========
+ictSIP Faxing
+=============
 
 Fax Panel
 *********

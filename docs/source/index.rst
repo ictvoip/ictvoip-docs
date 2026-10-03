@@ -81,7 +81,7 @@ ictVoIP Billing Management System is a comprehensive WHMCS addon application tha
 ✨ Key Features
 **************
 
-The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Billing System, offers a robust set of features for managing VoIP services:
+The International FusionPBX & FS PBX Billing system, integrated with WHMCS & ictVoIP Billing System, offers a robust set of features for managing VoIP services:
 
 * **🏢 Single or Multi PBX Support** - Flexible infrastructure setups
 * **🏢 Multi-Tenant or Single-Tenant** - Diverse customer structures
@@ -93,8 +93,9 @@ The International FusionPBX Billing system, integrated with WHMCS & ictVoIP Bill
 * **📞 Automatic CDR Collection** - Streamlined call data gathering
 * **👤 Client Portal Access** - End-user account management
 * **📈 Metered or Pay As You Go** - Precise usage-based billing
-* **🧩 Client Services Admin Dashboard** - Centralized WHMCS admin interface to manage FusionPBX tenants, extensions, gateways, and provisioning status per provider/PBX.
-* **📦 ictVoIP Box Addon** - Optional front-facing FusionPBX provisioning and DID/trunk automation for new and existing WHMCS clients.
+* **🧩 Client Services Admin Dashboard** - Provisioning per provider/PBX.
+* **📦 ictVoIP Box Addon** - Front-facing client provisioning
+* **🎙️ Call Recordings** - FusionPBX & FS PBX companion modules
 * **🔔 Payment Reminders** - Automated payment notifications
 
 🔧 Compatibility
