@@ -74,7 +74,7 @@ usage          syntax                           HTML rendering
 =========== ================================== ==============================
 italic      `*italic*`                         *italic*
 bold        `**bold**`                         **bold**
-link        ```python <www.python.org>`__``     `python <www.python.org>`__
+link        ```python <https://www.python.org>`__``     `python <https://www.python.org>`__
 verbatim    ````*````                               ``*``
 =========== ================================== ==============================
 
