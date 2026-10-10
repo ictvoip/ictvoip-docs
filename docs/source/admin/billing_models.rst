@@ -81,22 +81,23 @@ The second decision is **when** usage becomes a charge. ictVoIP Billing provides
 .. warning::
 
    **Do not enable Real-Time Billing on a metered (included-minutes) product.**
-   Real-time billing is a prepaid engine: it deducts each call from client
-   credit and treats free minutes as *per-call* free minutes (for example,
-   "the first minute of each call is free"). A metered product requires the
+   Real-time billing is a prepaid engine: every call is rated and deducted
+   from client credit at completion — there is no allowance pool, and the
+   package's Free Minutes field is locked at **0** while Real-Time Billing
+   is enabled. A metered product requires the
    **Autobill** path, where free minutes act as the *per-billing-period
    allowance* — the meter that included minutes are drawn against and that
    resets each billing cycle.
 
    Enabling Real-Time Billing on a package intended as a metered bundle
-   produces exactly the symptoms of a misconfigured product: the allowance
-   appears to apply to every call, usage is not accumulated against the
-   period, and charges do not reflect the bundle design.
+   produces exactly the symptoms of a misconfigured product: no allowance
+   accumulates against the period, and charges do not reflect the bundle
+   design.
 
-The Free Minutes field — two different meanings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Free Minutes field — per-path behavior
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Because both engines share the package configuration, the **Free Minutes** field has a different meaning on each path:
+Because both engines share the package configuration, the **Free Minutes** field behaves differently on each path:
 
 .. list-table::
    :header-rows: 1
@@ -106,7 +107,7 @@ Because both engines share the package configuration, the **Free Minutes** field
    * - Path
      - Free Minutes meaning
    * - Real-Time Billing enabled
-     - **Per-call** — each call is free for its first N minutes
+     - **Locked at 0** — real-time packages have no allowance pool; every call bills from the first second. The field renders read-only in Package Rates and is forced to ``0`` on save.
    * - Real-Time Billing disabled (Autobill)
      - **Per-period** allowance — the meter for included minutes; overage invoiced at package rates
 
@@ -147,7 +148,7 @@ Prepaid Pay-As-You-Go
 *Customer tops up credit; each call deducts immediately; service suspends at zero.*
 
 - Real-Time Billing: **enabled**
-- Free Minutes: 0 (or a per-call promo amount)
+- Free Minutes: 0 (required — locked at 0 on real-time packages)
 - Custom rates or provider tariff for rate resolution
 - Client credit: required deposit before calls can be made
 - AutoSuspend: enabled; Low Balance Threshold: recommended
@@ -196,8 +197,8 @@ Common Misconfigurations
 
    * - Symptom
      - Likely Cause
-   * - "Free minutes are applied to every call"
-     - Real-Time Billing enabled on a metered product — per-call free minutes are correct on that path
+   * - "Free Minutes field is greyed out at 0"
+     - Expected on real-time packages — RT has no allowance pool; the field unlocks only if Real-Time Billing is disabled
    * - "Free calls show zero usage"
      - Real-Time Billing records billed usage, not allowance consumption — metering lives on the Autobill path
    * - "Calls bill $0"

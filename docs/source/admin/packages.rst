@@ -174,7 +174,7 @@ Enable Real-Time Billing per Package
 1. Navigate to **Addons → ictVoIP Billing → Package Rates**
 2. Select the package you want to configure
 3. In the real-time billing section, enable **Real-Time Billing**
-4. Configure usage-related options as needed (free minutes, markups, incremental billing, inbound billing)
+4. Configure usage-related options as needed (markups, incremental billing, inbound billing). **Free Minutes is locked at 0** on real-time packages — every call bills from the first second
 5. Save the package configuration
 
 .. warning::
