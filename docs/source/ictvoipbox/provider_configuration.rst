@@ -366,10 +366,10 @@ Example cron entry (every 5 minutes):
 .. note::
    Replace ``/path/to/whmcs`` with the full path to your WHMCS installation.
 
-Provider and regulated-DID scope
---------------------------------
+Provider scope
+--------------
 
-The DID Purchase Cron is for **VoIP.ms providers only**. It does **not** purchase DIDs from DIDWW or any other provider, and it does **not** handle regulated-country DIDs. DIDWW orders and any DID that requires regulatory documentation must still be processed through the admin provisioning queue.
+The DID Purchase Cron is for **VoIP.ms providers only**. It does **not** purchase DIDs from DIDWW or any other provider. DIDWW orders must still be processed through the admin provisioning queue.
 
 Test mode
 ---------

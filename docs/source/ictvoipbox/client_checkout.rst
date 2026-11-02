@@ -39,7 +39,7 @@ All three methods result in the same automated provisioning sequence once the ad
 Checkout Wizard Flow
 --------------------
 
-The ictVoIP Box checkout wizard guides clients (or administrators placing orders) through a streamlined 4-step process to configure their new PBX service. The wizard dynamically adapts based on the selected provider and regulatory requirements.
+The ictVoIP Box checkout wizard guides clients (or administrators placing orders) through a streamlined 4-step process to configure their new PBX service. The wizard dynamically adapts based on the selected provider.
 
 Step 1: Company Details
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -104,65 +104,6 @@ The second step presents available DIDs based on the product's mapped provider (
    :width: 600px
    :align: center
    :alt: Checkout Step 2 - DID Selection
-
-|
-
-Step 2.5: Regulatory Compliance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Purpose**: Collect regulatory information for Providers
-
-.. important::
-   **This step only appears for Provider products** that require regulatory compliance (e.g., South Africa, EU countries, UK). if normal DID ordering we skip directly to Step 3.
-
-When a Provider DID is selected, the wizard presents a regulatory compliance form to collect identity, address, and business information required by the provider.
-
-**Identity Information:**
-
-* **Full Name**: Legal name matching government-issued ID
-* **Date of Birth**: Format: YYYY-MM-DD
-* **Phone Number**: Contact phone number
-* **Email Address**: Contact email address
-
-**Address Information:**
-
-* **Country**: Select from regulatory countries
-* **City**: City name (used to auto-match regulatory area)
-* **Postal Code**: ZIP or postal code
-* **Street Address**: Complete street address
-
-**Business Information (For Business DIDs):**
-
-* **Company Name**: Legal business name
-* **Registration Number**: Business registration number
-* **Tax ID**: Tax identification number or VAT number
-
-**Document Upload Requirements:**
-
-The form displays required documents that must be uploaded during admin review:
-
-* **Proof of Identity**: Passport, national ID, or driver's license
-* **Proof of Address**: Utility bill, bank statement (within 3 months)
-* **Business Proof**: Company registration, tax certificate (for business DIDs)
-
-.. warning::
-   **Document Upload Timing:**
-   
-   Documents are NOT uploaded during client checkout. The client provides regulatory information in this step, and the administrator uploads proof documents during the admin review process (see :ref:`document-upload-phase`).
-
-**Validation:**
-
-* All required fields must be completed
-* Date of birth must be valid date
-* City name must match DIDWW regulatory areas
-* Business fields required only for business DID types
-
-|
-
-.. image:: ../_static/images/clientarea/cart_ordering_2_5.png
-   :width: 600px
-   :align: center
-   :alt: Checkout Step 2.5 - Regulatory Compliance Form
 
 |
 
@@ -262,13 +203,12 @@ After completing the checkout wizard, the order is placed in a **pending provisi
 **Admin View:**
 
 * Order appears in **Provisioning Queue** (see :ref:`admin-queue-management`)
-* Admin can review order details and regulatory information
+* Admin can review order details
 * Admin controls when provisioning begins
 
 **Next Steps:**
 
 1. Administrator reviews order in provisioning queue
-2. For DIDWW orders, administrator completes regulatory workflow
-3. Administrator triggers provisioning when ready
-4. Client receives welcome email with credentials upon completion
+2. Administrator triggers provisioning when ready
+3. Client receives welcome email with credentials upon completion
 

@@ -36,7 +36,6 @@ The platform consists of three integrated components:
 **2. ictVoIP Box Addon** (This Module)
    * Client-facing shopping cart integration
    * Product ordering interface
-   * Regulatory data collection
    * Admin provisioning queue
    * Order workflow management
 
@@ -56,7 +55,7 @@ The complete integration flow follows this sequence::
    Admin Queue → Admin Provisions → FusionPBX + Provider
 
 1. **Client** orders FusionPBX products through custom ictVoIP Box checkout cart
-2. **ictVoIP Box** captures order and regulatory data
+2. **ictVoIP Box** captures order data
 3. **Admin Queue** displays pending orders for review
 4. **Admin** provisions to FusionPBX and provider
 5. **System** sends welcome email with FusionPBX credentials to client

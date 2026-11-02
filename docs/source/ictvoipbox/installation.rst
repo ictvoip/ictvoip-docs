@@ -17,13 +17,11 @@ The ictVoIP Box addon includes the following components:
 
 **2. Shopping Cart Hooks**
    * Checkout processing integration
-   * Regulatory information collection
    * Email template merge fields
 
 **3. Custom Order Form Template**
    * Custom checkout cart for ictVoIP Box products
    * DID selection interface
-   * Regulatory information forms (DIDWW)
 
 **4. Provider API Integration**
    * Provider API integration for DID ordering

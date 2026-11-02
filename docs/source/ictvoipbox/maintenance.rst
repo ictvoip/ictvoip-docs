@@ -7,15 +7,9 @@ Daily Tasks
 **1. Review Provisioning Queue**
 
 * Check for pending orders
-* Provision VoIP.ms orders
-* Monitor DIDWW regulatory orders
+* Provision orders
 
-**2. Check DIDWW Order Status**
-
-* Poll orders in ``order_placed`` status
-* Follow up on blocked/terminated orders
-
-**3. Verify Welcome Emails**
+**2. Verify Welcome Emails**
 
 * Ensure clients receive credentials
 * Check email logs for failures
